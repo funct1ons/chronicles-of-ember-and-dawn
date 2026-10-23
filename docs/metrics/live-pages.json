@@ -1,20 +1,33 @@
 {
-  "testedAt": "2026-10-23T11:00:00Z",
+  "testedAt": "2026-10-23T11:08:00Z",
   "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/",
   "ci": {
-    "runId": 39942129225,
-    "buildSeconds": 86,
-    "deploySeconds": 12,
-    "steps": ["npm ci", "npm test", "npm run build", "playwright install chromium", "npm run test:e2e", "npm run verify:release", "upload-pages-artifact", "deploy-pages"],
-    "conclusion": "success"
+    "firstRunId": 39942129225,
+    "latestRunId": 39943389361,
+    "latestBuildSeconds": 108,
+    "latestDeploySeconds": 8,
+    "steps": ["npm ci", "npm test", "npm run build", "playwright install --with-deps chromium", "npm run test:e2e", "npm run verify:release", "upload-artifact", "upload-pages-artifact", "deploy-pages"],
+    "conclusion": "success",
+    "annotation": "ubuntu-latest will migrate to Ubuntu 26 from 2026-10-19; informational only."
   },
   "observed": {
     "httpStatus": 200,
     "indexHtmlBytes": 661,
     "assetPathsRelative": true,
-    "battleElapsed": "00:46",
-    "battleRound": "第 5 波",
-    "livePopulation": "7/80",
+    "classicBattle": {
+      "wallClockMs": 37098,
+      "elapsed": "00:46",
+      "round": "第 5 波",
+      "livePopulation": "7/80"
+    },
+    "campaignCheck": {
+      "viewport": "1366x900",
+      "missionCards": 10,
+      "firstMissionLaunched": true,
+      "elapsed": "01:01",
+      "round": "第 6 波",
+      "livePopulation": "19/48"
+    },
     "horizontalOverflow": false,
     "activeTrack": {
       "src": "the_final_battle.ogg",
@@ -31,6 +44,10 @@
   },
   "pageErrors": [],
   "failedResponses": [],
-  "screenshots": ["docs/screenshots/live-pages-main-menu.png", "docs/screenshots/live-pages-battle.png"],
-  "note": "Real public GitHub Pages visit from this machine in headless Chromium 153. Proves the deployed static subpath serves assets, runs a live battle, precaches offline resources, serves audio byte ranges, and starts music after user interaction. It is not a human playthrough, subjective audio review, or a cross-browser/device performance guarantee."
+  "screenshots": [
+    "docs/screenshots/live-pages-main-menu.png",
+    "docs/screenshots/live-pages-battle.png",
+    "docs/screenshots/live-pages-campaign.png"
+  ],
+  "note": "Real public GitHub Pages visits from this machine in headless Chromium 153 after the CI deploy. Proves the deployed static subpath serves relative assets, runs live classic and campaign battles that recruit units, starts music after user interaction, precaches 21 offline resources including music, and answers audio byte ranges with 206. It is not a human playthrough, subjective audio review, or a cross-browser/device performance guarantee."
 }
