@@ -106,6 +106,6 @@ npm.cmd audit
 - 音乐与合成音效的人耳音色、编曲、声像及循环听审。
 - 人类完整战役通关与难度体验评测；自动脚本不能替代。
 - 实体低配PC、Firefox、Safari、所有DPI/缩放与浏览器全屏权限组合；本轮推荐Windows Chrome/Edge。
-- GitHub远程推送、真实线上Pages部署与Linux CI实际执行；目前只有已验证的本地静态子路径及部署配置。
+- 线上页面的 AI 难度体验巡检，尚未做远程真人对战；GitHub Pages 真实部署与 Linux CI 已在实际访问下验证（`metrics/live-pages.json`）。
 
 首版的可运行、类型、核心测试、浏览器集成与本地发布验证已完成；上述边界保持公开，不将其写成已验收的高品质承诺。

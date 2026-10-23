@@ -1,0 +1,36 @@
+{
+  "testedAt": "2026-10-23T11:00:00Z",
+  "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/",
+  "ci": {
+    "runId": 39942129225,
+    "buildSeconds": 86,
+    "deploySeconds": 12,
+    "steps": ["npm ci", "npm test", "npm run build", "playwright install chromium", "npm run test:e2e", "npm run verify:release", "upload-pages-artifact", "deploy-pages"],
+    "conclusion": "success"
+  },
+  "observed": {
+    "httpStatus": 200,
+    "indexHtmlBytes": 661,
+    "assetPathsRelative": true,
+    "battleElapsed": "00:46",
+    "battleRound": "第 5 波",
+    "livePopulation": "7/80",
+    "horizontalOverflow": false,
+    "activeTrack": {
+      "src": "the_final_battle.ogg",
+      "paused": false,
+      "currentTime": 1.67,
+      "volume": 0.193,
+      "error": null
+    },
+    "serviceWorkerControlled": true,
+    "cacheName": "ember-dawn-6f3a45a2fe0dd9",
+    "cacheEntries": 21,
+    "musicPrecached": true,
+    "audioRange": { "status": 206, "bytes": 128, "contentRange": "bytes 0-127/3777653" }
+  },
+  "pageErrors": [],
+  "failedResponses": [],
+  "screenshots": ["docs/screenshots/live-pages-main-menu.png", "docs/screenshots/live-pages-battle.png"],
+  "note": "Real public GitHub Pages visit from this machine in headless Chromium 153. Proves the deployed static subpath serves assets, runs a live battle, precaches offline resources, serves audio byte ranges, and starts music after user interaction. It is not a human playthrough, subjective audio review, or a cross-browser/device performance guarantee."
+}

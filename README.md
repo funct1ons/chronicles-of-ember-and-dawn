@@ -94,6 +94,8 @@ Windows自动化配置也会查找已有Playwright Chromium缓存。CI使用标�
 
 ## GitHub Pages
 
+**线上地址：<https://funct1ons.github.io/chronicles-of-ember-and-dawn/>**（已实际部署并访问验证）
+
 1. 将源码按你的仓库流程提交；本次开发未执行外部推送。
 2. GitHub仓库 **Settings → Pages → Source → GitHub Actions**。
 3. `.github/workflows/pages.yml` 在 `main` 推送或手动触发时执行依赖安装、单测、构建与浏览器验收，然后上传 `dist/` 并部署。
@@ -126,6 +128,7 @@ scripts/        平衡、PNG导出、生产离线验证、SW生成
 - [测试报告](docs/TEST_REPORT.md)
 - [素材授权](docs/ASSET_LICENSES.md) / [音乐逐项来源与哈希](docs/ASSET_LICENSES_AUDIO.md)
 - [开发与问题记录](docs/PROGRESS.md)
+- [线上 Pages 实测记录](docs/metrics/live-pages.json)
 
 ## 授权与已知边界
 
