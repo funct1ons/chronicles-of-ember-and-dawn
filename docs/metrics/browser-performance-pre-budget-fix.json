@@ -1,0 +1,14 @@
+{
+  "units": 150,
+  "frames": 120,
+  "renderMedianMs": 0.5,
+  "renderP95Ms": 3.5,
+  "simulation3sMs": 136.3999999910593,
+  "steadyFrames": 410,
+  "steadyFps": 136.4801438034686,
+  "frameP95Ms": 7.100000000000136,
+  "remainingUnits": 150,
+  "ai150MedianMs": 183.70000000298023,
+  "ai150MaxMs": 239.69999998807907,
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36"
+}

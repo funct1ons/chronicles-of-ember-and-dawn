@@ -1,0 +1,32 @@
+{
+  "name": "chronicles-of-ember-and-dawn",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/generate-legal.mjs && tsc --noEmit && vite build && node scripts/generate-sw.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "balance": "tsx scripts/balance.ts",
+    "ai:coverage": "tsx scripts/ai-coverage.ts",
+    "validate:fresh": "tsx scripts/fresh-validation.ts",
+    "challenges:witness": "tsx scripts/challenge-witness.ts",
+    "metrics:report": "tsx scripts/report-metrics.ts",
+    "strategy:suite": "tsx scripts/strategy-suite.ts",
+    "missions:verify": "tsx scripts/mission-playability.ts",
+    "screenshots": "node scripts/collect-screenshots.mjs",
+    "assets": "tsx scripts/export-assets.ts",
+    "verify:release": "tsx scripts/verify-release.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

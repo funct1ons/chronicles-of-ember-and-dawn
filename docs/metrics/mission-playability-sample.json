@@ -1,0 +1,387 @@
+{
+  "generated": "2026-10-22T18:32:02.221Z",
+  "source": {
+    "sha256": "c8dc78c2cd483356f9e9f9ce356046cfad1b3f2521f639628c12bc81e62acd35",
+    "files": {
+      "src/core/simulation.ts": "d256c5531287a6f74d0a0ab4ce55947d736795426526b307d2cc5140f5fa81fc",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "0e1028be858379b21e1a527302bc3dc2930f861d3990051325ab1513a99316e9",
+      "src/core/tactics.ts": "f808461b15acab2f9657017f99bbdb2ffb8dc4799c92aea135c66d62ed3bc6c4",
+      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/data/missions.ts": "2c6177c3f3feeff51944677a25938a8e0d6f4283528e137103cce3bfe0256b52"
+    }
+  },
+  "note": "Fixed legal player policies, production AI. Scripted completion evidence only; not human playtesting or guaranteed difficulty calibration.",
+  "rows": [
+    {
+      "name": "c5 / combined arms",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 54,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        8076,
+        14596
+      ],
+      "kills": [
+        169,
+        100
+      ],
+      "aiRecruits": {
+        "bow": 87,
+        "shield": 90,
+        "knight": 20
+      },
+      "cpuMs": 2875,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c5",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c5 / combined arms",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 54,
+      "base": [
+        2395,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        7117,
+        11962
+      ],
+      "kills": [
+        147,
+        89
+      ],
+      "aiRecruits": {
+        "bow": 94,
+        "shield": 66,
+        "knight": 12
+      },
+      "cpuMs": 3201,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c5",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c5 / piercing screen",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 60,
+      "base": [
+        2500,
+        2474
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        31159,
+        43272
+      ],
+      "kills": [
+        492,
+        512
+      ],
+      "aiRecruits": {
+        "bow": 179,
+        "shield": 247,
+        "knight": 91
+      },
+      "cpuMs": 3112,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c5",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c5 / piercing screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 263,
+      "rounds": 22,
+      "peakUnits": 50,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6183,
+        9228
+      ],
+      "kills": [
+        114,
+        92
+      ],
+      "aiRecruits": {
+        "bow": 66,
+        "shield": 29,
+        "knight": 19
+      },
+      "cpuMs": 325,
+      "steps": 7904,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c5",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c5 / arcane column",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 52,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6227,
+        18293
+      ],
+      "kills": [
+        223,
+        73
+      ],
+      "aiRecruits": {
+        "bow": 76,
+        "shield": 151,
+        "knight": 22
+      },
+      "cpuMs": 3034,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c5",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c5 / arcane column",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 53,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        26197,
+        36453
+      ],
+      "kills": [
+        375,
+        319
+      ],
+      "aiRecruits": {
+        "bow": 116,
+        "shield": 167,
+        "knight": 102
+      },
+      "cpuMs": 1810,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c5",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c5 / greedy transition",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 145,
+      "rounds": 12,
+      "peakUnits": 42,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        382
+      ],
+      "spent": [
+        4648,
+        2062
+      ],
+      "kills": [
+        3,
+        109
+      ],
+      "aiRecruits": {
+        "bow": 9,
+        "shield": 18,
+        "knight": 2
+      },
+      "cpuMs": 110,
+      "steps": 4344,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c5",
+      "recipe": "greedy transition"
+    },
+    {
+      "name": "c5 / greedy transition",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 189,
+      "rounds": 16,
+      "peakUnits": 41,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6928,
+        3395
+      ],
+      "kills": [
+        26,
+        133
+      ],
+      "aiRecruits": {
+        "bow": 35,
+        "shield": 21
+      },
+      "cpuMs": 131,
+      "steps": 5676,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c5",
+      "recipe": "greedy transition"
+    },
+    {
+      "name": "c5 / raiding screen",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 155,
+      "rounds": 13,
+      "peakUnits": 46,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        406
+      ],
+      "spent": [
+        4954,
+        2095
+      ],
+      "kills": [
+        5,
+        150
+      ],
+      "aiRecruits": {
+        "bow": 15,
+        "shield": 16,
+        "knight": 1
+      },
+      "cpuMs": 169,
+      "steps": 4649,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c5",
+      "recipe": "raiding screen"
+    },
+    {
+      "name": "c5 / raiding screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 202,
+      "rounds": 17,
+      "peakUnits": 54,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        7506,
+        3876
+      ],
+      "kills": [
+        33,
+        211
+      ],
+      "aiRecruits": {
+        "bow": 47,
+        "knight": 2,
+        "shield": 12
+      },
+      "cpuMs": 185,
+      "steps": 6070,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c5",
+      "recipe": "raiding screen"
+    }
+  ]
+}

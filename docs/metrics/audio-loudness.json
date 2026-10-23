@@ -1,0 +1,62 @@
+{
+  "epic_march_loop.wav": {
+    "input_i": "-10.49",
+    "input_tp": "0.21",
+    "input_lra": "6.80",
+    "input_thresh": "-20.49",
+    "output_i": "-23.39",
+    "output_tp": "-11.09",
+    "output_lra": "7.00",
+    "output_thresh": "-33.39",
+    "normalization_type": "dynamic",
+    "target_offset": "0.39"
+  },
+  "eye_of_the_storm.mp3": {
+    "input_i": "-22.07",
+    "input_tp": "-8.05",
+    "input_lra": "3.50",
+    "input_thresh": "-32.16",
+    "output_i": "-22.38",
+    "output_tp": "-7.87",
+    "output_lra": "2.60",
+    "output_thresh": "-32.44",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.62"
+  },
+  "hope_orchestral_battle_music.ogg": {
+    "input_i": "-9.90",
+    "input_tp": "-0.88",
+    "input_lra": "2.70",
+    "input_thresh": "-19.90",
+    "output_i": "-22.50",
+    "output_tp": "-12.20",
+    "output_lra": "2.10",
+    "output_thresh": "-32.50",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.50"
+  },
+  "the_final_battle.ogg": {
+    "input_i": "-13.79",
+    "input_tp": "-0.10",
+    "input_lra": "11.00",
+    "input_thresh": "-24.25",
+    "output_i": "-20.73",
+    "output_tp": "-4.58",
+    "output_lra": "6.00",
+    "output_thresh": "-30.89",
+    "normalization_type": "dynamic",
+    "target_offset": "-2.27"
+  },
+  "war_theme.ogg": {
+    "input_i": "-12.03",
+    "input_tp": "0.06",
+    "input_lra": "4.00",
+    "input_thresh": "-22.13",
+    "output_i": "-23.23",
+    "output_tp": "-11.09",
+    "output_lra": "3.80",
+    "output_thresh": "-33.28",
+    "normalization_type": "dynamic",
+    "target_offset": "0.23"
+  }
+}

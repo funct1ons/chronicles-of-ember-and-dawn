@@ -1,0 +1,772 @@
+{
+  "generated": "2026-10-23T10:27:08.733Z",
+  "source": {
+    "sha256": "6072790e54921f2fa62c25cec6247d839ae8f434146339551b43f831f23da9df",
+    "files": {
+      "src/core/simulation.ts": "7759143ee7d061d676d42a11cc963593d9b8569bd9ff1c4a73428d9b4f797c45",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
+      "src/core/tactics.ts": "d95d6c49b3606ac93406eadc27332cd411d971a6b7da31ae191b341b878d8cef",
+      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
+    }
+  },
+  "holdout": [
+    {
+      "name": "mixed vs difficulty 0",
+      "matches": 10,
+      "playerWins": 9,
+      "draws": 0,
+      "losses": 1,
+      "medianSeconds": 184,
+      "baseDestroyed": 9
+    },
+    {
+      "name": "mixed vs difficulty 1",
+      "matches": 10,
+      "playerWins": 10,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 191,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "mixed vs difficulty 2",
+      "matches": 10,
+      "playerWins": 5,
+      "draws": 3,
+      "losses": 2,
+      "medianSeconds": 510,
+      "baseDestroyed": 6
+    },
+    {
+      "name": "mixed vs difficulty 3",
+      "matches": 10,
+      "playerWins": 5,
+      "draws": 1,
+      "losses": 4,
+      "medianSeconds": 681,
+      "baseDestroyed": 6
+    },
+    {
+      "name": "mixed vs difficulty 4",
+      "matches": 10,
+      "playerWins": 5,
+      "draws": 0,
+      "losses": 5,
+      "medianSeconds": 254,
+      "baseDestroyed": 8
+    },
+    {
+      "name": "single levy vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 160,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single runner vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 168,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single shield vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 196,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single pike vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 132,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single axe vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 155,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single bow vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 124,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single crossbow vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 89,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single rider vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 124,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single knight vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 143,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single mage vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 101,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single healer vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 85,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single ballista vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 128,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single assassin vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 110,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single guardian vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 198,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single firemage vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 95,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "single paladin vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 155,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "master vs normal",
+      "matches": 10,
+      "playerWins": 7,
+      "draws": 1,
+      "losses": 2,
+      "medianSeconds": 266,
+      "baseDestroyed": 9
+    }
+  ],
+  "strategy": [
+    {
+      "name": "mixed vs master",
+      "matches": 10,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 7,
+      "medianSeconds": 331,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "healing phalanx vs master",
+      "matches": 10,
+      "playerWins": 3,
+      "draws": 2,
+      "losses": 5,
+      "medianSeconds": 258,
+      "baseDestroyed": 8
+    },
+    {
+      "name": "siege column vs master",
+      "matches": 10,
+      "playerWins": 4,
+      "draws": 1,
+      "losses": 5,
+      "medianSeconds": 281,
+      "baseDestroyed": 8
+    },
+    {
+      "name": "mobile breakthrough vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 10,
+      "medianSeconds": 181,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "greedy elite transition vs master",
+      "matches": 10,
+      "playerWins": 5,
+      "draws": 0,
+      "losses": 5,
+      "medianSeconds": 229,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "reactive counters vs master",
+      "matches": 10,
+      "playerWins": 0,
+      "draws": 1,
+      "losses": 9,
+      "medianSeconds": 195,
+      "baseDestroyed": 8
+    }
+  ],
+  "campaignBotSmoke": [
+    {
+      "name": "c1",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 220,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c2",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 178,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c3",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 185,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c4",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 264,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c5",
+      "matches": 3,
+      "playerWins": 1,
+      "draws": 2,
+      "losses": 0,
+      "medianSeconds": 966,
+      "baseDestroyed": 1
+    },
+    {
+      "name": "c6",
+      "matches": 3,
+      "playerWins": 1,
+      "draws": 2,
+      "losses": 0,
+      "medianSeconds": 966,
+      "baseDestroyed": 1
+    },
+    {
+      "name": "c7",
+      "matches": 3,
+      "playerWins": 2,
+      "draws": 0,
+      "losses": 1,
+      "medianSeconds": 289,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c8",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 316,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c9",
+      "matches": 3,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 3,
+      "medianSeconds": 267,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "c10",
+      "matches": 3,
+      "playerWins": 1,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 194,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "h1",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 966,
+      "baseDestroyed": 1
+    },
+    {
+      "name": "h2",
+      "matches": 3,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 83,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "h3",
+      "matches": 3,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 3,
+      "medianSeconds": 197,
+      "baseDestroyed": 3
+    }
+  ],
+  "missions": [
+    {
+      "name": "c1",
+      "matches": 10,
+      "playerWins": 10,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 177,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "c2",
+      "matches": 10,
+      "playerWins": 8,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 168,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "c3",
+      "matches": 10,
+      "playerWins": 7,
+      "draws": 0,
+      "losses": 3,
+      "medianSeconds": 177,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "c4",
+      "matches": 10,
+      "playerWins": 6,
+      "draws": 0,
+      "losses": 4,
+      "medianSeconds": 205,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "c5",
+      "matches": 10,
+      "playerWins": 2,
+      "draws": 3,
+      "losses": 5,
+      "medianSeconds": 966,
+      "baseDestroyed": 5
+    },
+    {
+      "name": "c6",
+      "matches": 10,
+      "playerWins": 6,
+      "draws": 2,
+      "losses": 2,
+      "medianSeconds": 257,
+      "baseDestroyed": 7
+    },
+    {
+      "name": "c7",
+      "matches": 10,
+      "playerWins": 7,
+      "draws": 1,
+      "losses": 2,
+      "medianSeconds": 324,
+      "baseDestroyed": 9
+    },
+    {
+      "name": "c8",
+      "matches": 10,
+      "playerWins": 6,
+      "draws": 0,
+      "losses": 4,
+      "medianSeconds": 345,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "c9",
+      "matches": 10,
+      "playerWins": 2,
+      "draws": 1,
+      "losses": 7,
+      "medianSeconds": 231,
+      "baseDestroyed": 9
+    },
+    {
+      "name": "c10",
+      "matches": 10,
+      "playerWins": 2,
+      "draws": 1,
+      "losses": 7,
+      "medianSeconds": 168,
+      "baseDestroyed": 9
+    },
+    {
+      "name": "h1",
+      "matches": 12,
+      "playerWins": 2,
+      "draws": 4,
+      "losses": 6,
+      "medianSeconds": 287,
+      "baseDestroyed": 8
+    },
+    {
+      "name": "h2",
+      "matches": 10,
+      "playerWins": 3,
+      "draws": 0,
+      "losses": 7,
+      "medianSeconds": 105,
+      "baseDestroyed": 10
+    },
+    {
+      "name": "h3",
+      "matches": 6,
+      "playerWins": 2,
+      "draws": 0,
+      "losses": 4,
+      "medianSeconds": 111,
+      "baseDestroyed": 6
+    }
+  ],
+  "fresh": [
+    {
+      "name": "mixed vs difficulty 0",
+      "matches": 6,
+      "playerWins": 5,
+      "draws": 0,
+      "losses": 1,
+      "medianSeconds": 181,
+      "baseDestroyed": 6
+    },
+    {
+      "name": "mixed vs difficulty 1",
+      "matches": 6,
+      "playerWins": 6,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 195,
+      "baseDestroyed": 6
+    },
+    {
+      "name": "mixed vs difficulty 2",
+      "matches": 6,
+      "playerWins": 3,
+      "draws": 2,
+      "losses": 1,
+      "medianSeconds": 394,
+      "baseDestroyed": 4
+    },
+    {
+      "name": "mixed vs difficulty 3",
+      "matches": 6,
+      "playerWins": 4,
+      "draws": 1,
+      "losses": 1,
+      "medianSeconds": 966,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "mixed vs difficulty 4",
+      "matches": 6,
+      "playerWins": 1,
+      "draws": 1,
+      "losses": 4,
+      "medianSeconds": 966,
+      "baseDestroyed": 3
+    },
+    {
+      "name": "greedy elite transition vs master",
+      "matches": 6,
+      "playerWins": 4,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 245,
+      "baseDestroyed": 6
+    },
+    {
+      "name": "master vs normal",
+      "matches": 6,
+      "playerWins": 6,
+      "draws": 0,
+      "losses": 0,
+      "medianSeconds": 337,
+      "baseDestroyed": 6
+    },
+    {
+      "name": "single levy vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 173,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single runner vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 180,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single shield vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 195,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single pike vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 125,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single axe vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 159,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single bow vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 124,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single crossbow vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 88,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single rider vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 120,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single knight vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 150,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single mage vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 96,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single healer vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 88,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single ballista vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 130,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single assassin vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 112,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single guardian vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 195,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single firemage vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 105,
+      "baseDestroyed": 2
+    },
+    {
+      "name": "single paladin vs master",
+      "matches": 2,
+      "playerWins": 0,
+      "draws": 0,
+      "losses": 2,
+      "medianSeconds": 156,
+      "baseDestroyed": 2
+    }
+  ],
+  "ai-role-coverage": {
+    "total": 3136,
+    "selected": {
+      "paladin": 426,
+      "levy": 116,
+      "axe": 212,
+      "shield": 41,
+      "knight": 106,
+      "bow": 329,
+      "firemage": 40,
+      "mage": 159,
+      "pike": 172,
+      "assassin": 293,
+      "rider": 34,
+      "runner": 20,
+      "healer": 955,
+      "crossbow": 138,
+      "guardian": 92,
+      "ballista": 3
+    },
+    "unselected": []
+  },
+  "challenge-witness": {
+    "recipe": {
+      "farm": 320,
+      "cycle": [
+        "axe",
+        "bow"
+      ]
+    },
+    "searchTrials": 27,
+    "verification": [
+      {
+        "name": "h1 selected recipe verification",
+        "matches": 6,
+        "playerWins": 6,
+        "draws": 0,
+        "losses": 0,
+        "medianSeconds": 437,
+        "baseDestroyed": 6
+      }
+    ],
+    "mirrors": [
+      {
+        "name": "h1 hard mirror",
+        "matches": 6,
+        "playerWins": 6,
+        "draws": 0,
+        "losses": 0,
+        "medianSeconds": 653,
+        "baseDestroyed": 5
+      }
+    ]
+  }
+}

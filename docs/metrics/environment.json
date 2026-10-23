@@ -1,0 +1,12 @@
+{
+  "captured": "2026-10-22T18:12:18.608Z",
+  "platform": "win32",
+  "release": "10.0.26300",
+  "arch": "x64",
+  "node": "v24.14.1",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13400F",
+  "logicalCpus": 16,
+  "ramGiB": 16,
+  "browser": "cached Chromium 153 / Playwright",
+  "note": "Headless local test environment; RAF rate is not a physical monitor FPS guarantee."
+}

@@ -1,0 +1,22 @@
+const shapes:Record<string,string>={
+ crest:'<path d="M12 2 21 6v8l-9 9-9-9V6Z"/><path d="m12 6 3 6-3 6-3-6Z"/>',
+ swords:'<path d="m4 3 14 14m-1-3 4 4-3 3-4-4M20 3 6 17m1-3-4 4 3 3 4-4M4 3l1 5 3-3Zm16 0-1 5-3-3Z"/>',
+ flag:'<path d="M5 22V3m0 1c5-5 10 5 15 0v10c-5 5-10-5-15 0"/>',
+ crown:'<path d="m3 7 4 4 5-7 5 7 4-4-2 12H5Zm3 15h12"/>',
+ mountain:'<path d="m2 20 7-14 5 8 3-5 6 11ZM6 12l3 2 3-3"/>',
+ gear:'<path d="m9 3 1-2h4l1 2 3 2 3 1 1 4-2 2v3l-1 4-4 1-2 2-4-1-1-2-4-1-1-4 2-3-1-3 2-3Z"/><circle cx="12" cy="12" r="4"/>',
+ book:'<path d="M12 5C8 2 4 3 2 4v16c3-2 7-1 10 1 3-2 7-3 10-1V4c-3-1-6-2-10 1Zm0 0v16"/>',
+ play:'<path d="m8 4 13 8-13 8Z"/>',pause:'<path d="M7 4v16M17 4v16"/>',
+ volume:'<path d="m11 4-5 5H2v6h4l5 5Zm4 4c3 2 3 6 0 8m3-12c6 4 6 12 0 16"/>',
+ mute:'<path d="m11 4-5 5H2v6h4l5 5Zm5 5 6 6m0-6-6 6"/>',
+ expand:'<path d="M9 3H3v6m12-6h6v6M3 15v6h6m6 0h6v-6"/>',
+ arrow:'<path d="M3 12h17m-7-7 7 7-7 7"/>',back:'<path d="M21 12H4m7-7-7 7 7 7"/>',
+ lock:'<rect x="5" y="10" width="14" height="11" rx="1"/><path d="M8 10V6a4 4 0 0 1 8 0v4m-4 5v3"/>',
+ check:'<path d="m4 12 5 5L21 5"/>',coin:'<circle cx="12" cy="12" r="9"/><path d="M14 7h-4v10h4M8 12h7"/>',
+ people:'<circle cx="8" cy="7" r="3"/><path d="M2 21v-5a6 6 0 0 1 12 0v5m1-17a3 3 0 0 1 0 6m2 3a5 5 0 0 1 5 5v3"/>',
+ close:'<path d="m5 5 14 14M19 5 5 19"/>',spark:'<path d="m12 1 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/>',
+ help:'<circle cx="12" cy="12" r="10"/><path d="M9 8a3 3 0 1 1 4 3c-1 1-1 2-1 3m0 3v1"/>',
+ trophy:'<path d="M7 3h10v8a5 5 0 0 1-10 0ZM7 5H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4m-5 4v5m-5 0h10"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 3"/>',
+};
+export function icon(name:string,cls=''):string{return `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${shapes[name]??shapes.crest}</svg>`;}

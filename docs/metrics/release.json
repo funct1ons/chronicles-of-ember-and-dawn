@@ -1,0 +1,90 @@
+{
+  "testedAt": "2026-10-23T10:35:48.532Z",
+  "url": "http://127.0.0.1:4190/game/",
+  "cacheInfo": {
+    "names": [
+      "ember-dawn-6f3a45a2fe0dd9"
+    ],
+    "files": [
+      "/game/art/README.txt",
+      "/game/art/battlefield-plains.png",
+      "/game/art/battlefield-ruins.png",
+      "/game/art/battlefield-snow.png",
+      "/game/art/battlefield-wastes.png",
+      "/game/art/unit-atlas-azure.png",
+      "/game/art/unit-atlas-crimson.png",
+      "/game/assets/index-CKZ1wfoz.css",
+      "/game/assets/index-CSxvpz-H.js",
+      "/game/audio/epic_march_loop.wav",
+      "/game/audio/eye_of_the_storm.mp3",
+      "/game/audio/hope_orchestral_battle_music.ogg",
+      "/game/audio/the_final_battle.ogg",
+      "/game/audio/war_theme.ogg",
+      "/game/favicon.svg",
+      "/game/index.html",
+      "/game/legal/ASSET_LICENSES.md",
+      "/game/legal/ASSET_LICENSES_AUDIO.md",
+      "/game/legal/AUDIO_CREDITS.md",
+      "/game/legal/LICENSE.txt",
+      "/game/legal/VITE_LICENSE.md"
+    ]
+  },
+  "runtime": {
+    "offline": true,
+    "elapsed": "01:22",
+    "round": "第 8 波",
+    "gold": "76",
+    "population": "9/80",
+    "fps": "180 FPS · 14 单位 · 30Hz",
+    "tracks": [
+      {
+        "src": "/game/audio/eye_of_the_storm.mp3",
+        "paused": true,
+        "currentTime": 0,
+        "duration": 117.98059,
+        "error": null,
+        "volume": 0
+      },
+      {
+        "src": "/game/audio/war_theme.ogg",
+        "paused": true,
+        "currentTime": 0,
+        "duration": 283.746735,
+        "error": null,
+        "volume": 0
+      },
+      {
+        "src": "/game/audio/hope_orchestral_battle_music.ogg",
+        "paused": true,
+        "currentTime": 0,
+        "duration": 69.821088,
+        "error": null,
+        "volume": 0
+      },
+      {
+        "src": "/game/audio/the_final_battle.ogg",
+        "paused": false,
+        "currentTime": 25.375544,
+        "duration": 145.824218,
+        "error": null,
+        "volume": 0.1926989999999987
+      },
+      {
+        "src": "/game/audio/epic_march_loop.wav",
+        "paused": true,
+        "currentTime": 0,
+        "duration": 43.582494,
+        "error": null,
+        "volume": 0
+      }
+    ],
+    "overflow": false
+  },
+  "range": {
+    "status": 206,
+    "bytes": 128,
+    "contentRange": "bytes 0-127/3777653"
+  },
+  "errors": [],
+  "badResponses": []
+}

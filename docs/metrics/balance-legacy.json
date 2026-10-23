@@ -1,0 +1,864 @@
+{
+  "generated": "2026-10-22T16:53:30.948Z",
+  "note": "40-round bounded deterministic samples; not statistically significant win-rate estimates. Config symmetric, no resource bonuses.",
+  "rows": [
+    {
+      "name": "economic combined arms vs normal",
+      "seed": 17,
+      "winner": 0,
+      "seconds": 221,
+      "rounds": 18,
+      "peakUnits": 77,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3854,
+        7906
+      ],
+      "kills": [
+        230,
+        32
+      ],
+      "cpuMs": 214,
+      "steps": 6640
+    },
+    {
+      "name": "levy spam vs master",
+      "seed": 17,
+      "winner": 1,
+      "seconds": 363,
+      "rounds": 30,
+      "peakUnits": 111,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        11688,
+        6817
+      ],
+      "kills": [
+        161,
+        487
+      ],
+      "cpuMs": 717,
+      "steps": 10903
+    },
+    {
+      "name": "master vs normal",
+      "seed": 17,
+      "winner": 0,
+      "seconds": 281,
+      "rounds": 23,
+      "peakUnits": 117,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        7091,
+        10745
+      ],
+      "kills": [
+        275,
+        158
+      ],
+      "cpuMs": 447,
+      "steps": 8420
+    },
+    {
+      "name": "normal vs master",
+      "seed": 17,
+      "winner": 0,
+      "seconds": 462,
+      "rounds": 38,
+      "peakUnits": 117,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        9965,
+        20109
+      ],
+      "kills": [
+        406,
+        182
+      ],
+      "cpuMs": 887,
+      "steps": 13851
+    },
+    {
+      "name": "economic combined arms vs normal",
+      "seed": 103,
+      "winner": 0,
+      "seconds": 194,
+      "rounds": 16,
+      "peakUnits": 78,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4039,
+        6701
+      ],
+      "kills": [
+        202,
+        34
+      ],
+      "cpuMs": 147,
+      "steps": 5827
+    },
+    {
+      "name": "levy spam vs master",
+      "seed": 103,
+      "winner": 1,
+      "seconds": 239,
+      "rounds": 20,
+      "peakUnits": 102,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        7368,
+        5663
+      ],
+      "kills": [
+        130,
+        307
+      ],
+      "cpuMs": 361,
+      "steps": 7157
+    },
+    {
+      "name": "master vs normal",
+      "seed": 103,
+      "winner": 0,
+      "seconds": 315,
+      "rounds": 26,
+      "peakUnits": 112,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6981,
+        12693
+      ],
+      "kills": [
+        309,
+        155
+      ],
+      "cpuMs": 452,
+      "steps": 9449
+    },
+    {
+      "name": "normal vs master",
+      "seed": 103,
+      "winner": 1,
+      "seconds": 312,
+      "rounds": 26,
+      "peakUnits": 120,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        12533,
+        7525
+      ],
+      "kills": [
+        159,
+        326
+      ],
+      "cpuMs": 458,
+      "steps": 9374
+    },
+    {
+      "name": "economic combined arms vs normal",
+      "seed": 806,
+      "winner": 0,
+      "seconds": 195,
+      "rounds": 16,
+      "peakUnits": 69,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3641,
+        7073
+      ],
+      "kills": [
+        211,
+        29
+      ],
+      "cpuMs": 137,
+      "steps": 5848
+    },
+    {
+      "name": "levy spam vs master",
+      "seed": 806,
+      "winner": 1,
+      "seconds": 229,
+      "rounds": 19,
+      "peakUnits": 100,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6936,
+        5762
+      ],
+      "kills": [
+        132,
+        289
+      ],
+      "cpuMs": 304,
+      "steps": 6877
+    },
+    {
+      "name": "master vs normal",
+      "seed": 806,
+      "winner": "draw",
+      "seconds": 474,
+      "rounds": 40,
+      "peakUnits": 106,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        13579,
+        18140
+      ],
+      "kills": [
+        337,
+        270
+      ],
+      "cpuMs": 966,
+      "steps": 14221
+    },
+    {
+      "name": "normal vs master",
+      "seed": 806,
+      "winner": 1,
+      "seconds": 281,
+      "rounds": 23,
+      "peakUnits": 105,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        11216,
+        7064
+      ],
+      "kills": [
+        153,
+        300
+      ],
+      "cpuMs": 392,
+      "steps": 8443
+    },
+    {
+      "name": "mixed vs difficulty 0",
+      "seed": 200,
+      "winner": 0,
+      "seconds": 172,
+      "rounds": 14,
+      "peakUnits": 65,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        585,
+        600
+      ],
+      "spent": [
+        3161,
+        5697
+      ],
+      "kills": [
+        185,
+        24
+      ],
+      "cpuMs": 106,
+      "steps": 5161
+    },
+    {
+      "name": "mixed vs difficulty 1",
+      "seed": 201,
+      "winner": 0,
+      "seconds": 192,
+      "rounds": 16,
+      "peakUnits": 71,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3619,
+        6876
+      ],
+      "kills": [
+        201,
+        29
+      ],
+      "cpuMs": 136,
+      "steps": 5755
+    },
+    {
+      "name": "mixed vs difficulty 2",
+      "seed": 202,
+      "winner": 0,
+      "seconds": 208,
+      "rounds": 17,
+      "peakUnits": 78,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3576,
+        7145
+      ],
+      "kills": [
+        217,
+        28
+      ],
+      "cpuMs": 164,
+      "steps": 6228
+    },
+    {
+      "name": "mixed vs difficulty 3",
+      "seed": 203,
+      "winner": 0,
+      "seconds": 197,
+      "rounds": 16,
+      "peakUnits": 73,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3524,
+        6905
+      ],
+      "kills": [
+        205,
+        28
+      ],
+      "cpuMs": 151,
+      "steps": 5910
+    },
+    {
+      "name": "mixed vs difficulty 4",
+      "seed": 204,
+      "winner": 0,
+      "seconds": 193,
+      "rounds": 16,
+      "peakUnits": 69,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3575,
+        6899
+      ],
+      "kills": [
+        208,
+        29
+      ],
+      "cpuMs": 136,
+      "steps": 5791
+    },
+    {
+      "name": "single levy vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 233,
+      "rounds": 19,
+      "peakUnits": 99,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6936,
+        5704
+      ],
+      "kills": [
+        134,
+        289
+      ],
+      "cpuMs": 312,
+      "steps": 7002
+    },
+    {
+      "name": "single runner vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 314,
+      "rounds": 26,
+      "peakUnits": 103,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        12672,
+        8536
+      ],
+      "kills": [
+        206,
+        352
+      ],
+      "cpuMs": 432,
+      "steps": 9431
+    },
+    {
+      "name": "single shield vs master",
+      "seed": 73,
+      "winner": "draw",
+      "seconds": 474,
+      "rounds": 40,
+      "peakUnits": 85,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        19695,
+        6770
+      ],
+      "kills": [
+        147,
+        277
+      ],
+      "cpuMs": 886,
+      "steps": 14221
+    },
+    {
+      "name": "single pike vs master",
+      "seed": 73,
+      "winner": 0,
+      "seconds": 312,
+      "rounds": 26,
+      "peakUnits": 74,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        9612,
+        12904
+      ],
+      "kills": [
+        381,
+        140
+      ],
+      "cpuMs": 261,
+      "steps": 9352
+    },
+    {
+      "name": "single axe vs master",
+      "seed": 73,
+      "winner": 0,
+      "seconds": 196,
+      "rounds": 16,
+      "peakUnits": 48,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        464,
+        600
+      ],
+      "spent": [
+        2880,
+        7017
+      ],
+      "kills": [
+        207,
+        7
+      ],
+      "cpuMs": 87,
+      "steps": 5874
+    },
+    {
+      "name": "single bow vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 269,
+      "rounds": 22,
+      "peakUnits": 96,
+      "base": [
+        0,
+        1373
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        9280,
+        8506
+      ],
+      "kills": [
+        210,
+        160
+      ],
+      "cpuMs": 267,
+      "steps": 8059
+    },
+    {
+      "name": "single crossbow vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 140,
+      "rounds": 12,
+      "peakUnits": 84,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        440,
+        600
+      ],
+      "spent": [
+        2580,
+        2088
+      ],
+      "kills": [
+        7,
+        30
+      ],
+      "cpuMs": 152,
+      "steps": 4190
+    },
+    {
+      "name": "single rider vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 293,
+      "rounds": 24,
+      "peakUnits": 73,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        8280,
+        5973
+      ],
+      "kills": [
+        124,
+        72
+      ],
+      "cpuMs": 287,
+      "steps": 8776
+    },
+    {
+      "name": "single knight vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 163,
+      "rounds": 14,
+      "peakUnits": 52,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        272,
+        600
+      ],
+      "spent": [
+        2220,
+        4367
+      ],
+      "kills": [
+        94,
+        10
+      ],
+      "cpuMs": 68,
+      "steps": 4898
+    },
+    {
+      "name": "single mage vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 173,
+      "rounds": 14,
+      "peakUnits": 76,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        374,
+        600
+      ],
+      "spent": [
+        2730,
+        3654
+      ],
+      "kills": [
+        60,
+        21
+      ],
+      "cpuMs": 143,
+      "steps": 5201
+    },
+    {
+      "name": "single healer vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 111,
+      "rounds": 9,
+      "peakUnits": 82,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        249,
+        560
+      ],
+      "spent": [
+        1430,
+        1920
+      ],
+      "kills": [
+        0,
+        13
+      ],
+      "cpuMs": 98,
+      "steps": 3325
+    },
+    {
+      "name": "single ballista vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 159,
+      "rounds": 13,
+      "peakUnits": 74,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        233,
+        600
+      ],
+      "spent": [
+        1890,
+        3260
+      ],
+      "kills": [
+        49,
+        9
+      ],
+      "cpuMs": 141,
+      "steps": 4781
+    },
+    {
+      "name": "single assassin vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 193,
+      "rounds": 16,
+      "peakUnits": 72,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        486,
+        600
+      ],
+      "spent": [
+        3625,
+        3669
+      ],
+      "kills": [
+        59,
+        29
+      ],
+      "cpuMs": 159,
+      "steps": 5783
+    },
+    {
+      "name": "single guardian vs master",
+      "seed": 73,
+      "winner": "draw",
+      "seconds": 474,
+      "rounds": 40,
+      "peakUnits": 81,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        11550,
+        10080
+      ],
+      "kills": [
+        162,
+        53
+      ],
+      "cpuMs": 432,
+      "steps": 14221
+    },
+    {
+      "name": "single firemage vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 132,
+      "rounds": 11,
+      "peakUnits": 80,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        192,
+        600
+      ],
+      "spent": [
+        1400,
+        2184
+      ],
+      "kills": [
+        12,
+        7
+      ],
+      "cpuMs": 122,
+      "steps": 3974
+    },
+    {
+      "name": "single paladin vs master",
+      "seed": 73,
+      "winner": 1,
+      "seconds": 159,
+      "rounds": 13,
+      "peakUnits": 51,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        224,
+        600
+      ],
+      "spent": [
+        1840,
+        4258
+      ],
+      "kills": [
+        85,
+        8
+      ],
+      "cpuMs": 71,
+      "steps": 4761
+    }
+  ]
+}

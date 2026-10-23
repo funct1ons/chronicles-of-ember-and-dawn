@@ -1,0 +1,55 @@
+{
+  "units": 150,
+  "frames": 120,
+  "renderMedianMs": 0.5,
+  "renderP95Ms": 3.5999999940395355,
+  "simulation3sMs": 134.90000000596046,
+  "steadyFrames": 457,
+  "steadyFps": 152.05456662784894,
+  "frameP95Ms": 5.600000000000364,
+  "remainingUnits": 150,
+  "ai150MedianMs": 0.30000001192092896,
+  "ai150MaxMs": 0.5,
+  "aiByDifficulty": [
+    {
+      "level": 0,
+      "medianMs": 0,
+      "maxMs": 2.100000023841858
+    },
+    {
+      "level": 1,
+      "medianMs": 1.199999988079071,
+      "maxMs": 1.4000000059604645
+    },
+    {
+      "level": 2,
+      "medianMs": 16.899999976158142,
+      "maxMs": 31.5
+    },
+    {
+      "level": 3,
+      "medianMs": 25.099999994039536,
+      "maxMs": 41.099999994039536
+    },
+    {
+      "level": 4,
+      "medianMs": 0.30000001192092896,
+      "maxMs": 0.5
+    }
+  ],
+  "advantageForecastMaxMs": 31.69999998807907,
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+  "generated": "2026-10-23T10:20:52.402Z",
+  "source": {
+    "sha256": "6072790e54921f2fa62c25cec6247d839ae8f434146339551b43f831f23da9df",
+    "files": {
+      "src/core/simulation.ts": "7759143ee7d061d676d42a11cc963593d9b8569bd9ff1c4a73428d9b4f797c45",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
+      "src/core/tactics.ts": "d95d6c49b3606ac93406eadc27332cd411d971a6b7da31ae191b341b878d8cef",
+      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
+    }
+  }
+}

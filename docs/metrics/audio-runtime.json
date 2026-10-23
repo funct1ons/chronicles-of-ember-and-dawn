@@ -1,0 +1,81 @@
+{
+  "audioContext": "running",
+  "tracks": [
+    {
+      "scene": "menu",
+      "file": "/audio/eye_of_the_storm.mp3",
+      "playing": true,
+      "time": 15.304762,
+      "duration": 117.98059,
+      "volume": 0.06998719015384611,
+      "rms": 0.001340558147908333,
+      "error": null
+    },
+    {
+      "scene": "campaign",
+      "file": "/audio/war_theme.ogg",
+      "playing": true,
+      "time": 15.328088,
+      "duration": 283.746735,
+      "volume": 0.017455872,
+      "rms": 0.0024621681435471575,
+      "error": null
+    },
+    {
+      "scene": "prepare",
+      "file": "/audio/hope_orchestral_battle_music.ogg",
+      "playing": true,
+      "time": 15.324762,
+      "duration": 69.821088,
+      "volume": 0.01591851690000001,
+      "rms": 0.0035298084077946767,
+      "error": null
+    },
+    {
+      "scene": "battle",
+      "file": "/audio/the_final_battle.ogg",
+      "playing": true,
+      "time": 15.319621,
+      "duration": 145.824218,
+      "volume": 0.0327267135,
+      "rms": 0.0014483449291045197,
+      "error": null
+    },
+    {
+      "scene": "climax",
+      "file": "/audio/epic_march_loop.wav",
+      "playing": true,
+      "time": 15.321859,
+      "duration": 43.582494,
+      "volume": 0.030931875000000008,
+      "rms": 0.00626443894418238,
+      "error": null
+    },
+    {
+      "scene": "victory",
+      "file": "/audio/hope_orchestral_battle_music.ogg",
+      "playing": true,
+      "time": 15.321486,
+      "duration": 69.821088,
+      "volume": 0.021117915,
+      "rms": 0.003927986093498408,
+      "error": null
+    },
+    {
+      "scene": "defeat",
+      "file": "/audio/eye_of_the_storm.mp3",
+      "playing": true,
+      "time": 15.269433,
+      "duration": 117.98059,
+      "volume": 0.04055119714285715,
+      "rms": 0.0023523730514966824,
+      "error": null
+    }
+  ],
+  "volumeBefore": 0.018022754285714288,
+  "mutedVolume": 0,
+  "master": 0,
+  "voices": 20,
+  "sfxPeak": 0.6192246079444885,
+  "outputPeak": 0.6561311483383179
+}

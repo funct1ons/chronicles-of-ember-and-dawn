@@ -1,0 +1,241 @@
+{
+  "generated": "2026-10-22T17:58:17.918Z",
+  "note": "Production 80-round rules. Human policies select before countdown; built-in AI selects after both incomes settle. Bot mirrors use the same post-income decision hook. No hidden bonuses; paired sides and deterministic seeds. Limited samples, not a universal balance proof.",
+  "rows": [
+    {
+      "name": "mixed vs difficulty 2",
+      "seed": 17,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 75,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        23072,
+        34476
+      ],
+      "kills": [
+        419,
+        271
+      ],
+      "aiRecruits": {
+        "levy": 37,
+        "bow": 59,
+        "runner": 101,
+        "axe": 70,
+        "shield": 82,
+        "knight": 6,
+        "paladin": 14,
+        "healer": 15,
+        "assassin": 68,
+        "ballista": 2
+      },
+      "cpuMs": 6031,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit"
+    },
+    {
+      "name": "mixed vs difficulty 4",
+      "seed": 17,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 308,
+      "rounds": 26,
+      "peakUnits": 63,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        12223,
+        9578
+      ],
+      "kills": [
+        122,
+        180
+      ],
+      "aiRecruits": {
+        "pike": 18,
+        "levy": 33,
+        "bow": 34,
+        "runner": 7,
+        "rider": 5,
+        "paladin": 2,
+        "healer": 9,
+        "shield": 18,
+        "mage": 9,
+        "firemage": 3,
+        "assassin": 5
+      },
+      "cpuMs": 801,
+      "steps": 9237,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "single levy vs master",
+      "seed": 17,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 160,
+      "rounds": 13,
+      "peakUnits": 80,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4344,
+        4225
+      ],
+      "kills": [
+        45,
+        181
+      ],
+      "aiRecruits": {
+        "pike": 11,
+        "levy": 33,
+        "bow": 14,
+        "runner": 32,
+        "assassin": 7
+      },
+      "cpuMs": 590,
+      "steps": 4797,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "single shield vs master",
+      "seed": 17,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 342,
+      "rounds": 28,
+      "peakUnits": 66,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        12480,
+        7897
+      ],
+      "kills": [
+        114,
+        192
+      ],
+      "aiRecruits": {
+        "pike": 27,
+        "levy": 56,
+        "runner": 17,
+        "crossbow": 13,
+        "rider": 5,
+        "firemage": 3,
+        "assassin": 14,
+        "healer": 4
+      },
+      "cpuMs": 1058,
+      "steps": 10258,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "single pike vs master",
+      "seed": 17,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 125,
+      "rounds": 10,
+      "peakUnits": 42,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        550,
+        600
+      ],
+      "spent": [
+        2538,
+        2887
+      ],
+      "kills": [
+        38,
+        47
+      ],
+      "aiRecruits": {
+        "pike": 4,
+        "bow": 2,
+        "levy": 6,
+        "runner": 51,
+        "rider": 5
+      },
+      "cpuMs": 104,
+      "steps": 3744,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "single axe vs master",
+      "seed": 17,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 124,
+      "rounds": 10,
+      "peakUnits": 69,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        320,
+        600
+      ],
+      "spent": [
+        1800,
+        3073
+      ],
+      "kills": [
+        20,
+        20
+      ],
+      "aiRecruits": {
+        "pike": 4,
+        "runner": 40,
+        "levy": 33,
+        "assassin": 5
+      },
+      "cpuMs": 422,
+      "steps": 3714,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    }
+  ]
+}

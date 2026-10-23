@@ -1,0 +1,292 @@
+{
+  "generated": "2026-10-23T10:27:08.119Z",
+  "source": {
+    "sha256": "6072790e54921f2fa62c25cec6247d839ae8f434146339551b43f831f23da9df",
+    "files": {
+      "src/core/simulation.ts": "7759143ee7d061d676d42a11cc963593d9b8569bd9ff1c4a73428d9b4f797c45",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
+      "src/core/tactics.ts": "d95d6c49b3606ac93406eadc27332cd411d971a6b7da31ae191b341b878d8cef",
+      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
+    }
+  },
+  "total": 3136,
+  "cpuMs": 3887,
+  "selected": {
+    "paladin": 426,
+    "levy": 116,
+    "axe": 212,
+    "shield": 41,
+    "knight": 106,
+    "bow": 329,
+    "firemage": 40,
+    "mage": 159,
+    "pike": 172,
+    "assassin": 293,
+    "rider": 34,
+    "runner": 20,
+    "healer": 955,
+    "crossbow": 138,
+    "guardian": 92,
+    "ballista": 3
+  },
+  "examples": {
+    "paladin": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [],
+      "gold": 230,
+      "round": 1,
+      "enemyX": 350
+    },
+    "levy": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [],
+      "gold": 230,
+      "round": 1,
+      "enemyX": 800
+    },
+    "axe": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [],
+      "gold": 900,
+      "round": 1,
+      "enemyX": 350
+    },
+    "shield": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [],
+      "gold": 900,
+      "round": 1,
+      "enemyX": 800
+    },
+    "knight": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [],
+      "gold": 900,
+      "round": 15,
+      "enemyX": 350
+    },
+    "bow": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield"
+      ],
+      "gold": 230,
+      "round": 1,
+      "enemyX": 350
+    },
+    "firemage": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield"
+      ],
+      "gold": 900,
+      "round": 15,
+      "enemyX": 800
+    },
+    "mage": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield"
+      ],
+      "gold": 2500,
+      "round": 1,
+      "enemyX": 350
+    },
+    "pike": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 900,
+      "round": 1,
+      "enemyX": 800
+    },
+    "assassin": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 2500,
+      "round": 1,
+      "enemyX": 350
+    },
+    "rider": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 230,
+      "round": 1,
+      "enemyX": 350
+    },
+    "runner": {
+      "enemy": "levy",
+      "number": 4,
+      "own": [
+        "pike",
+        "pike",
+        "pike",
+        "pike",
+        "pike",
+        "pike",
+        "pike",
+        "pike",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 230,
+      "round": 1,
+      "enemyX": 350
+    },
+    "healer": {
+      "enemy": "levy",
+      "number": 12,
+      "own": [
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield",
+        "shield"
+      ],
+      "gold": 230,
+      "round": 1,
+      "enemyX": 350
+    },
+    "crossbow": {
+      "enemy": "levy",
+      "number": 12,
+      "own": [
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 900,
+      "round": 15,
+      "enemyX": 800
+    },
+    "guardian": {
+      "enemy": "pike",
+      "number": 4,
+      "own": [
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 900,
+      "round": 15,
+      "enemyX": 800
+    },
+    "ballista": {
+      "enemy": "axe",
+      "number": 4,
+      "own": [
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "guardian",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow",
+        "bow"
+      ],
+      "gold": 900,
+      "round": 1,
+      "enemyX": 350
+    }
+  },
+  "unselected": [],
+  "note": "Artificial legal-population public-state scenarios, not match win-rates."
+}

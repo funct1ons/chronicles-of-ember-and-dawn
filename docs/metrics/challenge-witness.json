@@ -1,0 +1,1615 @@
+{
+  "generated": "2026-10-23T10:01:31.903Z",
+  "source": {
+    "sha256": "6072790e54921f2fa62c25cec6247d839ae8f434146339551b43f831f23da9df",
+    "files": {
+      "src/core/simulation.ts": "7759143ee7d061d676d42a11cc963593d9b8569bd9ff1c4a73428d9b4f797c45",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
+      "src/core/tactics.ts": "d95d6c49b3606ac93406eadc27332cd411d971a6b7da31ae191b341b878d8cef",
+      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
+    }
+  },
+  "config": {
+    "mode": "challenge",
+    "biome": "plains",
+    "difficulty": 3,
+    "seed": 1748297486,
+    "startingGold": 150,
+    "startingIncome": 80,
+    "supply": 65,
+    "growth": 1,
+    "roundDuration": 12,
+    "baseHp": 2500,
+    "ai": true,
+    "playerSide": 0,
+    "allowedUnits": [
+      "levy",
+      "runner",
+      "axe",
+      "bow",
+      "crossbow",
+      "assassin"
+    ],
+    "maxRounds": 80,
+    "missionId": "h1",
+    "enemyAllowedUnits": [
+      "levy",
+      "runner",
+      "bow",
+      "crossbow",
+      "assassin"
+    ]
+  },
+  "note": "Explicit recipe search followed by paired-faction verification; not an unbiased win-rate sample. Public-information bot mirrors are separate, not human completion.",
+  "witness": {
+    "farm": 320,
+    "cycle": [
+      "axe",
+      "bow"
+    ]
+  },
+  "trials": [
+    {
+      "name": "h1 farm=0 bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 51,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        44080,
+        44774
+      ],
+      "kills": [
+        814,
+        742
+      ],
+      "aiRecruits": {
+        "levy": 40,
+        "bow": 725,
+        "runner": 49
+      },
+      "cpuMs": 1298,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 0,
+      "cycle": [
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=0 assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 97,
+      "rounds": 8,
+      "peakUnits": 43,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        206,
+        496
+      ],
+      "spent": [
+        1125,
+        2003
+      ],
+      "kills": [
+        15,
+        9
+      ],
+      "aiRecruits": {
+        "levy": 27,
+        "bow": 2,
+        "runner": 24,
+        "assassin": 3
+      },
+      "cpuMs": 94,
+      "steps": 2911,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=0 bow/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 131,
+      "rounds": 11,
+      "peakUnits": 55,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        428,
+        600
+      ],
+      "spent": [
+        2325,
+        3114
+      ],
+      "kills": [
+        33,
+        32
+      ],
+      "aiRecruits": {
+        "levy": 34,
+        "bow": 10,
+        "runner": 31,
+        "crossbow": 7
+      },
+      "cpuMs": 170,
+      "steps": 3917,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "bow",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=0 levy/bow/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 65,
+      "base": [
+        2472,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        44926,
+        44974
+      ],
+      "kills": [
+        820,
+        1034
+      ],
+      "aiRecruits": {
+        "levy": 49,
+        "bow": 583,
+        "runner": 159,
+        "assassin": 10,
+        "crossbow": 35
+      },
+      "cpuMs": 1850,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 0,
+      "cycle": [
+        "levy",
+        "bow",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=0 bow/bow/assassin/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 149,
+      "rounds": 12,
+      "peakUnits": 62,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        468,
+        600
+      ],
+      "spent": [
+        2776,
+        4170
+      ],
+      "kills": [
+        60,
+        34
+      ],
+      "aiRecruits": {
+        "levy": 34,
+        "bow": 15,
+        "runner": 69
+      },
+      "cpuMs": 178,
+      "steps": 4484,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "bow",
+        "bow",
+        "assassin",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=0 runner/bow/assassin/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 157,
+      "rounds": 13,
+      "peakUnits": 54,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4016,
+        4553
+      ],
+      "kills": [
+        79,
+        69
+      ],
+      "aiRecruits": {
+        "levy": 54,
+        "bow": 20,
+        "runner": 27,
+        "assassin": 9
+      },
+      "cpuMs": 169,
+      "steps": 4709,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "runner",
+        "bow",
+        "assassin",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=0 axe/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 417,
+      "rounds": 35,
+      "peakUnits": 53,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        15126,
+        17739
+      ],
+      "kills": [
+        304,
+        187
+      ],
+      "aiRecruits": {
+        "levy": 15,
+        "crossbow": 80,
+        "runner": 89,
+        "bow": 115,
+        "assassin": 5
+      },
+      "cpuMs": 553,
+      "steps": 12500,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "axe",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=0 levy/axe/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 647,
+      "rounds": 54,
+      "peakUnits": 71,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        27476,
+        29466
+      ],
+      "kills": [
+        544,
+        543
+      ],
+      "aiRecruits": {
+        "levy": 85,
+        "crossbow": 103,
+        "bow": 221,
+        "runner": 125,
+        "assassin": 10
+      },
+      "cpuMs": 1709,
+      "steps": 19405,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "levy",
+        "axe",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=0 axe",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 196,
+      "rounds": 16,
+      "peakUnits": 57,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4590,
+        4933
+      ],
+      "kills": [
+        96,
+        51
+      ],
+      "aiRecruits": {
+        "levy": 61,
+        "crossbow": 5,
+        "runner": 44,
+        "bow": 10,
+        "assassin": 7
+      },
+      "cpuMs": 631,
+      "steps": 5869,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 0,
+      "cycle": [
+        "axe"
+      ]
+    },
+    {
+      "name": "h1 farm=160 bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 42,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        44846,
+        45062
+      ],
+      "kills": [
+        797,
+        764
+      ],
+      "aiRecruits": {
+        "levy": 40,
+        "bow": 750,
+        "crossbow": 7
+      },
+      "cpuMs": 1398,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 160,
+      "cycle": [
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=160 assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 99,
+      "rounds": 8,
+      "peakUnits": 47,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        310,
+        552
+      ],
+      "spent": [
+        1610,
+        2094
+      ],
+      "kills": [
+        19,
+        25
+      ],
+      "aiRecruits": {
+        "levy": 23,
+        "bow": 3,
+        "runner": 38
+      },
+      "cpuMs": 93,
+      "steps": 2980,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 160,
+      "cycle": [
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=160 bow/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 218,
+      "rounds": 18,
+      "peakUnits": 50,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        7264,
+        7065
+      ],
+      "kills": [
+        117,
+        104
+      ],
+      "aiRecruits": {
+        "levy": 55,
+        "bow": 47,
+        "runner": 40,
+        "crossbow": 14,
+        "assassin": 3
+      },
+      "cpuMs": 293,
+      "steps": 6529,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 160,
+      "cycle": [
+        "bow",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=160 levy/bow/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 68,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        45094,
+        45133
+      ],
+      "kills": [
+        852,
+        1040
+      ],
+      "aiRecruits": {
+        "levy": 108,
+        "bow": 598,
+        "crossbow": 28,
+        "runner": 134,
+        "assassin": 5
+      },
+      "cpuMs": 2199,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 160,
+      "cycle": [
+        "levy",
+        "bow",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=160 bow/bow/assassin/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 146,
+      "rounds": 12,
+      "peakUnits": 67,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3511,
+        4136
+      ],
+      "kills": [
+        59,
+        52
+      ],
+      "aiRecruits": {
+        "levy": 41,
+        "bow": 14,
+        "runner": 65
+      },
+      "cpuMs": 295,
+      "steps": 4371,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 160,
+      "cycle": [
+        "bow",
+        "bow",
+        "assassin",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=160 runner/bow/assassin/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 130,
+      "rounds": 11,
+      "peakUnits": 63,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        596,
+        600
+      ],
+      "spent": [
+        3115,
+        3564
+      ],
+      "kills": [
+        55,
+        57
+      ],
+      "aiRecruits": {
+        "levy": 51,
+        "bow": 3,
+        "runner": 53,
+        "crossbow": 3
+      },
+      "cpuMs": 270,
+      "steps": 3898,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 160,
+      "cycle": [
+        "runner",
+        "bow",
+        "assassin",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=160 axe/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 628,
+      "rounds": 52,
+      "peakUnits": 51,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        23824,
+        28074
+      ],
+      "kills": [
+        446,
+        332
+      ],
+      "aiRecruits": {
+        "levy": 30,
+        "bow": 224,
+        "crossbow": 149,
+        "runner": 43
+      },
+      "cpuMs": 783,
+      "steps": 18849,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 160,
+      "cycle": [
+        "axe",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=160 levy/axe/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 70,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        44952,
+        44899
+      ],
+      "kills": [
+        763,
+        927
+      ],
+      "aiRecruits": {
+        "levy": 113,
+        "bow": 406,
+        "crossbow": 181,
+        "assassin": 5,
+        "runner": 68
+      },
+      "cpuMs": 2373,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 160,
+      "cycle": [
+        "levy",
+        "axe",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=160 axe",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 219,
+      "rounds": 18,
+      "peakUnits": 68,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6930,
+        7218
+      ],
+      "kills": [
+        128,
+        88
+      ],
+      "aiRecruits": {
+        "levy": 70,
+        "bow": 3,
+        "crossbow": 2,
+        "runner": 47,
+        "assassin": 28
+      },
+      "cpuMs": 770,
+      "steps": 6585,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 160,
+      "cycle": [
+        "axe"
+      ]
+    },
+    {
+      "name": "h1 farm=320 bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 55,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        45262,
+        45258
+      ],
+      "kills": [
+        814,
+        795
+      ],
+      "aiRecruits": {
+        "levy": 64,
+        "bow": 747,
+        "runner": 11
+      },
+      "cpuMs": 1480,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 320,
+      "cycle": [
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=320 assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 122,
+      "rounds": 10,
+      "peakUnits": 66,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        556,
+        600
+      ],
+      "spent": [
+        3008,
+        3114
+      ],
+      "kills": [
+        39,
+        58
+      ],
+      "aiRecruits": {
+        "levy": 46,
+        "bow": 3,
+        "runner": 51
+      },
+      "cpuMs": 275,
+      "steps": 3658,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=320 bow/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 313,
+      "rounds": 26,
+      "peakUnits": 68,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        12647,
+        12904
+      ],
+      "kills": [
+        264,
+        193
+      ],
+      "aiRecruits": {
+        "levy": 64,
+        "bow": 76,
+        "runner": 179,
+        "crossbow": 6
+      },
+      "cpuMs": 536,
+      "steps": 9375,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "bow",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=320 levy/bow/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 63,
+      "base": [
+        2360,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        45366,
+        45325
+      ],
+      "kills": [
+        803,
+        1058
+      ],
+      "aiRecruits": {
+        "levy": 64,
+        "bow": 574,
+        "runner": 107,
+        "crossbow": 70,
+        "assassin": 5
+      },
+      "cpuMs": 2069,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "farm": 320,
+      "cycle": [
+        "levy",
+        "bow",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=320 bow/bow/assassin/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 127,
+      "rounds": 11,
+      "peakUnits": 72,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3650,
+        3352
+      ],
+      "kills": [
+        44,
+        75
+      ],
+      "aiRecruits": {
+        "levy": 46,
+        "bow": 4,
+        "runner": 56
+      },
+      "cpuMs": 318,
+      "steps": 3803,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "bow",
+        "bow",
+        "assassin",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=320 runner/bow/assassin/assassin",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 129,
+      "rounds": 11,
+      "peakUnits": 68,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3793,
+        3654
+      ],
+      "kills": [
+        54,
+        83
+      ],
+      "aiRecruits": {
+        "levy": 46,
+        "bow": 3,
+        "runner": 66
+      },
+      "cpuMs": 348,
+      "steps": 3881,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "runner",
+        "bow",
+        "assassin",
+        "assassin"
+      ]
+    },
+    {
+      "name": "h1 farm=320 axe/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 178,
+      "rounds": 15,
+      "peakUnits": 57,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4658,
+        6120
+      ],
+      "kills": [
+        151,
+        67
+      ],
+      "aiRecruits": {
+        "levy": 82,
+        "bow": 44,
+        "runner": 11,
+        "crossbow": 14
+      },
+      "cpuMs": 326,
+      "steps": 5346,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "axe",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=320 levy/axe/bow",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 473,
+      "rounds": 39,
+      "peakUnits": 62,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        17802,
+        20724
+      ],
+      "kills": [
+        410,
+        362
+      ],
+      "aiRecruits": {
+        "levy": 100,
+        "bow": 139,
+        "runner": 92,
+        "crossbow": 75,
+        "assassin": 4
+      },
+      "cpuMs": 1211,
+      "steps": 14182,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "levy",
+        "axe",
+        "bow"
+      ]
+    },
+    {
+      "name": "h1 farm=320 axe",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 181,
+      "rounds": 15,
+      "peakUnits": 57,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6138,
+        4412
+      ],
+      "kills": [
+        88,
+        99
+      ],
+      "aiRecruits": {
+        "levy": 65,
+        "bow": 5,
+        "runner": 21,
+        "crossbow": 21
+      },
+      "cpuMs": 311,
+      "steps": 5444,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "farm": 320,
+      "cycle": [
+        "axe"
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "name": "h1 selected recipe verification",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 178,
+      "rounds": 15,
+      "peakUnits": 57,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4658,
+        6120
+      ],
+      "kills": [
+        151,
+        67
+      ],
+      "aiRecruits": {
+        "levy": 82,
+        "bow": 44,
+        "runner": 11,
+        "crossbow": 14
+      },
+      "cpuMs": 302,
+      "steps": 5346,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 selected recipe verification",
+      "seed": 101,
+      "playerSide": 1,
+      "winner": 1,
+      "result": "win",
+      "seconds": 437,
+      "rounds": 36,
+      "peakUnits": 47,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        18832,
+        15504
+      ],
+      "kills": [
+        223,
+        318
+      ],
+      "aiRecruits": {
+        "levy": 51,
+        "bow": 143,
+        "runner": 27,
+        "crossbow": 97
+      },
+      "cpuMs": 546,
+      "steps": 13100,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 selected recipe verification",
+      "seed": 203,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 169,
+      "rounds": 14,
+      "peakUnits": 53,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3962,
+        5522
+      ],
+      "kills": [
+        150,
+        56
+      ],
+      "aiRecruits": {
+        "levy": 87,
+        "bow": 3,
+        "runner": 38,
+        "crossbow": 22
+      },
+      "cpuMs": 265,
+      "steps": 5066,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 selected recipe verification",
+      "seed": 203,
+      "playerSide": 1,
+      "winner": 1,
+      "result": "win",
+      "seconds": 510,
+      "rounds": 42,
+      "peakUnits": 49,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        22644,
+        19652
+      ],
+      "kills": [
+        289,
+        393
+      ],
+      "aiRecruits": {
+        "levy": 73,
+        "crossbow": 110,
+        "bow": 176,
+        "runner": 34
+      },
+      "cpuMs": 695,
+      "steps": 15290,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 selected recipe verification",
+      "seed": 307,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 390,
+      "rounds": 32,
+      "peakUnits": 51,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        14082,
+        16380
+      ],
+      "kills": [
+        276,
+        204
+      ],
+      "aiRecruits": {
+        "levy": 58,
+        "bow": 120,
+        "runner": 8,
+        "crossbow": 90
+      },
+      "cpuMs": 508,
+      "steps": 11694,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 selected recipe verification",
+      "seed": 307,
+      "playerSide": 1,
+      "winner": 1,
+      "result": "win",
+      "seconds": 532,
+      "rounds": 44,
+      "peakUnits": 45,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        23678,
+        19360
+      ],
+      "kills": [
+        285,
+        381
+      ],
+      "aiRecruits": {
+        "levy": 48,
+        "bow": 179,
+        "runner": 22,
+        "crossbow": 132
+      },
+      "cpuMs": 687,
+      "steps": 15968,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    }
+  ],
+  "mirrors": [
+    {
+      "name": "h1 hard mirror",
+      "seed": 101,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 71,
+      "base": [
+        2500,
+        1487
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        44962,
+        45095
+      ],
+      "kills": [
+        785,
+        814
+      ],
+      "aiRecruits": {
+        "levy": 72,
+        "bow": 497,
+        "runner": 116,
+        "crossbow": 90,
+        "assassin": 21
+      },
+      "cpuMs": 1917,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit"
+    },
+    {
+      "name": "h1 hard mirror",
+      "seed": 101,
+      "playerSide": 1,
+      "winner": 1,
+      "result": "win",
+      "seconds": 741,
+      "rounds": 62,
+      "peakUnits": 60,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        33962,
+        33052
+      ],
+      "kills": [
+        533,
+        604
+      ],
+      "aiRecruits": {
+        "levy": 33,
+        "bow": 390,
+        "runner": 105,
+        "assassin": 6,
+        "crossbow": 70
+      },
+      "cpuMs": 1485,
+      "steps": 22236,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 hard mirror",
+      "seed": 203,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 444,
+      "rounds": 37,
+      "peakUnits": 53,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        18918,
+        19306
+      ],
+      "kills": [
+        352,
+        315
+      ],
+      "aiRecruits": {
+        "levy": 53,
+        "bow": 214,
+        "runner": 40,
+        "crossbow": 37,
+        "assassin": 8
+      },
+      "cpuMs": 775,
+      "steps": 13316,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 hard mirror",
+      "seed": 203,
+      "playerSide": 1,
+      "winner": 1,
+      "result": "win",
+      "seconds": 653,
+      "rounds": 54,
+      "peakUnits": 57,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        29438,
+        29457
+      ],
+      "kills": [
+        464,
+        509
+      ],
+      "aiRecruits": {
+        "levy": 57,
+        "bow": 339,
+        "crossbow": 69,
+        "runner": 34,
+        "assassin": 10
+      },
+      "cpuMs": 1269,
+      "steps": 19579,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 hard mirror",
+      "seed": 307,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 492,
+      "rounds": 41,
+      "peakUnits": 54,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        21082,
+        21460
+      ],
+      "kills": [
+        428,
+        323
+      ],
+      "aiRecruits": {
+        "levy": 92,
+        "bow": 200,
+        "crossbow": 48,
+        "runner": 84,
+        "assassin": 4
+      },
+      "cpuMs": 953,
+      "steps": 14745,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    },
+    {
+      "name": "h1 hard mirror",
+      "seed": 307,
+      "playerSide": 1,
+      "winner": 1,
+      "result": "win",
+      "seconds": 261,
+      "rounds": 22,
+      "peakUnits": 73,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        10195,
+        10058
+      ],
+      "kills": [
+        181,
+        184
+      ],
+      "aiRecruits": {
+        "levy": 43,
+        "bow": 88,
+        "crossbow": 27,
+        "runner": 17,
+        "assassin": 9
+      },
+      "cpuMs": 573,
+      "steps": 7820,
+      "atLimit": false,
+      "endReason": "baseDestroyed"
+    }
+  ]
+}
