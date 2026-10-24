@@ -1,14 +1,14 @@
 {
-  "generated": "2026-10-23T15:56:37.840Z",
+  "generated": "2026-10-24T06:18:50.461Z",
   "source": {
-    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+    "sha256": "fd82d170ac87125473db58255d89a7aeb7251d50698bf991ae1c09d89df3449e",
     "files": {
       "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
       "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
       "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
       "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
       "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
-      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
+      "src/data/units.ts": "7b4078cfe55f90681b9530c774e218df88d7c30e1628eecbf0ba1dee7d3fa4b9",
       "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
     }
   },
@@ -50,7 +50,7 @@
         "mage": 5,
         "shield": 12
       },
-      "cpuMs": 4876,
+      "cpuMs": 5160,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -93,7 +93,7 @@
         "shield": 20,
         "mage": 5
       },
-      "cpuMs": 2611,
+      "cpuMs": 2721,
       "steps": 21774,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -134,7 +134,7 @@
         "mage": 5,
         "shield": 12
       },
-      "cpuMs": 4186,
+      "cpuMs": 4434,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -174,7 +174,7 @@
         "knight": 3,
         "axe": 7
       },
-      "cpuMs": 2966,
+      "cpuMs": 3196,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -213,7 +213,7 @@
         "shield": 31,
         "guardian": 1
       },
-      "cpuMs": 5180,
+      "cpuMs": 5417,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -253,7 +253,7 @@
         "paladin": 20,
         "shield": 21
       },
-      "cpuMs": 5274,
+      "cpuMs": 5568,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -293,7 +293,7 @@
         "mage": 4,
         "axe": 27
       },
-      "cpuMs": 582,
+      "cpuMs": 589,
       "steps": 7973,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -333,7 +333,7 @@
         "knight": 3,
         "assassin": 4
       },
-      "cpuMs": 8144,
+      "cpuMs": 8451,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -371,7 +371,7 @@
         "axe": 7,
         "runner": 1
       },
-      "cpuMs": 494,
+      "cpuMs": 504,
       "steps": 6397,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -412,7 +412,7 @@
         "assassin": 7,
         "runner": 1
       },
-      "cpuMs": 3711,
+      "cpuMs": 3848,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -454,7 +454,7 @@
         "mage": 22,
         "runner": 2
       },
-      "cpuMs": 3667,
+      "cpuMs": 3746,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -496,7 +496,7 @@
         "assassin": 1,
         "paladin": 1
       },
-      "cpuMs": 252,
+      "cpuMs": 267,
       "steps": 6129,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -533,7 +533,7 @@
         "healer": 5,
         "axe": 47
       },
-      "cpuMs": 185,
+      "cpuMs": 186,
       "steps": 6629,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -572,7 +572,7 @@
         "mage": 2,
         "runner": 2
       },
-      "cpuMs": 438,
+      "cpuMs": 454,
       "steps": 8231,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -612,7 +612,7 @@
         "axe": 4,
         "runner": 1
       },
-      "cpuMs": 1649,
+      "cpuMs": 1730,
       "steps": 19196,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -653,7 +653,7 @@
         "assassin": 2,
         "paladin": 2
       },
-      "cpuMs": 279,
+      "cpuMs": 284,
       "steps": 6396,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -692,7 +692,7 @@
         "axe": 6,
         "shield": 19
       },
-      "cpuMs": 5635,
+      "cpuMs": 5851,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -732,7 +732,7 @@
         "runner": 1,
         "mage": 1
       },
-      "cpuMs": 936,
+      "cpuMs": 947,
       "steps": 10077,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -770,7 +770,7 @@
         "paladin": 4,
         "axe": 6
       },
-      "cpuMs": 383,
+      "cpuMs": 386,
       "steps": 6775,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -811,7 +811,7 @@
         "assassin": 9,
         "mage": 2
       },
-      "cpuMs": 839,
+      "cpuMs": 862,
       "steps": 13706,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -853,7 +853,7 @@
         "runner": 1,
         "mage": 11
       },
-      "cpuMs": 2367,
+      "cpuMs": 2503,
       "steps": 16160,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -892,7 +892,7 @@
         "paladin": 2,
         "knight": 6
       },
-      "cpuMs": 413,
+      "cpuMs": 442,
       "steps": 8033,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -930,7 +930,7 @@
         "axe": 11,
         "shield": 3
       },
-      "cpuMs": 643,
+      "cpuMs": 691,
       "steps": 8998,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -969,7 +969,7 @@
         "shield": 13,
         "mage": 4
       },
-      "cpuMs": 725,
+      "cpuMs": 755,
       "steps": 11551,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1011,7 +1011,7 @@
         "runner": 1,
         "assassin": 9
       },
-      "cpuMs": 1333,
+      "cpuMs": 1376,
       "steps": 15553,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1052,7 +1052,7 @@
         "paladin": 5,
         "axe": 26
       },
-      "cpuMs": 369,
+      "cpuMs": 370,
       "steps": 7708,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1090,7 +1090,7 @@
         "axe": 25,
         "paladin": 2
       },
-      "cpuMs": 251,
+      "cpuMs": 265,
       "steps": 6145,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1130,7 +1130,7 @@
         "knight": 6,
         "shield": 9
       },
-      "cpuMs": 4534,
+      "cpuMs": 4674,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -1169,7 +1169,7 @@
         "runner": 2,
         "assassin": 2
       },
-      "cpuMs": 628,
+      "cpuMs": 651,
       "steps": 10208,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1209,7 +1209,7 @@
         "mage": 1,
         "shield": 19
       },
-      "cpuMs": 470,
+      "cpuMs": 479,
       "steps": 7929,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1246,7 +1246,7 @@
         "paladin": 3,
         "knight": 3
       },
-      "cpuMs": 139,
+      "cpuMs": 141,
       "steps": 5709,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1284,7 +1284,7 @@
         "assassin": 7,
         "shield": 1
       },
-      "cpuMs": 204,
+      "cpuMs": 211,
       "steps": 6375,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1322,7 +1322,7 @@
         "knight": 3,
         "runner": 1
       },
-      "cpuMs": 146,
+      "cpuMs": 168,
       "steps": 5734,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1360,7 +1360,7 @@
         "crossbow": 7,
         "runner": 1
       },
-      "cpuMs": 189,
+      "cpuMs": 198,
       "steps": 5245,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1399,7 +1399,7 @@
         "paladin": 2,
         "knight": 2
       },
-      "cpuMs": 134,
+      "cpuMs": 146,
       "steps": 5466,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1436,7 +1436,7 @@
         "paladin": 3,
         "assassin": 7
       },
-      "cpuMs": 151,
+      "cpuMs": 152,
       "steps": 5936,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1473,7 +1473,7 @@
         "healer": 5,
         "runner": 19
       },
-      "cpuMs": 141,
+      "cpuMs": 152,
       "steps": 4821,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1511,7 +1511,7 @@
         "healer": 6,
         "shield": 5
       },
-      "cpuMs": 150,
+      "cpuMs": 154,
       "steps": 5531,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1548,7 +1548,7 @@
         "healer": 5,
         "axe": 7
       },
-      "cpuMs": 231,
+      "cpuMs": 244,
       "steps": 6015,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1586,7 +1586,7 @@
         "axe": 7,
         "runner": 18
       },
-      "cpuMs": 162,
+      "cpuMs": 168,
       "steps": 5342,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1626,7 +1626,7 @@
         "healer": 10,
         "axe": 14
       },
-      "cpuMs": 261,
+      "cpuMs": 275,
       "steps": 6953,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1665,7 +1665,7 @@
         "assassin": 8,
         "runner": 1
       },
-      "cpuMs": 223,
+      "cpuMs": 236,
       "steps": 6136,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1704,7 +1704,7 @@
         "paladin": 5,
         "axe": 7
       },
-      "cpuMs": 216,
+      "cpuMs": 231,
       "steps": 6579,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1743,7 +1743,7 @@
         "assassin": 4,
         "runner": 1
       },
-      "cpuMs": 231,
+      "cpuMs": 247,
       "steps": 5812,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1783,7 +1783,7 @@
         "healer": 5,
         "axe": 7
       },
-      "cpuMs": 257,
+      "cpuMs": 276,
       "steps": 6828,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1822,7 +1822,7 @@
         "assassin": 3,
         "runner": 1
       },
-      "cpuMs": 225,
+      "cpuMs": 251,
       "steps": 5817,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1861,7 +1861,7 @@
         "assassin": 4,
         "runner": 7
       },
-      "cpuMs": 243,
+      "cpuMs": 244,
       "steps": 5911,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1902,7 +1902,7 @@
         "paladin": 3,
         "runner": 10
       },
-      "cpuMs": 419,
+      "cpuMs": 430,
       "steps": 9140,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1941,7 +1941,7 @@
         "healer": 11,
         "shield": 27
       },
-      "cpuMs": 371,
+      "cpuMs": 379,
       "steps": 8043,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1981,7 +1981,7 @@
         "paladin": 3,
         "shield": 18
       },
-      "cpuMs": 325,
+      "cpuMs": 331,
       "steps": 7337,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2018,7 +2018,7 @@
         "axe": 6,
         "paladin": 2
       },
-      "cpuMs": 373,
+      "cpuMs": 378,
       "steps": 5712,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2059,7 +2059,7 @@
         "axe": 7,
         "assassin": 6
       },
-      "cpuMs": 372,
+      "cpuMs": 383,
       "steps": 6561,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2096,7 +2096,7 @@
         "axe": 6,
         "paladin": 2
       },
-      "cpuMs": 351,
+      "cpuMs": 359,
       "steps": 5569,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2134,7 +2134,7 @@
         "firemage": 3,
         "paladin": 2
       },
-      "cpuMs": 217,
+      "cpuMs": 231,
       "steps": 5815,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2171,7 +2171,7 @@
         "axe": 6,
         "paladin": 2
       },
-      "cpuMs": 294,
+      "cpuMs": 305,
       "steps": 5542,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2208,7 +2208,7 @@
         "healer": 11,
         "axe": 7
       },
-      "cpuMs": 653,
+      "cpuMs": 678,
       "steps": 6583,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2247,7 +2247,7 @@
         "shield": 7,
         "paladin": 2
       },
-      "cpuMs": 4006,
+      "cpuMs": 4195,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -2286,7 +2286,7 @@
         "mage": 4,
         "assassin": 3
       },
-      "cpuMs": 193,
+      "cpuMs": 199,
       "steps": 5656,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2324,7 +2324,7 @@
         "paladin": 2,
         "shield": 1
       },
-      "cpuMs": 429,
+      "cpuMs": 444,
       "steps": 6020,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2361,7 +2361,7 @@
         "axe": 6,
         "paladin": 2
       },
-      "cpuMs": 313,
+      "cpuMs": 340,
       "steps": 5668,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -2397,7 +2397,7 @@
         "levy": 121,
         "runner": 110
       },
-      "cpuMs": 377,
+      "cpuMs": 379,
       "steps": 6294,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2432,7 +2432,7 @@
         "levy": 79,
         "runner": 115
       },
-      "cpuMs": 260,
+      "cpuMs": 277,
       "steps": 5313,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2467,7 +2467,7 @@
         "runner": 147,
         "levy": 85
       },
-      "cpuMs": 284,
+      "cpuMs": 311,
       "steps": 6261,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2502,7 +2502,7 @@
         "levy": 131,
         "bow": 44
       },
-      "cpuMs": 305,
+      "cpuMs": 317,
       "steps": 5113,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2537,7 +2537,7 @@
         "levy": 110,
         "bow": 65
       },
-      "cpuMs": 253,
+      "cpuMs": 256,
       "steps": 5277,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2608,7 +2608,7 @@
         "rider": 16,
         "bow": 43
       },
-      "cpuMs": 262,
+      "cpuMs": 278,
       "steps": 5563,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2644,7 +2644,7 @@
         "bow": 41,
         "rider": 6
       },
-      "cpuMs": 409,
+      "cpuMs": 422,
       "steps": 5563,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2679,7 +2679,7 @@
         "bow": 47,
         "levy": 117
       },
-      "cpuMs": 391,
+      "cpuMs": 403,
       "steps": 4946,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2715,7 +2715,7 @@
         "crossbow": 32,
         "axe": 17
       },
-      "cpuMs": 370,
+      "cpuMs": 394,
       "steps": 8621,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2751,7 +2751,7 @@
         "axe": 15,
         "crossbow": 11
       },
-      "cpuMs": 272,
+      "cpuMs": 275,
       "steps": 6798,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2786,7 +2786,7 @@
         "shield": 74,
         "crossbow": 12
       },
-      "cpuMs": 355,
+      "cpuMs": 388,
       "steps": 5885,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2822,7 +2822,7 @@
         "shield": 60,
         "knight": 3
       },
-      "cpuMs": 165,
+      "cpuMs": 173,
       "steps": 6169,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2858,7 +2858,7 @@
         "shield": 493,
         "knight": 10
       },
-      "cpuMs": 4262,
+      "cpuMs": 4474,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -2894,7 +2894,7 @@
         "shield": 91,
         "knight": 9
       },
-      "cpuMs": 5982,
+      "cpuMs": 6324,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -2929,7 +2929,7 @@
         "shield": 47,
         "bow": 22
       },
-      "cpuMs": 189,
+      "cpuMs": 196,
       "steps": 5203,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -2965,7 +2965,7 @@
         "shield": 33,
         "mage": 2
       },
-      "cpuMs": 112,
+      "cpuMs": 121,
       "steps": 5051,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3002,7 +3002,7 @@
         "mage": 4,
         "healer": 10
       },
-      "cpuMs": 7275,
+      "cpuMs": 7691,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -3044,7 +3044,7 @@
         "runner": 12,
         "ballista": 1
       },
-      "cpuMs": 374,
+      "cpuMs": 390,
       "steps": 8260,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3086,7 +3086,7 @@
         "bow": 10,
         "rider": 5
       },
-      "cpuMs": 532,
+      "cpuMs": 559,
       "steps": 6927,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3130,7 +3130,7 @@
         "assassin": 5,
         "rider": 5
       },
-      "cpuMs": 2627,
+      "cpuMs": 2717,
       "steps": 17745,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3173,7 +3173,7 @@
         "pike": 26,
         "shield": 18
       },
-      "cpuMs": 525,
+      "cpuMs": 549,
       "steps": 7666,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3218,7 +3218,7 @@
         "mage": 3,
         "axe": 22
       },
-      "cpuMs": 3870,
+      "cpuMs": 4001,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -3261,7 +3261,7 @@
         "pike": 23,
         "axe": 7
       },
-      "cpuMs": 1132,
+      "cpuMs": 1173,
       "steps": 17044,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3303,7 +3303,7 @@
         "axe": 6,
         "runner": 1
       },
-      "cpuMs": 495,
+      "cpuMs": 500,
       "steps": 6424,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3342,7 +3342,7 @@
         "paladin": 9,
         "knight": 3
       },
-      "cpuMs": 745,
+      "cpuMs": 795,
       "steps": 8635,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3383,7 +3383,7 @@
         "paladin": 2,
         "ballista": 1
       },
-      "cpuMs": 764,
+      "cpuMs": 798,
       "steps": 6929,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3427,7 +3427,7 @@
         "runner": 1,
         "firemage": 9
       },
-      "cpuMs": 1317,
+      "cpuMs": 1375,
       "steps": 13324,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3466,7 +3466,7 @@
         "mage": 4,
         "shield": 1
       },
-      "cpuMs": 382,
+      "cpuMs": 400,
       "steps": 5150,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3505,7 +3505,7 @@
         "knight": 9,
         "axe": 20
       },
-      "cpuMs": 532,
+      "cpuMs": 545,
       "steps": 6967,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3542,7 +3542,7 @@
         "crossbow": 126,
         "runner": 83
       },
-      "cpuMs": 1147,
+      "cpuMs": 1221,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -3580,7 +3580,7 @@
         "crossbow": 119,
         "assassin": 5
       },
-      "cpuMs": 1074,
+      "cpuMs": 1097,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -3617,7 +3617,7 @@
         "runner": 66,
         "crossbow": 130
       },
-      "cpuMs": 1128,
+      "cpuMs": 1190,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -3656,7 +3656,7 @@
         "levy": 4,
         "runner": 2
       },
-      "cpuMs": 14,
+      "cpuMs": 15,
       "steps": 2525,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3698,7 +3698,7 @@
         "shield": 4,
         "pike": 5
       },
-      "cpuMs": 60,
+      "cpuMs": 70,
       "steps": 8935,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3735,7 +3735,7 @@
         "levy": 3,
         "axe": 1
       },
-      "cpuMs": 14,
+      "cpuMs": 19,
       "steps": 1915,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3772,7 +3772,7 @@
         "mage": 4,
         "paladin": 1
       },
-      "cpuMs": 28,
+      "cpuMs": 41,
       "steps": 5898,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3809,7 +3809,7 @@
         "mage": 4,
         "paladin": 2
       },
-      "cpuMs": 32,
+      "cpuMs": 34,
       "steps": 5575,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -3846,7 +3846,7 @@
         "mage": 6,
         "paladin": 1
       },
-      "cpuMs": 23,
+      "cpuMs": 25,
       "steps": 5071,
       "atLimit": false,
       "endReason": "baseDestroyed",

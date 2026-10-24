@@ -19,6 +19,7 @@
     "missions:verify": "tsx scripts/mission-playability.ts",
     "screenshots": "node scripts/collect-screenshots.mjs",
     "assets": "tsx scripts/export-assets.ts",
+    "verify:unit-visuals": "tsx scripts/verify-unit-visuals.ts",
     "verify:release": "tsx scripts/verify-release.ts",
     "verify:live": "node scripts/verify-live-pages.mjs",
     "motion:audit": "tsx scripts/diagnose-jitter.ts --output docs/metrics/v11-motion-audit.json",

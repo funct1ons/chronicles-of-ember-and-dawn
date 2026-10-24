@@ -1,6 +1,27 @@
 # 测试与实际运行记录
 
-## 首页封面改版（已提交部署并完成公网验收）
+## 当前：16兵种视觉身份重构（本地验收通过，已获授权正在发布）
+
+当前核心/数据指纹：`fd82d170ac87125473db58255d89a7aeb7251d50698bf991ae1c09d89df3449e`。本轮仅精灵、美术辅助、装备一致性文案与测试/报告调整；16兵所有机械字段逐项锁定，模拟、AI、经济、音频及运动算法未改。`units.ts` 的故事变动会改变原始字节指纹，故重新跑完整对战报告，而非直接沿用旧指纹。
+
+|项目|本轮实测|
+|---|---|
+|单测/类型/生产构建|**22文件274项通过**；类型与图集导出通过。JS184.01kB/gzip66.13kB，CSS35.84kB/gzip8.91kB。|
+|美术全帧|**640帧、0缺陷**：16兵×双阵营×5状态×4帧，48×48、非空、alpha仅0/255，扩大画布重绘检查裁切；walk/attack至少3种不同帧，双阵营几何一致。|
+|轮廓问题对|预先指定9对idle/平均IoU均<0.86；三施法者idle从全同降为0.541/0.636/0.533，轻斥候/刺客0.448，轻骑/重骑0.792。IoU是同原点几何诊断，**不是玩家误认率**；完整口径见`UNIT_VISUAL_IDENTITIES.md`。|
+|完整浏览器|**16/16一次通过，56.4秒**；含新2项像素/几何/缩图检查、首页/图鉴/音频/合法胜局/150人负载。无修改原100ms AI阈值。|
+|150人压力|高HP混合队只作负载fixture：绘图中位0.6ms/P95 4.0ms，3模拟秒164.7ms，持续155 headless FPS；不作平衡证据。另合法75+75普通AI最大23.6ms、困难52.6ms、大师0.6ms，小军收尾32.3ms，均过100ms门槛。|
+|合法自然胜局|c1无资源/属性注入：168模拟秒、14波、184击杀、69征募、基地2500/0；统计与存档相符。|
+|对战等价回归|521局、3136公共局面角色覆盖及挑战见证重跑。六报告保留数组顺序与全部实际游戏/种子/RNG衍生结果，严格对比一致；仅忽略生成时间/源锁/CPU计时及已说明的未使用模板seed。**不是新增独立样本**。|
+|运动|44,769 tick、1,941,038连续样本，最大2.743709 world px，无>6px。9组1024/1440/1920×DPR1/1.25/1.5通过；180Hz环境raw展示变化约6倍于30Hz模拟，不承诺每帧设备像素都移动。|
+|生产子路径与离线|`/game/` 模拟Pages编码Vary服务器，21缓存、断网RAF至第8波/81模拟秒，Final播放25.2976秒；五音频全文SHA与206/128字节Range一致，无页面/非取消类资源失败。|
+|实际图像审查|主侧打开最终双阵营联系图、动作图、150人双DPR、图鉴、雪地、代表视口及最新生产离线/自然交战截图，不只依靠代理回报或静态检查。|
+
+主入口`metrics/summary.json`；新证据`unit-visual-redesign.json`、`unit-visual-gameplay-equivalence.json`，最新`browser-performance.json`、`release.json`、`v11-motion-browser.json`均有相应源码锁。旧v1.1等价报告保留为历史，汇总脚本按当前源码匹配，不用新故事指纹冒充旧验收。音频四文件未改，305秒长播证据源码锁仍有效，未无必要重跑并冒充新听审。
+
+**边界**：本轮完整性能通过不解释过去Windows182.5/163.7ms尖峰，根因专项仍未决；旧缓存安全升级提示尚未实现。没有人类辨识率实验、人耳听审、人工完整战役或实体低配/Firefox/Safari验收。用户已授权提交部署，新版CI/公网证据将在完成后归档；下列封面与v1.1公网记录仅属于历史版本。
+
+## 首页封面改版（已提交部署并完成公网验收，历史）
 
 - **262项单测 / 19文件通过**，含新增3项首页结构与兼容性检查；类型与生产构建通过。JS138.74kB/gzip52.77kB、CSS35.84kB/gzip8.91kB。
 - 首页专项 **2/2浏览器用例通过**：六窗口640×480、800×600、1024×768、1366×768、1440×1000、1920×1080；无横纵溢出、标题/按钮/页脚不交叠，所有模式、存档进度、设置/鸣谢与键盘跳转保留。`metrics/cover-redesign.json` 锁定模板/首页CSS/入口文件；实际打开上述多尺寸截图，归档 `screenshots/cover/`。
@@ -9,6 +30,14 @@
 - 用户随后明确授权“提交和部署”。提交 `7cab52f` 后，原完整流水线 [40057479233](https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40057479233) 一次通过：**262单测、14/14浏览器（51.4秒）、生产离线验证**，build2m15、deploy10s。Ubuntu/Node22/Chrome156压力绘图中位0.6ms/P95 13.4ms、持续52.7FPS，普通AI峰值7.4ms、困难52.6ms、大师0.9ms、小军20.3ms；原100ms门槛未改。`metrics/cover-ci-run.json` 保存API步骤状态和日志原行。**这是独立CI环境通过，不是Windows尖峰已修复或可随意忽略的证明**；本地两次失败、三次隔离通过及诊断全部保留，Windows性能专项仍未决。
 - 真实公网 `https://funct1ons.github.io/chronicles-of-ember-and-dawn/` 新封面验收通过（`metrics/cover-live-pages.json`）：标题为「烬辉战纪」，JS `index-BExlH8Ov.js`、SW与本地构建逐字节相同，无开发API。已实际打开1440封面与断网交战截图；图鉴/搜索/故事、U/B快捷键/暂停保留，Final从1.0096推进13.0149秒。SW缓存 `ember-dawn-605d01d47a707c` 共21文件；断网重载8秒后9人口、Final播放2.47秒，五首音频完整SHA与本地一致、Range206/128字节，无页面错误或非取消类资源失败。主动导航取消媒体请求单列为ERR_ABORTED，非隐藏真实错误。
 - 本次未改战斗/AI/经济/音频/运动代码；源码未变不等于浏览器性能不受影响。旧521局、305秒音频长播与运动审计仍为对应源码的既有证据，不冒充本轮重跑。下列为 **v1.1发布时的历史验收**；其性能报告另存 `metrics/v11-published-browser-performance.json`，当前 `browser-performance.json` 如实保留最新执行结果。
+
+### 旧缓存回访：此前验收的覆盖缺口
+
+用户报告 Pages 仍显示旧封面后，主侧再次核对 `e166642` 对应部署成功，真实公网根入口、JS/SW 字节与 dist 相同；全新 Chromium 截图为新版（`metrics/cover-live-recheck.json`）。这不能替代已有缓存的升级验证。
+
+独立 debugger 在有界真实 SW/CacheStorage fixture 中复现：旧缓存返回首次回访页面；新 worker 已激活/接管且 fetch 返回新 HTML 时，同一已加载 DOM/JS/CSS 仍旧，没有更新提示；激活后第二次 reload 得到新版。延迟一首缓存资源可使 worker 停留 installing；带 `?v=cover-7cab52f` 的在线导航可在旧 worker 控制时加载新版。使用原样生成器、精确提取的旧注册分支；HTML/App/音频为微型替代，不测真实音乐下载时长或游戏中升级。一次初始化等待不充分的无效尝试保留，不作产品证据；一次有效合并场景通过。详见 `metrics/cover-cache-upgrade-diagnosis.json`、`scripts/diagnose-cache-upgrade.mjs`。主侧审查报告/脚本，`node --check`、`git diff --check` 通过，未新增浏览器重复尝试。
+
+用户浏览器的具体 SW/HTTP 状态未实证；本地 no-store 只排除该 fixture 的 HTTP 缓存，不能替用户排除 CDN/HTTP 缓存。当前绕过入口需联网，不清存档；任意查询 URL 不保证离线加载。升级提示/安全确认刷新尚未实现，不能把本次诊断写成自动更新功能验收。本轮未改运行时代码，未重新部署。
 
 ## v1.1 环境与复现
 
@@ -32,6 +61,7 @@ npm.cmd run validate:fresh
 npm.cmd run ai:coverage
 npm.cmd run challenges:witness
 npm.cmd run motion:audit
+npm.cmd run verify:unit-visuals
 npm.cmd run verify:motion
 npm.cmd run verify:audio
 npm.cmd run audio:analyze
@@ -39,7 +69,7 @@ npm.cmd run metrics:report
 npm.cmd audit
 ```
 
-`verify:motion`、`verify:audio`、`audio:analyze` 使用独立运行的开发服务器（默认4199，可用 `GAME_URL` 指向另一端口）。性能实测不要与批量对战同时运行；Node 计时不等于浏览器计时。
+`verify:unit-visuals`、`verify:motion`、`verify:audio`、`audio:analyze` 使用独立运行的开发服务器（默认4199，可用 `GAME_URL` 指向另一端口）。性能实测不要与批量对战同时运行；Node 计时不等于浏览器计时。
 
 ## v1.1 发布时执行状态（历史基线）
 

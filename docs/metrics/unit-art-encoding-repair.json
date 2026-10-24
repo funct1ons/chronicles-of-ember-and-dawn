@@ -1,0 +1,9 @@
+{
+  "file": "src/render/units/mobile.ts",
+  "issue": "Legacy PowerShell comment rewrite left seven invalid header lines",
+  "repair": "Restore only seven comment headers as UTF-8",
+  "emittedJavaScriptIdentical": true,
+  "emittedSha256": "0cfa59954bdde7f07720c0dab5da57eafe35a97782456afa1260ecc596419dfd",
+  "beforeSha256": "3a95e932ca4e39cd07cc6c75e1cfeb743d61b6c39a389c205bcbb09e2454bf28",
+  "afterSha256": "93bfaaa6036137f7e1358b474ebdc3e59342d98b3d6725f3f614b02df6806a0d"
+}

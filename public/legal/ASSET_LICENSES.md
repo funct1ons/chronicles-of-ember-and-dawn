@@ -4,7 +4,7 @@
 |内容|源文件/交付资源|授权|
 |---|---|---|
 |世界观、中文/英文标题、兵种与关卡文本|src/data、src/ui|项目MIT，见根目录LICENSE|
-|16兵种、蓝/红色板、待机/行走/攻击像素帧|src/render/sprites.ts；public/art/unit-atlas-*.png|项目MIT|
+|16兵种、蓝/红色板、待机/行走/攻击像素帧|src/render/sprites.ts、src/render/units/*.ts；public/art/unit-atlas-*.png|项目MIT|
 |四战场、旗帜、要塞与粒子美术|src/render/scenery.ts、BattleRenderer.ts；public/art/battlefield-*.png|项目MIT|
 |UI SVG线稿图标、纹章与favicon|src/ui/icons.ts、public/favicon.svg|项目MIT|
 |本地合成的战斗/环境/UI音效|src/audio/AudioManager.ts|项目MIT|

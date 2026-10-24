@@ -1,5 +1,5 @@
 import {describe,it,expect} from 'vitest';
-import {UNITS,ALL_UNIT_IDS} from './units';
+import {UNITS,ALL_UNIT_IDS,UNIT_BY_ID} from './units';
 import {MISSIONS,CHALLENGES,defaultConfig,missionConfig} from './missions';
 describe('release content',()=>{
  it('has 16 unique, complete tactical profiles',()=>{expect(UNITS).toHaveLength(16);expect(new Set(ALL_UNIT_IDS).size).toBe(16);expect(new Set(UNITS.map(u=>u.role)).size).toBe(16);for(const u of UNITS){expect(u.cost).toBeGreaterThan(0);expect(u.income).toBeGreaterThan(0);expect(u.hp).toBeGreaterThan(0);expect(u.supply).toBeGreaterThan(0);expect(u.ability.length).toBeGreaterThan(0);expect(u.cooldown).toBeGreaterThan(0);}});
@@ -33,6 +33,28 @@ describe('release content',()=>{
   const joined=UNITS.map(u=>u.lore).join('');
   for(const anchor of ['星火','苍曜','赤烬'])expect(joined).toContain(anchor);
   expect(joined).not.toMatch(/惧穿甲|穿甲武器/);
+ });
+ it('never lets prose promise a skill or a recruiter the game does not have',()=>{
+  for(const u of UNITS){
+   // Both banners field every role: no story may read as single-side recruitment.
+   expect(u.lore).toMatch(/苍曜|赤烬|两军|各为其主|各留数人/);
+   // Cosmetics only: prose must not imply stealth, summons, flight, teleports or
+   // collision bypass, because the simulation implements none of them.
+   expect(u.lore).not.toMatch(/隐形|传送|穿墙|召唤|飞行|绕过碰撞|无视碰撞/);
+  }
+ });
+ it('keeps each story on its redesigned silhouette',()=>{
+  const markers:Record<string,RegExp>={
+   levy:/圆木盾|软帽/, runner:/短披|前倾/, shield:/塔盾/, pike:/细长/, axe:/双臂裸露/,
+   bow:/长弓/, crossbow:/横弩|绞盘/, rider:/不披甲|轻快马具/, knight:/旗缨/, mage:/星环/,
+   healer:/白金兜帽/, ballista:/弓臂|巨轮/, assassin:/斜披|短刃/, guardian:/页锤|棱面巨盾/,
+   firemage:/秃首|火盆/, paladin:/冠盔|长披/,
+  };
+  for(const [id,marker] of Object.entries(markers))expect(UNIT_BY_ID[id].lore).toMatch(marker);
+  // The new militia artist explicitly uses spearHead: unlike the old sword,
+  // the redraw now matches the original short-spear/wood-shield equipment.
+  expect(UNIT_BY_ID['levy'].lore).toContain('短矛');
+  expect(UNIT_BY_ID['shield'].description).not.toContain('穿甲');
  });
  it('does not hide a lore-only balance change behind the codex fields',()=>{
   expect(UNITS.find(u=>u.id==='axe')!.heavyDamage).toBe(53);

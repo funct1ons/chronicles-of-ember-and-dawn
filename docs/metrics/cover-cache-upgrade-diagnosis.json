@@ -1,0 +1,1212 @@
+{
+  "generatedAt": "2026-10-24T04:51:11.574Z",
+  "agent": "debugger",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\files\\code\\MiragineWar\\scripts\\diagnose-cache-upgrade.mjs --prior .tmp/cover-cache-upgrade-2026-10-24T04-49-12-159Z-6f95412f/result.json",
+  "executionHistory": {
+    "totalBrowserScenarioAttempts": 2,
+    "currentScenarioCount": 1,
+    "prior": {
+      "path": ".tmp/cover-cache-upgrade-2026-10-24T04-49-12-159Z-6f95412f/result.json",
+      "sha256": "79bf711f2ce95cf731a1247d92042932238a65b09e58104ee06a2d67748d1c68",
+      "status": "failed",
+      "evidenceDirectory": ".tmp/cover-cache-upgrade-2026-10-24T04-49-12-159Z-6f95412f",
+      "runnerSha256": "1c306455f3169bfafdb211b516024137692a859be2600d20343639b8f6d12499",
+      "cases": [
+        {
+          "name": "normal-install",
+          "status": "failed",
+          "failure": {
+            "message": "First reload did not retain old release",
+            "stack": "Error: First reload did not retain old release\n    at check (file:///C:/files/code/MiragineWar/scripts/diagnose-cache-upgrade.mjs:32:59)\n    at file:///C:/files/code/MiragineWar/scripts/diagnose-cache-upgrade.mjs:204:4"
+          }
+        }
+      ],
+      "invalidation": "Diagnostic harness error: this installed Playwright waitForFunction treats a returned Promise as truthy before its boolean resolution; seed snapshot active=null/installing=installing proves the old SW was NOT ready. No product upgrade conclusion from this attempt. Fixed using bounded Node-side polling that awaits each page.evaluate result; not rerun as a separate normal scenario.",
+      "implementationEvidence": "node_modules/playwright-core/lib/coreBundle.js waitForFunctionExpression: const success=predicate(); if(success) fulfill(success) without awaiting predicate."
+    }
+  },
+  "localHead": "e1666425dc046c54b5028a2ea4a27ecd6aec59ae",
+  "oldCommit": "7c8b31cfadca5af9b3cf9b708b8e4fdf7ea31eae",
+  "newCoverCommit": "7cab52fd912fc15f215f34c62f6e64f166814f77",
+  "deployment": {
+    "suppliedHead": "e166642",
+    "suppliedSuccessfulActionsRun": "40058184203",
+    "independentlyVerifiedHere": false,
+    "parentReport": "docs/metrics/cover-live-recheck.json",
+    "parentResult": "Network/fresh browser passed; deployed index-BExlH8Ov.js matches dist. No public requests in this runner."
+  },
+  "evidenceDirectory": ".tmp/cover-cache-upgrade-2026-10-24T04-51-11-431Z-e725a31e",
+  "sources": {
+    "src/main.ts": {
+      "sha256": "02900ee1a622664b521aaebcbf1083419c8c1c20a506513680f33fc85799ea93"
+    },
+    "scripts/generate-sw.mjs": {
+      "sha256": "2c21e1d311017693d3c49d235cd1b9111dc5c9c202adc1f39f99d7cb21840c05",
+      "sameAsOldCommit": true
+    },
+    "scripts/sw-cache.mjs": {
+      "sha256": "5b6696a7f6cd30f327a9d8de1b928b98fcf24af710e9ff151ad094953a260372",
+      "sameAsOldCommit": true
+    },
+    "playwright.config.ts": {
+      "sha256": "15638b979a9faff33c5c9c3f3f9a7b3d332933cefa333473d92693ca1113d50e"
+    }
+  },
+  "registration": {
+    "source": "7c8b31c:src/main.ts production branch",
+    "sha256": "f127f1526e042af0482c7e7aa9b8eb5725bc1e0dd519c724c7dac4adeb007e6d",
+    "matchesCurrent": true,
+    "file": "production-registration.js"
+  },
+  "bounds": {
+    "launchMs": 12000,
+    "contextMs": 5000,
+    "navigationMs": 7000,
+    "transitionMs": 9000,
+    "gateMaxMs": 12000,
+    "heldObservationMs": 1000,
+    "perCaseMs": 30000,
+    "overallMs": 75000,
+    "cleanupMs": 4000,
+    "responseBytesMax": 65536
+  },
+  "status": "reproduced",
+  "cases": [
+    {
+      "name": "combined-music-query-and-old-dom-upgrade",
+      "startedAt": "2026-10-24T04:51:12.103Z",
+      "snapshots": [
+        {
+          "label": "old-release-seeded-and-controlled",
+          "at": "2026-10-24T04:51:12.371Z",
+          "documentId": "37910160-f046-4719-ba4f-6916b0adade6",
+          "mainVersion": "old",
+          "toasts": [
+            "所有战场资源已备妥，可离线游玩。"
+          ],
+          "events": [
+            {
+              "type": "document-start",
+              "atMs": 8.900000005960464,
+              "domVersion": null
+            },
+            {
+              "type": "load",
+              "atMs": 22.900000005960464,
+              "domVersion": "old"
+            },
+            {
+              "type": "controllerchange",
+              "atMs": 51.900000005960464,
+              "domVersion": "old",
+              "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js"
+            }
+          ],
+          "domVersion": "old",
+          "cssVersion": "old",
+          "htmlVersion": "old",
+          "registration": {
+            "active": "activated",
+            "installing": null,
+            "waiting": null,
+            "activeIsController": true,
+            "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+            "updateViaCache": "imports"
+          },
+          "cacheNames": [
+            "ember-dawn-87d36bd5055b09"
+          ],
+          "cacheContents": {
+            "ember-dawn-87d36bd5055b09": [
+              "/cover-cache-upgrade/assets/cover-old.css",
+              "/cover-cache-upgrade/assets/main-old.js",
+              "/cover-cache-upgrade/audio/epic_march_loop.wav",
+              "/cover-cache-upgrade/audio/eye_of_the_storm.mp3",
+              "/cover-cache-upgrade/audio/hope_orchestral_battle_music.ogg",
+              "/cover-cache-upgrade/audio/the_final_battle.ogg",
+              "/cover-cache-upgrade/audio/war_theme.ogg",
+              "/cover-cache-upgrade/index.html"
+            ]
+          }
+        },
+        {
+          "label": "first-reload-before-update-completes",
+          "at": "2026-10-24T04:51:12.396Z",
+          "documentId": "ce94e228-a645-463b-932b-55fdbe9b1721",
+          "mainVersion": "old",
+          "toasts": [],
+          "events": [
+            {
+              "type": "document-start",
+              "atMs": 7.5,
+              "domVersion": null
+            },
+            {
+              "type": "load",
+              "atMs": 8.799999982118607,
+              "domVersion": "old"
+            }
+          ],
+          "domVersion": "old",
+          "cssVersion": "old",
+          "htmlVersion": "old",
+          "registration": {
+            "active": "activated",
+            "installing": null,
+            "waiting": null,
+            "activeIsController": true,
+            "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+            "updateViaCache": "imports"
+          },
+          "cacheNames": [
+            "ember-dawn-87d36bd5055b09"
+          ],
+          "cacheContents": {
+            "ember-dawn-87d36bd5055b09": [
+              "/cover-cache-upgrade/assets/cover-old.css",
+              "/cover-cache-upgrade/assets/main-old.js",
+              "/cover-cache-upgrade/audio/epic_march_loop.wav",
+              "/cover-cache-upgrade/audio/eye_of_the_storm.mp3",
+              "/cover-cache-upgrade/audio/hope_orchestral_battle_music.ogg",
+              "/cover-cache-upgrade/audio/the_final_battle.ogg",
+              "/cover-cache-upgrade/audio/war_theme.ogg",
+              "/cover-cache-upgrade/index.html"
+            ]
+          }
+        },
+        {
+          "label": "one-new-music-response-still-held",
+          "at": "2026-10-24T04:51:15.321Z",
+          "documentId": "ce94e228-a645-463b-932b-55fdbe9b1721",
+          "mainVersion": "old",
+          "toasts": [],
+          "events": [
+            {
+              "type": "document-start",
+              "atMs": 7.5,
+              "domVersion": null
+            },
+            {
+              "type": "load",
+              "atMs": 8.799999982118607,
+              "domVersion": "old"
+            },
+            {
+              "type": "explicit-update-resolved",
+              "atMs": 1916.5999999940395
+            },
+            {
+              "type": "updatefound",
+              "atMs": 1916.5999999940395,
+              "domVersion": "old"
+            },
+            {
+              "type": "worker-observed",
+              "atMs": 1916.5999999940395,
+              "domVersion": "old",
+              "state": "installing"
+            }
+          ],
+          "domVersion": "old",
+          "cssVersion": "old",
+          "htmlVersion": "old",
+          "registration": {
+            "active": "activated",
+            "installing": "installing",
+            "waiting": null,
+            "activeIsController": true,
+            "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+            "updateViaCache": "imports"
+          },
+          "cacheNames": [
+            "ember-dawn-87d36bd5055b09",
+            "ember-dawn-31779d7a4ca344"
+          ],
+          "cacheContents": {
+            "ember-dawn-87d36bd5055b09": [
+              "/cover-cache-upgrade/assets/cover-old.css",
+              "/cover-cache-upgrade/assets/main-old.js",
+              "/cover-cache-upgrade/audio/epic_march_loop.wav",
+              "/cover-cache-upgrade/audio/eye_of_the_storm.mp3",
+              "/cover-cache-upgrade/audio/hope_orchestral_battle_music.ogg",
+              "/cover-cache-upgrade/audio/the_final_battle.ogg",
+              "/cover-cache-upgrade/audio/war_theme.ogg",
+              "/cover-cache-upgrade/index.html"
+            ],
+            "ember-dawn-31779d7a4ca344": []
+          }
+        },
+        {
+          "label": "query-entry-new-page-while-old-worker-still-controls",
+          "at": "2026-10-24T04:51:15.484Z",
+          "documentId": "35446821-134a-492b-8fbc-3de3532df7e0",
+          "mainVersion": "new",
+          "toasts": [],
+          "events": [
+            {
+              "type": "document-start",
+              "atMs": 15.700000017881393,
+              "domVersion": null
+            },
+            {
+              "type": "load",
+              "atMs": 48,
+              "domVersion": "new"
+            },
+            {
+              "type": "worker-observed",
+              "atMs": 49.70000001788139,
+              "domVersion": "new",
+              "state": "installing"
+            }
+          ],
+          "domVersion": "new",
+          "cssVersion": "new",
+          "htmlVersion": "new",
+          "registration": {
+            "active": "activated",
+            "installing": "installing",
+            "waiting": null,
+            "activeIsController": true,
+            "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+            "updateViaCache": "imports"
+          },
+          "cacheNames": [
+            "ember-dawn-87d36bd5055b09",
+            "ember-dawn-31779d7a4ca344"
+          ],
+          "cacheContents": {
+            "ember-dawn-87d36bd5055b09": [
+              "/cover-cache-upgrade/assets/cover-old.css",
+              "/cover-cache-upgrade/assets/main-old.js",
+              "/cover-cache-upgrade/audio/epic_march_loop.wav",
+              "/cover-cache-upgrade/audio/eye_of_the_storm.mp3",
+              "/cover-cache-upgrade/audio/hope_orchestral_battle_music.ogg",
+              "/cover-cache-upgrade/audio/the_final_battle.ogg",
+              "/cover-cache-upgrade/audio/war_theme.ogg",
+              "/cover-cache-upgrade/index.html"
+            ],
+            "ember-dawn-31779d7a4ca344": []
+          }
+        },
+        {
+          "label": "new-worker-active-and-controller-without-navigation",
+          "at": "2026-10-24T04:51:16.542Z",
+          "documentId": "ce94e228-a645-463b-932b-55fdbe9b1721",
+          "mainVersion": "old",
+          "toasts": [],
+          "events": [
+            {
+              "type": "document-start",
+              "atMs": 7.5,
+              "domVersion": null
+            },
+            {
+              "type": "load",
+              "atMs": 8.799999982118607,
+              "domVersion": "old"
+            },
+            {
+              "type": "explicit-update-resolved",
+              "atMs": 1916.5999999940395
+            },
+            {
+              "type": "updatefound",
+              "atMs": 1916.5999999940395,
+              "domVersion": "old"
+            },
+            {
+              "type": "worker-observed",
+              "atMs": 1916.5999999940395,
+              "domVersion": "old",
+              "state": "installing"
+            },
+            {
+              "type": "worker-statechange",
+              "atMs": 3117.5999999940395,
+              "domVersion": "old",
+              "state": "installed"
+            },
+            {
+              "type": "worker-statechange",
+              "atMs": 3121.0999999940395,
+              "domVersion": "old",
+              "state": "activating"
+            },
+            {
+              "type": "controllerchange",
+              "atMs": 3121.0999999940395,
+              "domVersion": "old",
+              "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js"
+            },
+            {
+              "type": "worker-statechange",
+              "atMs": 4126.0999999940395,
+              "domVersion": "old",
+              "state": "activated"
+            }
+          ],
+          "domVersion": "old",
+          "cssVersion": "old",
+          "htmlVersion": "old",
+          "registration": {
+            "active": "activated",
+            "installing": null,
+            "waiting": null,
+            "activeIsController": true,
+            "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+            "updateViaCache": "imports"
+          },
+          "cacheNames": [
+            "ember-dawn-31779d7a4ca344"
+          ],
+          "cacheContents": {
+            "ember-dawn-31779d7a4ca344": [
+              "/cover-cache-upgrade/assets/cover-new.css",
+              "/cover-cache-upgrade/assets/main-new.js",
+              "/cover-cache-upgrade/audio/epic_march_loop.wav",
+              "/cover-cache-upgrade/audio/eye_of_the_storm.mp3",
+              "/cover-cache-upgrade/audio/hope_orchestral_battle_music.ogg",
+              "/cover-cache-upgrade/audio/the_final_battle.ogg",
+              "/cover-cache-upgrade/audio/war_theme.ogg",
+              "/cover-cache-upgrade/index.html"
+            ]
+          }
+        },
+        {
+          "label": "second-reload-after-new-worker-activation",
+          "at": "2026-10-24T04:51:16.610Z",
+          "documentId": "9ae2f4cc-34ed-47d0-b3d3-b977daae84c0",
+          "mainVersion": "new",
+          "toasts": [],
+          "events": [
+            {
+              "type": "document-start",
+              "atMs": 12.5,
+              "domVersion": null
+            },
+            {
+              "type": "load",
+              "atMs": 22.900000005960464,
+              "domVersion": "new"
+            }
+          ],
+          "domVersion": "new",
+          "cssVersion": "new",
+          "htmlVersion": "new",
+          "registration": {
+            "active": "activated",
+            "installing": null,
+            "waiting": null,
+            "activeIsController": true,
+            "controllerURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+            "updateViaCache": "imports"
+          },
+          "cacheNames": [
+            "ember-dawn-31779d7a4ca344"
+          ],
+          "cacheContents": {
+            "ember-dawn-31779d7a4ca344": [
+              "/cover-cache-upgrade/assets/cover-new.css",
+              "/cover-cache-upgrade/assets/main-new.js",
+              "/cover-cache-upgrade/audio/epic_march_loop.wav",
+              "/cover-cache-upgrade/audio/eye_of_the_storm.mp3",
+              "/cover-cache-upgrade/audio/hope_orchestral_battle_music.ogg",
+              "/cover-cache-upgrade/audio/the_final_battle.ogg",
+              "/cover-cache-upgrade/audio/war_theme.ogg",
+              "/cover-cache-upgrade/index.html"
+            ]
+          }
+        }
+      ],
+      "workerVersions": [
+        {
+          "at": "2026-10-24T04:51:12.265Z",
+          "versions": []
+        },
+        {
+          "at": "2026-10-24T04:51:12.300Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "stopped",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 0,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.302Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "stopped",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.302Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.302Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.307Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "installing",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.307Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "installing",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.318Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "installed",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.318Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activating",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.318Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activating",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.318Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.378Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:12.382Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:14.290Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "stopped",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 0,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:14.290Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 0,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:14.290Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 0,
+              "controlledClients": [],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:14.293Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "new",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:14.294Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "starting",
+              "status": "installing",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:14.294Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "installing",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.422Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.495Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "installed",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.500Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "stopping",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": [],
+              "targetId": "4E7CD9BFD08FBC5D86E09E980DD56FC6"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.502Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "stopped",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.502Z",
+          "versions": [
+            {
+              "versionId": "0",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "stopped",
+              "status": "redundant",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817472.30148,
+              "controlledClients": []
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.502Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activating",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.502Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activating",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:15.502Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activating",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [
+                "373DCB5984FFF5921659B480048B75E7",
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:16.503Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [
+                "373DCB5984FFF5921659B480048B75E7",
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:16.595Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [
+                "373DCB5984FFF5921659B480048B75E7",
+                "43D21045343A14AB8705415121890E6E"
+              ],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        },
+        {
+          "at": "2026-10-24T04:51:16.601Z",
+          "versions": [
+            {
+              "versionId": "1",
+              "registrationId": "0",
+              "scriptURL": "http://127.0.0.1:49562/cover-cache-upgrade/sw.js",
+              "runningStatus": "running",
+              "status": "activated",
+              "scriptLastModified": 0,
+              "scriptResponseTime": 1792817474.28402,
+              "controlledClients": [
+                "373DCB5984FFF5921659B480048B75E7"
+              ],
+              "targetId": "7DE9950CB0207498C4D4B03109C69464"
+            }
+          ]
+        }
+      ],
+      "responses": [
+        {
+          "at": "2026-10-24T04:51:12.277Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+          "status": 200,
+          "fromServiceWorker": false
+        },
+        {
+          "at": "2026-10-24T04:51:12.292Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-old.css",
+          "status": 200,
+          "fromServiceWorker": false
+        },
+        {
+          "at": "2026-10-24T04:51:12.294Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-old.js",
+          "status": 200,
+          "fromServiceWorker": false
+        },
+        {
+          "at": "2026-10-24T04:51:12.379Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        {
+          "at": "2026-10-24T04:51:12.392Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-old.css",
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        {
+          "at": "2026-10-24T04:51:12.392Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-old.js",
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        {
+          "at": "2026-10-24T04:51:16.557Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/index.html",
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        {
+          "at": "2026-10-24T04:51:16.595Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        {
+          "at": "2026-10-24T04:51:16.601Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-new.css",
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        {
+          "at": "2026-10-24T04:51:16.601Z",
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-new.js",
+          "status": 200,
+          "fromServiceWorker": true
+        }
+      ],
+      "cdpResponses": [
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+          "type": "Document",
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-old.css",
+          "type": "Stylesheet",
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-old.js",
+          "type": "Script",
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/favicon.ico",
+          "type": "Other",
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+          "type": "Document",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-old.css",
+          "type": "Stylesheet",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-old.js",
+          "type": "Script",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/index.html",
+          "type": "Fetch",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+          "type": "Document",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-new.css",
+          "type": "Stylesheet",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-new.js",
+          "type": "Script",
+          "fromDiskCache": true,
+          "fromServiceWorker": true,
+          "status": 200,
+          "cacheControl": "no-store"
+        }
+      ],
+      "errors": [],
+      "deployedNewAt": "2026-10-24T04:51:12.371Z",
+      "firstReload": {
+        "fromServiceWorker": true,
+        "status": 200
+      },
+      "musicHold": {
+        "file": "audio/war_theme.ogg",
+        "enteredAt": "2026-10-24T04:51:14.300Z",
+        "observedMs": 1021,
+        "releasedAt": "2026-10-24T04:51:15.484Z"
+      },
+      "queryResponses": [
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/?v=cover-7cab52f",
+          "status": 200,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/cover-new.css",
+          "status": 200,
+          "fromServiceWorker": false
+        },
+        {
+          "url": "http://127.0.0.1:49562/cover-cache-upgrade/assets/main-new.js",
+          "status": 200,
+          "fromServiceWorker": false
+        }
+      ],
+      "queryNavigation": {
+        "query": "?v=cover-7cab52f",
+        "status": 200,
+        "fromServiceWorker": false
+      },
+      "fetchAfterActivation": {
+        "status": 200,
+        "fetchedHtmlVersion": "new",
+        "loadedDomVersion": "old"
+      },
+      "secondReload": {
+        "fromServiceWorker": true,
+        "status": 200
+      },
+      "observed": {
+        "firstReloadOldFromSW": true,
+        "installHeldByMusic": true,
+        "newWorkerControlsOldDocument": true,
+        "documentReplacedByActivation": false,
+        "autoRefreshObserved": false,
+        "updateToastObserved": false,
+        "secondReloadAfterActivationLoadsNew": true,
+        "queryEntryLoadsNewUnderOldController": true
+      },
+      "status": "reproduced",
+      "finishedAt": "2026-10-24T04:51:16.627Z"
+    }
+  ],
+  "method": {
+    "faithful": [
+      "Real browser ServiceWorker/CacheStorage, not mocked APIs.",
+      "Exact current scripts/generate-sw.mjs, run twice in owned temporary cwd with tiny old/new dist trees; generator and sw-cache.mjs equal old commit.",
+      "Exact extracted old production registration branch; only import.meta.env.BASE_URL substituted with fixture scope.",
+      "Cache-first exact URLs, directory alias, whole-release addAll including five music files, skipWaiting, old-cache deletion and clients.claim are unmodified generated code.",
+      "Same SW URL and scope across releases, hashed main/CSS names, fresh isolated context per case; no user browser caches touched."
+    ],
+    "boundaries": [
+      "HTML and App are marker-only substitutes: DOM/main/CSS versions and toast calls, not real cover rendering or gameplay.",
+      "Five music payloads are tiny invalid placeholder bytes; they are precached but never played. No real transfer-size/codec/performance claims.",
+      "A bounded server-side gate delays sw.js until first-reload snapshot, to make update timing deterministic; explicit registration.update() then requests discovery. This does not measure automatic browser update-check latency.",
+      "The combined scenario delays one new music response, opens a second tab at the query upgrade entry under the old worker, then releases music. The original tab is preserved to measure old DOM after activation and a subsequent reload. This proves a dependency/bypass, not actual user installation duration.",
+      "All HTTP responses are Cache-Control: no-store. This rules HTTP cache out of this local reproduction; it does not test or exonerate GitHub/CDN/user HTTP caches.",
+      "Old hashed fixture assets remain available as fallback on the local server. GitHub release artifact retention is not simulated; no multi-tab/update-during-battle compatibility claim."
+    ],
+    "expected": "After new SW activates/claims, the already loaded document remains old. A later navigation/reload after activation should load new cached HTML/main/CSS.",
+    "resources": "One ephemeral loopback server only, closed in finally; no interaction with existing 4199 or other servers; no build of repository dist."
+  },
+  "fixtures": {
+    "old": {
+      "cacheName": "ember-dawn-87d36bd5055b09",
+      "swSha256": "963ad81502379490f66482b3e83d7c65e3b147be8b4aedb01a1aed28f43ffd21",
+      "generation": "Offline cache 87d36bd5055b09: 8 files, music included.",
+      "fileCount": 9,
+      "byteCount": 4197
+    },
+    "new": {
+      "cacheName": "ember-dawn-31779d7a4ca344",
+      "swSha256": "2ff37d9fead1f2c87a0026657b5221a3caaf6078049600a4ffa14de5f6a413fc",
+      "generation": "Offline cache 31779d7a4ca344: 8 files, music included.",
+      "fileCount": 9,
+      "byteCount": 4197
+    }
+  },
+  "browser": {
+    "configuredBy": "playwright.config.ts use.launchOptions/headless/viewport (actual local selection, no download)",
+    "launchOptions": {
+      "executablePath": "C:\\Users\\admin\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe",
+      "headless": true,
+      "timeout": 12000
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "executablePath": "C:\\Users\\admin\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe",
+    "version": "153.0.8010.12"
+  },
+  "url": "http://127.0.0.1:49562/cover-cache-upgrade/",
+  "conclusion": {
+    "confirmedByLocalReproduction": [
+      "One valid combined scenario after one retained invalid harness attempt; no separate normal-install rerun.",
+      "First reload under old controller was served old HTML/main/CSS from SW despite HTTP no-store.",
+      "After complete new install, skipWaiting/claim switched the controller and deleted the old release cache; the same old document/main/CSS remained, with no update toast or reload.",
+      "A diagnostic fetch returned new HTML while that same document remained old, separating current resource serving from already executed/rendered content.",
+      "A second reload performed after activation loaded new HTML/main/CSS from the new SW.",
+      "Holding one music response kept the new worker installing (not waiting) and the old worker active.",
+      "While music was still held and old worker still controlled, a second tab at ?v=cover-7cab52f was NOT served by SW and loaded new HTML/main/CSS. Releasing music activated the new worker; original tab remained old until the explicit second reload."
+    ],
+    "rootCause": "Confirmed mechanism: cache-first navigation gives the first reload the old page; the production registration returns early when reg.active exists, does not handle upgrade notification/controllerchange, and skipWaiting/claim do not reload an existing document. Full addAll music is an independent pre-activation gate.",
+    "liveAttribution": "Not confirmed for the user browser: no controller/version/install/HTTP evidence from that browser. This mechanism can explain a successful deployment still showing the old cover; deployment failure cannot be inferred from that DOM alone.",
+    "httpCache": "Not needed for either reproduced symptom and excluded locally by no-store plus SW-served old navigations. A live stale HTTP/CDN response remains unmeasured; parent report independently confirms currently deployed bytes. If a later fresh navigation still receives old bytes after activation, compare its actual response bytes/cache headers and manifest.",
+    "immediateUpgradeEntry": {
+      "query": "?v=cover-7cab52f",
+      "reproduced": true,
+      "reason": "Old worker only aliases an exact scope-root navigation to index.html; query-bearing root URL is not in URLS. New hashed main/CSS URLs are also absent from the old manifest and fall through to network.",
+      "caveat": "Verified on a faithful local fixture, not in the user browser. Requires online/current server bytes. Loading new code under an old worker temporarily does not establish full offline readiness; wait for the new install to finish. Use at home/safe screen, not mid-battle; it does not erase saves or caches."
+    },
+    "smallestRobustFollowUp": [
+      "Observe updatefound/installing state and controllerchange even when registration already has an active worker; distinguish first offline-ready toast from update-available notice.",
+      "Offer an explicit reload-to-update action on the home/menu or safe paused boundary. Never force location.reload during battle; a controller change is not proof the current DOM updated.",
+      "Expose bounded downloading/install failure status so waiting for all music is not mistaken for deployment failure. Preserve existing full-offline behavior unless separately approving a shell/music split."
+    ],
+    "discriminatingLiveCheck": "Record current DOM/asset version, reg.installing/waiting/active/controller, current cache name and fetched index bytes. Installing+music outstanding differs from new cache+new fetched HTML+old DOM. Only after activation test one more user-approved navigation from a safe screen.",
+    "notAnAcceptance": "No claim of automatic new-page update, actual cover visual acceptance, user-browser root-cause proof, production deployment verification or gameplay-safe release compatibility."
+  },
+  "cleanup": {
+    "browserClosed": true,
+    "serverClosed": true
+  },
+  "finishedAt": "2026-10-24T04:51:17.035Z",
+  "runnerSha256": "6aae55cdddef1ce8a1c2337c09c9da97c1151202e10d7b383613f534e74dd441",
+  "artifactAudit": {
+    "at": "2026-10-24T04:53:06.616Z",
+    "status": "passed",
+    "browserRerun": false,
+    "sourceAndRunnerHashesMatch": true,
+    "verifiedScenarioAttempts": 2,
+    "script": ".tmp/cover-cache-upgrade-2026-10-24T04-51-11-431Z-e725a31e/offline-artifact-check.mjs",
+    "note": "Post-run artifact check only. Browser runner and its SHA are unchanged. Initial overly broad all-CDP-disk-flags-false audit assertion failed; inspection showed every such flag was also fromServiceWorker=true. Corrected attribution below, without any new browser attempt."
+  },
+  "httpCacheEvidence": {
+    "releaseResponseCacheControl": "no-store",
+    "fromDiskCacheFlagCount": 7,
+    "diskFlagsAlsoFromServiceWorker": true,
+    "nonSWDiskFlagCount": 0,
+    "newDeploymentBareRootNetworkRequestCount": 0,
+    "interpretation": "In this Chromium all seven SW-returned CacheStorage responses also report fromDiskCache=true. This flag alone must NOT be labelled stale HTTP cache. All served fixture release resources were no-store; first/second bare-root navigations were SW-served with no bare-root request to the new server deployment. Query HTML/main/CSS came directly from network. Live user HTTP state remains unmeasured."
+  }
+}

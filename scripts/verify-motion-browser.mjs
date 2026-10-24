@@ -8,7 +8,7 @@ let executablePath=process.env.CHROMIUM_PATH;
 if(!executablePath&&existsSync(cache))for(const d of readdirSync(cache).filter(d=>/^chromium-\d+$/.test(d)).sort((a,b)=>+b.split('-')[1]-+a.split('-')[1])){const p=join(cache,d,'chrome-win64','chrome.exe');if(existsSync(p)){executablePath=p;break;}}
 const url=process.env.GAME_URL??'http://127.0.0.1:4199/';
 const browser=await chromium.launch({executablePath,headless:true});
-const fingerprint=()=>Object.fromEntries(['src/render/BattleRenderer.ts','src/render/motion.ts','src/render/pixelViewport.ts','src/ui/App.ts','src/style.css'].map(path=>[path,createHash('sha256').update(readFileSync(path)).digest('hex')]));
+const fingerprint=()=>Object.fromEntries(['src/render/BattleRenderer.ts','src/render/motion.ts','src/render/pixelViewport.ts','src/render/sprites.ts','src/render/units/pixelArt.ts','src/render/units/infantry.ts','src/render/units/mobile.ts','src/render/units/casters.ts','src/data/units.ts','src/ui/App.ts','src/style.css'].map(path=>[path,createHash('sha256').update(readFileSync(path)).digest('hex')]));
 const report={generated:new Date().toISOString(),url,source:fingerprint(),kind:'real RAF presentation + viewport smoke; not human subjective review; deviceScaleFactor is not a physical Windows zoom test',viewports:[],errors:[]};
 mkdirSync('docs/screenshots/v11',{recursive:true});mkdirSync('docs/metrics',{recursive:true});
 try{

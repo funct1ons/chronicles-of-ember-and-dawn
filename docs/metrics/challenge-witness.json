@@ -1,14 +1,14 @@
 {
-  "generated": "2026-10-23T16:05:42.681Z",
+  "generated": "2026-10-24T06:23:30.428Z",
   "source": {
-    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+    "sha256": "fd82d170ac87125473db58255d89a7aeb7251d50698bf991ae1c09d89df3449e",
     "files": {
       "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
       "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
       "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
       "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
       "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
-      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
+      "src/data/units.ts": "7b4078cfe55f90681b9530c774e218df88d7c30e1628eecbf0ba1dee7d3fa4b9",
       "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
     }
   },
@@ -82,7 +82,7 @@
         "bow": 741,
         "runner": 34
       },
-      "cpuMs": 1004,
+      "cpuMs": 1070,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -122,7 +122,7 @@
         "runner": 24,
         "assassin": 3
       },
-      "cpuMs": 70,
+      "cpuMs": 83,
       "steps": 2903,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -161,7 +161,7 @@
         "bow": 10,
         "runner": 39
       },
-      "cpuMs": 325,
+      "cpuMs": 359,
       "steps": 4182,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -202,7 +202,7 @@
         "crossbow": 49,
         "runner": 68
       },
-      "cpuMs": 1465,
+      "cpuMs": 1536,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -244,7 +244,7 @@
         "runner": 52,
         "assassin": 7
       },
-      "cpuMs": 117,
+      "cpuMs": 115,
       "steps": 4524,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -330,7 +330,7 @@
         "bow": 384,
         "assassin": 5
       },
-      "cpuMs": 926,
+      "cpuMs": 978,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -372,7 +372,7 @@
         "runner": 47,
         "assassin": 10
       },
-      "cpuMs": 709,
+      "cpuMs": 746,
       "steps": 13277,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -415,7 +415,7 @@
         "bow": 10,
         "assassin": 12
       },
-      "cpuMs": 377,
+      "cpuMs": 407,
       "steps": 5537,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -455,7 +455,7 @@
         "runner": 15,
         "crossbow": 7
       },
-      "cpuMs": 964,
+      "cpuMs": 993,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -494,7 +494,7 @@
         "bow": 13,
         "runner": 32
       },
-      "cpuMs": 63,
+      "cpuMs": 65,
       "steps": 3240,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -534,7 +534,7 @@
         "runner": 93,
         "assassin": 5
       },
-      "cpuMs": 116,
+      "cpuMs": 122,
       "steps": 4780,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -575,7 +575,7 @@
         "runner": 102,
         "crossbow": 56
       },
-      "cpuMs": 1476,
+      "cpuMs": 1555,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -618,7 +618,7 @@
         "crossbow": 49,
         "assassin": 28
       },
-      "cpuMs": 718,
+      "cpuMs": 746,
       "steps": 21402,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -703,7 +703,7 @@
         "crossbow": 154,
         "runner": 45
       },
-      "cpuMs": 588,
+      "cpuMs": 634,
       "steps": 19610,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -745,7 +745,7 @@
         "runner": 84,
         "assassin": 5
       },
-      "cpuMs": 1234,
+      "cpuMs": 1319,
       "steps": 18849,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -788,7 +788,7 @@
         "runner": 63,
         "assassin": 36
       },
-      "cpuMs": 681,
+      "cpuMs": 699,
       "steps": 9655,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -827,7 +827,7 @@
         "bow": 760,
         "runner": 9
       },
-      "cpuMs": 998,
+      "cpuMs": 1102,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -866,7 +866,7 @@
         "bow": 3,
         "runner": 69
       },
-      "cpuMs": 230,
+      "cpuMs": 231,
       "steps": 4091,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -906,7 +906,7 @@
         "runner": 75,
         "assassin": 4
       },
-      "cpuMs": 228,
+      "cpuMs": 246,
       "steps": 5931,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -948,7 +948,7 @@
         "crossbow": 28,
         "assassin": 10
       },
-      "cpuMs": 1500,
+      "cpuMs": 1582,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -991,7 +991,7 @@
         "crossbow": 73,
         "assassin": 17
       },
-      "cpuMs": 698,
+      "cpuMs": 727,
       "steps": 21021,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -1035,7 +1035,7 @@
         "assassin": 10,
         "crossbow": 7
       },
-      "cpuMs": 160,
+      "cpuMs": 163,
       "steps": 4964,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -1079,7 +1079,7 @@
         "crossbow": 35,
         "assassin": 5
       },
-      "cpuMs": 272,
+      "cpuMs": 290,
       "steps": 8162,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -1120,7 +1120,7 @@
         "runner": 129,
         "crossbow": 147
       },
-      "cpuMs": 1657,
+      "cpuMs": 1763,
       "steps": 26257,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -1163,7 +1163,7 @@
         "crossbow": 21,
         "assassin": 1
       },
-      "cpuMs": 249,
+      "cpuMs": 250,
       "steps": 5777,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -1206,7 +1206,7 @@
         "crossbow": 35,
         "assassin": 5
       },
-      "cpuMs": 273,
+      "cpuMs": 271,
       "steps": 8162,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1242,7 +1242,7 @@
         "runner": 30,
         "crossbow": 71
       },
-      "cpuMs": 331,
+      "cpuMs": 332,
       "steps": 9531,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1278,7 +1278,7 @@
         "runner": 35,
         "crossbow": 14
       },
-      "cpuMs": 166,
+      "cpuMs": 164,
       "steps": 4726,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1351,7 +1351,7 @@
         "runner": 30,
         "crossbow": 69
       },
-      "cpuMs": 342,
+      "cpuMs": 340,
       "steps": 11086,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1387,7 +1387,7 @@
         "runner": 57,
         "crossbow": 49
       },
-      "cpuMs": 239,
+      "cpuMs": 249,
       "steps": 7472,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1426,7 +1426,7 @@
         "runner": 66,
         "assassin": 10
       },
-      "cpuMs": 1203,
+      "cpuMs": 1243,
       "steps": 25990,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1463,7 +1463,7 @@
         "assassin": 9,
         "runner": 18
       },
-      "cpuMs": 244,
+      "cpuMs": 247,
       "steps": 6266,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1500,7 +1500,7 @@
         "runner": 34,
         "assassin": 4
       },
-      "cpuMs": 594,
+      "cpuMs": 613,
       "steps": 11682,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1537,7 +1537,7 @@
         "crossbow": 63,
         "assassin": 9
       },
-      "cpuMs": 1241,
+      "cpuMs": 1264,
       "steps": 25708,
       "atLimit": false,
       "endReason": "baseDestroyed"
@@ -1573,7 +1573,7 @@
         "runner": 118,
         "crossbow": 84
       },
-      "cpuMs": 1267,
+      "cpuMs": 1302,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit"
@@ -1610,7 +1610,7 @@
         "crossbow": 56,
         "assassin": 19
       },
-      "cpuMs": 933,
+      "cpuMs": 948,
       "steps": 17888,
       "atLimit": false,
       "endReason": "baseDestroyed"

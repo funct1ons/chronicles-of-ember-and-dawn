@@ -2,53 +2,53 @@
   "units": 150,
   "frames": 120,
   "renderMedianMs": 0.5999999940395355,
-  "renderP95Ms": 5,
-  "simulation3sMs": 155.40000000596046,
-  "steadyFrames": 288,
-  "steadyFps": 95.82751048113397,
-  "frameP95Ms": 11.400000000000091,
+  "renderP95Ms": 4,
+  "simulation3sMs": 164.69999998807907,
+  "steadyFrames": 466,
+  "steadyFps": 155.04907669272998,
+  "frameP95Ms": 5.699999999999818,
   "remainingUnits": 150,
-  "ai150MedianMs": 0.8999999761581421,
-  "ai150MaxMs": 5.899999976158142,
+  "ai150MedianMs": 0.29999998211860657,
+  "ai150MaxMs": 0.5999999940395355,
   "aiByDifficulty": [
     {
       "level": 0,
       "medianMs": 0,
-      "maxMs": 5.5
+      "maxMs": 2.2999999821186066
     },
     {
       "level": 1,
-      "medianMs": 2.7000000178813934,
-      "maxMs": 3.5
+      "medianMs": 1.2000000178813934,
+      "maxMs": 1.399999976158142
     },
     {
       "level": 2,
-      "medianMs": 22.5,
-      "maxMs": 35.30000001192093
+      "medianMs": 11.900000005960464,
+      "maxMs": 23.599999994039536
     },
     {
       "level": 3,
-      "medianMs": 42.5,
-      "maxMs": 163.7000000178814
+      "medianMs": 26.599999994039536,
+      "maxMs": 52.599999994039536
     },
     {
       "level": 4,
-      "medianMs": 0.8999999761581421,
-      "maxMs": 5.899999976158142
+      "medianMs": 0.29999998211860657,
+      "maxMs": 0.5999999940395355
     }
   ],
-  "advantageForecastMaxMs": 67.2999999821186,
+  "advantageForecastMaxMs": 32.30000001192093,
   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
-  "generated": "2026-10-24T02:50:27.807Z",
+  "generated": "2026-10-24T07:44:34.416Z",
   "source": {
-    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+    "sha256": "fd82d170ac87125473db58255d89a7aeb7251d50698bf991ae1c09d89df3449e",
     "files": {
       "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
       "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
       "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
       "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
       "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
-      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
+      "src/data/units.ts": "7b4078cfe55f90681b9530c774e218df88d7c30e1628eecbf0ba1dee7d3fa4b9",
       "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
     }
   }

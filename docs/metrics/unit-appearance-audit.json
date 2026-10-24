@@ -1,0 +1,155 @@
+{
+  "method": "48x48 unshifted common anchor, alpha>=128 mask IoU; not a perceptual score or player identification test",
+  "pairs": [
+    {
+      "a": "星辉术士",
+      "b": "曙光祭司",
+      "alpha128IoU": 1,
+      "exactRgbaFractionOfOpaqueUnion": 0.8971631205673759
+    },
+    {
+      "a": "星辉术士",
+      "b": "烬火贤者",
+      "alpha128IoU": 1,
+      "exactRgbaFractionOfOpaqueUnion": 0.8971631205673759
+    },
+    {
+      "a": "曙光祭司",
+      "b": "烬火贤者",
+      "alpha128IoU": 1,
+      "exactRgbaFractionOfOpaqueUnion": 0.8971631205673759
+    },
+    {
+      "a": "誓约民兵",
+      "b": "铁壁卫士",
+      "alpha128IoU": 0.990909090909091,
+      "exactRgbaFractionOfOpaqueUnion": 0.7727272727272727
+    },
+    {
+      "a": "逐风斥候",
+      "b": "夜幕行者",
+      "alpha128IoU": 0.9681274900398407,
+      "exactRgbaFractionOfOpaqueUnion": 0.8904382470119522
+    },
+    {
+      "a": "铁壁卫士",
+      "b": "破晓执誓者",
+      "alpha128IoU": 0.9548611111111112,
+      "exactRgbaFractionOfOpaqueUnion": 0.9149305555555556
+    },
+    {
+      "a": "风暴轻骑",
+      "b": "苍穹重骑",
+      "alpha128IoU": 0.9481865284974094,
+      "exactRgbaFractionOfOpaqueUnion": 0.6683937823834197
+    },
+    {
+      "a": "誓约民兵",
+      "b": "破晓执誓者",
+      "alpha128IoU": 0.9461805555555556,
+      "exactRgbaFractionOfOpaqueUnion": 0.703125
+    },
+    {
+      "a": "誓约民兵",
+      "b": "夜幕行者",
+      "alpha128IoU": 0.9036363636363637,
+      "exactRgbaFractionOfOpaqueUnion": 0.54
+    },
+    {
+      "a": "铁壁卫士",
+      "b": "夜幕行者",
+      "alpha128IoU": 0.8954954954954955,
+      "exactRgbaFractionOfOpaqueUnion": 0.35135135135135137
+    },
+    {
+      "a": "誓约民兵",
+      "b": "逐风斥候",
+      "alpha128IoU": 0.8882783882783882,
+      "exactRgbaFractionOfOpaqueUnion": 0.5421245421245421
+    },
+    {
+      "a": "逐风斥候",
+      "b": "铁壁卫士",
+      "alpha128IoU": 0.8802177858439202,
+      "exactRgbaFractionOfOpaqueUnion": 0.35208711433756806
+    },
+    {
+      "a": "曜石禁卫",
+      "b": "破晓执誓者",
+      "alpha128IoU": 0.8738601823708206,
+      "exactRgbaFractionOfOpaqueUnion": 0.6291793313069909
+    },
+    {
+      "a": "黎明长枪",
+      "b": "钢弦弩手",
+      "alpha128IoU": 0.8632958801498127,
+      "exactRgbaFractionOfOpaqueUnion": 0.6629213483146067
+    },
+    {
+      "a": "夜幕行者",
+      "b": "破晓执誓者",
+      "alpha128IoU": 0.8554216867469879,
+      "exactRgbaFractionOfOpaqueUnion": 0.33562822719449226
+    },
+    {
+      "a": "逐风斥候",
+      "b": "裂甲战斧",
+      "alpha128IoU": 0.8422939068100358,
+      "exactRgbaFractionOfOpaqueUnion": 0.27419354838709675
+    },
+    {
+      "a": "逐风斥候",
+      "b": "破晓执誓者",
+      "alpha128IoU": 0.8405545927209706,
+      "exactRgbaFractionOfOpaqueUnion": 0.3362218370883882
+    },
+    {
+      "a": "铁壁卫士",
+      "b": "曜石禁卫",
+      "alpha128IoU": 0.8343465045592705,
+      "exactRgbaFractionOfOpaqueUnion": 0.5592705167173252
+    }
+  ],
+  "animatedPairs": [
+    {
+      "ids": [
+        "mage",
+        "healer"
+      ],
+      "minAlpha128IoU": 1,
+      "maxAlpha128IoU": 1
+    },
+    {
+      "ids": [
+        "mage",
+        "firemage"
+      ],
+      "minAlpha128IoU": 1,
+      "maxAlpha128IoU": 1
+    },
+    {
+      "ids": [
+        "runner",
+        "assassin"
+      ],
+      "minAlpha128IoU": 0.9666666666666667,
+      "maxAlpha128IoU": 0.9686274509803922
+    },
+    {
+      "ids": [
+        "levy",
+        "shield"
+      ],
+      "minAlpha128IoU": 0.9830827067669173,
+      "maxAlpha128IoU": 0.9963963963963964
+    },
+    {
+      "ids": [
+        "guardian",
+        "paladin"
+      ],
+      "minAlpha128IoU": 0.8620689655172413,
+      "maxAlpha128IoU": 0.882800608828006
+    }
+  ]
+}
