@@ -2,10 +2,22 @@
  * Chronicles of Ember and Dawn — offline audio director.
  *
  * Responsibilities:
- *  - Orchestral background music per screen, cross-faded with two HTMLAudioElements.
+ *  - Orchestral background music per screen, cross-faded with HTMLAudioElements.
+ *  - A continuous battle theme: `battle` and `climax` share one recording, one
+ *    playhead and no restart. Climbing to climax raises the same track by ~2dB and
+ *    adds a sparse locally synthesized layer aligned to measured recording transients. No second
+ *    melody is ever mixed in.
+ *  - Reliable looping: two streaming decks per track overlap across the loop point
+ *    (constant-power gains) instead of deliberately feathering both file edges to 0.
  *  - Web Audio synthesis for battle/UI effects (no downloaded SFX, no chiptune BGM).
  *  - A separate, slowly gusting wind ambience bed.
  *  - Independent music / effects / ambience volume, mute, concurrency limits and cooldowns.
+ *
+ * Loop strategy: decks are HTMLAudioElements, so a 146s recording streams instead of
+ * costing ~56MB of decoded PCM per track. The standby deck is primed ~20s before the
+ * loop point and both decks play through the splice to mask decoder/edge gaps.
+ * (A decoded AudioBufferSourceNode loop would be sample accurate, but the memory cost
+ * and the element-based release contract make the streaming overlap the safer trade.)
  *
  * Integration contract:
  *   const audio = new AudioManager();
@@ -20,6 +32,23 @@
  * from same-origin `public/audio` files through Vite's `import.meta.env.BASE_URL`;
  * effects are synthesized locally with Web Audio.
  */
+
+import { BATTLE_ACCENT_CUES } from './battleAccentCues';
+import {
+  BATTLE_SCENE_GAIN,
+  CLIMAX_LAYER_LEVEL,
+  CLIMAX_SCENE_GAIN,
+  LOOP_OVERLAP_SECONDS,
+  LOOP_PRIME_SECONDS,
+  loopCrossfade,
+  musicLevel,
+} from './musicMix';
+import {
+  collectAccentPercussion,
+  createPulseCursor,
+  type PercussionHit,
+  type PulseCursor,
+} from './percussion';
 
 export type AudioScene =
   | 'menu'
@@ -163,16 +192,19 @@ interface SceneDef {
 
 /**
  * Seven narrative states backed by five CC0 orchestral recordings.
- * Victory is a reprise of "Hope"; defeat is a slowed reprise of "Eye of the Storm".
+ * Preparation uses "Epic March Loop"; victory starts "Hope" from its opening;
+ * defeat is a slowed reprise of "Eye of the Storm".
  * These are runtime treatments (rate/gain), never edited or re-encoded files.
  */
 const SCENES: Record<AudioScene, SceneDef> = {
   menu: { track: 'eye', music: 0.72, fadeIn: 2.6, playbackRate: 1, wind: 0.15, rumble: 0.02 },
   campaign: { track: 'war', music: 0.68, fadeIn: 2.4, playbackRate: 1, wind: 0.12, rumble: 0.03 },
-  prepare: { track: 'hope', music: 0.66, fadeIn: 2, playbackRate: 1, wind: 0.19, rumble: 0.04 },
-  battle: { track: 'final', music: 0.78, fadeIn: 1.8, playbackRate: 1, wind: 0.13, rumble: 0.2 },
-  climax: { track: 'march', music: 0.84, fadeIn: 1.4, playbackRate: 1, wind: 0.1, rumble: 0.3 },
-  // Reuse: "Hope" returns as a brighter, resolved reprise rather than a sixth download.
+  prepare: { track: 'march', music: 0.66, fadeIn: 2, playbackRate: 1, wind: 0.19, rumble: 0.04 },
+  // Battle and climax deliberately share one recording: an intensity change must
+  // never restart or swap the battle theme. Only gain and the percussion layer move.
+  battle: { track: 'final', music: BATTLE_SCENE_GAIN, fadeIn: 1.8, playbackRate: 1, wind: 0.13, rumble: 0.2 },
+  climax: { track: 'final', music: CLIMAX_SCENE_GAIN, fadeIn: 1.8, playbackRate: 1, wind: 0.1, rumble: 0.3 },
+  // A dedicated resolution theme, restarted from its opening for every result.
   victory: { track: 'hope', music: 0.7, fadeIn: 1.6, playbackRate: 1, wind: 0.1, rumble: 0 },
   // Reuse: slowed "Eye of the Storm" reads as a sombre aftermath.
   defeat: { track: 'eye', music: 0.58, fadeIn: 2.8, playbackRate: 0.92, wind: 0.22, rumble: 0.02 },
@@ -181,9 +213,15 @@ const SCENES: Record<AudioScene, SceneDef> = {
 const BASE = import.meta.env.BASE_URL || '/';
 const MUSIC_BASE = `${BASE.endsWith('/') ? BASE : `${BASE}/`}audio/`;
 
-const DEFAULT_VOLUMES = { music: 0.7, effects: 0.8, ambience: 0.5 };
+const DEFAULT_VOLUMES = { music: 0.8, effects: 0.8, ambience: 0.5 };
 const MAX_ACTIVE_SFX = 20;
 const SFX_PANORAMA_LIMIT = 1;
+
+/** Seconds of smoothing for a same-track scene coefficient change (battle <-> climax). */
+const SCENE_GAIN_TAU = 1.1;
+
+/** Beat look-ahead of the climax percussion scheduler. */
+const PULSE_LOOKAHEAD = 0.3;
 
 export interface AudioManagerOptions {
   initialScene?: AudioScene;
@@ -731,7 +769,7 @@ const SFX: Record<SoundName, SfxDef> = {
 interface MusicVoice {
   track: TrackId;
   el: HTMLAudioElement;
-  /** Cross-fade factor 0..1. */
+  /** Cross-fade factor 0..1 (scene hand-off). */
   gain: number;
   target: number;
   /** Fade factor change per second. */
@@ -739,6 +777,12 @@ interface MusicVoice {
   /** Smoothed scene gain (lets a same-track scene change stay continuous). */
   sceneGain: number;
   sceneTarget: number;
+  /** Loop-overlap envelope (0..1): the deck that is finishing the cycle ramps out. */
+  loopGain: number;
+  /** Media position seen last frame; used to detect the natural loop wrap. */
+  lastAt: number;
+  /** True while this deck is the incoming side of a loop overlap. */
+  twin: boolean;
 }
 
 interface ActiveSfx {
@@ -769,8 +813,24 @@ export class AudioManager {
   private noiseBuffer: AudioBuffer | null = null;
 
   private readonly elements = new Map<TrackId, HTMLAudioElement>();
+  /** Optional second streaming deck per track, created lazily for the loop overlap. */
+  private readonly twins = new Map<TrackId, HTMLAudioElement>();
+  /** Per-track playhead preserved across scene changes (battle <-> climax never restart). */
+  private readonly positions = new Map<TrackId, number>();
+  /** Tracks that must start from 0 the next time they are used (a fresh battle). */
+  private readonly resetPending = new Set<TrackId>();
   private current: MusicVoice | null = null;
   private outgoing: MusicVoice | null = null;
+  /** Incoming deck that covers the loop point of the current track. */
+  private twin: MusicVoice | null = null;
+  private loopCrossfades = 0;
+
+  /** Climax percussion layer: synthesized locally, routed on the music bus volume. */
+  private layerGain: GainNode | null = null;
+  private layerLevel = 0;
+  private layerHits = 0;
+  private pulse: PulseCursor = createPulseCursor();
+  private layerSources: { node: AudioScheduledSourceNode; endTime: number }[] = [];
 
   private activeSfx: ActiveSfx[] = [];
   private readonly cooldowns = new Map<SoundName, number>();
@@ -835,12 +895,19 @@ export class AudioManager {
   }
 
   /**
-   * Changing scenes starts a soft two-deck cross-fade. Repeating the current
-   * scene is a no-op (useful for UI re-renders).
+   * Changing scenes cross-fades between recordings, except when both scenes are
+   * backed by the same recording (battle <-> climax): then playback continues
+   * untouched and only the mix and the percussion layer change.
+   * Repeating the current scene is a no-op (useful for UI re-renders).
    */
   setScene(scene: AudioScene): void {
     if (this.disposed) return;
-    if (!SCENES[scene] || scene === this.activeScene) return;
+    if (!SCENES[scene]) return;
+    // Every visit to the pre-battle staging area arms a restart of the battle theme,
+    // so a new match always opens on the first bar (never on the previous playhead).
+    if (scene === 'prepare') this.scheduleReset('final');
+    if (scene !== this.activeScene && (scene === 'victory' || scene === 'defeat')) this.scheduleReset(SCENES[scene].track);
+    if (scene === this.activeScene) return;
     this.activeScene = scene;
     this.syncAmbienceTargets();
     if (this.unlocked) this.syncScene();
@@ -858,7 +925,20 @@ export class AudioManager {
   setMuted(muted: boolean): void {
     if (this.disposed) return;
     this.muted = Boolean(muted);
+    if (this.muted) this.silenceLayer();
     this.applyGains();
+  }
+
+  /** Cut the climax layer immediately (mute/teardown must never leave it ringing). */
+  private silenceLayer(): void {
+    this.layerLevel = 0;
+    const ctx = this.ctx;
+    try {
+      this.layerGain?.gain.cancelScheduledValues(ctx ? ctx.currentTime : 0);
+      this.layerGain?.gain.setValueAtTime(0, ctx ? ctx.currentTime : 0);
+    } catch {
+      /* ignore */
+    }
   }
 
   /**
@@ -949,19 +1029,23 @@ export class AudioManager {
     const duckTarget=this.duckRemaining>0?.62:1;
     this.duckGain+=(duckTarget-this.duckGain)*(1-Math.exp(-delta/(duckTarget<this.duckGain?.08:.7)));
 
+    const musicSmooth = delta > 0 ? 1 - Math.exp(-delta / SCENE_GAIN_TAU) : 0;
     for (const voice of this.musicVoices()) {
       if (voice.gain < voice.target) {
         voice.gain = Math.min(voice.target, voice.gain + voice.fadeRate * delta);
       } else if (voice.gain > voice.target) {
         voice.gain = Math.max(voice.target, voice.gain - voice.fadeRate * delta);
       }
-      const smooth = delta > 0 ? 1 - Math.exp(-delta / 0.65) : 0;
-      voice.sceneGain += (voice.sceneTarget - voice.sceneGain) * smooth;
+      voice.sceneGain += (voice.sceneTarget - voice.sceneGain) * musicSmooth;
       this.applyMusicVolume(voice);
+      if (!voice.twin) this.rememberPosition(voice);
     }
 
+    this.updateLoop();
+    this.updateClimaxLayer(delta);
+
     if (this.outgoing && this.outgoing.gain <= 0.001) {
-      this.stopVoice(this.outgoing);
+      this.pauseVoice(this.outgoing);
       this.outgoing = null;
     }
 
@@ -981,9 +1065,16 @@ export class AudioManager {
     this.disposed = true;
     this.unlocked = false;
 
-    for (const el of this.elements.values()) {
+    this.current = null;
+    this.outgoing = null;
+    this.twin = null;
+    this.positions.clear();
+    this.resetPending.clear();
+
+    for (const el of this.allElements()) {
       try {
         el.pause();
+        el.volume = 0;
         el.removeAttribute('src');
         el.load();
       } catch {
@@ -991,8 +1082,25 @@ export class AudioManager {
       }
     }
     this.elements.clear();
-    this.current = null;
-    this.outgoing = null;
+    this.twins.clear();
+
+    for (const source of this.layerSources) {
+      try {
+        source.node.stop();
+      } catch {
+        /* already stopped */
+      }
+    }
+    this.layerSources = [];
+    this.layerLevel = 0;
+    this.layerHits = 0;
+    this.pulse = createPulseCursor();
+    try {
+      this.layerGain?.disconnect();
+    } catch {
+      /* ignore */
+    }
+    this.layerGain = null;
     this.activeSfx = [];
     this.cooldowns.clear();
 
@@ -1038,26 +1146,40 @@ export class AudioManager {
   /* ---------------------------------------------------------------- */
 
   private prepareElements(): void {
-    if (typeof Audio === 'undefined') return;
     for (const id of TRACK_IDS) {
-      try {
-        const el = new Audio();
-        el.preload = this.options.preload ? 'auto' : 'none';
-        el.loop = true;
-        el.volume = 0;
-        el.src = `${MUSIC_BASE}${TRACKS[id].file}`;
-        if (this.options.preload) el.load();
-        this.elements.set(id, el);
-      } catch (error) {
-        this.report(`could not prepare track "${id}"`, error);
-      }
+      const el = this.createElement(id);
+      if (el) this.elements.set(id, el);
     }
+  }
+
+  private createElement(track: TrackId): HTMLAudioElement | null {
+    if (typeof Audio === 'undefined') return null;
+    try {
+      const el = new Audio();
+      el.preload = this.options.preload ? 'auto' : 'none';
+      // Loop stays enabled as a last-resort fallback: if a standby deck cannot be
+      // started in time, the file still repeats instead of falling silent.
+      el.loop = true;
+      el.volume = 0;
+      el.src = `${MUSIC_BASE}${TRACKS[track].file}`;
+      if (el.preload === 'auto') el.load();
+      return el;
+    } catch (error) {
+      this.report(`could not prepare track "${track}"`, error);
+      return null;
+    }
+  }
+
+  /** Every streaming deck this manager owns (primary deck plus loop standbys). */
+  private allElements(): HTMLAudioElement[] {
+    return [...this.elements.values(), ...this.twins.values()];
   }
 
   private musicVoices(): MusicVoice[] {
     const voices: MusicVoice[] = [];
     if (this.outgoing) voices.push(this.outgoing);
     if (this.current) voices.push(this.current);
+    if (this.twin) voices.push(this.twin);
     return voices;
   }
 
@@ -1066,7 +1188,11 @@ export class AudioManager {
     const def = SCENES[this.activeScene];
 
     if (this.current && this.current.track === def.track) {
+      // Same recording (battle -> climax -> battle, or a repeated scene): leave the
+      // playhead alone. Only the scene gain slopes toward the new target (+2dB at
+      // climax), so an intensity change is heard but never restarts the theme.
       this.current.sceneTarget = def.music;
+      this.current.loopGain = this.twin ? this.current.loopGain : 1;
       try {
         this.current.el.playbackRate = def.playbackRate;
       } catch {
@@ -1078,6 +1204,7 @@ export class AudioManager {
 
     const el = this.elements.get(def.track);
     if (!el) return;
+    if (this.twin) this.releaseTwin();
 
     // A -> B -> A within one cross-fade: revive the deck that is fading out.
     if (this.outgoing && this.outgoing.el === el) {
@@ -1092,6 +1219,7 @@ export class AudioManager {
       revived.target = 1;
       revived.fadeRate = 1 / Math.max(0.6, def.fadeIn);
       revived.sceneTarget = def.music;
+      revived.loopGain = 1;
       try {
         revived.el.playbackRate = def.playbackRate;
       } catch {
@@ -1102,7 +1230,7 @@ export class AudioManager {
     }
 
     if (this.outgoing) {
-      this.stopVoice(this.outgoing);
+      this.pauseVoice(this.outgoing);
       this.outgoing = null;
     }
 
@@ -1114,11 +1242,11 @@ export class AudioManager {
     }
 
     try {
-      el.currentTime = 0;
       el.playbackRate = def.playbackRate;
     } catch {
-      /* metadata may not be loaded yet; play() will start at 0 */
+      /* ignore */
     }
+    this.seekForStart(def.track, el);
 
     const voice: MusicVoice = {
       track: def.track,
@@ -1128,6 +1256,9 @@ export class AudioManager {
       fadeRate: 1 / Math.max(0.6, def.fadeIn),
       sceneGain: def.music,
       sceneTarget: def.music,
+      loopGain: 1,
+      lastAt: 0,
+      twin: false,
     };
     this.current = voice;
     this.applyMusicVolume(voice);
@@ -1144,14 +1275,10 @@ export class AudioManager {
     }
   }
 
-  private stopVoice(voice: MusicVoice): void {
+  /** Pauses a deck without touching its playhead: positions are resumed later. */
+  private pauseVoice(voice: MusicVoice): void {
     try {
       voice.el.pause();
-    } catch {
-      /* ignore */
-    }
-    try {
-      voice.el.currentTime = 0;
     } catch {
       /* ignore */
     }
@@ -1164,19 +1291,304 @@ export class AudioManager {
 
   private applyMusicVolume(voice: MusicVoice): void {
     try {
-      if (this.muted || this.musicVolume <= 0) {
-        voice.el.volume = 0;
-        return;
-      }
-      const duration=voice.el.duration;
-      const at=voice.el.currentTime;
-      // Gently feather file boundaries instead of exposing raw discontinuities.
-      // This is deliberately not advertised as sample-accurate gapless editing.
-      const seam=Number.isFinite(duration)&&duration>5?Math.max(0,Math.min(1,at/.6,(duration-at)/1.1)):1;
-      voice.el.volume = clamp(this.musicVolume * TRACKS[voice.track].gain * voice.sceneGain * voice.gain * this.duckGain * seam, 0, 1);
+      // Loudness depends only on the mix, never on the playhead: no seam feathering.
+      voice.el.volume = musicLevel({
+        musicVolume: this.musicVolume,
+        trackGain: TRACKS[voice.track].gain,
+        sceneGain: voice.sceneGain,
+        fade: voice.gain,
+        loopFade: voice.loopGain,
+        duck: this.duckGain,
+        muted: this.muted,
+      });
     } catch {
       /* ignore */
     }
+  }
+
+  /** The deck of `track` that is not carrying the sound right now (created lazily). */
+  private standbyDeck(track: TrackId, active: HTMLAudioElement): HTMLAudioElement | null {
+    const primary = this.elements.get(track);
+    if (primary && primary !== active) return primary;
+    const known = this.twins.get(track);
+    if (known && known !== active) return known;
+    const created = this.createElement(track);
+    if (!created) return null;
+    this.twins.set(track, created);
+    return created;
+  }
+
+  private scheduleReset(track: TrackId): void {
+    this.positions.delete(track);
+    this.resetPending.add(track);
+  }
+
+  private rememberPosition(voice: MusicVoice): void {
+    try {
+      const at = voice.el.currentTime;
+      if (Number.isFinite(at) && at >= 0) this.positions.set(voice.track, at);
+    } catch {
+      /* ignore */
+    }
+  }
+
+  /** Resume a track where it was paused; a fresh battle starts from 0 instead. */
+  private seekForStart(track: TrackId, el: HTMLAudioElement): void {
+    const reset = this.resetPending.delete(track);
+    let target = reset ? 0 : this.positions.get(track) ?? 0;
+    try {
+      const duration = el.duration;
+      if (Number.isFinite(duration) && duration > 2 && target > duration - 1.5) target = 0;
+      if (Math.abs(el.currentTime - target) > 0.35) el.currentTime = Math.max(0, target);
+    } catch {
+      /* metadata may not be loaded yet; playback starts where the element is */
+    }
+  }
+
+  /**
+   * Keeps the battle theme continuous forever. Two streaming decks overlap across
+   * the loop point with constant-power envelopes, so the splice is never silent and
+   * never restarts at an audible gap.
+   */
+  private updateLoop(): void {
+    const current = this.current;
+    if (!current) return;
+    let at = 0;
+    let duration = Number.NaN;
+    try {
+      at = current.el.currentTime;
+      duration = current.el.duration;
+    } catch {
+      return;
+    }
+    if (!Number.isFinite(at) || at < 0) return;
+
+    if (current.el.paused) {
+      if (this.twin) this.releaseTwin();
+      return;
+    }
+
+    const overlap =
+      Number.isFinite(duration) && duration > 0
+        ? Math.min(LOOP_OVERLAP_SECONDS, Math.max(0.4, duration * 0.25))
+        : LOOP_OVERLAP_SECONDS;
+    const remaining = Number.isFinite(duration) ? duration - at : Number.POSITIVE_INFINITY;
+
+    // Prime the standby deck well ahead of the splice so it never waits on the network.
+    if (!this.twin && remaining <= LOOP_PRIME_SECONDS) {
+      this.standbyDeck(current.track, current.el);
+    }
+    if (!this.twin && remaining <= overlap) this.startLoopTwin(current);
+
+    if (this.twin) {
+      const fade = loopCrossfade(at, duration, overlap);
+      current.loopGain = fade.out;
+      this.twin.loopGain = fade.in;
+      this.applyMusicVolume(current);
+      this.applyMusicVolume(this.twin);
+      // Detect the natural wrap (or a manual seek) instead of trusting play() to be exact.
+      const wrapped = current.lastAt - at > 0.4;
+      if (fade.in >= 1 || wrapped || (Number.isFinite(duration) && at >= duration - 0.05)) {
+        this.commitLoopTwin();
+        return;
+      }
+    } else {
+      current.loopGain = 1;
+    }
+
+    current.lastAt = at;
+  }
+
+  private startLoopTwin(current: MusicVoice): void {
+    const el = this.standbyDeck(current.track, current.el);
+    if (!el) return;
+    try {
+      el.currentTime = 0;
+      el.playbackRate = current.el.playbackRate;
+    } catch {
+      /* ignore */
+    }
+    el.volume = 0;
+    const voice: MusicVoice = {
+      track: current.track,
+      el,
+      gain: current.gain,
+      target: current.target,
+      fadeRate: current.fadeRate,
+      sceneGain: current.sceneGain,
+      sceneTarget: current.sceneTarget,
+      loopGain: 0,
+      lastAt: 0,
+      twin: true,
+    };
+    this.twin = voice;
+    this.applyMusicVolume(voice);
+    void this.playElement(voice);
+  }
+
+  private commitLoopTwin(): void {
+    const next = this.twin;
+    this.twin = null;
+    if (!next) return;
+    const previous = this.current;
+    if (previous) this.pauseVoice(previous);
+    next.twin = false;
+    next.loopGain = 1;
+    next.gain = 1;
+    next.target = 1;
+    next.lastAt = next.el.currentTime;
+    this.current = next;
+    this.loopCrossfades += 1;
+    // A new cycle restarts the beat grid: re-sync instead of drifting.
+    this.pulse = createPulseCursor();
+    this.rememberPosition(next);
+    this.applyMusicVolume(next);
+  }
+
+  private releaseTwin(): void {
+    const twin = this.twin;
+    if (!twin) return;
+    // If the standby deck already carries most of the level, promote it instead of
+    // cutting it: a scene change in the middle of the loop splice stays continuous.
+    if (twin.loopGain > 0.5) {
+      this.commitLoopTwin();
+      return;
+    }
+    this.twin = null;
+    this.pauseVoice(twin);
+    if (this.current) {
+      this.current.loopGain = 1;
+      this.applyMusicVolume(this.current);
+    }
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Climax percussion layer (Web Audio, music volume governed)        */
+  /* ---------------------------------------------------------------- */
+
+  private ensureLayer(): void {
+    const ctx = this.ctx;
+    if (!ctx || !this.masterGain || this.layerGain) return;
+    try {
+      // Routed past the effects compressor but under masterGain, so mute and the
+      // music slider both govern it. The effects bus never touches this node.
+      this.layerGain = ctx.createGain();
+      this.layerGain.gain.value = 0;
+      this.layerGain.connect(this.masterGain);
+    } catch (error) {
+      this.report('climax layer setup failed', error);
+    }
+  }
+
+  private updateClimaxLayer(delta: number): void {
+    const ctx = this.ctx;
+    const want =
+      this.unlocked &&
+      !this.muted &&
+      this.activeScene === 'climax' &&
+      this.musicVolume > 0.001 &&
+      !!this.layerGain;
+    const target = want ? clamp(this.musicVolume * CLIMAX_LAYER_LEVEL * this.duckGain, 0, 1) : 0;
+    const tau = target > this.layerLevel ? 2.4 : 0.35;
+    this.layerLevel += (target - this.layerLevel) * (delta > 0 ? 1 - Math.exp(-delta / tau) : 0);
+    if (Math.abs(target - this.layerLevel) < 0.0005) this.layerLevel = target;
+
+    // Write the smoothed level directly: scheduling an automation event every frame
+    // floods Chrome's parameter queue (it caps out and the gain freezes mid-ramp).
+    if (this.layerGain) {
+      try {
+        this.layerGain.gain.value = this.layerLevel;
+      } catch {
+        /* ignore */
+      }
+    }
+
+    if (!ctx || !want || !this.layerGain || !this.noiseBuffer || this.layerLevel <= 0.001) {
+      this.pruneLayer(ctx);
+      return;
+    }
+
+    const voice = this.current;
+    if (!voice) {
+      this.pruneLayer(ctx);
+      return;
+    }
+    let at = 0;
+    try {
+      if (voice.el.paused) {
+        this.pruneLayer(ctx);
+        return;
+      }
+      at = voice.el.currentTime;
+    } catch {
+      return;
+    }
+
+    const scheduled = collectAccentPercussion({
+      cursor: this.pulse,
+      trackTime: at,
+      cues: BATTLE_ACCENT_CUES,
+      lookahead: PULSE_LOOKAHEAD,
+    });
+    this.pulse = scheduled.cursor;
+    for (const hit of scheduled.hits) this.scheduleHit(ctx, hit);
+    this.pruneLayer(ctx);
+  }
+
+  private scheduleHit(ctx: AudioContext, hit: PercussionHit): void {
+    const destination = this.layerGain;
+    const buffer = this.noiseBuffer;
+    if (!destination || !buffer) return;
+    const start = ctx.currentTime + Math.min(PULSE_LOOKAHEAD, Math.max(0.012, hit.delay + 0.012));
+    const registered: AudioScheduledSourceNode[] = [];
+    const render: RenderContext = {
+      ctx,
+      buffer,
+      destination,
+      start,
+      pitch: 1,
+      register: (node) => {
+        registered.push(node);
+      },
+    };
+    let tail = 0.6;
+    switch (hit.kind) {
+      case 'timpani':
+        thump(render, 98, 58, 0.55, 0.5);
+        noise(render, { dur: 0.18, from: 240, type: 'lowpass', q: 0.8, peak: 0.16, attack: 0.002 });
+        tone(render, { type: 'triangle', from: 196, to: 186, dur: 0.32, peak: 0.07 });
+        tail = 0.62;
+        break;
+      case 'timpaniSoft':
+        thump(render, 88, 60, 0.42, 0.32);
+        noise(render, { dur: 0.12, from: 200, type: 'lowpass', q: 0.8, peak: 0.1, attack: 0.002 });
+        tail = 0.5;
+        break;
+      case 'snare':
+        noise(render, { dur: 0.16, from: 1900, type: 'bandpass', q: 1.1, peak: 0.22, attack: 0.001 });
+        tone(render, { type: 'triangle', from: 196, to: 168, dur: 0.08, peak: 0.09 });
+        tail = 0.22;
+        break;
+      case 'snareGhost':
+        noise(render, { dur: 0.1, from: 2400, type: 'highpass', q: 0.8, peak: 0.08, attack: 0.001 });
+        tail = 0.16;
+        break;
+      default:
+        break;
+    }
+    const endTime = start + tail;
+    this.layerHits += 1;
+    for (const node of registered) this.layerSources.push({ node, endTime });
+  }
+
+  private pruneLayer(ctx: AudioContext | null): void {
+    if (this.layerSources.length === 0) return;
+    if (!ctx) {
+      this.layerSources = [];
+      return;
+    }
+    const now = ctx.currentTime;
+    this.layerSources = this.layerSources.filter((entry) => entry.endTime > now);
   }
 
   /* ---------------------------------------------------------------- */
@@ -1304,6 +1716,7 @@ export class AudioManager {
       this.sfxGain.connect(this.compressor);
       this.compressor.connect(this.masterGain);
       this.noiseBuffer = createNoiseBuffer(ctx, 2.5);
+      this.ensureLayer();
     } catch (error) {
       this.report('AudioContext unavailable', error);
     }
@@ -1320,6 +1733,8 @@ export class AudioManager {
       } catch {
         /* ignore */
       }
+      // The layer follows the music slider (and mute); its per-frame ramp lives in
+      // updateClimaxLayer so no automation events are queued for it here.
     }
     for (const voice of this.musicVoices()) this.applyMusicVolume(voice);
   }

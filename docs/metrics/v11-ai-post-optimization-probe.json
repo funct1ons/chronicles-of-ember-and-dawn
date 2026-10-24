@@ -1,0 +1,14 @@
+{
+  "sourceSha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+  "method": "Hand-transcribed rounded timing summary of retained Playwright stdout; three independent repetitions, unchanged 100ms gate. Not a worst-case bound or a reproduced cause of the old spike.",
+  "command": "npx.cmd playwright test tests/e2e/game.spec.ts -g \"150-unit\" --repeat-each 3",
+  "result": "3 passed (20.1s)",
+  "runs": [
+    {"hardMedianMs":27.1,"hardMaxMs":50.3,"normalMaxMs":13.4,"masterMaxMs":0.7,"advantageForecastMaxMs":33.1},
+    {"hardMedianMs":24.9,"hardMaxMs":44.6,"normalMaxMs":41.4,"masterMaxMs":0.7,"advantageForecastMaxMs":36.6},
+    {"hardMedianMs":31.4,"hardMaxMs":60.2,"normalMaxMs":24.2,"masterMaxMs":0.7,"advantageForecastMaxMs":40.9}
+  ],
+  "originalFailure": "v11-browser-performance-first-failure.json",
+  "originalRepeatProbe": "v11-ai-repeat-probe.json",
+  "equivalence": "v11-tactics-equivalence.json"
+}

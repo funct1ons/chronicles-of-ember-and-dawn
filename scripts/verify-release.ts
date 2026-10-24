@@ -1,8 +1,15 @@
 import {createServer} from 'node:http';
-import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {readFile,mkdir,writeFile,readdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {sourceFingerprint} from './fingerprint';
 import {resolve,extname,sep} from 'node:path';
 import {chromium} from '@playwright/test';
 import {browserPath} from './browser';
+async function artifactFingerprint(){
+ const paths=['index.html','sw.js',...(await readdir('dist/assets')).filter(p=>/\.(js|css)$/.test(p)).sort().map(p=>'assets/'+p)];
+ return Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile('dist/'+path)).digest('hex')])));
+}
+const source=await sourceFingerprint(),artifacts=await artifactFingerprint();
 const root=resolve('dist');const mime:Record<string,string>={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.ogg':'audio/ogg','.mp3':'audio/mpeg','.wav':'audio/wav','.txt':'text/plain'};
 const server=createServer(async(req,res)=>{try{const url=new URL(req.url??'/','http://localhost');if(!url.pathname.startsWith('/game/')){res.writeHead(404).end();return;}const relative=decodeURIComponent(url.pathname.slice(6))||'index.html';const path=resolve(root,relative);if(path!==root&&!path.startsWith(root+sep)){res.writeHead(403).end();return;}const data=await readFile(path);res.writeHead(200,{'Content-Type':mime[extname(path)]??'application/octet-stream','Content-Length':data.length,'Cache-Control':'no-cache'});res.end(data);}catch{res.writeHead(404).end();}});
 await new Promise<void>(r=>server.listen(4190,'127.0.0.1',r));
@@ -24,7 +31,8 @@ try{
  await mkdir('docs/screenshots',{recursive:true});await page.screenshot({path:'docs/screenshots/offline-production-battle.png',fullPage:true});
  const runtime=await page.evaluate(()=>({offline:!navigator.onLine,elapsed:document.querySelector('#elapsed')?.textContent,round:document.querySelector('#round')?.textContent,gold:document.querySelector('#gold-0')?.textContent,population:document.querySelector('#supply-0')?.textContent,fps:document.querySelector('#fps-label')?.textContent,tracks:(window as any).__music.map((e:HTMLAudioElement)=>({src:new URL(e.src).pathname,paused:e.paused,currentTime:e.currentTime,duration:e.duration,error:e.error?.message??null,volume:e.volume})),overflow:document.documentElement.scrollWidth>innerWidth}));
  const range=await page.evaluate(async()=>{const r=await fetch('./audio/eye_of_the_storm.mp3',{headers:{Range:'bytes=0-127'}});return {status:r.status,bytes:(await r.arrayBuffer()).byteLength,contentRange:r.headers.get('Content-Range')};});
- const result={testedAt:new Date().toISOString(),url:'http://127.0.0.1:4190/game/',cacheInfo,runtime,range,errors,badResponses};
+ if(JSON.stringify(artifacts)!==JSON.stringify(await artifactFingerprint()))throw new Error('Production artifacts changed during release verification');
+ const result={testedAt:new Date().toISOString(),source,artifacts,url:'http://127.0.0.1:4190/game/',cacheInfo,runtime,range,errors,badResponses};
  await mkdir('docs/metrics',{recursive:true});await writeFile('docs/metrics/release.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
  if(errors.length||badResponses.length||runtime.overflow||range.status!==206||range.bytes!==128)throw new Error('Release runtime check failed');
  const [minutes,seconds]=(runtime.elapsed??'0:0').split(':').map(Number);const played=minutes*60+seconds;

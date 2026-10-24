@@ -1,0 +1,1959 @@
+{
+  "generated": "2026-10-23T16:01:12.895Z",
+  "source": {
+    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+    "files": {
+      "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
+      "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
+      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
+      "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
+    }
+  },
+  "sampling": "every tick, including spawn/death ticks",
+  "dt": 0.03333333333333333,
+  "samples": 1941038,
+  "ticks": 44769,
+  "stepMax": 2.743709,
+  "anomalyCount": 0,
+  "results": [
+    {
+      "name": "ai-407",
+      "ticks": 7201,
+      "samples": 189099,
+      "waveTicks": 20,
+      "waveSamples": 4542,
+      "spawnSamples": 260,
+      "deathSamples": 228,
+      "movingPct": 98.056574,
+      "stepMedian": 1.218,
+      "stepP95": 1.928,
+      "stepP99": 2.332,
+      "stepMax": 2.504854,
+      "waveMax": 2.375769,
+      "spawnMax": 2.331962,
+      "deathMax": 2.331962,
+      "anomalyCount": 0,
+      "existingMax": 2.504854,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 398,
+      "fingerprint": "6ff52bb97dc685af",
+      "worst": [
+        {
+          "tick": 3756,
+          "time": 125.2,
+          "id": 114,
+          "type": "runner",
+          "side": 0,
+          "dx": 2.201765,
+          "dy": 1.194372,
+          "dist": 2.504854,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 663.749075,
+            "y": 333.220939,
+            "action": "walk",
+            "target": 74
+          },
+          "after": {
+            "x": 665.950839,
+            "y": 334.415311,
+            "action": "walk",
+            "target": 74
+          }
+        },
+        {
+          "tick": 3794,
+          "time": 126.466667,
+          "id": 110,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.563641,
+          "dy": -1.891041,
+          "dist": 2.453774,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 637.401798,
+            "y": 390.099915,
+            "action": "hurt",
+            "target": 99
+          },
+          "after": {
+            "x": 638.965439,
+            "y": 388.208874,
+            "action": "walk",
+            "target": 99
+          }
+        },
+        {
+          "tick": 3795,
+          "time": 126.5,
+          "id": 110,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.635083,
+          "dy": -1.816925,
+          "dist": 2.444323,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 638.965439,
+            "y": 388.208874,
+            "action": "walk",
+            "target": 99
+          },
+          "after": {
+            "x": 640.600522,
+            "y": 386.391949,
+            "action": "walk",
+            "target": 99
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 3756,
+          "time": 125.2,
+          "id": 114,
+          "type": "runner",
+          "side": 0,
+          "dx": 2.201765,
+          "dy": 1.194372,
+          "dist": 2.504854,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 663.749075,
+            "y": 333.220939,
+            "action": "walk",
+            "target": 74
+          },
+          "after": {
+            "x": 665.950839,
+            "y": 334.415311,
+            "action": "walk",
+            "target": 74
+          }
+        },
+        {
+          "tick": 3794,
+          "time": 126.466667,
+          "id": 110,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.563641,
+          "dy": -1.891041,
+          "dist": 2.453774,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 637.401798,
+            "y": 390.099915,
+            "action": "hurt",
+            "target": 99
+          },
+          "after": {
+            "x": 638.965439,
+            "y": 388.208874,
+            "action": "walk",
+            "target": 99
+          }
+        },
+        {
+          "tick": 3795,
+          "time": 126.5,
+          "id": 110,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.635083,
+          "dy": -1.816925,
+          "dist": 2.444323,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 638.965439,
+            "y": 388.208874,
+            "action": "walk",
+            "target": 99
+          },
+          "after": {
+            "x": 640.600522,
+            "y": 386.391949,
+            "action": "walk",
+            "target": 99
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed-waves-407",
+      "ticks": 3601,
+      "samples": 266587,
+      "waveTicks": 39,
+      "waveSamples": 21249,
+      "spawnSamples": 354,
+      "deathSamples": 287,
+      "movingPct": 95.053022,
+      "stepMedian": 0.938,
+      "stepP95": 1.889,
+      "stepP99": 2.332,
+      "stepMax": 2.690575,
+      "waveMax": 2.608669,
+      "spawnMax": 2.601034,
+      "deathMax": 2.601034,
+      "anomalyCount": 0,
+      "existingMax": 2.690575,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 1736,
+      "fingerprint": "554f708a1141bd25",
+      "worst": [
+        {
+          "tick": 1913,
+          "time": 63.766667,
+          "id": 220,
+          "type": "rider",
+          "side": 1,
+          "dx": -1.733259,
+          "dy": 2.057913,
+          "dist": 2.690575,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 955.884399,
+            "y": 338.563532,
+            "action": "walk",
+            "target": 85
+          },
+          "after": {
+            "x": 954.151139,
+            "y": 340.621444,
+            "action": "walk",
+            "target": 85
+          }
+        },
+        {
+          "tick": 895,
+          "time": 29.833333,
+          "id": 114,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.775133,
+          "dy": 1.970185,
+          "dist": 2.651929,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 245.001565,
+            "y": 426.72589,
+            "action": "walk",
+            "target": 92
+          },
+          "after": {
+            "x": 246.776698,
+            "y": 428.696076,
+            "action": "walk",
+            "target": 25
+          }
+        },
+        {
+          "tick": 890,
+          "time": 29.666667,
+          "id": 114,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.519121,
+          "dy": 2.165654,
+          "dist": 2.645332,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 244.338831,
+            "y": 424.66593,
+            "action": "walk",
+            "target": 92
+          },
+          "after": {
+            "x": 245.857952,
+            "y": 426.831584,
+            "action": "walk",
+            "target": 92
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 1913,
+          "time": 63.766667,
+          "id": 220,
+          "type": "rider",
+          "side": 1,
+          "dx": -1.733259,
+          "dy": 2.057913,
+          "dist": 2.690575,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 955.884399,
+            "y": 338.563532,
+            "action": "walk",
+            "target": 85
+          },
+          "after": {
+            "x": 954.151139,
+            "y": 340.621444,
+            "action": "walk",
+            "target": 85
+          }
+        },
+        {
+          "tick": 895,
+          "time": 29.833333,
+          "id": 114,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.775133,
+          "dy": 1.970185,
+          "dist": 2.651929,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 245.001565,
+            "y": 426.72589,
+            "action": "walk",
+            "target": 92
+          },
+          "after": {
+            "x": 246.776698,
+            "y": 428.696076,
+            "action": "walk",
+            "target": 25
+          }
+        },
+        {
+          "tick": 890,
+          "time": 29.666667,
+          "id": 114,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.519121,
+          "dy": 2.165654,
+          "dist": 2.645332,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 244.338831,
+            "y": 424.66593,
+            "action": "walk",
+            "target": 92
+          },
+          "after": {
+            "x": 245.857952,
+            "y": 426.831584,
+            "action": "walk",
+            "target": 92
+          }
+        }
+      ]
+    },
+    {
+      "name": "ai-8093",
+      "ticks": 7201,
+      "samples": 228062,
+      "waveTicks": 20,
+      "waveSamples": 5401,
+      "spawnSamples": 284,
+      "deathSamples": 245,
+      "movingPct": 97.544966,
+      "stepMedian": 1.121,
+      "stepP95": 1.928,
+      "stepP99": 2.332,
+      "stepMax": 2.472947,
+      "waveMax": 2.405892,
+      "spawnMax": 2.331962,
+      "deathMax": 2.331962,
+      "anomalyCount": 0,
+      "existingMax": 2.472947,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 585,
+      "fingerprint": "20c34d9cf67150d3",
+      "worst": [
+        {
+          "tick": 3749,
+          "time": 124.966667,
+          "id": 130,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.650406,
+          "dy": -1.841637,
+          "dist": 2.472947,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 616.335074,
+            "y": 360.519338,
+            "action": "walk",
+            "target": 136
+          },
+          "after": {
+            "x": 617.98548,
+            "y": 358.6777,
+            "action": "walk",
+            "target": 136
+          }
+        },
+        {
+          "tick": 5009,
+          "time": 166.966667,
+          "id": 195,
+          "type": "runner",
+          "side": 1,
+          "dx": -2.200132,
+          "dy": -1.085716,
+          "dist": 2.453439,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 898.066794,
+            "y": 441.300244,
+            "action": "walk",
+            "target": 164
+          },
+          "after": {
+            "x": 895.866662,
+            "y": 440.214528,
+            "action": "walk",
+            "target": 164
+          }
+        },
+        {
+          "tick": 1270,
+          "time": 42.333333,
+          "id": 13,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.537196,
+          "dy": 1.909651,
+          "dist": 2.451477,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 753.614669,
+            "y": 433.127168,
+            "action": "hurt",
+            "target": 18
+          },
+          "after": {
+            "x": 755.151864,
+            "y": 435.036819,
+            "action": "walk",
+            "target": 18
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 3749,
+          "time": 124.966667,
+          "id": 130,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.650406,
+          "dy": -1.841637,
+          "dist": 2.472947,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 616.335074,
+            "y": 360.519338,
+            "action": "walk",
+            "target": 136
+          },
+          "after": {
+            "x": 617.98548,
+            "y": 358.6777,
+            "action": "walk",
+            "target": 136
+          }
+        },
+        {
+          "tick": 5009,
+          "time": 166.966667,
+          "id": 195,
+          "type": "runner",
+          "side": 1,
+          "dx": -2.200132,
+          "dy": -1.085716,
+          "dist": 2.453439,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 898.066794,
+            "y": 441.300244,
+            "action": "walk",
+            "target": 164
+          },
+          "after": {
+            "x": 895.866662,
+            "y": 440.214528,
+            "action": "walk",
+            "target": 164
+          }
+        },
+        {
+          "tick": 1270,
+          "time": 42.333333,
+          "id": 13,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.537196,
+          "dy": 1.909651,
+          "dist": 2.451477,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 753.614669,
+            "y": 433.127168,
+            "action": "hurt",
+            "target": 18
+          },
+          "after": {
+            "x": 755.151864,
+            "y": 435.036819,
+            "action": "walk",
+            "target": 18
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed-waves-8093",
+      "ticks": 3601,
+      "samples": 275067,
+      "waveTicks": 39,
+      "waveSamples": 21926,
+      "spawnSamples": 354,
+      "deathSamples": 284,
+      "movingPct": 94.277758,
+      "stepMedian": 0.964,
+      "stepP95": 1.74,
+      "stepP99": 2.332,
+      "stepMax": 2.689902,
+      "waveMax": 2.683618,
+      "spawnMax": 2.601034,
+      "deathMax": 2.350896,
+      "anomalyCount": 0,
+      "existingMax": 2.689902,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 1905,
+      "fingerprint": "e677839f7239f36b",
+      "worst": [
+        {
+          "tick": 2367,
+          "time": 78.9,
+          "id": 254,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.689847,
+          "dy": -2.092843,
+          "dist": 2.689902,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 350.545738,
+            "y": 363.465382,
+            "action": "walk",
+            "target": 186
+          },
+          "after": {
+            "x": 352.235585,
+            "y": 361.372539,
+            "action": "walk",
+            "target": 175
+          }
+        },
+        {
+          "tick": 2347,
+          "time": 78.233333,
+          "id": 254,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.654972,
+          "dy": -2.112551,
+          "dist": 2.683618,
+          "speedBudget": 2.601034,
+          "wave": true,
+          "spawned": false,
+          "before": {
+            "x": 322.745314,
+            "y": 363.753008,
+            "action": "walk",
+            "target": 186
+          },
+          "after": {
+            "x": 324.400286,
+            "y": 361.640457,
+            "action": "walk",
+            "target": 175
+          }
+        },
+        {
+          "tick": 857,
+          "time": 28.566667,
+          "id": 114,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.738524,
+          "dy": 2.0317,
+          "dist": 2.673999,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 167.665861,
+            "y": 384.456282,
+            "action": "walk",
+            "target": 91
+          },
+          "after": {
+            "x": 169.404386,
+            "y": 386.487981,
+            "action": "walk",
+            "target": 91
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 2367,
+          "time": 78.9,
+          "id": 254,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.689847,
+          "dy": -2.092843,
+          "dist": 2.689902,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 350.545738,
+            "y": 363.465382,
+            "action": "walk",
+            "target": 186
+          },
+          "after": {
+            "x": 352.235585,
+            "y": 361.372539,
+            "action": "walk",
+            "target": 175
+          }
+        },
+        {
+          "tick": 2347,
+          "time": 78.233333,
+          "id": 254,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.654972,
+          "dy": -2.112551,
+          "dist": 2.683618,
+          "speedBudget": 2.601034,
+          "wave": true,
+          "spawned": false,
+          "before": {
+            "x": 322.745314,
+            "y": 363.753008,
+            "action": "walk",
+            "target": 186
+          },
+          "after": {
+            "x": 324.400286,
+            "y": 361.640457,
+            "action": "walk",
+            "target": 175
+          }
+        },
+        {
+          "tick": 857,
+          "time": 28.566667,
+          "id": 114,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.738524,
+          "dy": 2.0317,
+          "dist": 2.673999,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 167.665861,
+            "y": 384.456282,
+            "action": "walk",
+            "target": 91
+          },
+          "after": {
+            "x": 169.404386,
+            "y": 386.487981,
+            "action": "walk",
+            "target": 91
+          }
+        }
+      ]
+    },
+    {
+      "name": "ai-12547",
+      "ticks": 7201,
+      "samples": 169095,
+      "waveTicks": 20,
+      "waveSamples": 4095,
+      "spawnSamples": 255,
+      "deathSamples": 214,
+      "movingPct": 97.292055,
+      "stepMedian": 1.256,
+      "stepP95": 1.928,
+      "stepP99": 2.601,
+      "stepMax": 2.650844,
+      "waveMax": 2.626757,
+      "spawnMax": 2.601034,
+      "deathMax": 2.601034,
+      "anomalyCount": 0,
+      "existingMax": 2.650844,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 206,
+      "fingerprint": "60f63d18bf0b22da",
+      "worst": [
+        {
+          "tick": 5788,
+          "time": 192.933333,
+          "id": 189,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.793269,
+          "dy": -1.952219,
+          "dist": 2.650844,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 495.321457,
+            "y": 404.74454,
+            "action": "walk",
+            "target": 185
+          },
+          "after": {
+            "x": 497.114726,
+            "y": 402.792321,
+            "action": "walk",
+            "target": 183
+          }
+        },
+        {
+          "tick": 5844,
+          "time": 194.8,
+          "id": 193,
+          "type": "rider",
+          "side": 1,
+          "dx": -1.574529,
+          "dy": -2.122179,
+          "dist": 2.642496,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 678.103746,
+            "y": 325.026588,
+            "action": "walk",
+            "target": 190
+          },
+          "after": {
+            "x": 676.529217,
+            "y": 322.904409,
+            "action": "walk",
+            "target": 190
+          }
+        },
+        {
+          "tick": 5584,
+          "time": 186.133333,
+          "id": 188,
+          "type": "rider",
+          "side": 0,
+          "dx": 2.013243,
+          "dy": -1.687219,
+          "dist": 2.626757,
+          "speedBudget": 2.601034,
+          "wave": true,
+          "spawned": false,
+          "before": {
+            "x": 134.8,
+            "y": 449.78,
+            "action": "walk",
+            "target": 173
+          },
+          "after": {
+            "x": 136.813243,
+            "y": 448.092781,
+            "action": "walk",
+            "target": 173
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 5788,
+          "time": 192.933333,
+          "id": 189,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.793269,
+          "dy": -1.952219,
+          "dist": 2.650844,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 495.321457,
+            "y": 404.74454,
+            "action": "walk",
+            "target": 185
+          },
+          "after": {
+            "x": 497.114726,
+            "y": 402.792321,
+            "action": "walk",
+            "target": 183
+          }
+        },
+        {
+          "tick": 5844,
+          "time": 194.8,
+          "id": 193,
+          "type": "rider",
+          "side": 1,
+          "dx": -1.574529,
+          "dy": -2.122179,
+          "dist": 2.642496,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 678.103746,
+            "y": 325.026588,
+            "action": "walk",
+            "target": 190
+          },
+          "after": {
+            "x": 676.529217,
+            "y": 322.904409,
+            "action": "walk",
+            "target": 190
+          }
+        },
+        {
+          "tick": 5584,
+          "time": 186.133333,
+          "id": 188,
+          "type": "rider",
+          "side": 0,
+          "dx": 2.013243,
+          "dy": -1.687219,
+          "dist": 2.626757,
+          "speedBudget": 2.601034,
+          "wave": true,
+          "spawned": false,
+          "before": {
+            "x": 134.8,
+            "y": 449.78,
+            "action": "walk",
+            "target": 173
+          },
+          "after": {
+            "x": 136.813243,
+            "y": 448.092781,
+            "action": "walk",
+            "target": 173
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed-waves-12547",
+      "ticks": 3601,
+      "samples": 281994,
+      "waveTicks": 39,
+      "waveSamples": 22412,
+      "spawnSamples": 353,
+      "deathSamples": 279,
+      "movingPct": 94.443499,
+      "stepMedian": 0.933,
+      "stepP95": 1.733,
+      "stepP99": 2.332,
+      "stepMax": 2.743709,
+      "waveMax": 2.635976,
+      "spawnMax": 2.601034,
+      "deathMax": 2.331962,
+      "anomalyCount": 0,
+      "existingMax": 2.743709,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 1928,
+      "fingerprint": "81173316a0773013",
+      "worst": [
+        {
+          "tick": 1203,
+          "time": 40.1,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.498319,
+          "dy": 2.298473,
+          "dist": 2.743709,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 626.212864,
+            "y": 437.723968,
+            "action": "walk",
+            "target": 69
+          },
+          "after": {
+            "x": 627.711183,
+            "y": 440.022441,
+            "action": "walk",
+            "target": 69
+          }
+        },
+        {
+          "tick": 1204,
+          "time": 40.133333,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.702438,
+          "dy": 2.145602,
+          "dist": 2.73896,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 627.711183,
+            "y": 440.022441,
+            "action": "walk",
+            "target": 69
+          },
+          "after": {
+            "x": 629.413621,
+            "y": 442.168044,
+            "action": "walk",
+            "target": 69
+          }
+        },
+        {
+          "tick": 1112,
+          "time": 37.066667,
+          "id": 115,
+          "type": "rider",
+          "side": 0,
+          "dx": 2.30003,
+          "dy": 1.387633,
+          "dist": 2.686199,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 600.647327,
+            "y": 410.512196,
+            "action": "walk",
+            "target": 33
+          },
+          "after": {
+            "x": 602.947357,
+            "y": 411.899829,
+            "action": "walk",
+            "target": 33
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 1203,
+          "time": 40.1,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.498319,
+          "dy": 2.298473,
+          "dist": 2.743709,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 626.212864,
+            "y": 437.723968,
+            "action": "walk",
+            "target": 69
+          },
+          "after": {
+            "x": 627.711183,
+            "y": 440.022441,
+            "action": "walk",
+            "target": 69
+          }
+        },
+        {
+          "tick": 1204,
+          "time": 40.133333,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.702438,
+          "dy": 2.145602,
+          "dist": 2.73896,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 627.711183,
+            "y": 440.022441,
+            "action": "walk",
+            "target": 69
+          },
+          "after": {
+            "x": 629.413621,
+            "y": 442.168044,
+            "action": "walk",
+            "target": 69
+          }
+        },
+        {
+          "tick": 1112,
+          "time": 37.066667,
+          "id": 115,
+          "type": "rider",
+          "side": 0,
+          "dx": 2.30003,
+          "dy": 1.387633,
+          "dist": 2.686199,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 600.647327,
+            "y": 410.512196,
+            "action": "walk",
+            "target": 33
+          },
+          "after": {
+            "x": 602.947357,
+            "y": 411.899829,
+            "action": "walk",
+            "target": 33
+          }
+        }
+      ]
+    },
+    {
+      "name": "ai-19181",
+      "ticks": 7201,
+      "samples": 192731,
+      "waveTicks": 20,
+      "waveSamples": 4569,
+      "spawnSamples": 260,
+      "deathSamples": 222,
+      "movingPct": 97.387551,
+      "stepMedian": 1.121,
+      "stepP95": 1.928,
+      "stepP99": 2.332,
+      "stepMax": 2.33233,
+      "waveMax": 2.331962,
+      "spawnMax": 2.331962,
+      "deathMax": 2.331962,
+      "anomalyCount": 0,
+      "existingMax": 2.33233,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 389,
+      "fingerprint": "841cb42d8657a8e6",
+      "worst": [
+        {
+          "tick": 1213,
+          "time": 40.433333,
+          "id": 13,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.655087,
+          "dy": 1.643305,
+          "dist": 2.33233,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 633.378588,
+            "y": 334.691249,
+            "action": "walk",
+            "target": 18
+          },
+          "after": {
+            "x": 635.033675,
+            "y": 336.334553,
+            "action": "walk",
+            "target": 18
+          }
+        },
+        {
+          "tick": 901,
+          "time": 30.033333,
+          "id": 17,
+          "type": "runner",
+          "side": 1,
+          "dx": -1.733333,
+          "dy": -1.56,
+          "dist": 2.331962,
+          "speedBudget": 2.331962,
+          "wave": true,
+          "spawned": true,
+          "before": {
+            "x": 1162,
+            "y": 455,
+            "action": "spawn",
+            "target": null
+          },
+          "after": {
+            "x": 1160.266667,
+            "y": 453.44,
+            "action": "walk",
+            "target": 1
+          }
+        },
+        {
+          "tick": 901,
+          "time": 30.033333,
+          "id": 18,
+          "type": "runner",
+          "side": 1,
+          "dx": -1.733333,
+          "dy": 1.56,
+          "dist": 2.331962,
+          "speedBudget": 2.331962,
+          "wave": true,
+          "spawned": true,
+          "before": {
+            "x": 1151,
+            "y": 315,
+            "action": "spawn",
+            "target": null
+          },
+          "after": {
+            "x": 1149.266667,
+            "y": 316.56,
+            "action": "walk",
+            "target": 9
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 1213,
+          "time": 40.433333,
+          "id": 13,
+          "type": "runner",
+          "side": 0,
+          "dx": 1.655087,
+          "dy": 1.643305,
+          "dist": 2.33233,
+          "speedBudget": 2.331962,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 633.378588,
+            "y": 334.691249,
+            "action": "walk",
+            "target": 18
+          },
+          "after": {
+            "x": 635.033675,
+            "y": 336.334553,
+            "action": "walk",
+            "target": 18
+          }
+        },
+        {
+          "tick": 902,
+          "time": 30.066667,
+          "id": 17,
+          "type": "runner",
+          "side": 1,
+          "dx": -1.733333,
+          "dy": -1.56,
+          "dist": 2.331962,
+          "speedBudget": 2.331962,
+          "wave": true,
+          "spawned": false,
+          "before": {
+            "x": 1160.266667,
+            "y": 453.44,
+            "action": "walk",
+            "target": 1
+          },
+          "after": {
+            "x": 1158.533333,
+            "y": 451.88,
+            "action": "walk",
+            "target": 1
+          }
+        },
+        {
+          "tick": 902,
+          "time": 30.066667,
+          "id": 18,
+          "type": "runner",
+          "side": 1,
+          "dx": -1.733333,
+          "dy": 1.56,
+          "dist": 2.331962,
+          "speedBudget": 2.331962,
+          "wave": true,
+          "spawned": false,
+          "before": {
+            "x": 1149.266667,
+            "y": 316.56,
+            "action": "walk",
+            "target": 9
+          },
+          "after": {
+            "x": 1147.533333,
+            "y": 318.12,
+            "action": "walk",
+            "target": 9
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed-waves-19181",
+      "ticks": 3601,
+      "samples": 276899,
+      "waveTicks": 39,
+      "waveSamples": 22114,
+      "spawnSamples": 370,
+      "deathSamples": 293,
+      "movingPct": 94.023814,
+      "stepMedian": 0.945,
+      "stepP95": 1.937,
+      "stepP99": 2.332,
+      "stepMax": 2.726938,
+      "waveMax": 2.60485,
+      "spawnMax": 2.601034,
+      "deathMax": 2.601271,
+      "anomalyCount": 0,
+      "existingMax": 2.726938,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 2066,
+      "fingerprint": "6021eb25dba0bf17",
+      "worst": [
+        {
+          "tick": 1199,
+          "time": 39.966667,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.734525,
+          "dy": -2.104189,
+          "dist": 2.726938,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 632.381655,
+            "y": 389.337335,
+            "action": "walk",
+            "target": 119
+          },
+          "after": {
+            "x": 634.11618,
+            "y": 387.233146,
+            "action": "walk",
+            "target": 119
+          }
+        },
+        {
+          "tick": 1200,
+          "time": 40,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.825065,
+          "dy": -2.019774,
+          "dist": 2.722195,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 634.11618,
+            "y": 387.233146,
+            "action": "walk",
+            "target": 119
+          },
+          "after": {
+            "x": 635.941245,
+            "y": 385.213372,
+            "action": "walk",
+            "target": 119
+          }
+        },
+        {
+          "tick": 1198,
+          "time": 39.933333,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.625658,
+          "dy": -2.171806,
+          "dist": 2.712841,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 630.755997,
+            "y": 391.509141,
+            "action": "walk",
+            "target": 119
+          },
+          "after": {
+            "x": 632.381655,
+            "y": 389.337335,
+            "action": "walk",
+            "target": 119
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 1199,
+          "time": 39.966667,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.734525,
+          "dy": -2.104189,
+          "dist": 2.726938,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 632.381655,
+            "y": 389.337335,
+            "action": "walk",
+            "target": 119
+          },
+          "after": {
+            "x": 634.11618,
+            "y": 387.233146,
+            "action": "walk",
+            "target": 119
+          }
+        },
+        {
+          "tick": 1200,
+          "time": 40,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.825065,
+          "dy": -2.019774,
+          "dist": 2.722195,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 634.11618,
+            "y": 387.233146,
+            "action": "walk",
+            "target": 119
+          },
+          "after": {
+            "x": 635.941245,
+            "y": 385.213372,
+            "action": "walk",
+            "target": 119
+          }
+        },
+        {
+          "tick": 1198,
+          "time": 39.933333,
+          "id": 116,
+          "type": "rider",
+          "side": 0,
+          "dx": 1.625658,
+          "dy": -2.171806,
+          "dist": 2.712841,
+          "speedBudget": 2.601034,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 630.755997,
+            "y": 391.509141,
+            "action": "walk",
+            "target": 119
+          },
+          "after": {
+            "x": 632.381655,
+            "y": 389.337335,
+            "action": "walk",
+            "target": 119
+          }
+        }
+      ]
+    },
+    {
+      "name": "legal-support-queue-0",
+      "ticks": 600,
+      "samples": 19200,
+      "waveTicks": 0,
+      "waveSamples": 0,
+      "spawnSamples": 0,
+      "deathSamples": 0,
+      "movingPct": 67.411458,
+      "stepMedian": 0.18,
+      "stepP95": 0.993,
+      "stepP99": 1.127,
+      "stepMax": 1.255672,
+      "waveMax": 0,
+      "spawnMax": 0,
+      "deathMax": 0,
+      "anomalyCount": 0,
+      "existingMax": 1.255672,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 41,
+      "fingerprint": "546300fb42dfb157",
+      "worst": [
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 2,
+          "type": "bow",
+          "side": 0,
+          "dx": -0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 575.7,
+            "y": 315,
+            "action": "idle",
+            "target": 1
+          },
+          "after": {
+            "x": 574.766667,
+            "y": 315.84,
+            "action": "walk",
+            "target": 1
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 10,
+          "type": "bow",
+          "side": 0,
+          "dx": -0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 575.7,
+            "y": 355,
+            "action": "idle",
+            "target": 9
+          },
+          "after": {
+            "x": 574.766667,
+            "y": 355.84,
+            "action": "walk",
+            "target": 9
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 18,
+          "type": "bow",
+          "side": 0,
+          "dx": -0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 575.7,
+            "y": 395,
+            "action": "idle",
+            "target": 17
+          },
+          "after": {
+            "x": 574.766667,
+            "y": 395.84,
+            "action": "walk",
+            "target": 17
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 2,
+          "type": "bow",
+          "side": 0,
+          "dx": -0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 575.7,
+            "y": 315,
+            "action": "idle",
+            "target": 1
+          },
+          "after": {
+            "x": 574.766667,
+            "y": 315.84,
+            "action": "walk",
+            "target": 1
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 10,
+          "type": "bow",
+          "side": 0,
+          "dx": -0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 575.7,
+            "y": 355,
+            "action": "idle",
+            "target": 9
+          },
+          "after": {
+            "x": 574.766667,
+            "y": 355.84,
+            "action": "walk",
+            "target": 9
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 18,
+          "type": "bow",
+          "side": 0,
+          "dx": -0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 575.7,
+            "y": 395,
+            "action": "idle",
+            "target": 17
+          },
+          "after": {
+            "x": 574.766667,
+            "y": 395.84,
+            "action": "walk",
+            "target": 17
+          }
+        }
+      ]
+    },
+    {
+      "name": "legal-support-queue-1",
+      "ticks": 600,
+      "samples": 19200,
+      "waveTicks": 0,
+      "waveSamples": 0,
+      "spawnSamples": 0,
+      "deathSamples": 0,
+      "movingPct": 67.411458,
+      "stepMedian": 0.18,
+      "stepP95": 0.993,
+      "stepP99": 1.127,
+      "stepMax": 1.255672,
+      "waveMax": 0,
+      "spawnMax": 0,
+      "deathMax": 0,
+      "anomalyCount": 0,
+      "existingMax": 1.255672,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 41,
+      "fingerprint": "e99815f1b2c484ec",
+      "worst": [
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 2,
+          "type": "bow",
+          "side": 1,
+          "dx": 0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 704.3,
+            "y": 315,
+            "action": "idle",
+            "target": 1
+          },
+          "after": {
+            "x": 705.233333,
+            "y": 315.84,
+            "action": "walk",
+            "target": 1
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 10,
+          "type": "bow",
+          "side": 1,
+          "dx": 0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 704.3,
+            "y": 355,
+            "action": "idle",
+            "target": 9
+          },
+          "after": {
+            "x": 705.233333,
+            "y": 355.84,
+            "action": "walk",
+            "target": 9
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 18,
+          "type": "bow",
+          "side": 1,
+          "dx": 0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 704.3,
+            "y": 395,
+            "action": "idle",
+            "target": 17
+          },
+          "after": {
+            "x": 705.233333,
+            "y": 395.84,
+            "action": "walk",
+            "target": 17
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 2,
+          "type": "bow",
+          "side": 1,
+          "dx": 0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 704.3,
+            "y": 315,
+            "action": "idle",
+            "target": 1
+          },
+          "after": {
+            "x": 705.233333,
+            "y": 315.84,
+            "action": "walk",
+            "target": 1
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 10,
+          "type": "bow",
+          "side": 1,
+          "dx": 0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 704.3,
+            "y": 355,
+            "action": "idle",
+            "target": 9
+          },
+          "after": {
+            "x": 705.233333,
+            "y": 355.84,
+            "action": "walk",
+            "target": 9
+          }
+        },
+        {
+          "tick": 20,
+          "time": 0.666667,
+          "id": 18,
+          "type": "bow",
+          "side": 1,
+          "dx": 0.933333,
+          "dy": 0.84,
+          "dist": 1.255672,
+          "speedBudget": 1.255672,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 704.3,
+            "y": 395,
+            "action": "idle",
+            "target": 17
+          },
+          "after": {
+            "x": 705.233333,
+            "y": 395.84,
+            "action": "walk",
+            "target": 17
+          }
+        }
+      ]
+    },
+    {
+      "name": "legal-dense-boundary-contacts",
+      "ticks": 361,
+      "samples": 23104,
+      "waveTicks": 0,
+      "waveSamples": 0,
+      "spawnSamples": 0,
+      "deathSamples": 0,
+      "movingPct": 79.462431,
+      "stepMedian": 0.214,
+      "stepP95": 1.033,
+      "stepP99": 1.39,
+      "stepMax": 1.525589,
+      "waveMax": 0,
+      "spawnMax": 0,
+      "deathMax": 0,
+      "anomalyCount": 0,
+      "existingMax": 1.525589,
+      "existingAnomalyCount": 0,
+      "overSpeedBudget": 69,
+      "fingerprint": "b868ecdec0e861f1",
+      "worst": [
+        {
+          "tick": 264,
+          "time": 8.8,
+          "id": 49,
+          "type": "levy",
+          "side": 0,
+          "dx": 0.763584,
+          "dy": 1.320742,
+          "dist": 1.525589,
+          "speedBudget": 1.390208,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 563.813775,
+            "y": 364.566167,
+            "action": "walk",
+            "target": 6
+          },
+          "after": {
+            "x": 564.577359,
+            "y": 365.886909,
+            "action": "walk",
+            "target": 6
+          }
+        },
+        {
+          "tick": 263,
+          "time": 8.766667,
+          "id": 49,
+          "type": "levy",
+          "side": 0,
+          "dx": 0.738039,
+          "dy": 1.314859,
+          "dist": 1.507831,
+          "speedBudget": 1.390208,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 563.075736,
+            "y": 363.251308,
+            "action": "walk",
+            "target": 6
+          },
+          "after": {
+            "x": 563.813775,
+            "y": 364.566167,
+            "action": "walk",
+            "target": 6
+          }
+        },
+        {
+          "tick": 265,
+          "time": 8.833333,
+          "id": 49,
+          "type": "levy",
+          "side": 0,
+          "dx": 0.851443,
+          "dy": 1.227902,
+          "dist": 1.494221,
+          "speedBudget": 1.390208,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 564.577359,
+            "y": 365.886909,
+            "action": "walk",
+            "target": 6
+          },
+          "after": {
+            "x": 565.428802,
+            "y": 367.114811,
+            "action": "walk",
+            "target": 8
+          }
+        }
+      ],
+      "worstExisting": [
+        {
+          "tick": 264,
+          "time": 8.8,
+          "id": 49,
+          "type": "levy",
+          "side": 0,
+          "dx": 0.763584,
+          "dy": 1.320742,
+          "dist": 1.525589,
+          "speedBudget": 1.390208,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 563.813775,
+            "y": 364.566167,
+            "action": "walk",
+            "target": 6
+          },
+          "after": {
+            "x": 564.577359,
+            "y": 365.886909,
+            "action": "walk",
+            "target": 6
+          }
+        },
+        {
+          "tick": 263,
+          "time": 8.766667,
+          "id": 49,
+          "type": "levy",
+          "side": 0,
+          "dx": 0.738039,
+          "dy": 1.314859,
+          "dist": 1.507831,
+          "speedBudget": 1.390208,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 563.075736,
+            "y": 363.251308,
+            "action": "walk",
+            "target": 6
+          },
+          "after": {
+            "x": 563.813775,
+            "y": 364.566167,
+            "action": "walk",
+            "target": 6
+          }
+        },
+        {
+          "tick": 265,
+          "time": 8.833333,
+          "id": 49,
+          "type": "levy",
+          "side": 0,
+          "dx": 0.851443,
+          "dy": 1.227902,
+          "dist": 1.494221,
+          "speedBudget": 1.390208,
+          "wave": false,
+          "spawned": false,
+          "before": {
+            "x": 564.577359,
+            "y": 365.886909,
+            "action": "walk",
+            "target": 6
+          },
+          "after": {
+            "x": 565.428802,
+            "y": 367.114811,
+            "action": "walk",
+            "target": 8
+          }
+        }
+      ]
+    }
+  ]
+}

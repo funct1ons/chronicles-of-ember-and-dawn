@@ -2,12 +2,15 @@ import type { BattleState, BattleEvent, Biome, Fighter, Side } from '../core/typ
 import { UNIT_BY_ID } from '../data/units';
 import { sprite, isRanged } from './sprites';
 import { scenery, castle, THEMES } from './scenery';
+import { ImpactShake, MotionHistory } from './motion';
+import { devicePoint, pixelViewport, spritePixels, type PixelViewport } from './pixelViewport';
 interface Particle {x:number;y:number;vx:number;vy:number;life:number;max:number;color:string;size:number;kind:'spark'|'arrow'|'magic'|'smoke'|'heal';tx?:number;ty?:number;}
 export class BattleRenderer {
  private ctx:CanvasRenderingContext2D;
  private particles:Particle[]=[];
- private shake=0;
- private previousTime=0;
+ private shake=new ImpactShake();
+ private motion=new MotionHistory();
+ private previousTime:number|null=null;
  public reducedMotion=false;
  public showHealth=true;
  public lastFrameMs=0;
@@ -22,28 +25,44 @@ export class BattleRenderer {
    if(e.kind==='hit'||e.kind==='death'||e.kind==='base'){
     const n=e.kind==='death'?5:e.kind==='base'?8:3;
     for(let i=0;i<n;i++)this.add({x,y,vx:(Math.random()-.5)*35,vy:-8-Math.random()*18,life:.2+Math.random()*.3,max:.5,color:i%2?'#d2bb8d':'#9a7860',size:1,kind:'spark'});
-    if(e.kind==='base')this.shake=2;
+    if(e.kind==='base'&&!this.reducedMotion)this.shake.hit();
    }
    if(e.kind==='heal')for(let i=0;i<3;i++)this.add({x:x+(Math.random()-.5)*14,y:y+Math.random()*15,vx:0,vy:-13,life:.65,max:.65,color:'#e6dfb6',size:1,kind:'heal'});
    if(e.kind==='spawn')for(let i=0;i<2;i++)this.add({x:x+(Math.random()-.5)*12,y:y+13,vx:Math.random()*6,vy:-5,life:.5,max:.5,color:'#a6a18b',size:2,kind:'smoke'});
   }
  }
  private add(p:Particle){if(this.particles.length<220)this.particles.push(p);}
- clear(){this.particles=[];this.shake=0;}
- render(state:BattleState|null,biome:Biome='plains',clock=performance.now()/1000){
-  const start=performance.now();const g=this.ctx;const dt=Math.min(.05,Math.max(0,clock-this.previousTime));this.previousTime=clock;
-  const time=this.reducedMotion?0:clock;
-  g.save();g.scale(2,2);g.imageSmoothingEnabled=false;
-  const shake=this.reducedMotion?0:this.shake;this.shake=Math.max(0,this.shake-dt*9);
-  g.translate(Math.round(Math.sin(clock*61)*shake),0);
+ /** Call immediately BEFORE every fixed simulation step, including catch-up steps. */
+ captureBeforeStep(state:BattleState){this.motion.captureBeforeStep(state);}
+ clear(){this.particles=[];this.shake.clear();this.motion.clear();this.previousTime=null;}
+ /** alpha=accumulator/FIXED_DT; null freezes the last presented position on pause.
+  * Omitted alpha preserves legacy current-state rendering. Clock is a paused visual clock.
+  * clear() is required on battle restart; no simulated positions/RNG are modified.
+  */
+ render(state:BattleState|null,biome:Biome='plains',clock=performance.now()/1000,alpha:number|null=1){
+  const start=performance.now();const g=this.ctx;
+  const elapsed=this.previousTime===null?0:Math.max(0,clock-this.previousTime);this.previousTime=clock;
+  const dt=Math.min(.05,elapsed);const time=this.reducedMotion?0:clock;
+  this.motion.beginFrame(state,alpha);
+  // CSS must own both displayed dimensions. Resize only on an actual size/DPR change.
+  const bounds=this.canvas.getBoundingClientRect();
+  const view=pixelViewport(bounds.width||1280,bounds.height||540,globalThis.devicePixelRatio??1);
+  if(this.canvas.width!==view.width)this.canvas.width=view.width;
+  if(this.canvas.height!==view.height)this.canvas.height=view.height;
+  g.save();g.setTransform(1,0,0,1,0,0);g.imageSmoothingEnabled=false;
+  g.fillStyle=THEMES[biome].sky[0];g.fillRect(0,0,view.width,view.height);
+  const impulse=this.shake.advance(elapsed,this.reducedMotion);
+  const shake=Math.max(-view.maxShake,Math.min(view.maxShake,impulse));
+  g.setTransform(view.scale,0,0,view.scale,view.x+shake,view.y);
   g.drawImage(scenery(biome),0,0);
   this.atmosphere(g,biome,time);
   castle(g,37,0,time,state?state.teams[0].baseHp/state.config.baseHp:1,biome);
-  castle(g,601,1,time,state?state.teams[1].baseHp/state.config.baseHp:1,biome);
+  // scenery's right flag reaches x+43; 601 clipped it beyond the 640px scene.
+  castle(g,596,1,time,state?state.teams[1].baseHp/state.config.baseHp:1,biome);
   // Strategic middle-ground glow, then soldiers sorted by feet for stable depth.
   if(state){
-   const units=[...state.units].sort((a,b)=>a.y-b.y||a.id-b.id);
-   for(const u of units)this.soldier(g,u,time);
+   const units=state.units.map(unit=>({unit,...this.motion.position(unit)})).sort((a,b)=>a.y-b.y||a.unit.id-b.unit.id);
+   for(const u of units)this.soldier(g,u.unit,time,view,u.x,u.y,shake);
    this.projectiles(g,dt);
    if(this.showHealth){for(const side of [0,1] as Side[]){const x=side===0?12:575;g.fillStyle='#0a121be0';g.fillRect(x,223,52,4);g.fillStyle=side===0?'#6d9cb3':'#c47768';g.fillRect(x+1,224,50*Math.max(0,state.teams[side].baseHp/state.config.baseHp),2);}}
   }else{
@@ -51,7 +70,8 @@ export class BattleRenderer {
     for(let i=0;i<18;i++){
      const row=Math.floor(i/6);const x=side===0?155+(i%6)*16+row*6:1125-(i%6)*16-row*6;
      const types=['shield','pike','bow','knight','levy','paladin'];
-     this.soldier(g,{id:i,side,type:types[i%6],x,y:370+row*30,hp:100,maxHp:100,cooldown:0,action:'idle',actionTime:0,target:null,born:0},time);
+     const u:Fighter={id:i,side,type:types[i%6],x,y:370+row*30,hp:100,maxHp:100,cooldown:0,action:'idle',actionTime:0,target:null,born:0};
+     this.soldier(g,u,time,view,u.x,u.y,shake);
     }
    }
   }
@@ -60,27 +80,29 @@ export class BattleRenderer {
   const fade=g.createLinearGradient(0,248,0,270);fade.addColorStop(0,'#0a121800');fade.addColorStop(1,'#0a1218aa');g.fillStyle=fade;g.fillRect(0,248,640,22);
   g.restore();this.lastFrameMs=performance.now()-start;
  }
- private soldier(g:CanvasRenderingContext2D,u:Fighter,time:number){
-  const x=Math.round(u.x/2),y=Math.round(u.y/2);const dead=u.action==='dead';
+ private soldier(g:CanvasRenderingContext2D,u:Fighter,time:number,view:PixelViewport,worldX:number,worldY:number,shake:number){
+  const position=devicePoint(view,worldX,worldY);const art=spritePixels(view.scale);
+  const scale=art.size/36;const dead=u.action==='dead';
   const opacity=dead?Math.max(0,1-(u.actionTime/.65)):1;
-  g.globalAlpha=opacity;
-  g.fillStyle='#07111850';g.beginPath();g.ellipse(x,y-1,UNIT_BY_ID[u.type]?.role==='knight'?13:8,2,0,0,Math.PI*2);g.fill();
+  g.save();g.setTransform(1,0,0,1,position.x+shake,position.y);g.globalAlpha=opacity;
+  g.fillStyle='#07111850';g.beginPath();g.ellipse(0,-scale,(UNIT_BY_ID[u.type]?.role==='knight'?13:8)*scale,2*scale,0,0,Math.PI*2);g.fill();
   const elapsed=Math.max(0,UNIT_BY_ID[u.type].cooldown-u.cooldown);
   // Movement can resume during an attack cooldown; finish the weapon's four-frame swing anyway.
   const swinging=!dead&&u.cooldown>0&&elapsed<.29&&!(u.action==='hurt'&&u.actionTime<.12);
   const visualAction=swinging?'attack':u.action;
   const frame=swinging?Math.min(3,Math.floor(elapsed*13)):Math.floor(time*(u.action==='walk'?7:2)+u.id*.7)%4;
   const s=sprite(u.type,u.side,visualAction,frame);
-  g.save();g.translate(x,y);if(u.side===1)g.scale(-1,1);
-  if(dead){g.translate(0,-5);g.rotate(-Math.min(1.5,u.actionTime*5));}
+  g.save();if(u.side===1)g.scale(-1,1);
+  if(dead){g.translate(0,Math.round(-5*scale));g.rotate(-Math.min(1.5,u.actionTime*5));}
   if(u.action==='hurt'&&Math.floor(time*20)%2===0)g.globalAlpha=.65;
-  g.drawImage(s,-18,-34,36,36);
+  g.drawImage(s,art.left,art.top,art.size,art.size);
   // Fine attack streak only appears on contact frames, does not obscure silhouettes.
   if(swinging&&frame===2&&!isRanged(UNIT_BY_ID[u.type].role)){
-   g.strokeStyle='#e4d3ad8f';g.lineWidth=1;g.beginPath();g.moveTo(13,-24);g.lineTo(21,-16);g.lineTo(18,-9);g.stroke();
+   g.strokeStyle='#e4d3ad8f';g.lineWidth=Math.max(1,Math.round(scale));g.beginPath();g.moveTo(Math.round(13*scale),Math.round(-24*scale));g.lineTo(Math.round(21*scale),Math.round(-16*scale));g.lineTo(Math.round(18*scale),Math.round(-9*scale));g.stroke();
   }
   g.restore();g.globalAlpha=1;
-  if(this.showHealth&&!dead&&u.hp<u.maxHp){g.fillStyle='#091018bf';g.fillRect(x-7,y-35,14,2);g.fillStyle=u.side===0?'#82b7ca':'#cc8274';g.fillRect(x-7,y-35,14*Math.max(0,u.hp/u.maxHp),1);}
+  if(this.showHealth&&!dead&&u.hp<u.maxHp){const x=Math.round(-7*scale),y=Math.round(-35*scale),width=Math.round(14*scale);g.fillStyle='#091018bf';g.fillRect(x,y,width,Math.max(1,Math.round(2*scale)));g.fillStyle=u.side===0?'#82b7ca':'#cc8274';g.fillRect(x,y,Math.round(width*Math.max(0,u.hp/u.maxHp)),Math.max(1,Math.round(scale)));}
+  g.restore();
  }
  private atmosphere(g:CanvasRenderingContext2D,biome:Biome,time:number){
   const theme=THEMES[biome];

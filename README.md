@@ -4,6 +4,13 @@
 
 ![实际离线生产版战斗](docs/screenshots/offline-production-battle.png)
 
+## v1.1 更新
+
+- 16兵种各有原创小故事，支持定位筛选、搜索、价格排序、真实伤害适性与经济效率；战场按 `B` 查看完整条目。
+- 战斗主曲连续播放，高潮只增加协调打击层与平滑增益；双甲板循环交叠，首次默认音乐音量提高至80%（不覆盖已有设置）。
+- 固定步渲染插值、设备像素对齐、整数倍率精灵与低幅震屏；修复换波出生重叠推开已有单位的问题。
+- 已完成305秒真实音频波形长测、9组视口/DPR检查和新版本521局回归；详情与验收边界见测试报告。
+
 ## Windows PowerShell 启动
 
 需要 **Node.js 22.12+（推荐22 LTS或24 LTS）**，现代 Edge / Chrome / Firefox。无需后端、账户、API Key、Python或额外游戏编辑器。
@@ -32,7 +39,7 @@ npm.cmd run preview -- --host 127.0.0.1
 - 经典对战、10关渐进战役、3种特殊试炼、自定义规则、本地双人。
 - 五档规则/评分与有界前瞻AI；所有经典难度遵守同等金币与人口，战役额外补给在简报明示。
 - 教程、完整兵种图鉴、暂停、1/1.5/2/3倍速、全屏、静音、三路音量、战史与版本化本地进度、JSON导入导出。
-- 五首本地CC0管弦配乐、七个音乐状态、平滑交叉淡化、21类本地合成音效、风/战场环境与20声部上限。
+- 五首本地CC0管弦配乐、七个音乐状态、连续战斗主曲/高潮协调叠层、流式循环交叠、21类本地合成音效、风/战场环境与20声部上限。
 - GitHub Pages子路径兼容、所有音频随发布、生产版离线缓存与音频Range支持。
 
 ## 三十秒上手
@@ -52,6 +59,7 @@ npm.cmd run preview -- --host 127.0.0.1
 |暂停/继续|`Space`，或暂停面板|
 |返回/关闭面板|`Esc`|
 |加速/减速|`+` / `-`|
+|当前检视兵种完整图鉴|`B`（`U`仍选火法）|
 |一键静音|`M`|
 |全屏|`F`（浏览器也可F11）|
 
@@ -81,6 +89,12 @@ npm.cmd run challenges:witness # 无盾试炼的合法通关构造验证
 npm.cmd run screenshots     # 收集本轮E2E截图到docs/screenshots
 npm.cmd run verify:release  # /game/子目录、断网、实际时钟战斗、音乐与Range验收
 npm.cmd run assets          # 导出两阵营精灵图集和四战场PNG
+npm.cmd run motion:audit    # 全tick出生/位移异常审计
+# 以下需要运行本地dev服务器，默认 http://127.0.0.1:4199/
+# npm.cmd run dev -- --port 4199 --strictPort
+npm.cmd run verify:motion   # 9组视口/DPR与真实RAF插值检查
+npm.cmd run verify:audio    # 305秒真实波形长播（不加速、不seek）
+npm.cmd run audio:analyze   # 重现Final素材的稀疏低频重音分析
 ```
 
 浏览器下载受阻时，可使用已有Chrome/Edge：
@@ -96,7 +110,7 @@ Windows自动化配置也会查找已有Playwright Chromium缓存。CI使用标�
 
 **线上地址：<https://funct1ons.github.io/chronicles-of-ember-and-dawn/>**（已实际部署并访问验证）
 
-1. 将源码按你的仓库流程提交；本次开发未执行外部推送。
+1. v1.0 已上线；v1.1 已获授权发布，推送后由 GitHub Actions 校验并部署。公开站点以最后成功部署为准，发布与实测状态见 [执行记录](docs/PROGRESS.md)。
 2. GitHub仓库 **Settings → Pages → Source → GitHub Actions**。
 3. `.github/workflows/pages.yml` 在 `main` 推送或手动触发时执行依赖安装、单测、构建与浏览器验收，然后上传 `dist/` 并部署。
 4. 如果默认分支不是main，修改工作流分支过滤。
@@ -116,7 +130,7 @@ public/audio/   五首本地CC0原始配乐
 scripts/        平衡、PNG导出、生产离线验证、SW生成
 ```
 
-模拟不依赖渲染、音频或在线服务；固定30Hz，渲染使用requestAnimationFrame。当前约150单位预算下采用有界O(n²)邻近搜索与软八队列，无不必要后端/框架。
+模拟不依赖渲染、音频或在线服务；固定30Hz，渲染使用requestAnimationFrame与位置插值（暂停冻结展示，不修改模拟位置）。当前约150单位预算下采用有界O(n²)邻近搜索与软八队列，无不必要后端/框架。
 
 ## 设计与验收文档
 
@@ -128,6 +142,7 @@ scripts/        平衡、PNG导出、生产离线验证、SW生成
 - [测试报告](docs/TEST_REPORT.md)
 - [素材授权](docs/ASSET_LICENSES.md) / [音乐逐项来源与哈希](docs/ASSET_LICENSES_AUDIO.md)
 - [开发与问题记录](docs/PROGRESS.md)
+- [v1.1 已批准方案与实施追踪](docs/PLAN_V1_1_CODEX_AUDIO_MOTION.md)
 - [线上 Pages 实测记录](docs/metrics/live-pages.json)
 
 ## 授权与已知边界

@@ -1,14 +1,14 @@
 {
-  "generated": "2026-10-23T10:24:54.106Z",
+  "generated": "2026-10-23T15:59:06.413Z",
   "source": {
-    "sha256": "6072790e54921f2fa62c25cec6247d839ae8f434146339551b43f831f23da9df",
+    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
     "files": {
-      "src/core/simulation.ts": "7759143ee7d061d676d42a11cc963593d9b8569bd9ff1c4a73428d9b4f797c45",
+      "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
       "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
       "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
       "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
-      "src/core/tactics.ts": "d95d6c49b3606ac93406eadc27332cd411d971a6b7da31ae191b341b878d8cef",
-      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
+      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
       "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
     }
   },
@@ -20,8 +20,8 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 161,
-      "rounds": 13,
+      "seconds": 169,
+      "rounds": 14,
       "peakUnits": 58,
       "base": [
         2500,
@@ -32,19 +32,19 @@
         600
       ],
       "spent": [
-        2835,
-        4728
+        2933,
+        5160
       ],
       "kills": [
-        166,
-        43
+        184,
+        47
       ],
       "aiRecruits": {
-        "levy": 104,
+        "levy": 122,
         "runner": 62
       },
-      "cpuMs": 212,
-      "steps": 4841,
+      "cpuMs": 223,
+      "steps": 5066,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -56,9 +56,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 158,
+      "seconds": 157,
       "rounds": 13,
-      "peakUnits": 55,
+      "peakUnits": 54,
       "base": [
         2500,
         0
@@ -68,19 +68,19 @@
         600
       ],
       "spent": [
-        2705,
-        4812
+        2770,
+        4956
       ],
       "kills": [
-        156,
+        148,
         44
       ],
       "aiRecruits": {
-        "runner": 89,
-        "levy": 67
+        "runner": 117,
+        "levy": 31
       },
-      "cpuMs": 160,
-      "steps": 4753,
+      "cpuMs": 150,
+      "steps": 4724,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -92,9 +92,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 180,
+      "seconds": 181,
       "rounds": 15,
-      "peakUnits": 57,
+      "peakUnits": 60,
       "base": [
         2500,
         0
@@ -104,19 +104,19 @@
         600
       ],
       "spent": [
-        2996,
-        5592
+        3011,
+        6024
       ],
       "kills": [
         202,
-        50
+        48
       ],
       "aiRecruits": {
-        "levy": 140,
-        "runner": 62
+        "levy": 104,
+        "runner": 98
       },
-      "cpuMs": 227,
-      "steps": 5398,
+      "cpuMs": 228,
+      "steps": 5445,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -128,9 +128,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 170,
-      "rounds": 14,
-      "peakUnits": 61,
+      "seconds": 162,
+      "rounds": 13,
+      "peakUnits": 59,
       "base": [
         2500,
         0
@@ -140,19 +140,19 @@
         600
       ],
       "spent": [
-        2921,
-        5496
+        2867,
+        4704
       ],
       "kills": [
-        174,
-        50
+        158,
+        45
       ],
       "aiRecruits": {
-        "runner": 110,
-        "levy": 64
+        "runner": 76,
+        "levy": 82
       },
-      "cpuMs": 242,
-      "steps": 5107,
+      "cpuMs": 228,
+      "steps": 4846,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -164,31 +164,31 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 159,
+      "seconds": 160,
       "rounds": 13,
-      "peakUnits": 50,
+      "peakUnits": 44,
       "base": [
         2500,
         0
       ],
       "income": [
-        506,
+        516,
         600
       ],
       "spent": [
-        2220,
-        4764
+        2285,
+        4980
       ],
       "kills": [
         161,
-        31
+        32
       ],
       "aiRecruits": {
-        "levy": 86,
-        "runner": 75
+        "levy": 68,
+        "runner": 93
       },
-      "cpuMs": 156,
-      "steps": 4769,
+      "cpuMs": 147,
+      "steps": 4805,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -200,9 +200,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 158,
+      "seconds": 157,
       "rounds": 13,
-      "peakUnits": 56,
+      "peakUnits": 51,
       "base": [
         2500,
         0
@@ -223,8 +223,8 @@
         "runner": 90,
         "levy": 64
       },
-      "cpuMs": 171,
-      "steps": 4726,
+      "cpuMs": 170,
+      "steps": 4706,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -236,9 +236,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 177,
-      "rounds": 15,
-      "peakUnits": 63,
+      "seconds": 173,
+      "rounds": 14,
+      "peakUnits": 64,
       "base": [
         2500,
         0
@@ -248,19 +248,19 @@
         600
       ],
       "spent": [
-        3492,
-        5784
+        3434,
+        5136
       ],
       "kills": [
-        206,
-        79
+        188,
+        78
       ],
       "aiRecruits": {
         "levy": 136,
-        "runner": 70
+        "runner": 52
       },
-      "cpuMs": 238,
-      "steps": 5323,
+      "cpuMs": 247,
+      "steps": 5178,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -272,9 +272,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 213,
-      "rounds": 18,
-      "peakUnits": 61,
+      "seconds": 185,
+      "rounds": 15,
+      "peakUnits": 62,
       "base": [
         2500,
         0
@@ -284,19 +284,19 @@
         600
       ],
       "spent": [
-        4594,
-        7584
+        3724,
+        5964
       ],
       "kills": [
-        239,
-        100
+        182,
+        83
       ],
       "aiRecruits": {
-        "runner": 154,
-        "levy": 85
+        "runner": 133,
+        "levy": 49
       },
-      "cpuMs": 235,
-      "steps": 6399,
+      "cpuMs": 204,
+      "steps": 5546,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -308,9 +308,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 454,
-      "rounds": 38,
-      "peakUnits": 74,
+      "seconds": 568,
+      "rounds": 47,
+      "peakUnits": 73,
       "base": [
         2500,
         0
@@ -320,19 +320,19 @@
         600
       ],
       "spent": [
-        13502,
-        19536
+        18234,
+        23784
       ],
       "kills": [
-        619,
-        371
+        779,
+        510
       ],
       "aiRecruits": {
-        "levy": 229,
-        "runner": 390
+        "levy": 355,
+        "runner": 424
       },
-      "cpuMs": 827,
-      "steps": 13627,
+      "cpuMs": 1172,
+      "steps": 17045,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -344,8 +344,8 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 817,
-      "rounds": 68,
+      "seconds": 353,
+      "rounds": 29,
       "peakUnits": 72,
       "base": [
         2500,
@@ -356,19 +356,19 @@
         600
       ],
       "spent": [
-        26678,
-        34836
+        9468,
+        12876
       ],
       "kills": [
-        1140,
-        748
+        440,
+        248
       ],
       "aiRecruits": {
-        "runner": 623,
-        "levy": 517
+        "runner": 193,
+        "levy": 247
       },
-      "cpuMs": 1722,
-      "steps": 24496,
+      "cpuMs": 578,
+      "steps": 10603,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c1",
@@ -380,9 +380,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 156,
+      "seconds": 160,
       "rounds": 13,
-      "peakUnits": 55,
+      "peakUnits": 53,
       "base": [
         2500,
         0
@@ -392,19 +392,19 @@
         600
       ],
       "spent": [
-        2991,
-        4702
+        2997,
+        4876
       ],
       "kills": [
-        152,
-        39
+        155,
+        40
       ],
       "aiRecruits": {
         "levy": 121,
-        "bow": 31
+        "bow": 34
       },
-      "cpuMs": 195,
-      "steps": 4669,
+      "cpuMs": 180,
+      "steps": 4799,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -416,7 +416,7 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 137,
+      "seconds": 132,
       "rounds": 11,
       "peakUnits": 47,
       "base": [
@@ -424,23 +424,23 @@
         0
       ],
       "income": [
-        584,
+        564,
         600
       ],
       "spent": [
-        2706,
-        3584
+        2590,
+        3790
       ],
       "kills": [
-        104,
-        34
+        97,
+        35
       ],
       "aiRecruits": {
-        "levy": 72,
-        "bow": 32
+        "levy": 54,
+        "bow": 43
       },
-      "cpuMs": 102,
-      "steps": 4115,
+      "cpuMs": 99,
+      "steps": 3974,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -452,7 +452,7 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 167,
+      "seconds": 170,
       "rounds": 14,
       "peakUnits": 58,
       "base": [
@@ -464,19 +464,19 @@
         600
       ],
       "spent": [
-        3590,
-        5648
+        3533,
+        5474
       ],
       "kills": [
-        156,
+        153,
         49
       ],
       "aiRecruits": {
         "levy": 100,
-        "bow": 56
+        "bow": 53
       },
-      "cpuMs": 190,
-      "steps": 5006,
+      "cpuMs": 210,
+      "steps": 5104,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -488,9 +488,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 168,
+      "seconds": 172,
       "rounds": 14,
-      "peakUnits": 55,
+      "peakUnits": 65,
       "base": [
         2500,
         0
@@ -500,19 +500,19 @@
         600
       ],
       "spent": [
-        3554,
-        5548
+        3623,
+        5446
       ],
       "kills": [
-        149,
-        48
+        166,
+        50
       ],
       "aiRecruits": {
-        "levy": 91,
-        "bow": 58
+        "levy": 123,
+        "bow": 43
       },
-      "cpuMs": 180,
-      "steps": 5044,
+      "cpuMs": 232,
+      "steps": 5150,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -524,9 +524,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 158,
+      "seconds": 156,
       "rounds": 13,
-      "peakUnits": 53,
+      "peakUnits": 54,
       "base": [
         2500,
         0
@@ -547,8 +547,8 @@
         "levy": 121,
         "bow": 33
       },
-      "cpuMs": 180,
-      "steps": 4744,
+      "cpuMs": 174,
+      "steps": 4671,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -560,7 +560,7 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 156,
+      "seconds": 154,
       "rounds": 13,
       "peakUnits": 55,
       "base": [
@@ -583,8 +583,8 @@
         "levy": 90,
         "bow": 48
       },
-      "cpuMs": 164,
-      "steps": 4688,
+      "cpuMs": 167,
+      "steps": 4627,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -596,9 +596,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 385,
-      "rounds": 32,
-      "peakUnits": 58,
+      "seconds": 461,
+      "rounds": 38,
+      "peakUnits": 62,
       "base": [
         2500,
         0
@@ -608,19 +608,19 @@
         600
       ],
       "spent": [
-        13410,
-        16116
+        16774,
+        19880
       ],
       "kills": [
-        442,
-        244
+        528,
+        302
       ],
       "aiRecruits": {
-        "levy": 280,
-        "bow": 162
+        "levy": 316,
+        "bow": 212
       },
-      "cpuMs": 465,
-      "steps": 11547,
+      "cpuMs": 562,
+      "steps": 13842,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -632,8 +632,8 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 421,
-      "rounds": 35,
+      "seconds": 256,
+      "rounds": 21,
       "peakUnits": 61,
       "base": [
         2500,
@@ -644,19 +644,19 @@
         600
       ],
       "spent": [
-        15324,
-        18034
+        8190,
+        9584
       ],
       "kills": [
-        478,
-        277
+        269,
+        154
       ],
       "aiRecruits": {
-        "levy": 285,
-        "bow": 193
+        "levy": 177,
+        "bow": 92
       },
-      "cpuMs": 470,
-      "steps": 12641,
+      "cpuMs": 325,
+      "steps": 7688,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -668,9 +668,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 365,
-      "rounds": 30,
-      "peakUnits": 64,
+      "seconds": 324,
+      "rounds": 27,
+      "peakUnits": 71,
       "base": [
         0,
         2500
@@ -680,19 +680,19 @@
         600
       ],
       "spent": [
-        15310,
-        11444
+        13512,
+        10248
       ],
       "kills": [
-        252,
-        420
+        228,
+        372
       ],
       "aiRecruits": {
-        "levy": 153,
-        "bow": 134
+        "levy": 137,
+        "bow": 120
       },
-      "cpuMs": 589,
-      "steps": 10944,
+      "cpuMs": 534,
+      "steps": 9731,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -704,9 +704,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 376,
-      "rounds": 31,
-      "peakUnits": 75,
+      "seconds": 330,
+      "rounds": 27,
+      "peakUnits": 74,
       "base": [
         0,
         2500
@@ -716,19 +716,19 @@
         600
       ],
       "spent": [
-        15742,
-        12582
+        13512,
+        10552
       ],
       "kills": [
-        286,
-        438
+        244,
+        372
       ],
       "aiRecruits": {
-        "levy": 198,
-        "bow": 135
+        "levy": 169,
+        "bow": 112
       },
-      "cpuMs": 632,
-      "steps": 11282,
+      "cpuMs": 603,
+      "steps": 9894,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c2",
@@ -740,11 +740,11 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 174,
+      "seconds": 172,
       "rounds": 14,
-      "peakUnits": 55,
+      "peakUnits": 58,
       "base": [
-        2500,
+        2490,
         0
       ],
       "income": [
@@ -752,20 +752,20 @@
         600
       ],
       "spent": [
-        4460,
-        5816
+        4066,
+        5673
       ],
       "kills": [
-        133,
-        47
+        146,
+        37
       ],
       "aiRecruits": {
-        "levy": 86,
-        "rider": 18,
+        "levy": 104,
+        "rider": 13,
         "bow": 29
       },
-      "cpuMs": 170,
-      "steps": 5216,
+      "cpuMs": 205,
+      "steps": 5168,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -777,9 +777,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 161,
-      "rounds": 13,
-      "peakUnits": 66,
+      "seconds": 170,
+      "rounds": 14,
+      "peakUnits": 65,
       "base": [
         2500,
         0
@@ -789,20 +789,20 @@
         600
       ],
       "spent": [
-        3768,
-        5113
+        4048,
+        5683
       ],
       "kills": [
         119,
-        33
+        37
       ],
       "aiRecruits": {
         "levy": 61,
-        "bow": 53,
-        "rider": 5
+        "bow": 43,
+        "rider": 15
       },
-      "cpuMs": 224,
-      "steps": 4844,
+      "cpuMs": 236,
+      "steps": 5096,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -814,9 +814,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 178,
-      "rounds": 15,
-      "peakUnits": 60,
+      "seconds": 196,
+      "rounds": 16,
+      "peakUnits": 68,
       "base": [
         2500,
         0
@@ -826,19 +826,20 @@
         600
       ],
       "spent": [
-        4529,
-        6476
+        5716,
+        6935
       ],
       "kills": [
-        182,
-        52
+        185,
+        69
       ],
       "aiRecruits": {
         "levy": 120,
-        "bow": 62
+        "bow": 60,
+        "rider": 5
       },
-      "cpuMs": 266,
-      "steps": 5335,
+      "cpuMs": 363,
+      "steps": 5869,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -850,9 +851,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 177,
-      "rounds": 15,
-      "peakUnits": 56,
+      "seconds": 191,
+      "rounds": 16,
+      "peakUnits": 57,
       "base": [
         2500,
         0
@@ -862,20 +863,20 @@
         600
       ],
       "spent": [
-        4617,
-        6396
+        5255,
+        6989
       ],
       "kills": [
-        150,
-        56
+        161,
+        64
       ],
       "aiRecruits": {
-        "levy": 93,
-        "bow": 48,
-        "rider": 12
+        "levy": 111,
+        "bow": 25,
+        "rider": 25
       },
-      "cpuMs": 223,
-      "steps": 5317,
+      "cpuMs": 252,
+      "steps": 5729,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -887,7 +888,7 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 157,
+      "seconds": 159,
       "rounds": 13,
       "peakUnits": 49,
       "base": [
@@ -900,19 +901,19 @@
       ],
       "spent": [
         3167,
-        4977
+        5028
       ],
       "kills": [
-        126,
+        120,
         25
       ],
       "aiRecruits": {
         "levy": 87,
-        "rider": 11,
-        "bow": 28
+        "rider": 18,
+        "bow": 15
       },
       "cpuMs": 144,
-      "steps": 4715,
+      "steps": 4784,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -948,8 +949,8 @@
         "bow": 27,
         "rider": 17
       },
-      "cpuMs": 139,
-      "steps": 4711,
+      "cpuMs": 161,
+      "steps": 4713,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -961,9 +962,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 579,
-      "rounds": 48,
-      "peakUnits": 70,
+      "seconds": 784,
+      "rounds": 65,
+      "peakUnits": 81,
       "base": [
         2500,
         0
@@ -973,20 +974,20 @@
         600
       ],
       "spent": [
-        13642,
-        26346
+        16754,
+        36421
       ],
       "kills": [
-        564,
-        182
+        843,
+        218
       ],
       "aiRecruits": {
-        "levy": 318,
-        "bow": 168,
-        "rider": 78
+        "levy": 506,
+        "bow": 254,
+        "rider": 83
       },
-      "cpuMs": 1573,
-      "steps": 17364,
+      "cpuMs": 2601,
+      "steps": 23510,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -998,9 +999,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 133,
-      "rounds": 11,
-      "peakUnits": 64,
+      "seconds": 141,
+      "rounds": 12,
+      "peakUnits": 66,
       "base": [
         0,
         2500
@@ -1010,19 +1011,19 @@
         600
       ],
       "spent": [
-        4226,
-        3160
+        4864,
+        3450
       ],
       "kills": [
-        37,
-        104
+        46,
+        115
       ],
       "aiRecruits": {
         "levy": 64,
-        "bow": 28
+        "bow": 33
       },
-      "cpuMs": 212,
-      "steps": 4004,
+      "cpuMs": 237,
+      "steps": 4242,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -1034,9 +1035,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 194,
-      "rounds": 16,
-      "peakUnits": 72,
+      "seconds": 217,
+      "rounds": 18,
+      "peakUnits": 70,
       "base": [
         0,
         2500
@@ -1046,19 +1047,19 @@
         600
       ],
       "spent": [
-        7002,
-        5734
+        8368,
+        6350
       ],
       "kills": [
-        118,
-        206
+        131,
+        236
       ],
       "aiRecruits": {
-        "levy": 106,
-        "bow": 55
+        "levy": 122,
+        "bow": 59
       },
-      "cpuMs": 377,
-      "steps": 5810,
+      "cpuMs": 559,
+      "steps": 6514,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -1070,9 +1071,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 326,
-      "rounds": 27,
-      "peakUnits": 69,
+      "seconds": 239,
+      "rounds": 20,
+      "peakUnits": 65,
       "base": [
         0,
         2500
@@ -1082,20 +1083,20 @@
         600
       ],
       "spent": [
-        13762,
-        11798
+        9554,
+        8131
       ],
       "kills": [
-        207,
-        380
+        134,
+        267
       ],
       "aiRecruits": {
-        "levy": 103,
-        "bow": 137,
-        "rider": 12
+        "levy": 71,
+        "bow": 89,
+        "rider": 11
       },
-      "cpuMs": 623,
-      "steps": 9783,
+      "cpuMs": 325,
+      "steps": 7174,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c3",
@@ -1107,9 +1108,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 185,
-      "rounds": 15,
-      "peakUnits": 57,
+      "seconds": 195,
+      "rounds": 16,
+      "peakUnits": 56,
       "base": [
         2500,
         0
@@ -1119,19 +1120,20 @@
         600
       ],
       "spent": [
-        3618,
-        5226
+        3734,
+        5856
       ],
       "kills": [
-        72,
-        36
+        79,
+        38
       ],
       "aiRecruits": {
         "shield": 46,
-        "crossbow": 26
+        "crossbow": 26,
+        "axe": 7
       },
-      "cpuMs": 324,
-      "steps": 5551,
+      "cpuMs": 379,
+      "steps": 5863,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1143,9 +1145,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 442,
-      "rounds": 37,
-      "peakUnits": 49,
+      "seconds": 272,
+      "rounds": 23,
+      "peakUnits": 48,
       "base": [
         2500,
         0
@@ -1155,20 +1157,20 @@
         600
       ],
       "spent": [
-        4421,
-        18279
+        4220,
+        9911
       ],
       "kills": [
-        267,
-        47
+        143,
+        44
       ],
       "aiRecruits": {
-        "shield": 235,
-        "axe": 20,
-        "crossbow": 14
+        "shield": 115,
+        "axe": 7,
+        "crossbow": 21
       },
-      "cpuMs": 938,
-      "steps": 13250,
+      "cpuMs": 445,
+      "steps": 8159,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1180,9 +1182,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 386,
-      "rounds": 32,
-      "peakUnits": 73,
+      "seconds": 400,
+      "rounds": 33,
+      "peakUnits": 72,
       "base": [
         2500,
         0
@@ -1192,20 +1194,20 @@
         600
       ],
       "spent": [
-        12042,
-        15456
+        11469,
+        15979
       ],
       "kills": [
-        207,
-        180
+        218,
+        173
       ],
       "aiRecruits": {
-        "shield": 118,
-        "crossbow": 56,
-        "axe": 33
+        "shield": 137,
+        "crossbow": 54,
+        "axe": 27
       },
-      "cpuMs": 1154,
-      "steps": 11593,
+      "cpuMs": 1296,
+      "steps": 11996,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1217,9 +1219,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 205,
+      "seconds": 207,
       "rounds": 17,
-      "peakUnits": 56,
+      "peakUnits": 55,
       "base": [
         2500,
         0
@@ -1229,20 +1231,20 @@
         600
       ],
       "spent": [
-        5064,
-        6351
+        5272,
+        6306
       ],
       "kills": [
         84,
-        67
+        73
       ],
       "aiRecruits": {
-        "shield": 45,
-        "axe": 18,
-        "crossbow": 21
+        "shield": 46,
+        "axe": 12,
+        "crossbow": 26
       },
-      "cpuMs": 324,
-      "steps": 6137,
+      "cpuMs": 344,
+      "steps": 6197,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1278,8 +1280,8 @@
         "axe": 11,
         "crossbow": 21
       },
-      "cpuMs": 778,
-      "steps": 10697,
+      "cpuMs": 788,
+      "steps": 10708,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1289,36 +1291,36 @@
       "name": "c4 / arcane column",
       "seed": 811,
       "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 792,
-      "rounds": 66,
-      "peakUnits": 66,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 71,
       "base": [
         2500,
-        0
+        2500
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        5930,
-        35781
+        9900,
+        39106
       ],
       "kills": [
-        518,
-        66
+        537,
+        115
       ],
       "aiRecruits": {
-        "shield": 427,
-        "axe": 50,
-        "crossbow": 41
+        "shield": 464,
+        "axe": 65,
+        "crossbow": 36
       },
-      "cpuMs": 3694,
-      "steps": 23748,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
+      "cpuMs": 6029,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
       "missionId": "c4",
       "recipe": "arcane column"
     },
@@ -1328,32 +1330,32 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 161,
-      "rounds": 13,
-      "peakUnits": 54,
+      "seconds": 173,
+      "rounds": 14,
+      "peakUnits": 53,
       "base": [
         0,
         2500
       ],
       "income": [
         600,
-        540
+        568
       ],
       "spent": [
-        5168,
-        3086
+        5828,
+        3324
       ],
       "kills": [
-        9,
-        113
+        13,
+        119
       ],
       "aiRecruits": {
-        "shield": 34,
-        "axe": 4,
-        "crossbow": 6
+        "shield": 32,
+        "axe": 10,
+        "crossbow": 4
       },
-      "cpuMs": 710,
-      "steps": 4845,
+      "cpuMs": 371,
+      "steps": 5203,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1365,7 +1367,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 142,
+      "seconds": 147,
       "rounds": 12,
       "peakUnits": 50,
       "base": [
@@ -1374,23 +1376,23 @@
       ],
       "income": [
         600,
-        452
+        474
       ],
       "spent": [
         4648,
-        2530
+        2685
       ],
       "kills": [
-        1,
+        2,
         109
       ],
       "aiRecruits": {
-        "shield": 24,
-        "axe": 6,
+        "shield": 25,
+        "axe": 7,
         "crossbow": 5
       },
-      "cpuMs": 387,
-      "steps": 4260,
+      "cpuMs": 241,
+      "steps": 4406,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1402,7 +1404,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 146,
+      "seconds": 148,
       "rounds": 12,
       "peakUnits": 52,
       "base": [
@@ -1411,22 +1413,22 @@
       ],
       "income": [
         600,
-        454
+        442
       ],
       "spent": [
         4522,
-        2575
+        2485
       ],
       "kills": [
-        1,
+        0,
         132
       ],
       "aiRecruits": {
         "shield": 23,
-        "axe": 12
+        "axe": 11
       },
-      "cpuMs": 513,
-      "steps": 4386,
+      "cpuMs": 264,
+      "steps": 4428,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1438,7 +1440,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 150,
+      "seconds": 149,
       "rounds": 12,
       "peakUnits": 56,
       "base": [
@@ -1461,8 +1463,8 @@
         "shield": 37,
         "axe": 2
       },
-      "cpuMs": 523,
-      "steps": 4494,
+      "cpuMs": 259,
+      "steps": 4458,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c4",
@@ -1476,7 +1478,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 54,
+      "peakUnits": 55,
       "base": [
         2500,
         2500
@@ -1486,19 +1488,19 @@
         600
       ],
       "spent": [
-        8076,
-        14596
+        11245,
+        21642
       ],
       "kills": [
-        169,
-        100
+        227,
+        133
       ],
       "aiRecruits": {
-        "bow": 87,
-        "shield": 90,
-        "knight": 20
+        "bow": 54,
+        "shield": 151,
+        "knight": 47
       },
-      "cpuMs": 6021,
+      "cpuMs": 2922,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -1509,33 +1511,33 @@
       "name": "c5 / combined arms",
       "seed": 811,
       "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
+      "winner": 0,
+      "result": "win",
       "seconds": 966,
       "rounds": 80,
       "peakUnits": 54,
       "base": [
-        2395,
-        2500
+        2341,
+        2323
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        7117,
-        11962
+        10476,
+        31312
       ],
       "kills": [
-        147,
-        89
+        418,
+        128
       ],
       "aiRecruits": {
-        "bow": 94,
-        "shield": 66,
-        "knight": 12
+        "bow": 74,
+        "knight": 28,
+        "shield": 336
       },
-      "cpuMs": 6915,
+      "cpuMs": 5249,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -1548,46 +1550,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 966,
-      "rounds": 80,
-      "peakUnits": 60,
-      "base": [
-        2500,
-        2474
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        31159,
-        43272
-      ],
-      "kills": [
-        492,
-        512
-      ],
-      "aiRecruits": {
-        "bow": 179,
-        "shield": 247,
-        "knight": 91
-      },
-      "cpuMs": 5939,
-      "steps": 28982,
-      "atLimit": true,
-      "endReason": "roundLimit",
-      "missionId": "c5",
-      "recipe": "piercing screen"
-    },
-    {
-      "name": "c5 / piercing screen",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 263,
-      "rounds": 22,
-      "peakUnits": 50,
+      "seconds": 796,
+      "rounds": 66,
+      "peakUnits": 58,
       "base": [
         2500,
         0
@@ -1597,22 +1562,59 @@
         600
       ],
       "spent": [
-        6183,
-        9228
+        21071,
+        35168
       ],
       "kills": [
-        114,
-        92
+        427,
+        337
       ],
       "aiRecruits": {
-        "bow": 66,
-        "shield": 29,
-        "knight": 19
+        "bow": 141,
+        "shield": 216,
+        "knight": 70
       },
-      "cpuMs": 647,
-      "steps": 7904,
+      "cpuMs": 1864,
+      "steps": 23879,
       "atLimit": false,
       "endReason": "baseDestroyed",
+      "missionId": "c5",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c5 / piercing screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 60,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        27482,
+        41180
+      ],
+      "kills": [
+        480,
+        457
+      ],
+      "aiRecruits": {
+        "bow": 180,
+        "knight": 85,
+        "shield": 231
+      },
+      "cpuMs": 3207,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
       "missionId": "c5",
       "recipe": "piercing screen"
     },
@@ -1634,19 +1636,19 @@
         600
       ],
       "spent": [
-        6227,
-        18293
+        5655,
+        14931
       ],
       "kills": [
-        223,
-        73
+        187,
+        66
       ],
       "aiRecruits": {
-        "bow": 76,
-        "shield": 151,
-        "knight": 22
+        "bow": 77,
+        "shield": 124,
+        "knight": 13
       },
-      "cpuMs": 6302,
+      "cpuMs": 2982,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -1661,7 +1663,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 53,
+      "peakUnits": 54,
       "base": [
         2500,
         2500
@@ -1671,19 +1673,19 @@
         600
       ],
       "spent": [
-        26197,
-        36453
+        8799,
+        19414
       ],
       "kills": [
-        375,
-        319
+        239,
+        108
       ],
       "aiRecruits": {
-        "bow": 116,
-        "shield": 167,
-        "knight": 102
+        "bow": 68,
+        "knight": 26,
+        "shield": 164
       },
-      "cpuMs": 3501,
+      "cpuMs": 2723,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -1696,32 +1698,32 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 145,
-      "rounds": 12,
-      "peakUnits": 42,
+      "seconds": 153,
+      "rounds": 13,
+      "peakUnits": 41,
       "base": [
         0,
         2500
       ],
       "income": [
         600,
-        382
+        408
       ],
       "spent": [
-        4648,
-        2062
+        5168,
+        2270
       ],
       "kills": [
-        3,
-        109
+        7,
+        113
       ],
       "aiRecruits": {
-        "bow": 9,
-        "shield": 18,
-        "knight": 2
+        "bow": 15,
+        "shield": 13,
+        "knight": 3
       },
-      "cpuMs": 192,
-      "steps": 4344,
+      "cpuMs": 106,
+      "steps": 4577,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c5",
@@ -1733,8 +1735,8 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 189,
-      "rounds": 16,
+      "seconds": 168,
+      "rounds": 14,
       "peakUnits": 41,
       "base": [
         0,
@@ -1742,22 +1744,23 @@
       ],
       "income": [
         600,
-        600
+        526
       ],
       "spent": [
-        6928,
-        3395
+        5828,
+        2798
       ],
       "kills": [
-        26,
-        133
+        14,
+        119
       ],
       "aiRecruits": {
-        "bow": 35,
-        "shield": 21
+        "bow": 26,
+        "knight": 1,
+        "shield": 17
       },
-      "cpuMs": 255,
-      "steps": 5676,
+      "cpuMs": 86,
+      "steps": 5029,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c5",
@@ -1769,7 +1772,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 155,
+      "seconds": 154,
       "rounds": 13,
       "peakUnits": 46,
       "base": [
@@ -1782,19 +1785,19 @@
       ],
       "spent": [
         4954,
-        2095
+        2088
       ],
       "kills": [
-        5,
+        4,
         150
       ],
       "aiRecruits": {
-        "bow": 15,
-        "shield": 16,
+        "bow": 16,
+        "shield": 15,
         "knight": 1
       },
-      "cpuMs": 342,
-      "steps": 4649,
+      "cpuMs": 145,
+      "steps": 4615,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c5",
@@ -1806,9 +1809,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 202,
-      "rounds": 17,
-      "peakUnits": 54,
+      "seconds": 183,
+      "rounds": 15,
+      "peakUnits": 44,
       "base": [
         0,
         2500
@@ -1818,20 +1821,19 @@
         600
       ],
       "spent": [
-        7506,
-        3876
+        6320,
+        3339
       ],
       "kills": [
-        33,
-        211
+        25,
+        180
       ],
       "aiRecruits": {
-        "bow": 47,
-        "knight": 2,
-        "shield": 12
+        "bow": 48,
+        "knight": 3
       },
-      "cpuMs": 367,
-      "steps": 6070,
+      "cpuMs": 135,
+      "steps": 5480,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c5",
@@ -1843,11 +1845,11 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 226,
-      "rounds": 19,
-      "peakUnits": 51,
+      "seconds": 272,
+      "rounds": 23,
+      "peakUnits": 50,
       "base": [
-        2444,
+        2451,
         0
       ],
       "income": [
@@ -1855,19 +1857,20 @@
         600
       ],
       "spent": [
-        3941,
-        7355
+        4155,
+        9709
       ],
       "kills": [
-        118,
-        41
+        150,
+        43
       ],
       "aiRecruits": {
-        "shield": 73,
-        "bow": 45
+        "shield": 103,
+        "bow": 43,
+        "mage": 4
       },
-      "cpuMs": 678,
-      "steps": 6788,
+      "cpuMs": 379,
+      "steps": 8165,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -1879,9 +1882,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 417,
-      "rounds": 35,
-      "peakUnits": 51,
+      "seconds": 298,
+      "rounds": 25,
+      "peakUnits": 48,
       "base": [
         2374,
         0
@@ -1891,20 +1894,20 @@
         600
       ],
       "spent": [
-        4271,
-        16954
+        4352,
+        10974
       ],
       "kills": [
-        262,
-        44
+        171,
+        46
       ],
       "aiRecruits": {
         "bow": 48,
-        "shield": 210,
-        "mage": 4
+        "shield": 120,
+        "mage": 3
       },
-      "cpuMs": 1448,
-      "steps": 12498,
+      "cpuMs": 503,
+      "steps": 8936,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -1916,9 +1919,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 204,
-      "rounds": 17,
-      "peakUnits": 63,
+      "seconds": 449,
+      "rounds": 37,
+      "peakUnits": 77,
       "base": [
         2500,
         0
@@ -1928,20 +1931,20 @@
         600
       ],
       "spent": [
-        4797,
-        6106
+        13609,
+        18053
       ],
       "kills": [
-        96,
-        59
+        250,
+        201
       ],
       "aiRecruits": {
-        "shield": 46,
-        "bow": 47,
-        "mage": 3
+        "shield": 127,
+        "bow": 86,
+        "mage": 37
       },
-      "cpuMs": 752,
-      "steps": 6134,
+      "cpuMs": 2388,
+      "steps": 13477,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -1953,35 +1956,34 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 966,
-      "rounds": 80,
-      "peakUnits": 77,
+      "seconds": 461,
+      "rounds": 38,
+      "peakUnits": 80,
       "base": [
         2500,
-        1744
+        0
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        33426,
-        44028
+        10618,
+        18886
       ],
       "kills": [
-        566,
-        540
+        294,
+        151
       ],
       "aiRecruits": {
-        "bow": 156,
-        "shield": 314,
-        "mage": 96,
-        "healer": 19
+        "bow": 97,
+        "shield": 190,
+        "mage": 7
       },
-      "cpuMs": 13740,
-      "steps": 28982,
-      "atLimit": true,
-      "endReason": "roundLimit",
+      "cpuMs": 2399,
+      "steps": 13837,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
       "missionId": "c6",
       "recipe": "piercing screen"
     },
@@ -1993,7 +1995,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 70,
+      "peakUnits": 72,
       "base": [
         2500,
         2500
@@ -2003,20 +2005,20 @@
         600
       ],
       "spent": [
-        3640,
-        8267
+        25239,
+        32291
       ],
       "kills": [
-        90,
-        37
+        369,
+        286
       ],
       "aiRecruits": {
-        "shield": 69,
-        "bow": 44,
-        "healer": 10,
-        "mage": 1
+        "shield": 161,
+        "bow": 107,
+        "healer": 12,
+        "mage": 110
       },
-      "cpuMs": 17937,
+      "cpuMs": 5087,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -2031,7 +2033,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 67,
+      "peakUnits": 72,
       "base": [
         2500,
         2500
@@ -2041,20 +2043,19 @@
         600
       ],
       "spent": [
-        4199,
-        6264
+        4271,
+        9324
       ],
       "kills": [
-        60,
-        43
+        107,
+        42
       ],
       "aiRecruits": {
         "bow": 48,
-        "shield": 38,
-        "healer": 8,
-        "mage": 1
+        "shield": 82,
+        "healer": 11
       },
-      "cpuMs": 7995,
+      "cpuMs": 28710,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -2067,11 +2068,11 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 257,
-      "rounds": 21,
+      "seconds": 240,
+      "rounds": 20,
       "peakUnits": 52,
       "base": [
-        1725,
+        1739,
         0
       ],
       "income": [
@@ -2080,18 +2081,18 @@
       ],
       "spent": [
         5272,
-        8569
+        7979
       ],
       "kills": [
-        137,
+        129,
         85
       ],
       "aiRecruits": {
-        "shield": 89,
-        "bow": 48
+        "shield": 71,
+        "bow": 58
       },
-      "cpuMs": 614,
-      "steps": 7722,
+      "cpuMs": 308,
+      "steps": 7207,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -2103,7 +2104,7 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 223,
+      "seconds": 224,
       "rounds": 19,
       "peakUnits": 43,
       "base": [
@@ -2119,7 +2120,7 @@
         7390
       ],
       "kills": [
-        113,
+        114,
         82
       ],
       "aiRecruits": {
@@ -2127,8 +2128,8 @@
         "shield": 74,
         "healer": 5
       },
-      "cpuMs": 408,
-      "steps": 6699,
+      "cpuMs": 184,
+      "steps": 6724,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -2140,7 +2141,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 124,
+      "seconds": 125,
       "rounds": 10,
       "peakUnits": 48,
       "base": [
@@ -2156,7 +2157,7 @@
         2133
       ],
       "kills": [
-        0,
+        1,
         87
       ],
       "aiRecruits": {
@@ -2164,8 +2165,8 @@
         "bow": 21,
         "healer": 3
       },
-      "cpuMs": 172,
-      "steps": 3720,
+      "cpuMs": 86,
+      "steps": 3742,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -2177,7 +2178,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 146,
+      "seconds": 142,
       "rounds": 12,
       "peakUnits": 55,
       "base": [
@@ -2186,23 +2187,23 @@
       ],
       "income": [
         600,
-        582
+        556
       ],
       "spent": [
         4439,
-        3141
+        2921
       ],
       "kills": [
-        11,
+        9,
         115
       ],
       "aiRecruits": {
         "bow": 32,
         "shield": 13,
-        "healer": 4
+        "healer": 2
       },
-      "cpuMs": 202,
-      "steps": 4371,
+      "cpuMs": 104,
+      "steps": 4272,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c6",
@@ -2214,37 +2215,41 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 196,
-      "rounds": 16,
-      "peakUnits": 58,
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 83,
       "base": [
-        2470,
-        0
+        2465,
+        1956
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        4106,
-        7382
+        11281,
+        35670
       ],
       "kills": [
-        147,
-        43
+        526,
+        141
       ],
       "aiRecruits": {
-        "pike": 29,
-        "levy": 50,
-        "runner": 13,
+        "pike": 66,
+        "levy": 57,
+        "runner": 82,
         "knight": 6,
-        "bow": 21,
-        "shield": 28
+        "bow": 62,
+        "shield": 233,
+        "axe": 14,
+        "paladin": 5,
+        "guardian": 3,
+        "assassin": 40
       },
-      "cpuMs": 657,
-      "steps": 5869,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
+      "cpuMs": 8389,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
       "missionId": "c7",
       "recipe": "combined arms"
     },
@@ -2252,38 +2257,43 @@
       "name": "c7 / combined arms",
       "seed": 811,
       "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 303,
-      "rounds": 25,
-      "peakUnits": 80,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 865,
+      "rounds": 72,
+      "peakUnits": 75,
       "base": [
-        1080,
-        0
+        0,
+        2500
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        6086,
-        12760
+        20990,
+        27927
       ],
       "kills": [
-        255,
-        67
+        396,
+        283
       ],
       "aiRecruits": {
-        "pike": 51,
+        "pike": 30,
         "levy": 68,
-        "bow": 20,
-        "shield": 74,
-        "assassin": 5,
-        "runner": 34,
-        "knight": 3
+        "axe": 22,
+        "bow": 55,
+        "shield": 100,
+        "assassin": 41,
+        "knight": 4,
+        "paladin": 11,
+        "healer": 15,
+        "runner": 70,
+        "ballista": 1,
+        "rider": 2
       },
-      "cpuMs": 2658,
-      "steps": 9098,
+      "cpuMs": 7412,
+      "steps": 25954,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c7",
@@ -2295,9 +2305,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 424,
-      "rounds": 35,
-      "peakUnits": 80,
+      "seconds": 209,
+      "rounds": 17,
+      "peakUnits": 70,
       "base": [
         2500,
         0
@@ -2307,25 +2317,25 @@
         600
       ],
       "spent": [
-        15535,
-        18575
+        5933,
+        7893
       ],
       "kills": [
-        317,
-        236
+        160,
+        79
       ],
       "aiRecruits": {
-        "pike": 74,
+        "pike": 29,
         "levy": 50,
-        "paladin": 11,
-        "runner": 48,
-        "bow": 87,
-        "shield": 38,
-        "guardian": 6,
-        "knight": 3
+        "paladin": 2,
+        "runner": 30,
+        "bow": 10,
+        "shield": 19,
+        "crossbow": 7,
+        "axe": 13
       },
-      "cpuMs": 2428,
-      "steps": 12722,
+      "cpuMs": 500,
+      "steps": 6274,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c7",
@@ -2335,40 +2345,36 @@
       "name": "c7 / piercing screen",
       "seed": 811,
       "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 324,
-      "rounds": 27,
-      "peakUnits": 62,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 125,
+      "rounds": 10,
+      "peakUnits": 57,
       "base": [
-        1563,
-        0
+        0,
+        2500
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        12178,
-        13862
+        3056,
+        3494
       ],
       "kills": [
-        257,
-        180
+        45,
+        67
       ],
       "aiRecruits": {
-        "pike": 75,
+        "pike": 16,
         "levy": 50,
-        "paladin": 4,
-        "runner": 47,
-        "knight": 6,
-        "bow": 55,
-        "shield": 9,
-        "rider": 5,
-        "axe": 6
+        "paladin": 2,
+        "bow": 10,
+        "mage": 3
       },
-      "cpuMs": 1411,
-      "steps": 9734,
+      "cpuMs": 233,
+      "steps": 3765,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c7",
@@ -2378,11 +2384,55 @@
       "name": "c7 / arcane column",
       "seed": 407,
       "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 283,
+      "rounds": 24,
+      "peakUnits": 58,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        11184,
+        8834
+      ],
+      "kills": [
+        117,
+        147
+      ],
+      "aiRecruits": {
+        "pike": 25,
+        "levy": 50,
+        "shield": 20,
+        "axe": 7,
+        "knight": 3,
+        "paladin": 2,
+        "runner": 7,
+        "assassin": 21,
+        "crossbow": 2,
+        "bow": 5
+      },
+      "cpuMs": 681,
+      "steps": 8503,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c7",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c7 / arcane column",
+      "seed": 811,
+      "playerSide": 0,
       "winner": "draw",
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 74,
+      "peakUnits": 65,
       "base": [
         2500,
         2500
@@ -2392,72 +2442,29 @@
         600
       ],
       "spent": [
-        20275,
-        39432
+        13855,
+        14353
       ],
       "kills": [
-        439,
-        239
+        193,
+        161
       ],
       "aiRecruits": {
-        "pike": 36,
-        "levy": 51,
-        "knight": 23,
-        "shield": 71,
-        "bow": 32,
-        "runner": 103,
-        "healer": 14,
-        "assassin": 90,
-        "axe": 11,
-        "paladin": 35
+        "pike": 19,
+        "levy": 53,
+        "axe": 12,
+        "bow": 39,
+        "knight": 8,
+        "runner": 23,
+        "assassin": 13,
+        "paladin": 3,
+        "shield": 46,
+        "healer": 10
       },
-      "cpuMs": 28435,
+      "cpuMs": 4132,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
-      "missionId": "c7",
-      "recipe": "arcane column"
-    },
-    {
-      "name": "c7 / arcane column",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 378,
-      "rounds": 31,
-      "peakUnits": 66,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        9917,
-        16340
-      ],
-      "kills": [
-        281,
-        113
-      ],
-      "aiRecruits": {
-        "pike": 44,
-        "levy": 68,
-        "axe": 38,
-        "bow": 40,
-        "knight": 6,
-        "runner": 35,
-        "crossbow": 7,
-        "shield": 38,
-        "paladin": 5
-      },
-      "cpuMs": 2037,
-      "steps": 11337,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
       "missionId": "c7",
       "recipe": "arcane column"
     },
@@ -2467,9 +2474,52 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 232,
-      "rounds": 19,
-      "peakUnits": 64,
+      "seconds": 425,
+      "rounds": 35,
+      "peakUnits": 63,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        9968,
+        18737
+      ],
+      "kills": [
+        281,
+        131
+      ],
+      "aiRecruits": {
+        "pike": 7,
+        "levy": 50,
+        "bow": 49,
+        "shield": 136,
+        "knight": 13,
+        "crossbow": 7,
+        "rider": 10,
+        "paladin": 3,
+        "axe": 7
+      },
+      "cpuMs": 646,
+      "steps": 12751,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c7",
+      "recipe": "greedy transition"
+    },
+    {
+      "name": "c7 / greedy transition",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 242,
+      "rounds": 20,
+      "peakUnits": 63,
       "base": [
         2500,
         0
@@ -2480,504 +2530,40 @@
       ],
       "spent": [
         6646,
-        9150
+        9772
       ],
       "kills": [
         183,
         98
       ],
       "aiRecruits": {
-        "pike": 7,
-        "levy": 50,
+        "pike": 19,
+        "levy": 68,
         "bow": 28,
-        "shield": 26,
-        "axe": 7,
-        "crossbow": 7,
-        "assassin": 4,
-        "paladin": 3,
-        "runner": 51
-      },
-      "cpuMs": 659,
-      "steps": 6951,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c7",
-      "recipe": "greedy transition"
-    },
-    {
-      "name": "c7 / greedy transition",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 484,
-      "rounds": 40,
-      "peakUnits": 74,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        13404,
-        21635
-      ],
-      "kills": [
-        357,
-        166
-      ],
-      "aiRecruits": {
-        "pike": 30,
-        "levy": 86,
-        "bow": 83,
-        "knight": 15,
+        "knight": 6,
         "crossbow": 7,
         "rider": 5,
-        "paladin": 3,
-        "shield": 121,
-        "axe": 7
-      },
-      "cpuMs": 1510,
-      "steps": 14510,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c7",
-      "recipe": "greedy transition"
-    },
-    {
-      "name": "c7 / raiding screen",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 158,
-      "rounds": 13,
-      "peakUnits": 57,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4871,
-        4485
-      ],
-      "kills": [
-        75,
-        133
-      ],
-      "aiRecruits": {
-        "pike": 7,
-        "levy": 68,
-        "knight": 9,
         "axe": 7,
-        "runner": 5
-      },
-      "cpuMs": 392,
-      "steps": 4739,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c7",
-      "recipe": "raiding screen"
-    },
-    {
-      "name": "c7 / raiding screen",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 159,
-      "rounds": 13,
-      "peakUnits": 57,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4871,
-        4405
-      ],
-      "kills": [
-        75,
-        133
-      ],
-      "aiRecruits": {
-        "pike": 7,
-        "levy": 68,
-        "knight": 3,
-        "axe": 14,
-        "bow": 10
-      },
-      "cpuMs": 417,
-      "steps": 4767,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c7",
-      "recipe": "raiding screen"
-    },
-    {
-      "name": "c8 / combined arms",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 243,
-      "rounds": 20,
-      "peakUnits": 64,
-      "base": [
-        2493,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4221,
-        9618
-      ],
-      "kills": [
-        202,
-        45
-      ],
-      "aiRecruits": {
-        "levy": 42,
-        "bow": 19,
-        "runner": 45,
-        "pike": 32,
-        "shield": 64
-      },
-      "cpuMs": 1109,
-      "steps": 7288,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "combined arms"
-    },
-    {
-      "name": "c8 / combined arms",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 345,
-      "rounds": 29,
-      "peakUnits": 72,
-      "base": [
-        1908,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        6329,
-        15164
-      ],
-      "kills": [
-        263,
-        71
-      ],
-      "aiRecruits": {
-        "levy": 54,
-        "runner": 23,
-        "bow": 28,
-        "axe": 20,
-        "pike": 34,
-        "paladin": 4,
-        "shield": 94,
-        "assassin": 6
-      },
-      "cpuMs": 2109,
-      "steps": 10335,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "combined arms"
-    },
-    {
-      "name": "c8 / piercing screen",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 737,
-      "rounds": 61,
-      "peakUnits": 73,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        31928,
-        34134
-      ],
-      "kills": [
-        554,
-        502
-      ],
-      "aiRecruits": {
-        "levy": 43,
-        "bow": 169,
-        "runner": 10,
-        "crossbow": 26,
-        "pike": 181,
-        "shield": 91,
-        "guardian": 3,
-        "paladin": 7,
-        "knight": 3,
-        "mage": 4,
-        "assassin": 5,
-        "axe": 7,
-        "healer": 5
-      },
-      "cpuMs": 4788,
-      "steps": 22106,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "piercing screen"
-    },
-    {
-      "name": "c8 / piercing screen",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 389,
-      "rounds": 32,
-      "peakUnits": 68,
-      "base": [
-        738,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        15360,
-        16782
-      ],
-      "kills": [
-        303,
-        237
-      ],
-      "aiRecruits": {
-        "levy": 72,
-        "runner": 61,
-        "pike": 53,
-        "bow": 54,
-        "shield": 18,
-        "crossbow": 19,
-        "knight": 10,
-        "paladin": 3,
-        "assassin": 10,
-        "axe": 3
-      },
-      "cpuMs": 1792,
-      "steps": 11659,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "piercing screen"
-    },
-    {
-      "name": "c8 / arcane column",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 262,
-      "rounds": 22,
-      "peakUnits": 51,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        9940,
-        9306
-      ],
-      "kills": [
-        115,
-        137
-      ],
-      "aiRecruits": {
-        "levy": 40,
-        "bow": 19,
-        "pike": 17,
-        "axe": 7,
-        "runner": 26,
-        "knight": 16,
-        "mage": 5,
-        "paladin": 5
-      },
-      "cpuMs": 681,
-      "steps": 7875,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "arcane column"
-    },
-    {
-      "name": "c8 / arcane column",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 506,
-      "rounds": 42,
-      "peakUnits": 67,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        17114,
-        22776
-      ],
-      "kills": [
-        348,
-        185
-      ],
-      "aiRecruits": {
-        "levy": 72,
-        "runner": 54,
-        "pike": 30,
-        "crossbow": 7,
-        "knight": 16,
-        "shield": 57,
-        "axe": 29,
-        "bow": 49,
-        "paladin": 6,
-        "healer": 6,
-        "mage": 13,
-        "rider": 9
-      },
-      "cpuMs": 3075,
-      "steps": 15166,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "arcane column"
-    },
-    {
-      "name": "c8 / greedy transition",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 183,
-      "rounds": 15,
-      "peakUnits": 56,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        6414,
-        6156
-      ],
-      "kills": [
-        85,
-        118
-      ],
-      "aiRecruits": {
-        "levy": 40,
-        "bow": 28,
-        "runner": 25,
-        "shield": 23,
-        "crossbow": 7,
-        "rider": 5
-      },
-      "cpuMs": 531,
-      "steps": 5478,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "greedy transition"
-    },
-    {
-      "name": "c8 / greedy transition",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 405,
-      "rounds": 34,
-      "peakUnits": 66,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        14276,
-        18175
-      ],
-      "kills": [
-        303,
-        175
-      ],
-      "aiRecruits": {
-        "levy": 54,
-        "runner": 57,
-        "bow": 82,
-        "knight": 18,
-        "pike": 12,
-        "rider": 5,
-        "crossbow": 8,
-        "shield": 55,
-        "axe": 7,
+        "runner": 18,
+        "shield": 20,
         "assassin": 5
       },
-      "cpuMs": 1045,
-      "steps": 12159,
+      "cpuMs": 313,
+      "steps": 7273,
       "atLimit": false,
       "endReason": "baseDestroyed",
-      "missionId": "c8",
+      "missionId": "c7",
       "recipe": "greedy transition"
     },
     {
-      "name": "c8 / raiding screen",
+      "name": "c7 / raiding screen",
       "seed": 407,
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 171,
-      "rounds": 14,
-      "peakUnits": 55,
+      "seconds": 157,
+      "rounds": 13,
+      "peakUnits": 57,
       "base": [
         0,
         2500
@@ -2987,201 +2573,35 @@
         600
       ],
       "spent": [
-        5621,
-        4484
+        4871,
+        4412
       ],
       "kills": [
-        61,
-        139
+        75,
+        133
       ],
       "aiRecruits": {
-        "levy": 40,
-        "bow": 9,
-        "runner": 12,
-        "shield": 31,
-        "knight": 3
-      },
-      "cpuMs": 521,
-      "steps": 5137,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c8",
-      "recipe": "raiding screen"
-    },
-    {
-      "name": "c8 / raiding screen",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 149,
-      "rounds": 12,
-      "peakUnits": 46,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4439,
-        4202
-      ],
-      "kills": [
-        65,
-        115
-      ],
-      "aiRecruits": {
-        "levy": 54,
-        "runner": 7,
-        "bow": 8,
+        "pike": 7,
+        "levy": 69,
         "knight": 6,
-        "axe": 12
+        "axe": 7,
+        "bow": 11
       },
-      "cpuMs": 249,
-      "steps": 4465,
+      "cpuMs": 203,
+      "steps": 4703,
       "atLimit": false,
       "endReason": "baseDestroyed",
-      "missionId": "c8",
+      "missionId": "c7",
       "recipe": "raiding screen"
     },
     {
-      "name": "c9 / combined arms",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 192,
-      "rounds": 16,
-      "peakUnits": 54,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4906,
-        6809
-      ],
-      "kills": [
-        124,
-        45
-      ],
-      "aiRecruits": {
-        "levy": 48,
-        "bow": 26,
-        "runner": 9,
-        "healer": 4,
-        "axe": 26,
-        "paladin": 2,
-        "shield": 9
-      },
-      "cpuMs": 629,
-      "steps": 5758,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c9",
-      "recipe": "combined arms"
-    },
-    {
-      "name": "c9 / combined arms",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": "draw",
-      "result": "draw",
-      "seconds": 966,
-      "rounds": 80,
-      "peakUnits": 86,
-      "base": [
-        2500,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        15179,
-        22647
-      ],
-      "kills": [
-        226,
-        180
-      ],
-      "aiRecruits": {
-        "levy": 48,
-        "bow": 62,
-        "runner": 9,
-        "healer": 48,
-        "axe": 19,
-        "paladin": 27,
-        "shield": 41,
-        "firemage": 3,
-        "knight": 6
-      },
-      "cpuMs": 34686,
-      "steps": 28982,
-      "atLimit": true,
-      "endReason": "roundLimit",
-      "missionId": "c9",
-      "recipe": "combined arms"
-    },
-    {
-      "name": "c9 / piercing screen",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 347,
-      "rounds": 29,
-      "peakUnits": 60,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        14501,
-        12489
-      ],
-      "kills": [
-        150,
-        256
-      ],
-      "aiRecruits": {
-        "levy": 66,
-        "bow": 40,
-        "runner": 10,
-        "healer": 22,
-        "axe": 25,
-        "mage": 5,
-        "paladin": 8,
-        "rider": 6,
-        "assassin": 3
-      },
-      "cpuMs": 1462,
-      "steps": 10404,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c9",
-      "recipe": "piercing screen"
-    },
-    {
-      "name": "c9 / piercing screen",
+      "name": "c7 / raiding screen",
       "seed": 811,
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 226,
-      "rounds": 19,
+      "seconds": 155,
+      "rounds": 13,
       "peakUnits": 59,
       "base": [
         0,
@@ -3192,23 +2612,602 @@
         600
       ],
       "spent": [
-        8483,
-        6000
+        4871,
+        4396
       ],
       "kills": [
-        85,
-        158
+        75,
+        133
+      ],
+      "aiRecruits": {
+        "pike": 7,
+        "levy": 68,
+        "knight": 6,
+        "bow": 22
+      },
+      "cpuMs": 188,
+      "steps": 4664,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c7",
+      "recipe": "raiding screen"
+    },
+    {
+      "name": "c8 / combined arms",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 231,
+      "rounds": 19,
+      "peakUnits": 57,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4181,
+        9028
+      ],
+      "kills": [
+        184,
+        44
+      ],
+      "aiRecruits": {
+        "levy": 83,
+        "pike": 9,
+        "bow": 20,
+        "knight": 3,
+        "axe": 14,
+        "shield": 55
+      },
+      "cpuMs": 401,
+      "steps": 6930,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c8 / combined arms",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 74,
+      "base": [
+        1803,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6712,
+        15690
+      ],
+      "kills": [
+        240,
+        77
+      ],
+      "aiRecruits": {
+        "levy": 54,
+        "runner": 41,
+        "bow": 38,
+        "axe": 18,
+        "assassin": 10,
+        "pike": 12,
+        "shield": 84,
+        "healer": 15,
+        "crossbow": 1
+      },
+      "cpuMs": 6539,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c8",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c8 / piercing screen",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 389,
+      "rounds": 32,
+      "peakUnits": 82,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        14019,
+        17030
+      ],
+      "kills": [
+        315,
+        209
+      ],
+      "aiRecruits": {
+        "levy": 65,
+        "pike": 101,
+        "bow": 63,
+        "shield": 45,
+        "axe": 14,
+        "runner": 17,
+        "knight": 3,
+        "paladin": 2,
+        "healer": 5
+      },
+      "cpuMs": 1232,
+      "steps": 11662,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c8 / piercing screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 266,
+      "rounds": 22,
+      "peakUnits": 69,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        8537,
+        10912
+      ],
+      "kills": [
+        210,
+        122
+      ],
+      "aiRecruits": {
+        "levy": 54,
+        "runner": 41,
+        "pike": 53,
+        "bow": 31,
+        "guardian": 3,
+        "paladin": 2,
+        "knight": 4,
+        "shield": 9,
+        "axe": 13
+      },
+      "cpuMs": 730,
+      "steps": 7987,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c8 / arcane column",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 618,
+      "rounds": 51,
+      "peakUnits": 67,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        9695,
+        28355
+      ],
+      "kills": [
+        449,
+        105
+      ],
+      "aiRecruits": {
+        "levy": 65,
+        "pike": 38,
+        "bow": 28,
+        "knight": 16,
+        "shield": 265,
+        "axe": 14,
+        "runner": 14,
+        "mage": 9
+      },
+      "cpuMs": 2146,
+      "steps": 18533,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c8 / arcane column",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": "draw",
+      "result": "draw",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 84,
+      "base": [
+        2500,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        14958,
+        20359
+      ],
+      "kills": [
+        289,
+        170
+      ],
+      "aiRecruits": {
+        "levy": 60,
+        "runner": 70,
+        "pike": 10,
+        "crossbow": 7,
+        "knight": 12,
+        "shield": 91,
+        "axe": 20,
+        "mage": 3,
+        "bow": 24,
+        "paladin": 3,
+        "healer": 10,
+        "assassin": 14
+      },
+      "cpuMs": 7181,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c8",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c8 / greedy transition",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 243,
+      "rounds": 20,
+      "peakUnits": 66,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6704,
+        9819
+      ],
+      "kills": [
+        174,
+        99
+      ],
+      "aiRecruits": {
+        "levy": 65,
+        "bow": 42,
+        "knight": 12,
+        "rider": 5,
+        "shield": 27,
+        "runner": 18,
+        "assassin": 5
+      },
+      "cpuMs": 321,
+      "steps": 7281,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "greedy transition"
+    },
+    {
+      "name": "c8 / greedy transition",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 254,
+      "rounds": 21,
+      "peakUnits": 66,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6530,
+        10364
+      ],
+      "kills": [
+        192,
+        96
+      ],
+      "aiRecruits": {
+        "levy": 72,
+        "runner": 24,
+        "bow": 28,
+        "knight": 13,
+        "pike": 12,
+        "assassin": 5,
+        "shield": 38
+      },
+      "cpuMs": 344,
+      "steps": 7634,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "greedy transition"
+    },
+    {
+      "name": "c8 / raiding screen",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 149,
+      "rounds": 12,
+      "peakUnits": 52,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4439,
+        4370
+      ],
+      "kills": [
+        72,
+        115
+      ],
+      "aiRecruits": {
+        "levy": 65,
+        "bow": 20,
+        "knight": 6,
+        "axe": 6
+      },
+      "cpuMs": 161,
+      "steps": 4472,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "raiding screen"
+    },
+    {
+      "name": "c8 / raiding screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 155,
+      "rounds": 13,
+      "peakUnits": 47,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        4871,
+        4340
+      ],
+      "kills": [
+        68,
+        133
+      ],
+      "aiRecruits": {
+        "levy": 54,
+        "runner": 7,
+        "bow": 29,
+        "knight": 6
+      },
+      "cpuMs": 154,
+      "steps": 4662,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c8",
+      "recipe": "raiding screen"
+    },
+    {
+      "name": "c9 / combined arms",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 182,
+      "rounds": 15,
+      "peakUnits": 53,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        5084,
+        6219
+      ],
+      "kills": [
+        113,
+        48
+      ],
+      "aiRecruits": {
+        "levy": 48,
+        "bow": 26,
+        "runner": 9,
+        "healer": 4,
+        "axe": 19,
+        "paladin": 2,
+        "assassin": 5
+      },
+      "cpuMs": 253,
+      "steps": 5473,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c9",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c9 / combined arms",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 231,
+      "rounds": 19,
+      "peakUnits": 58,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        5339,
+        8610
+      ],
+      "kills": [
+        131,
+        51
+      ],
+      "aiRecruits": {
+        "levy": 48,
+        "bow": 13,
+        "runner": 9,
+        "healer": 11,
+        "axe": 33,
+        "paladin": 2,
+        "shield": 9,
+        "firemage": 3,
+        "knight": 3
+      },
+      "cpuMs": 611,
+      "steps": 6944,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c9",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c9 / piercing screen",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 236,
+      "rounds": 20,
+      "peakUnits": 62,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        9085,
+        8228
+      ],
+      "kills": [
+        107,
+        165
       ],
       "aiRecruits": {
         "levy": 66,
-        "bow": 19,
-        "runner": 9,
+        "bow": 16,
+        "runner": 26,
+        "healer": 11,
+        "axe": 13,
+        "mage": 5,
+        "paladin": 5,
+        "firemage": 3
+      },
+      "cpuMs": 430,
+      "steps": 7091,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c9",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c9 / piercing screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 201,
+      "rounds": 17,
+      "peakUnits": 60,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        7309,
+        5632
+      ],
+      "kills": [
+        81,
+        137
+      ],
+      "aiRecruits": {
+        "levy": 66,
+        "bow": 16,
+        "runner": 10,
         "healer": 11,
         "axe": 7,
-        "paladin": 5
+        "paladin": 4
       },
-      "cpuMs": 872,
-      "steps": 6791,
+      "cpuMs": 318,
+      "steps": 6041,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c9",
@@ -3220,7 +3219,47 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 208,
+      "seconds": 207,
+      "rounds": 17,
+      "peakUnits": 65,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6934,
+        5424
+      ],
+      "kills": [
+        83,
+        102
+      ],
+      "aiRecruits": {
+        "levy": 80,
+        "bow": 8,
+        "healer": 11,
+        "paladin": 3,
+        "firemage": 3,
+        "axe": 6
+      },
+      "cpuMs": 253,
+      "steps": 6203,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c9",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c9 / arcane column",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 210,
       "rounds": 17,
       "peakUnits": 65,
       "base": [
@@ -3247,48 +3286,8 @@
         "mage": 4,
         "runner": 1
       },
-      "cpuMs": 599,
-      "steps": 6236,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c9",
-      "recipe": "arcane column"
-    },
-    {
-      "name": "c9 / arcane column",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 269,
-      "rounds": 22,
-      "peakUnits": 66,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        9947,
-        5893
-      ],
-      "kills": [
-        85,
-        134
-      ],
-      "aiRecruits": {
-        "levy": 81,
-        "bow": 13,
-        "healer": 12,
-        "paladin": 7,
-        "shield": 1,
-        "firemage": 1
-      },
-      "cpuMs": 1270,
-      "steps": 8083,
+      "cpuMs": 373,
+      "steps": 6294,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c9",
@@ -3300,9 +3299,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 231,
+      "seconds": 229,
       "rounds": 19,
-      "peakUnits": 70,
+      "peakUnits": 67,
       "base": [
         2500,
         0
@@ -3312,25 +3311,25 @@
         600
       ],
       "spent": [
-        7052,
-        8712
+        6878,
+        8720
       ],
       "kills": [
-        157,
-        96
+        162,
+        93
       ],
       "aiRecruits": {
         "levy": 62,
-        "bow": 44,
-        "knight": 3,
+        "bow": 34,
+        "knight": 6,
         "crossbow": 7,
-        "assassin": 5,
+        "healer": 10,
+        "runner": 18,
         "shield": 18,
-        "healer": 5,
-        "axe": 13
+        "axe": 7
       },
-      "cpuMs": 581,
-      "steps": 6918,
+      "cpuMs": 300,
+      "steps": 6862,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c9",
@@ -3340,38 +3339,38 @@
       "name": "c9 / greedy transition",
       "seed": 811,
       "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 278,
-      "rounds": 23,
-      "peakUnits": 66,
+      "winner": 0,
+      "result": "win",
+      "seconds": 220,
+      "rounds": 18,
+      "peakUnits": 69,
       "base": [
-        0,
-        2500
+        2500,
+        0
       ],
       "income": [
         600,
         600
       ],
       "spent": [
-        11230,
-        9606
+        6964,
+        8071
       ],
       "kills": [
-        119,
-        166
+        140,
+        92
       ],
       "aiRecruits": {
         "levy": 62,
-        "bow": 46,
-        "healer": 14,
-        "knight": 8,
-        "axe": 7,
-        "shield": 10,
-        "paladin": 5
+        "bow": 36,
+        "healer": 9,
+        "shield": 18,
+        "paladin": 5,
+        "knight": 3,
+        "axe": 7
       },
-      "cpuMs": 996,
-      "steps": 8337,
+      "cpuMs": 314,
+      "steps": 6591,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c9",
@@ -3383,9 +3382,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 182,
-      "rounds": 15,
-      "peakUnits": 69,
+      "seconds": 154,
+      "rounds": 13,
+      "peakUnits": 54,
       "base": [
         0,
         2500
@@ -3395,358 +3394,35 @@
         600
       ],
       "spent": [
-        6259,
-        5411
+        4871,
+        5044
       ],
       "kills": [
-        73,
-        150
-      ],
-      "aiRecruits": {
-        "levy": 62,
-        "bow": 21,
-        "shield": 9,
-        "healer": 10,
-        "mage": 5,
-        "knight": 2
-      },
-      "cpuMs": 597,
-      "steps": 5475,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c9",
-      "recipe": "raiding screen"
-    },
-    {
-      "name": "c9 / raiding screen",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 149,
-      "rounds": 12,
-      "peakUnits": 60,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4439,
-        4481
-      ],
-      "kills": [
-        68,
-        115
+        66,
+        133
       ],
       "aiRecruits": {
         "levy": 62,
         "bow": 22,
         "knight": 3,
-        "runner": 17,
-        "healer": 5
+        "assassin": 5,
+        "healer": 10
       },
-      "cpuMs": 321,
-      "steps": 4465,
+      "cpuMs": 157,
+      "steps": 4622,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c9",
       "recipe": "raiding screen"
     },
     {
-      "name": "c10 / combined arms",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 143,
-      "rounds": 12,
-      "peakUnits": 69,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        4090,
-        3830
-      ],
-      "kills": [
-        42,
-        71
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 11,
-        "bow": 5,
-        "axe": 7,
-        "mage": 2
-      },
-      "cpuMs": 793,
-      "steps": 4281,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c10",
-      "recipe": "combined arms"
-    },
-    {
-      "name": "c10 / combined arms",
+      "name": "c9 / raiding screen",
       "seed": 811,
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 138,
-      "rounds": 11,
-      "peakUnits": 71,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        3430,
-        3520
-      ],
-      "kills": [
-        33,
-        65
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 9,
-        "bow": 5,
-        "axe": 6,
-        "mage": 2
-      },
-      "cpuMs": 1166,
-      "steps": 4130,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c10",
-      "recipe": "combined arms"
-    },
-    {
-      "name": "c10 / piercing screen",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 208,
-      "rounds": 17,
-      "peakUnits": 66,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        7309,
-        7259
-      ],
-      "kills": [
-        92,
-        137
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 7,
-        "bow": 16,
-        "axe": 6,
-        "paladin": 6,
-        "assassin": 9,
-        "mage": 8,
-        "runner": 1
-      },
-      "cpuMs": 695,
-      "steps": 6237,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c10",
-      "recipe": "piercing screen"
-    },
-    {
-      "name": "c10 / piercing screen",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 221,
-      "rounds": 18,
-      "peakUnits": 66,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        6857,
-        9049
-      ],
-      "kills": [
-        149,
-        93
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 12,
-        "bow": 28,
-        "axe": 33,
-        "mage": 5,
-        "paladin": 2,
-        "shield": 9
-      },
-      "cpuMs": 875,
-      "steps": 6631,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c10",
-      "recipe": "piercing screen"
-    },
-    {
-      "name": "c10 / arcane column",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 0,
-      "result": "win",
-      "seconds": 290,
-      "rounds": 24,
-      "peakUnits": 63,
-      "base": [
-        2500,
-        0
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        5861,
-        12685
-      ],
-      "kills": [
-        175,
-        59
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 17,
-        "bow": 15,
-        "axe": 47,
-        "mage": 9,
-        "knight": 3,
-        "paladin": 6,
-        "shield": 18
-      },
-      "cpuMs": 1339,
-      "steps": 8712,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c10",
-      "recipe": "arcane column"
-    },
-    {
-      "name": "c10 / arcane column",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": "draw",
-      "result": "draw",
-      "seconds": 966,
-      "rounds": 80,
-      "peakUnits": 65,
-      "base": [
-        2500,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        6962,
-        9934
-      ],
-      "kills": [
-        112,
-        73
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 25,
-        "bow": 28,
-        "axe": 7,
-        "mage": 5,
-        "knight": 15,
-        "shield": 1
-      },
-      "cpuMs": 7992,
-      "steps": 28982,
-      "atLimit": true,
-      "endReason": "roundLimit",
-      "missionId": "c10",
-      "recipe": "arcane column"
-    },
-    {
-      "name": "c10 / greedy transition",
-      "seed": 407,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 168,
-      "rounds": 14,
-      "peakUnits": 63,
-      "base": [
-        0,
-        2500
-      ],
-      "income": [
-        600,
-        600
-      ],
-      "spent": [
-        5864,
-        4096
-      ],
-      "kills": [
-        54,
-        113
-      ],
-      "aiRecruits": {
-        "levy": 60,
-        "healer": 9,
-        "bow": 17,
-        "axe": 5,
-        "paladin": 1
-      },
-      "cpuMs": 893,
-      "steps": 5050,
-      "atLimit": false,
-      "endReason": "baseDestroyed",
-      "missionId": "c10",
-      "recipe": "greedy transition"
-    },
-    {
-      "name": "c10 / greedy transition",
-      "seed": 811,
-      "playerSide": 0,
-      "winner": 1,
-      "result": "loss",
-      "seconds": 148,
-      "rounds": 12,
+      "seconds": 191,
+      "rounds": 16,
       "peakUnits": 62,
       "base": [
         0,
@@ -3757,23 +3433,356 @@
         600
       ],
       "spent": [
-        4624,
-        3984
+        6835,
+        5353
       ],
       "kills": [
-        49,
-        105
+        73,
+        166
       ],
       "aiRecruits": {
-        "levy": 60,
-        "healer": 9,
-        "bow": 16,
-        "axe": 4,
+        "levy": 62,
+        "bow": 33,
+        "shield": 9,
+        "healer": 10,
         "paladin": 1,
         "runner": 1
       },
-      "cpuMs": 734,
-      "steps": 4454,
+      "cpuMs": 278,
+      "steps": 5736,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c9",
+      "recipe": "raiding screen"
+    },
+    {
+      "name": "c10 / combined arms",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 68,
+      "base": [
+        2249,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        8312,
+        13618
+      ],
+      "kills": [
+        150,
+        99
+      ],
+      "aiRecruits": {
+        "levy": 28,
+        "healer": 30,
+        "bow": 50,
+        "runner": 21,
+        "axe": 7,
+        "shield": 9,
+        "assassin": 5,
+        "mage": 7,
+        "paladin": 8,
+        "guardian": 8
+      },
+      "cpuMs": 4076,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c10",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c10 / combined arms",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 966,
+      "rounds": 80,
+      "peakUnits": 78,
+      "base": [
+        1824,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        13480,
+        14253
+      ],
+      "kills": [
+        158,
+        165
+      ],
+      "aiRecruits": {
+        "levy": 60,
+        "healer": 37,
+        "bow": 31,
+        "axe": 12,
+        "mage": 10,
+        "paladin": 8,
+        "assassin": 8,
+        "rider": 5,
+        "shield": 15,
+        "guardian": 1
+      },
+      "cpuMs": 6712,
+      "steps": 28982,
+      "atLimit": true,
+      "endReason": "roundLimit",
+      "missionId": "c10",
+      "recipe": "combined arms"
+    },
+    {
+      "name": "c10 / piercing screen",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 120,
+      "rounds": 10,
+      "peakUnits": 53,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        3056,
+        3796
+      ],
+      "kills": [
+        33,
+        67
+      ],
+      "aiRecruits": {
+        "levy": 28,
+        "healer": 9,
+        "bow": 16,
+        "runner": 21,
+        "axe": 5
+      },
+      "cpuMs": 225,
+      "steps": 3611,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c10",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c10 / piercing screen",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 356,
+      "rounds": 30,
+      "peakUnits": 80,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        15092,
+        13575
+      ],
+      "kills": [
+        159,
+        262
+      ],
+      "aiRecruits": {
+        "levy": 60,
+        "healer": 23,
+        "bow": 51,
+        "axe": 19,
+        "mage": 5,
+        "rider": 5,
+        "shield": 10,
+        "paladin": 13,
+        "runner": 2
+      },
+      "cpuMs": 997,
+      "steps": 10675,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c10",
+      "recipe": "piercing screen"
+    },
+    {
+      "name": "c10 / arcane column",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 204,
+      "rounds": 17,
+      "peakUnits": 58,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        6934,
+        5166
+      ],
+      "kills": [
+        66,
+        102
+      ],
+      "aiRecruits": {
+        "levy": 46,
+        "healer": 9,
+        "bow": 16,
+        "runner": 9,
+        "axe": 5,
+        "knight": 6,
+        "mage": 2
+      },
+      "cpuMs": 400,
+      "steps": 6127,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c10",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c10 / arcane column",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 0,
+      "result": "win",
+      "seconds": 290,
+      "rounds": 24,
+      "peakUnits": 66,
+      "base": [
+        2500,
+        0
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        5084,
+        12621
+      ],
+      "kills": [
+        181,
+        48
+      ],
+      "aiRecruits": {
+        "levy": 60,
+        "healer": 18,
+        "bow": 27,
+        "axe": 33,
+        "mage": 5,
+        "paladin": 5,
+        "shield": 27,
+        "knight": 6
+      },
+      "cpuMs": 876,
+      "steps": 8695,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c10",
+      "recipe": "arcane column"
+    },
+    {
+      "name": "c10 / greedy transition",
+      "seed": 407,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 166,
+      "rounds": 14,
+      "peakUnits": 60,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        5864,
+        5570
+      ],
+      "kills": [
+        73,
+        113
+      ],
+      "aiRecruits": {
+        "levy": 46,
+        "healer": 7,
+        "bow": 24,
+        "runner": 14,
+        "knight": 6,
+        "rider": 6
+      },
+      "cpuMs": 215,
+      "steps": 4969,
+      "atLimit": false,
+      "endReason": "baseDestroyed",
+      "missionId": "c10",
+      "recipe": "greedy transition"
+    },
+    {
+      "name": "c10 / greedy transition",
+      "seed": 811,
+      "playerSide": 0,
+      "winner": 1,
+      "result": "loss",
+      "seconds": 157,
+      "rounds": 13,
+      "peakUnits": 63,
+      "base": [
+        0,
+        2500
+      ],
+      "income": [
+        600,
+        600
+      ],
+      "spent": [
+        5084,
+        4166
+      ],
+      "kills": [
+        57,
+        106
+      ],
+      "aiRecruits": {
+        "levy": 60,
+        "healer": 6,
+        "bow": 17,
+        "paladin": 2,
+        "axe": 4,
+        "mage": 2
+      },
+      "cpuMs": 350,
+      "steps": 4711,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c10",
@@ -3785,9 +3794,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 123,
-      "rounds": 10,
-      "peakUnits": 67,
+      "seconds": 112,
+      "rounds": 9,
+      "peakUnits": 63,
       "base": [
         0,
         2500
@@ -3797,21 +3806,22 @@
         600
       ],
       "spent": [
-        3189,
-        3641
+        2564,
+        3565
       ],
       "kills": [
-        43,
-        87
+        36,
+        82
       ],
       "aiRecruits": {
-        "levy": 60,
-        "healer": 6,
-        "bow": 17,
+        "levy": 46,
+        "healer": 7,
+        "bow": 14,
+        "runner": 9,
         "knight": 3
       },
-      "cpuMs": 524,
-      "steps": 3704,
+      "cpuMs": 190,
+      "steps": 3348,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c10",
@@ -3823,9 +3833,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 123,
+      "seconds": 117,
       "rounds": 10,
-      "peakUnits": 68,
+      "peakUnits": 73,
       "base": [
         0,
         2500
@@ -3836,20 +3846,21 @@
       ],
       "spent": [
         3189,
-        3488
+        3294
       ],
       "kills": [
-        36,
+        31,
         87
       ],
       "aiRecruits": {
         "levy": 60,
         "healer": 6,
         "bow": 16,
-        "paladin": 2
+        "paladin": 1,
+        "runner": 1
       },
-      "cpuMs": 563,
-      "steps": 3689,
+      "cpuMs": 293,
+      "steps": 3502,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "c10",
@@ -3861,9 +3872,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 146,
-      "rounds": 12,
-      "peakUnits": 52,
+      "seconds": 288,
+      "rounds": 24,
+      "peakUnits": 64,
       "base": [
         0,
         2500
@@ -3873,21 +3884,22 @@
         600
       ],
       "spent": [
-        4290,
-        4191
+        11412,
+        11389
       ],
       "kills": [
-        70,
-        82
+        191,
+        185
       ],
       "aiRecruits": {
-        "levy": 59,
-        "bow": 11,
-        "runner": 42,
-        "assassin": 5
+        "levy": 46,
+        "bow": 83,
+        "runner": 104,
+        "assassin": 9,
+        "crossbow": 7
       },
-      "cpuMs": 236,
-      "steps": 4386,
+      "cpuMs": 317,
+      "steps": 8651,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -3899,9 +3911,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 287,
-      "rounds": 24,
-      "peakUnits": 55,
+      "seconds": 179,
+      "rounds": 15,
+      "peakUnits": 48,
       "base": [
         0,
         2500
@@ -3911,22 +3923,22 @@
         600
       ],
       "spent": [
-        11412,
-        11310
+        6052,
+        5505
       ],
       "kills": [
-        202,
-        185
+        95,
+        109
       ],
       "aiRecruits": {
-        "levy": 53,
-        "runner": 87,
-        "bow": 75,
-        "crossbow": 21,
-        "assassin": 6
+        "levy": 52,
+        "runner": 31,
+        "bow": 33,
+        "crossbow": 7,
+        "assassin": 5
       },
-      "cpuMs": 603,
-      "steps": 8595,
+      "cpuMs": 137,
+      "steps": 5361,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -3938,9 +3950,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 146,
-      "rounds": 12,
-      "peakUnits": 52,
+      "seconds": 288,
+      "rounds": 24,
+      "peakUnits": 64,
       "base": [
         0,
         2500
@@ -3950,21 +3962,22 @@
         600
       ],
       "spent": [
-        4290,
-        4191
+        11412,
+        11389
       ],
       "kills": [
-        70,
-        82
+        191,
+        185
       ],
       "aiRecruits": {
-        "levy": 59,
-        "bow": 11,
-        "runner": 42,
-        "assassin": 5
+        "levy": 46,
+        "bow": 83,
+        "runner": 104,
+        "assassin": 9,
+        "crossbow": 7
       },
-      "cpuMs": 245,
-      "steps": 4386,
+      "cpuMs": 316,
+      "steps": 8651,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -3976,9 +3989,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 287,
-      "rounds": 24,
-      "peakUnits": 55,
+      "seconds": 179,
+      "rounds": 15,
+      "peakUnits": 48,
       "base": [
         0,
         2500
@@ -3988,22 +4001,22 @@
         600
       ],
       "spent": [
-        11412,
-        11310
+        6052,
+        5505
       ],
       "kills": [
-        202,
-        185
+        95,
+        109
       ],
       "aiRecruits": {
-        "levy": 53,
-        "runner": 87,
-        "bow": 75,
-        "crossbow": 21,
-        "assassin": 6
+        "levy": 52,
+        "runner": 31,
+        "bow": 33,
+        "crossbow": 7,
+        "assassin": 5
       },
-      "cpuMs": 639,
-      "steps": 8595,
+      "cpuMs": 144,
+      "steps": 5361,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -4028,18 +4041,17 @@
       ],
       "spent": [
         45172,
-        45310
+        45278
       ],
       "kills": [
-        824,
-        778
+        811,
+        786
       ],
       "aiRecruits": {
         "levy": 62,
-        "bow": 745,
-        "runner": 17
+        "bow": 755
       },
-      "cpuMs": 2132,
+      "cpuMs": 984,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -4054,7 +4066,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 50,
+      "peakUnits": 54,
       "base": [
         2500,
         2500
@@ -4065,18 +4077,18 @@
       ],
       "spent": [
         45172,
-        45220
+        45266
       ],
       "kills": [
-        807,
-        785
+        823,
+        778
       ],
       "aiRecruits": {
-        "levy": 56,
+        "levy": 70,
         "runner": 4,
-        "bow": 754
+        "bow": 749
       },
-      "cpuMs": 2076,
+      "cpuMs": 987,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -4091,7 +4103,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 71,
+      "peakUnits": 67,
       "base": [
         2500,
         2500
@@ -4105,15 +4117,16 @@
         45326
       ],
       "kills": [
-        825,
-        808
+        816,
+        809
       ],
       "aiRecruits": {
-        "levy": 80,
-        "bow": 738,
-        "crossbow": 7
+        "levy": 62,
+        "bow": 727,
+        "runner": 13,
+        "crossbow": 14
       },
-      "cpuMs": 2240,
+      "cpuMs": 1078,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -4128,7 +4141,7 @@
       "result": "draw",
       "seconds": 966,
       "rounds": 80,
-      "peakUnits": 59,
+      "peakUnits": 56,
       "base": [
         2500,
         2500
@@ -4139,18 +4152,19 @@
       ],
       "spent": [
         45426,
-        45212
+        45242
       ],
       "kills": [
-        806,
+        800,
         816
       ],
       "aiRecruits": {
-        "levy": 39,
-        "runner": 28,
-        "bow": 746
+        "levy": 53,
+        "runner": 4,
+        "bow": 747,
+        "assassin": 4
       },
-      "cpuMs": 2098,
+      "cpuMs": 1029,
       "steps": 28982,
       "atLimit": true,
       "endReason": "roundLimit",
@@ -4163,9 +4177,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 168,
+      "seconds": 172,
       "rounds": 14,
-      "peakUnits": 67,
+      "peakUnits": 61,
       "base": [
         0,
         2500
@@ -4176,20 +4190,20 @@
       ],
       "spent": [
         5621,
-        5296
+        4914
       ],
       "kills": [
-        108,
+        84,
         139
       ],
       "aiRecruits": {
-        "levy": 55,
-        "bow": 11,
-        "runner": 76,
-        "crossbow": 7
+        "levy": 46,
+        "bow": 31,
+        "runner": 42,
+        "assassin": 4
       },
-      "cpuMs": 493,
-      "steps": 5038,
+      "cpuMs": 206,
+      "steps": 5162,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -4201,9 +4215,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 176,
-      "rounds": 15,
-      "peakUnits": 47,
+      "seconds": 229,
+      "rounds": 19,
+      "peakUnits": 59,
       "base": [
         0,
         2500
@@ -4213,21 +4227,21 @@
         600
       ],
       "spent": [
-        6259,
-        5577
+        8655,
+        8341
       ],
       "kills": [
-        73,
-        150
+        137,
+        201
       ],
       "aiRecruits": {
-        "levy": 24,
-        "runner": 23,
-        "bow": 31,
-        "assassin": 19
+        "levy": 52,
+        "runner": 51,
+        "bow": 54,
+        "assassin": 17
       },
-      "cpuMs": 325,
-      "steps": 5284,
+      "cpuMs": 259,
+      "steps": 6884,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -4239,9 +4253,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 197,
-      "rounds": 16,
-      "peakUnits": 46,
+      "seconds": 507,
+      "rounds": 42,
+      "peakUnits": 47,
       "base": [
         2500,
         0
@@ -4251,20 +4265,21 @@
         600
       ],
       "spent": [
-        5154,
-        6896
+        19308,
+        22490
       ],
       "kills": [
-        160,
-        72
+        381,
+        269
       ],
       "aiRecruits": {
-        "levy": 80,
-        "bow": 68,
-        "crossbow": 12
+        "levy": 62,
+        "bow": 169,
+        "crossbow": 116,
+        "runner": 34
       },
-      "cpuMs": 360,
-      "steps": 5922,
+      "cpuMs": 476,
+      "steps": 15217,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -4276,9 +4291,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 603,
-      "rounds": 50,
-      "peakUnits": 44,
+      "seconds": 484,
+      "rounds": 40,
+      "peakUnits": 53,
       "base": [
         2500,
         0
@@ -4288,21 +4303,21 @@
         600
       ],
       "spent": [
-        22770,
-        27082
+        19456,
+        21106
       ],
       "kills": [
-        422,
-        322
+        361,
+        269
       ],
       "aiRecruits": {
-        "levy": 41,
-        "runner": 4,
-        "bow": 231,
-        "crossbow": 146
+        "levy": 53,
+        "runner": 53,
+        "crossbow": 112,
+        "bow": 143
       },
-      "cpuMs": 1140,
-      "steps": 18097,
+      "cpuMs": 477,
+      "steps": 14531,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h1",
@@ -4314,9 +4329,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 91,
+      "seconds": 99,
       "rounds": 8,
-      "peakUnits": 32,
+      "peakUnits": 31,
       "base": [
         0,
         2500
@@ -4327,23 +4342,22 @@
       ],
       "spent": [
         1840,
-        1817
+        1831
       ],
       "kills": [
-        2,
+        5,
         28
       ],
       "aiRecruits": {
         "knight": 6,
         "paladin": 1,
-        "levy": 8,
+        "levy": 11,
         "shield": 1,
-        "pike": 1,
-        "runner": 3,
-        "bow": 1
+        "axe": 1,
+        "runner": 2
       },
-      "cpuMs": 123,
-      "steps": 2719,
+      "cpuMs": 63,
+      "steps": 2981,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4355,9 +4369,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 110,
-      "rounds": 9,
-      "peakUnits": 34,
+      "seconds": 92,
+      "rounds": 8,
+      "peakUnits": 35,
       "base": [
         0,
         2500
@@ -4367,23 +4381,22 @@
         80
       ],
       "spent": [
-        1894,
-        1919
+        1840,
+        1806
       ],
       "kills": [
-        7,
-        29
+        2,
+        28
       ],
       "aiRecruits": {
         "knight": 7,
-        "levy": 9,
-        "crossbow": 2,
+        "levy": 12,
+        "crossbow": 1,
         "runner": 2,
-        "pike": 1,
-        "healer": 1
+        "shield": 1
       },
-      "cpuMs": 179,
-      "steps": 3309,
+      "cpuMs": 77,
+      "steps": 2756,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4395,9 +4408,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 107,
-      "rounds": 9,
-      "peakUnits": 30,
+      "seconds": 121,
+      "rounds": 10,
+      "peakUnits": 32,
       "base": [
         2500,
         0
@@ -4407,23 +4420,24 @@
         80
       ],
       "spent": [
-        1869,
-        1891
+        1955,
+        1984
       ],
       "kills": [
-        17,
-        12
+        21,
+        15
       ],
       "aiRecruits": {
         "knight": 6,
         "paladin": 1,
-        "crossbow": 1,
-        "axe": 1,
-        "shield": 3,
+        "levy": 4,
+        "bow": 1,
+        "axe": 2,
+        "shield": 2,
         "runner": 5
       },
-      "cpuMs": 140,
-      "steps": 3220,
+      "cpuMs": 69,
+      "steps": 3641,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4435,9 +4449,9 @@
       "playerSide": 0,
       "winner": 0,
       "result": "win",
-      "seconds": 105,
-      "rounds": 9,
-      "peakUnits": 35,
+      "seconds": 131,
+      "rounds": 11,
+      "peakUnits": 31,
       "base": [
         2500,
         0
@@ -4447,24 +4461,25 @@
         80
       ],
       "spent": [
-        1869,
-        1904
+        2020,
+        2073
       ],
       "kills": [
         21,
-        9
+        17
       ],
       "aiRecruits": {
         "knight": 7,
-        "levy": 6,
-        "runner": 2,
-        "pike": 1,
-        "shield": 3,
-        "bow": 1,
-        "crossbow": 1
+        "mage": 1,
+        "levy": 3,
+        "crossbow": 1,
+        "axe": 1,
+        "shield": 2,
+        "pike": 3,
+        "runner": 3
       },
-      "cpuMs": 166,
-      "steps": 3156,
+      "cpuMs": 70,
+      "steps": 3941,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4476,9 +4491,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 99,
+      "seconds": 100,
       "rounds": 8,
-      "peakUnits": 31,
+      "peakUnits": 30,
       "base": [
         0,
         2500
@@ -4502,8 +4517,8 @@
         "shield": 1,
         "runner": 2
       },
-      "cpuMs": 127,
-      "steps": 2958,
+      "cpuMs": 58,
+      "steps": 2997,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4515,9 +4530,9 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 100,
+      "seconds": 102,
       "rounds": 8,
-      "peakUnits": 33,
+      "peakUnits": 34,
       "base": [
         0,
         2500
@@ -4528,20 +4543,21 @@
       ],
       "spent": [
         1830,
-        1805
+        1823
       ],
       "kills": [
-        5,
+        3,
         26
       ],
       "aiRecruits": {
         "knight": 7,
         "levy": 10,
-        "runner": 6,
-        "pike": 1
+        "runner": 2,
+        "shield": 2,
+        "crossbow": 1
       },
-      "cpuMs": 147,
-      "steps": 2987,
+      "cpuMs": 79,
+      "steps": 3047,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4580,7 +4596,7 @@
         "pike": 5,
         "shield": 3
       },
-      "cpuMs": 44,
+      "cpuMs": 21,
       "steps": 4569,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -4623,7 +4639,7 @@
         "levy": 7,
         "runner": 4
       },
-      "cpuMs": 59,
+      "cpuMs": 29,
       "steps": 5091,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -4636,7 +4652,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 57,
+      "seconds": 58,
       "rounds": 5,
       "peakUnits": 32,
       "base": [
@@ -4649,7 +4665,7 @@
       ],
       "spent": [
         1591,
-        1580
+        1596
       ],
       "kills": [
         0,
@@ -4658,11 +4674,12 @@
       "aiRecruits": {
         "knight": 6,
         "paladin": 1,
-        "levy": 7,
-        "runner": 2
+        "axe": 1,
+        "bow": 1,
+        "runner": 3
       },
-      "cpuMs": 38,
-      "steps": 1721,
+      "cpuMs": 18,
+      "steps": 1728,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4674,7 +4691,7 @@
       "playerSide": 0,
       "winner": 1,
       "result": "loss",
-      "seconds": 58,
+      "seconds": 59,
       "rounds": 5,
       "peakUnits": 41,
       "base": [
@@ -4687,7 +4704,7 @@
       ],
       "spent": [
         1591,
-        1584
+        1570
       ],
       "kills": [
         0,
@@ -4696,12 +4713,12 @@
       "aiRecruits": {
         "knight": 6,
         "levy": 10,
-        "crossbow": 1,
         "bow": 1,
-        "axe": 1
+        "axe": 1,
+        "runner": 2
       },
-      "cpuMs": 55,
-      "steps": 1742,
+      "cpuMs": 29,
+      "steps": 1769,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h2",
@@ -4738,8 +4755,8 @@
         "mage": 2,
         "paladin": 1
       },
-      "cpuMs": 20,
-      "steps": 2335,
+      "cpuMs": 10,
+      "steps": 2333,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h3",
@@ -4775,8 +4792,8 @@
         "healer": 3,
         "mage": 2
       },
-      "cpuMs": 13,
-      "steps": 1837,
+      "cpuMs": 6,
+      "steps": 1833,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h3",
@@ -4812,7 +4829,7 @@
         "healer": 5,
         "mage": 2
       },
-      "cpuMs": 22,
+      "cpuMs": 11,
       "steps": 2511,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -4827,7 +4844,7 @@
       "result": "loss",
       "seconds": 111,
       "rounds": 9,
-      "peakUnits": 16,
+      "peakUnits": 15,
       "base": [
         0,
         2500
@@ -4849,8 +4866,8 @@
         "healer": 3,
         "mage": 2
       },
-      "cpuMs": 46,
-      "steps": 3344,
+      "cpuMs": 16,
+      "steps": 3343,
       "atLimit": false,
       "endReason": "baseDestroyed",
       "missionId": "h3",
@@ -4888,7 +4905,7 @@
         "paladin": 7,
         "guardian": 6
       },
-      "cpuMs": 66,
+      "cpuMs": 28,
       "steps": 5119,
       "atLimit": false,
       "endReason": "baseDestroyed",
@@ -4926,7 +4943,7 @@
         "mage": 2,
         "paladin": 3
       },
-      "cpuMs": 38,
+      "cpuMs": 19,
       "steps": 3654,
       "atLimit": false,
       "endReason": "baseDestroyed",

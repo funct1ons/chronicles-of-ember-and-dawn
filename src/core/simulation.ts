@@ -265,11 +265,51 @@ function runtimeOf(state: BattleState, unit: Fighter): UnitRuntime {
   return runtime;
 }
 
+/**
+ * Keep a legal birth position when a wave meets parked support or earlier recruits.
+ * The old 11px row offsets could even produce identical positions in one lane;
+ * untangling that birth pile shoved already-visible units by the 13px contact cap.
+ * Search only this lane for the closest free x; keep the original slot if free.
+ * No RNG is added and ordinary movement/contact constraints are unchanged.
+ */
+function freeSpawnX(state: BattleState, side: Side, preferred: number, y: number): number {
+  const intervals: { lo: number; hi: number }[] = [];
+  let occupied = false;
+  for (const other of state.units) {
+    if (!isAlive(other)) continue;
+    const separation = other.side === side ? FRIEND_GAP : MIN_SEPARATION;
+    const dy = Math.abs(other.y - y);
+    if (dy >= separation) continue;
+    const gap = Math.sqrt(separation * separation - dy * dy) + 1e-6;
+    const interval = { lo: other.x - gap, hi: other.x + gap };
+    intervals.push(interval);
+    if (preferred > interval.lo && preferred < interval.hi) occupied = true;
+  }
+  if (!occupied) return preferred;
+  intervals.sort((a, b) => a.lo - b.lo || a.hi - b.hi);
+  let left = preferred, right = preferred;
+  for (const interval of intervals) {
+    if (right > interval.lo && right < interval.hi) right = interval.hi;
+  }
+  for (let i = intervals.length - 1; i >= 0; i--) {
+    const interval = intervals[i]!;
+    if (left > interval.lo && left < interval.hi) left = interval.lo;
+  }
+  const min = BASE_X[0] + 8, max = BASE_X[1] - 8;
+  if (left < min && right > max) return preferred; // No legal slot (over-cap injected states).
+  if (left < min) return right;
+  if (right > max) return left;
+  const dl = preferred - left, dr = right - preferred;
+  // Ties prefer the fortress side, independent of faction's world direction.
+  return Math.abs(dl - dr) < 1e-8 ? (side === 0 ? left : right) : dl < dr ? left : right;
+}
+
 function spawnUnit(state: BattleState, side: Side, def: UnitDef, waveIndex: number): Fighter {
   const lane = pickSpawnLane(state, side);
   const dir = side === 0 ? 1 : -1;
-  const x = clamp(BASE_X[side] + dir * (BASE_RADIUS + 8 + (waveIndex % 4) * 11), BASE_X[0] + 8, BASE_X[1] - 8);
+  const preferred = clamp(BASE_X[side] + dir * (BASE_RADIUS + 8 + (waveIndex % 4) * 11), BASE_X[0] + 8, BASE_X[1] - 8);
   const y = laneCenterY(lane);
+  const x = freeSpawnX(state, side, preferred, y);
   const unit: Fighter = {
     id: state.nextId,
     side,

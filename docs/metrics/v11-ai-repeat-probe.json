@@ -1,0 +1,10 @@
+{
+  "note": "Unchanged-source repeat probe after the initial hard-AI 144.8ms failure; all three isolated Playwright runs passed the same <100ms gate. This does not establish the root cause of the initial spike or a worst-case upper bound. Timings copied from the retained v11-hard-ai-repeat-probe process output. Subsequent equivalent optimization is evaluated separately.",
+  "sourceSha256": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+  "firstFailure": "v11-browser-performance-first-failure.json",
+  "runs": [
+    {"hardMedianMs":46.4,"hardMaxMs":81.7,"normalMaxMs":60.6,"masterMaxMs":4.4,"finishingMaxMs":74.9},
+    {"hardMedianMs":48.1,"hardMaxMs":93.1,"normalMaxMs":26.1,"masterMaxMs":1.2,"finishingMaxMs":55.2},
+    {"hardMedianMs":30.1,"hardMaxMs":46.8,"normalMaxMs":74.7,"masterMaxMs":2.0,"finishingMaxMs":29.4}
+  ]
+}

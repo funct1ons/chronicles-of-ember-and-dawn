@@ -29,6 +29,9 @@ export function forecastWave(s:BattleState,side:Side,d:UnitDef,enemyLegal:UnitDe
  const nodes=s.units.filter(u=>u.hp>0&&u.action!=='dead').map(unit);
  recruit(nodes,side,d,n,100000);
  const predicted=predictedEnemy(s,enemy,enemyLegal);recruit(nodes,enemy,predicted,copies(s,enemy,predicted),200000);
+ // Recruitment is complete and sides never change. Retain original node indices/order
+ // (including later deaths) so ties, healing reservations and same-tick movement stay exact.
+ const bySide:[number[],number[]]=[[],[]];for(let i=0;i<nodes.length;i++)bySide[nodes[i].side].push(i);
  const baseDamage=[0,0];const dt=.65;
  const pending=new Float64Array(nodes.length);const healing=new Float64Array(nodes.length);const healingUsed=new Float64Array(nodes.length);
  for(let time=0;time<horizon;time+=dt){
@@ -37,17 +40,18 @@ export function forecastWave(s:BattleState,side:Side,d:UnitDef,enemyLegal:UnitDe
   for(let i=0;i<nodes.length;i++){
    const a=nodes[i];if(a.hp<=0)continue;const dir=a.side===0?1:-1;const def=a.def;a.cooldown-=dt;
    if(def.role==='healer'){
-    let best=-1,need=0;
-    for(let j=0;j<nodes.length;j++){const b=nodes[j];if(b.side!==a.side||b.hp<=0||i===j)continue;const gap=Math.abs(b.x-a.x)+Math.abs(b.y-a.y)*.35;if(gap>def.range)continue;const missing=b.def.hp-b.hp-healing[j];if(missing>need){need=missing;best=j;}}
+    let best=-1,need=0;const allies=bySide[a.side];
+    for(let k=0;k<allies.length;k++){const j=allies[k],b=nodes[j];if(b.hp<=0||i===j)continue;const gap=Math.abs(b.x-a.x)+Math.abs(b.y-a.y)*.35;if(gap>def.range)continue;const missing=b.def.hp-b.hp-healing[j];if(missing>need){need=missing;best=j;}}
     if(best>=0&&a.cooldown<=0){const amount=Math.min(24,need);healing[best]+=amount;healingUsed[i]+=amount;a.cooldown=def.cooldown;}
     // Follow the nearby front, staying safely behind it.
-    let front=a.x;for(const b of nodes)if(b.side===a.side&&b.hp>0&&b.def.range<120&&dir*(b.x-front)>0)front=b.x;
+    let front=a.x;for(let k=0;k<allies.length;k++){const b=nodes[allies[k]];if(b.hp>0&&b.def.range<120&&dir*(b.x-front)>0)front=b.x;}
     const target=front-dir*60;if(dir*(target-a.x)>0)a.x+=dir*Math.min(def.speed*dt,Math.abs(target-a.x));continue;
    }
    let target=-1,best=Infinity,nearestSq=Infinity;const reach=def.range+7,reachSq=reach*reach;
    // Target ranking needs only radius comparisons. Avoid millions of duplicate hypot
    // calls in normal/hard's coarse searches; keep the same geometry and tie order.
-   for(let j=0;j<nodes.length;j++){const b=nodes[j];if(b.hp<=0||b.side===a.side)continue;const dx=b.x-a.x,dy=b.y-a.y;const distance=Math.abs(dx)+Math.abs(dy)*.5,squared=dx*dx+dy*dy;nearestSq=Math.min(nearestSq,squared);const reachable=squared<=reachSq;
+   const enemies=bySide[1-a.side];
+   for(let k=0;k<enemies.length;k++){const j=enemies[k],b=nodes[j];if(b.hp<=0)continue;const dx=b.x-a.x,dy=b.y-a.y;const distance=Math.abs(dx)+Math.abs(dy)*.5,squared=dx*dx+dy*dy;nearestSq=Math.min(nearestSq,squared);const reachable=squared<=reachSq;
     const score=distance+(reachable?-220:0);if(score<best){best=score;target=j;}
    }
    const guard=Math.max(80,def.range+24);
@@ -61,7 +65,7 @@ export function forecastWave(s:BattleState,side:Side,d:UnitDef,enemyLegal:UnitDe
    }
    if(distance<=def.range+7&&a.cooldown<=0){
     pending[target]+=(a.charge?chargeHits:hits)[a.kind][b.kind];a.charge=false;a.cooldown=def.cooldown;
-    if(def.role==='firemage')for(let j=0;j<nodes.length;j++){const c=nodes[j];if(j!==target&&c.side!==a.side&&c.hp>0&&Math.hypot(c.x-b.x,c.y-b.y)<48)pending[j]+=hits[a.kind][c.kind]*.5;}
+    if(def.role==='firemage')for(let k=0;k<enemies.length;k++){const j=enemies[k],c=nodes[j];if(j!==target&&c.hp>0&&Math.hypot(c.x-b.x,c.y-b.y)<48)pending[j]+=hits[a.kind][c.kind]*.5;}
    }
   }
   for(let i=0;i<nodes.length;i++){const a=nodes[i];if(a.hp>0)a.hp=Math.max(0,Math.min(a.def.hp,a.hp+healing[i]-pending[i]));}

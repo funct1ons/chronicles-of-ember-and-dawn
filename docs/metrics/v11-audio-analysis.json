@@ -1,0 +1,180 @@
+{
+  "generated": "2026-10-23T15:47:44.103Z",
+  "method": "Channel 0, 20ms windows; audible threshold RMS 0.00003 (not perceptual silence); low-band positive RMS transients; greedy strongest 32 peaks spaced >=2.4s; not tempo/downbeat detection",
+  "rows": [
+    {
+      "file": "eye_of_the_storm.mp3",
+      "duration": 117.98058333333333,
+      "audibleStart": 0,
+      "audibleEnd": 117.98,
+      "head": 0,
+      "tail": 0.0005833333333242763,
+      "cues": []
+    },
+    {
+      "file": "war_theme.ogg",
+      "duration": 283.7438125,
+      "audibleStart": 0.04,
+      "audibleEnd": 283.7438125,
+      "head": 0.04,
+      "tail": 0,
+      "cues": []
+    },
+    {
+      "file": "hope_orchestral_battle_music.ogg",
+      "duration": 69.81816666666667,
+      "audibleStart": 0,
+      "audibleEnd": 69.81816666666667,
+      "head": 0,
+      "tail": 0,
+      "cues": []
+    },
+    {
+      "file": "the_final_battle.ogg",
+      "duration": 145.8213125,
+      "audibleStart": 0,
+      "audibleEnd": 145.8213125,
+      "head": 0,
+      "tail": 0,
+      "cues": [
+        {
+          "time": 9,
+          "strength": 0.11658339284061504
+        },
+        {
+          "time": 12,
+          "strength": 0.11769779923371096
+        },
+        {
+          "time": 15,
+          "strength": 0.06366943257789444
+        },
+        {
+          "time": 18,
+          "strength": 0.12414564888060275
+        },
+        {
+          "time": 22.5,
+          "strength": 0.11355435901053994
+        },
+        {
+          "time": 25.5,
+          "strength": 0.033315240929410975
+        },
+        {
+          "time": 30,
+          "strength": 0.027353174292914097
+        },
+        {
+          "time": 33,
+          "strength": 0.026246954250506573
+        },
+        {
+          "time": 36.12,
+          "strength": 0.036210963872544105
+        },
+        {
+          "time": 42.12,
+          "strength": 0.0366461387116402
+        },
+        {
+          "time": 46.5,
+          "strength": 0.027086585913498305
+        },
+        {
+          "time": 49.52,
+          "strength": 0.022814696279800997
+        },
+        {
+          "time": 52.52,
+          "strength": 0.022958007641492237
+        },
+        {
+          "time": 55.5,
+          "strength": 0.021461014839850908
+        },
+        {
+          "time": 60,
+          "strength": 0.025488573325514793
+        },
+        {
+          "time": 66,
+          "strength": 0.029074725710655558
+        },
+        {
+          "time": 72,
+          "strength": 0.023816908489817573
+        },
+        {
+          "time": 75,
+          "strength": 0.02396638284021617
+        },
+        {
+          "time": 78,
+          "strength": 0.02862095531656894
+        },
+        {
+          "time": 83.48,
+          "strength": 0.02525475067190317
+        },
+        {
+          "time": 87,
+          "strength": 0.021842936260956937
+        },
+        {
+          "time": 90,
+          "strength": 0.022343949715503096
+        },
+        {
+          "time": 94.5,
+          "strength": 0.024792857148634356
+        },
+        {
+          "time": 100.42,
+          "strength": 0.022923068718765843
+        },
+        {
+          "time": 114.76,
+          "strength": 0.02637407598326031
+        },
+        {
+          "time": 117.76,
+          "strength": 0.06988737006313904
+        },
+        {
+          "time": 120.2,
+          "strength": 0.028075417338855616
+        },
+        {
+          "time": 124.68,
+          "strength": 0.060645489900977734
+        },
+        {
+          "time": 127.58,
+          "strength": 0.04565104000369362
+        },
+        {
+          "time": 132,
+          "strength": 0.07455981003966262
+        },
+        {
+          "time": 136.68,
+          "strength": 0.05982798174559589
+        },
+        {
+          "time": 141,
+          "strength": 0.04976394662923911
+        }
+      ]
+    },
+    {
+      "file": "epic_march_loop.wav",
+      "duration": 43.582479166666666,
+      "audibleStart": 0,
+      "audibleEnd": 43.582479166666666,
+      "head": 0,
+      "tail": 0,
+      "cues": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@ export interface Settings { music:number; effects:number; ambience:number; muted
 export interface RecordEntry {date:string;mode:string;result:'win'|'loss'|'draw';seconds:number;rounds:number;kills:number;recruited:number;}
 export interface SaveData {version:1;settings:Settings;completed:string[];records:RecordEntry[];tutorialSeen:boolean;}
 export const SAVE_KEY='ember-dawn-save-v1';
-export const defaults=():SaveData=>({version:1,settings:{music:.45,effects:.5,ambience:.25,muted:false,reducedMotion:false,healthBars:true,speed:1},completed:[],records:[],tutorialSeen:false});
+export const defaults=():SaveData=>({version:1,settings:{music:.8,effects:.5,ambience:.25,muted:false,reducedMotion:false,healthBars:true,speed:1},completed:[],records:[],tutorialSeen:false});
 const clamp=(v:unknown,fall:number)=>typeof v==='number'&&Number.isFinite(v)?Math.max(0,Math.min(1,v)):fall;
 export function loadSave():SaveData{
  const d=defaults();try{

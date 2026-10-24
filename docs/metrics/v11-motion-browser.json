@@ -1,0 +1,240 @@
+{
+  "generated": "2026-10-23T15:46:07.467Z",
+  "url": "http://127.0.0.1:4199/",
+  "source": {
+    "src/render/BattleRenderer.ts": "52153b5c1e18564c30a62428a541c311c715d6c73eff83f8ff887174d870f018",
+    "src/render/motion.ts": "ae9f6947318bfbf28f72e107f26bf8aea63c83fac4ce9e68319a23c42066c250",
+    "src/render/pixelViewport.ts": "08c9620b8891f34782e724047807b654b08fd8b04bb9478fabd3ab7711c3d16b",
+    "src/ui/App.ts": "2e4cbde22ffa99d82edc1832a5100221c375febf3bf6cef1cef8b61f27942490",
+    "src/style.css": "64c3b5359ae8710a177a02ea1bb6150a9fa39cfc2c05beeadbf743ee2a3508c0"
+  },
+  "kind": "real RAF presentation + viewport smoke; not human subjective review; deviceScaleFactor is not a physical Windows zoom test",
+  "viewports": [
+    {
+      "width": 1024,
+      "dpr": 1,
+      "backing": [
+        1024,
+        307
+      ],
+      "css": [
+        1024,
+        307.1875
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 558,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17670000000003938,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1024-dpr1.png"
+    },
+    {
+      "width": 1024,
+      "dpr": 1.25,
+      "backing": [
+        1280,
+        384
+      ],
+      "css": [
+        1024,
+        307.1875
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 695,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.23772553691184165,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1024-dpr1.25.png"
+    },
+    {
+      "width": 1024,
+      "dpr": 1.5,
+      "backing": [
+        1536,
+        461
+      ],
+      "css": [
+        1024,
+        307.1875
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 837,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17979999999997176,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1024-dpr1.5.png"
+    },
+    {
+      "width": 1440,
+      "dpr": 1,
+      "backing": [
+        1440,
+        400
+      ],
+      "css": [
+        1440,
+        400
+      ],
+      "overflow": false,
+      "frames": 450,
+      "adjacentSamples": 4041,
+      "missingGapsRejected": 0,
+      "renderChanges": 4041,
+      "devicePixelChanges": 783,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 5.986666666666666,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17670000000003938,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.4000000059604645,
+      "screenshot": "docs/screenshots/v11/motion-1440-dpr1.png"
+    },
+    {
+      "width": 1440,
+      "dpr": 1.25,
+      "backing": [
+        1800,
+        500
+      ],
+      "css": [
+        1440,
+        400
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 981,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17670000000003938,
+      "renderMedianMs": 0.3999999761581421,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1440-dpr1.25.png"
+    },
+    {
+      "width": 1440,
+      "dpr": 1.5,
+      "backing": [
+        2160,
+        600
+      ],
+      "css": [
+        1440,
+        400
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 1179,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17670000000003938,
+      "renderMedianMs": 0.3999999761581421,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1440-dpr1.5.png"
+    },
+    {
+      "width": 1920,
+      "dpr": 1,
+      "backing": [
+        1920,
+        509
+      ],
+      "css": [
+        1920,
+        508.796875
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 1031,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17670000000003938,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1920-dpr1.png"
+    },
+    {
+      "width": 1920,
+      "dpr": 1.25,
+      "backing": [
+        2400,
+        636
+      ],
+      "css": [
+        1920,
+        508.796875
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 1289,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.17670000000003938,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.4000000059604645,
+      "screenshot": "docs/screenshots/v11/motion-1920-dpr1.25.png"
+    },
+    {
+      "width": 1920,
+      "dpr": 1.5,
+      "backing": [
+        2880,
+        763
+      ],
+      "css": [
+        1920,
+        508.796875
+      ],
+      "overflow": false,
+      "frames": 451,
+      "adjacentSamples": 4050,
+      "missingGapsRejected": 0,
+      "renderChanges": 4050,
+      "devicePixelChanges": 1546,
+      "simulationChanges": 675,
+      "interpolationChangeRatio": 6,
+      "maxAdjacentDeviceStep": 1,
+      "maxAdjacentWorldStep": 0.23772553691184165,
+      "renderMedianMs": 0.30000001192092896,
+      "renderP95Ms": 0.5,
+      "screenshot": "docs/screenshots/v11/motion-1920-dpr1.5.png"
+    }
+  ],
+  "errors": []
+}

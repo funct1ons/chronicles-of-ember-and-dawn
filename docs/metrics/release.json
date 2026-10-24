@@ -1,9 +1,27 @@
 {
-  "testedAt": "2026-10-23T10:35:48.532Z",
+  "testedAt": "2026-10-23T16:07:18.973Z",
+  "source": {
+    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+    "files": {
+      "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
+      "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
+      "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
+      "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
+      "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
+      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
+      "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
+    }
+  },
+  "artifacts": {
+    "index.html": "bcc8dfd405371c21f2a72a2599d329097329d3efc02a8089854c648abf08b9d9",
+    "sw.js": "b23097b07e7090195e74dab751b80456acd2cf7417078fdb34c0e00fbfa2e85c",
+    "assets/index-Ce4nEHFL.js": "043e571453889c62362c11b1f7ed60487fd517704791539cb029e96bd3e0a1d4",
+    "assets/index-N9YchXMn.css": "d5705d51f4ecbff92a5c1b59daa338603e78308925ad724689939541056b67c5"
+  },
   "url": "http://127.0.0.1:4190/game/",
   "cacheInfo": {
     "names": [
-      "ember-dawn-6f3a45a2fe0dd9"
+      "ember-dawn-115e582b04c98f"
     ],
     "files": [
       "/game/art/README.txt",
@@ -13,8 +31,8 @@
       "/game/art/battlefield-wastes.png",
       "/game/art/unit-atlas-azure.png",
       "/game/art/unit-atlas-crimson.png",
-      "/game/assets/index-CKZ1wfoz.css",
-      "/game/assets/index-CSxvpz-H.js",
+      "/game/assets/index-Ce4nEHFL.js",
+      "/game/assets/index-N9YchXMn.css",
       "/game/audio/epic_march_loop.wav",
       "/game/audio/eye_of_the_storm.mp3",
       "/game/audio/hope_orchestral_battle_music.ogg",
@@ -31,16 +49,16 @@
   },
   "runtime": {
     "offline": true,
-    "elapsed": "01:22",
+    "elapsed": "01:21",
     "round": "第 8 波",
     "gold": "76",
-    "population": "9/80",
-    "fps": "180 FPS · 14 单位 · 30Hz",
+    "population": "24/80",
+    "fps": "153 FPS · 24 单位 · 30Hz",
     "tracks": [
       {
         "src": "/game/audio/eye_of_the_storm.mp3",
         "paused": true,
-        "currentTime": 0,
+        "currentTime": 0.127815,
         "duration": 117.98059,
         "error": null,
         "volume": 0
@@ -64,15 +82,15 @@
       {
         "src": "/game/audio/the_final_battle.ogg",
         "paused": false,
-        "currentTime": 25.375544,
+        "currentTime": 25.314718,
         "duration": 145.824218,
         "error": null,
-        "volume": 0.1926989999999987
+        "volume": 0.34257599999999827
       },
       {
         "src": "/game/audio/epic_march_loop.wav",
         "paused": true,
-        "currentTime": 0,
+        "currentTime": 3.698653,
         "duration": 43.582494,
         "error": null,
         "volume": 0

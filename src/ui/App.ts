@@ -8,6 +8,8 @@ import { AudioManager, MUSIC_CREDITS } from '../audio/AudioManager';
 import { loadSave, saveData, downloadSave, type SaveData } from './storage';
 import { icon } from './icons';
 import * as T from './templates';
+import { BattleIntensity } from './battleIntensity';
+import { applyCodexPage, runCodexQuery } from './codex';
 
 type Page='home'|'classic'|'custom'|'local'|'campaign'|'challenges'|'codex'|'battle';
 const timeText=(s:number)=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(Math.floor(s%60)).padStart(2,'0')}`;
@@ -31,8 +33,7 @@ export class App {
  private visualClock=0;
  private frameHandle=0;
  private countedSecond=-1;
- private lastMusicSwitch=0;
- private intensityHigh=false;
+ private intensity=new BattleIntensity();
  private footstepClock=0;
  private warningClock=0;
  private resultRecorded=false;
@@ -63,8 +64,18 @@ export class App {
   this.closeModal(false);this.page=page;
   if(page!=='battle'){this.state=null;this.paused=false;this.ambient.append(this.renderer.canvas);this.ambient.hidden=false;this.renderer.canvas.className='ambient-canvas';}
   this.screen.innerHTML=page==='home'?T.home(this.save):page==='campaign'?T.campaign(this.save):page==='challenges'?T.challenges():page==='codex'?T.codex():T.setup(page,this.draft,this.save.settings.speed);
-  this.paintPortraits();this.updateMuteButton();window.scrollTo(0,0);
+  this.paintPortraits();if(page==='codex')this.wireCodex();this.updateMuteButton();window.scrollTo(0,0);
   this.audio.setScene(page==='campaign'||page==='challenges'?'campaign':'menu');
+ }
+ private wireCodex(){
+  const search=this.screen.querySelector<HTMLInputElement>('[data-codex-search]'),group=this.screen.querySelector<HTMLSelectElement>('[data-codex-group]'),sort=this.screen.querySelector<HTMLSelectElement>('[data-codex-sort]');
+  if(!search||!group||!sort)return;
+  const update=()=>applyCodexPage(this.screen,runCodexQuery({search:search.value,group:group.value,sort:sort.value}));
+  search.addEventListener('input',update);search.addEventListener('search',update);group.addEventListener('change',update);sort.addEventListener('change',update);update();
+ }
+ private showUnitDetail(id:string){
+  const detail=T.unitDetail(id);if(!detail)return;
+  this.openModal('unit-info',`${detail}<div class="modal-actions">${T.btn('codex','兵种速览','','book')}${T.btn('close-modal','返回战场','primary')}</div>`);this.paintPortraits();
  }
  private paintPortraits(){this.screen.querySelectorAll<HTMLCanvasElement>('[data-portrait]').forEach(c=>paintPortrait(c,c.dataset.portrait!,Number(c.dataset.portraitSide??0) as Side));this.modalRoot.querySelectorAll<HTMLCanvasElement>('[data-portrait]').forEach(c=>paintPortrait(c,c.dataset.portrait!,0));}
  private async click(e:MouseEvent){
@@ -103,7 +114,7 @@ export class App {
    case 'reset-progress':this.openModal('reset','<h2>重置战役进度？</h2><p>已解锁关卡和战史将被清除。音量设置保留。此操作无法撤销。</p><div class="modal-actions">'+T.btn('close-modal','保留进度')+T.btn('reset-confirm','确认重置','danger')+'</div>');break;
    case 'reset-confirm':this.save.completed=[];this.save.records=[];this.persist();this.navigate('home');this.toast('战役进度已重置。');break;
    case 'import':this.modalRoot.querySelector<HTMLInputElement>('#import-file')?.click();break;
-   default:if(a?.startsWith('codex-unit-')){const id=a.slice(11);this.openModal('unit-info',`<div class="eyebrow">${UNIT_BY_ID[id].title}</div><h2>${UNIT_BY_ID[id].name}</h2><p>${UNIT_BY_ID[id].description}</p>${T.unitStats(UNIT_BY_ID[id])}<div class="ability">${UNIT_BY_ID[id].ability}</div>`);}break;
+   default:if(a?.startsWith('codex-unit-'))this.showUnitDetail(a.slice(11));break;
   }
  }
  private captureOptions(){
@@ -116,7 +127,7 @@ export class App {
   if(value('speed')){this.save.settings.speed=Number(value('speed'));this.persist();}
  }
  public launch(config:MatchConfig){
-  this.closeModal(false);this.draft={...config};this.state=createBattle(config);this.page='battle';this.paused=false;this.resultRecorded=false;this.lastResultHtml='';this.accumulator=0;this.countedSecond=-1;this.lastMusicSwitch=0;this.intensityHigh=false;this.footstepClock=0;this.warningClock=0;this.localCursor=0;this.renderer.clear();
+  this.closeModal(false);this.draft={...config};this.state=createBattle(config);this.page='battle';this.paused=false;this.resultRecorded=false;this.lastResultHtml='';this.accumulator=0;this.countedSecond=-1;this.intensity.reset();this.footstepClock=0;this.warningClock=0;this.localCursor=0;this.renderer.clear();
   this.screen.innerHTML=T.battle(config);this.ambient.hidden=true;this.renderer.canvas.className='battle-canvas';this.screen.querySelector('#field-mount')!.append(this.renderer.canvas);
   this.paintPortraits();this.inspect(this.state.teams[config.playerSide].selected);this.updateHud();this.updateMuteButton();this.audio.setScene('prepare');this.audio.play('horn');window.scrollTo(0,0);
  }
@@ -149,12 +160,12 @@ export class App {
   if(!this.paused)this.visualClock+=dt;
   if(this.state&&!this.paused&&this.state.winner===null){
    this.accumulator+=dt*this.save.settings.speed;
-   while(this.accumulator>=1/30&&this.state.winner===null){stepBattle(this.state,1/30);this.renderer.consume(this.state.events);this.sounds();this.accumulator-=1/30;}
+   while(this.accumulator>=1/30&&this.state.winner===null){this.renderer.captureBeforeStep(this.state);stepBattle(this.state,1/30);this.renderer.consume(this.state.events);this.sounds();this.accumulator-=1/30;}
    const sec=Math.ceil(this.state.countdown);if(sec!==this.countedSecond){this.countedSecond=sec;if(sec>0&&sec<=3)this.audio.play('countdown');}
    if(this.state.winner!==null)this.finish();
    else this.updateBattleAudio(dt);
   }
-  this.renderer.render(this.state,this.state?.config.biome??(this.page==='campaign'?'ruins':this.page==='challenges'?'wastes':this.draft.biome),this.visualClock);
+  this.renderer.render(this.state,this.state?.config.biome??(this.page==='campaign'?'ruins':this.page==='challenges'?'wastes':this.draft.biome),this.visualClock,this.paused||(this.state!==null&&this.state.winner!==null)?null:this.accumulator/(1/30));
   this.audio.update(dt);
   this.fpsWindow.push(dt>0?dt:1/60);if(this.fpsWindow.length>90)this.fpsWindow.shift();
   if(this.uiClock>.1){this.uiClock=0;this.updateHud();const fps=this.screen.querySelector('#fps-label');if(fps)fps.textContent=`${Math.round(this.fpsWindow.length/this.fpsWindow.reduce((a,b)=>a+b,0))} FPS · ${this.state?.units.filter(u=>u.hp>0).length??0} 单位 · 30Hz` ;}
@@ -166,10 +177,8 @@ export class App {
   // Attack actions only last one fixed tick; measure actual firing/contact range instead.
   const fighting=s.units.filter(u=>{const target=targets.get(u.target??-1);return u.hp>0&&target&&target.hp>0&&target.side!==u.side&&Math.hypot(u.x-target.x,u.y-target.y)<=UNIT_BY_ID[u.type].range+24;}).length;
   const danger=s.teams.some(t=>t.baseHp<s.config.baseHp*.3);
-  const high=danger||fighting>=(this.intensityHigh?9:20);
-  if((high!==this.intensityHigh&&s.time-this.lastMusicSwitch>=12)||this.audio.scene==='prepare'){
-   this.intensityHigh=high;this.lastMusicSwitch=s.time;this.audio.setScene(high?'climax':'battle');
-  }
+  const high=this.intensity.update(dt,fighting,danger);
+  this.audio.setScene(high?'climax':'battle');
   this.footstepClock+=dt;this.warningClock+=dt;
   if(this.footstepClock>.38){this.footstepClock=0;const walker=s.units.find(u=>u.hp>0&&u.action==='walk');if(walker)this.audio.play('step',.2,walker.x/640-1);}
   if(danger&&this.warningClock>10){this.warningClock=0;this.audio.play('warning');}
@@ -222,8 +231,9 @@ export class App {
   if(e.key==='Tab'&&this.modalName){const nodes=Array.from(this.modalRoot.querySelectorAll<HTMLElement>('button:not([disabled]),input:not([hidden]),select,a[href]'));const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}return;}
   if(e.key==='Escape'){e.preventDefault();if(this.modalName&&this.modalName!=='result')this.closeModal();else if(this.state&&this.state.winner===null)this.pause();return;}
   if(e.code==='Space'&&this.state&&(!this.modalName||this.modalName==='pause')){e.preventDefault();if(!e.repeat)this.pause();return;}
-  if(this.modalName)return;
   const k=e.key.toUpperCase();
+  if(k==='B'&&this.state&&this.state.winner===null&&(!this.modalName||this.modalName==='pause'||this.modalName==='field-codex')){e.preventDefault();if(!e.repeat)this.showUnitDetail(this.inspected);return;}
+  if(this.modalName)return;
   if(k==='M'){e.preventDefault();this.save.settings.muted=!this.save.settings.muted;this.applySettings();this.persist();this.updateMuteButton();return;}
   if(k==='F'){e.preventDefault();void this.fullscreen();return;}
   if(!this.state||this.state.winner!==null)return;
@@ -234,6 +244,6 @@ export class App {
   const idx=T.HOTKEYS.indexOf(k);if(idx>=0){e.preventDefault();const side=this.state.config.mode==='local'?0:this.state.config.playerSide;const u=UNITS[idx];if(selectUnit(this.state,side,u.id)){this.inspect(u.id);this.audio.play('select');this.updateHud();}}
  }
  public toast(text:string){this.toastEl.textContent=text;this.toastEl.classList.add('visible');clearTimeout(this.toastTimer);this.toastTimer=setTimeout(()=>this.toastEl.classList.remove('visible'),4000);}
- public advance(seconds:number){if(!import.meta.env.DEV||!this.state)return;for(let i=0;i<seconds*30&&this.state.winner===null;i++){stepBattle(this.state,1/30);this.renderer.consume(this.state.events);}this.updateHud();if(this.state.winner!==null)this.finish();}
+ public advance(seconds:number){if(!import.meta.env.DEV||!this.state)return;for(let i=0;i<seconds*30&&this.state.winner===null;i++){this.renderer.captureBeforeStep(this.state);stepBattle(this.state,1/30);this.renderer.consume(this.state.events);}this.renderer.render(this.state,this.state.config.biome,this.visualClock,1);this.updateHud();if(this.state.winner!==null)this.finish();}
  public dispose(){cancelAnimationFrame(this.frameHandle);this.audio.dispose();}
 }

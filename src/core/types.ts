@@ -6,6 +6,10 @@ export interface UnitDef {
   cost: number; income: number; supply: number; hp: number; armor: Armor; defense: number;
   lightDamage: number; heavyDamage: number; cooldown: number; range: number; speed: number;
   ability: string; color: string;
+  /** 60–110 字的原创史书式背景故事，用于图鉴与战斗内条目。 */
+  lore: string;
+  /** 一句话战术信条：图鉴摘要与定位筛选的文案锚点。 */
+  doctrine: string;
 }
 export type Biome = 'plains' | 'wastes' | 'snow' | 'ruins';
 export type Difficulty = 0 | 1 | 2 | 3 | 4;

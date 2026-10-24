@@ -3,7 +3,7 @@ import {runMatch,type Policy,mixed} from './harness';
 import {CHALLENGES,missionConfig} from '../src/data/missions';
 import type {Side} from '../src/core/types';
 import {sourceFingerprint} from './fingerprint';
-const mission=CHALLENGES.find(m=>m.id==='h1')!,config=missionConfig(mission,true),source=await sourceFingerprint();
+const mission=CHALLENGES.find(m=>m.id==='h1')!,config={...missionConfig(mission,true),seed:101},source=await sourceFingerprint();
 const cycles=[['bow'],['assassin'],['bow','assassin'],['levy','bow','bow'],['bow','bow','assassin','assassin'],['runner','bow','assassin','assassin'],['axe','bow'],['levy','axe','bow'],['axe']];
 const trials=[];let witness:{farm:number;cycle:string[]}|undefined,bestSeconds=Infinity;
 for(const farm of [0,160,320])for(const cycle of cycles){const policy:Policy=(s,side)=>s.teams[side].income<farm?'levy':cycle[s.round%cycle.length];const row={...runMatch(`h1 farm=${farm} ${cycle.join('/')}`,policy,mission.difficulty,101,0,undefined,config),farm,cycle};trials.push(row);if(row.result==='win'&&row.seconds<bestSeconds){witness={farm,cycle};bestSeconds=row.seconds;}}

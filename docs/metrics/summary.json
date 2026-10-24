@@ -1,14 +1,14 @@
 {
-  "generated": "2026-10-23T10:27:08.733Z",
+  "generated": "2026-10-23T16:11:22.604Z",
   "source": {
-    "sha256": "6072790e54921f2fa62c25cec6247d839ae8f434146339551b43f831f23da9df",
+    "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
     "files": {
-      "src/core/simulation.ts": "7759143ee7d061d676d42a11cc963593d9b8569bd9ff1c4a73428d9b4f797c45",
+      "src/core/simulation.ts": "d4c3f8b554fe4cf3714715dc0dca783d8d3b1d22d2e500b43dd27742e4ab5a00",
       "src/core/math.ts": "80b098994446942f7be32a266f673b3b949e4263f8af87f5ed012c6d63394b95",
       "src/core/combat.ts": "94225bbbf9de498f864709d7fb2b4ba38aa3d0d7696a2c6cf764ea980088827c",
       "src/core/ai.ts": "ea4a1cd7891168a9faebe93cd98c0ebe081e4e5bab45f535831c5a00e71fc471",
-      "src/core/tactics.ts": "d95d6c49b3606ac93406eadc27332cd411d971a6b7da31ae191b341b878d8cef",
-      "src/data/units.ts": "b2ff8a189bb192e15a4d91320943dafc377f0db08a0b374bed76b2351326e0fd",
+      "src/core/tactics.ts": "3265e53e9318986801d71feffb4da11dd722f0a3ebfdeecc9e250568a8cfdf26",
+      "src/data/units.ts": "66cff9c160479eaa154f41c922e7b9523e126cf967d555a623e26760a09a4565",
       "src/data/missions.ts": "d6043e92440aeaf867959019ae3584d28b10f5f262a80ef12fa0275187062818"
     }
   },
@@ -19,44 +19,44 @@
       "playerWins": 9,
       "draws": 0,
       "losses": 1,
-      "medianSeconds": 184,
+      "medianSeconds": 187,
       "baseDestroyed": 9
     },
     {
       "name": "mixed vs difficulty 1",
       "matches": 10,
-      "playerWins": 10,
+      "playerWins": 9,
       "draws": 0,
-      "losses": 0,
-      "medianSeconds": 191,
-      "baseDestroyed": 10
+      "losses": 1,
+      "medianSeconds": 193,
+      "baseDestroyed": 9
     },
     {
       "name": "mixed vs difficulty 2",
       "matches": 10,
-      "playerWins": 5,
-      "draws": 3,
-      "losses": 2,
-      "medianSeconds": 510,
-      "baseDestroyed": 6
+      "playerWins": 9,
+      "draws": 1,
+      "losses": 0,
+      "medianSeconds": 255,
+      "baseDestroyed": 9
     },
     {
       "name": "mixed vs difficulty 3",
       "matches": 10,
-      "playerWins": 5,
-      "draws": 1,
-      "losses": 4,
-      "medianSeconds": 681,
+      "playerWins": 4,
+      "draws": 0,
+      "losses": 6,
+      "medianSeconds": 710,
       "baseDestroyed": 6
     },
     {
       "name": "mixed vs difficulty 4",
       "matches": 10,
-      "playerWins": 5,
-      "draws": 0,
-      "losses": 5,
-      "medianSeconds": 254,
-      "baseDestroyed": 8
+      "playerWins": 1,
+      "draws": 2,
+      "losses": 7,
+      "medianSeconds": 419,
+      "baseDestroyed": 6
     },
     {
       "name": "single levy vs master",
@@ -64,7 +64,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 160,
+      "medianSeconds": 162,
       "baseDestroyed": 10
     },
     {
@@ -73,7 +73,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 168,
+      "medianSeconds": 158,
       "baseDestroyed": 10
     },
     {
@@ -82,7 +82,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 196,
+      "medianSeconds": 197,
       "baseDestroyed": 10
     },
     {
@@ -91,7 +91,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 132,
+      "medianSeconds": 131,
       "baseDestroyed": 10
     },
     {
@@ -100,7 +100,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 155,
+      "medianSeconds": 156,
       "baseDestroyed": 10
     },
     {
@@ -127,7 +127,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 124,
+      "medianSeconds": 123,
       "baseDestroyed": 10
     },
     {
@@ -136,7 +136,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 143,
+      "medianSeconds": 146,
       "baseDestroyed": 10
     },
     {
@@ -145,7 +145,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 101,
+      "medianSeconds": 100,
       "baseDestroyed": 10
     },
     {
@@ -154,7 +154,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 85,
+      "medianSeconds": 87,
       "baseDestroyed": 10
     },
     {
@@ -181,7 +181,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 198,
+      "medianSeconds": 197,
       "baseDestroyed": 10
     },
     {
@@ -199,15 +199,15 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 155,
+      "medianSeconds": 153,
       "baseDestroyed": 10
     },
     {
       "name": "master vs normal",
       "matches": 10,
-      "playerWins": 7,
-      "draws": 1,
-      "losses": 2,
+      "playerWins": 9,
+      "draws": 0,
+      "losses": 1,
       "medianSeconds": 266,
       "baseDestroyed": 9
     }
@@ -216,29 +216,29 @@
     {
       "name": "mixed vs master",
       "matches": 10,
-      "playerWins": 3,
-      "draws": 0,
+      "playerWins": 1,
+      "draws": 2,
       "losses": 7,
-      "medianSeconds": 331,
-      "baseDestroyed": 10
+      "medianSeconds": 966,
+      "baseDestroyed": 3
     },
     {
       "name": "healing phalanx vs master",
       "matches": 10,
-      "playerWins": 3,
+      "playerWins": 1,
       "draws": 2,
-      "losses": 5,
-      "medianSeconds": 258,
+      "losses": 7,
+      "medianSeconds": 336,
       "baseDestroyed": 8
     },
     {
       "name": "siege column vs master",
       "matches": 10,
-      "playerWins": 4,
+      "playerWins": 5,
       "draws": 1,
-      "losses": 5,
-      "medianSeconds": 281,
-      "baseDestroyed": 8
+      "losses": 4,
+      "medianSeconds": 340,
+      "baseDestroyed": 9
     },
     {
       "name": "mobile breakthrough vs master",
@@ -246,7 +246,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 10,
-      "medianSeconds": 181,
+      "medianSeconds": 190,
       "baseDestroyed": 10
     },
     {
@@ -255,7 +255,7 @@
       "playerWins": 5,
       "draws": 0,
       "losses": 5,
-      "medianSeconds": 229,
+      "medianSeconds": 228,
       "baseDestroyed": 10
     },
     {
@@ -264,8 +264,8 @@
       "playerWins": 0,
       "draws": 1,
       "losses": 9,
-      "medianSeconds": 195,
-      "baseDestroyed": 8
+      "medianSeconds": 194,
+      "baseDestroyed": 9
     }
   ],
   "campaignBotSmoke": [
@@ -275,7 +275,7 @@
       "playerWins": 3,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 220,
+      "medianSeconds": 209,
       "baseDestroyed": 3
     },
     {
@@ -284,7 +284,7 @@
       "playerWins": 3,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 178,
+      "medianSeconds": 176,
       "baseDestroyed": 3
     },
     {
@@ -302,7 +302,7 @@
       "playerWins": 3,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 264,
+      "medianSeconds": 227,
       "baseDestroyed": 3
     },
     {
@@ -317,11 +317,11 @@
     {
       "name": "c6",
       "matches": 3,
-      "playerWins": 1,
-      "draws": 2,
+      "playerWins": 2,
+      "draws": 1,
       "losses": 0,
-      "medianSeconds": 966,
-      "baseDestroyed": 1
+      "medianSeconds": 173,
+      "baseDestroyed": 2
     },
     {
       "name": "c7",
@@ -329,7 +329,7 @@
       "playerWins": 2,
       "draws": 0,
       "losses": 1,
-      "medianSeconds": 289,
+      "medianSeconds": 275,
       "baseDestroyed": 3
     },
     {
@@ -338,35 +338,35 @@
       "playerWins": 3,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 316,
-      "baseDestroyed": 3
+      "medianSeconds": 568,
+      "baseDestroyed": 2
     },
     {
       "name": "c9",
       "matches": 3,
-      "playerWins": 0,
+      "playerWins": 1,
       "draws": 0,
-      "losses": 3,
-      "medianSeconds": 267,
+      "losses": 2,
+      "medianSeconds": 231,
       "baseDestroyed": 3
     },
     {
       "name": "c10",
       "matches": 3,
-      "playerWins": 1,
+      "playerWins": 2,
       "draws": 0,
-      "losses": 2,
-      "medianSeconds": 194,
+      "losses": 1,
+      "medianSeconds": 232,
       "baseDestroyed": 3
     },
     {
       "name": "h1",
       "matches": 3,
-      "playerWins": 3,
-      "draws": 0,
+      "playerWins": 1,
+      "draws": 2,
       "losses": 0,
       "medianSeconds": 966,
-      "baseDestroyed": 1
+      "baseDestroyed": 0
     },
     {
       "name": "h2",
@@ -374,7 +374,7 @@
       "playerWins": 3,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 83,
+      "medianSeconds": 84,
       "baseDestroyed": 3
     },
     {
@@ -383,7 +383,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 3,
-      "medianSeconds": 197,
+      "medianSeconds": 186,
       "baseDestroyed": 3
     }
   ],
@@ -394,7 +394,7 @@
       "playerWins": 10,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 177,
+      "medianSeconds": 173,
       "baseDestroyed": 10
     },
     {
@@ -403,7 +403,7 @@
       "playerWins": 8,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 168,
+      "medianSeconds": 172,
       "baseDestroyed": 10
     },
     {
@@ -412,24 +412,24 @@
       "playerWins": 7,
       "draws": 0,
       "losses": 3,
-      "medianSeconds": 177,
+      "medianSeconds": 191,
       "baseDestroyed": 10
     },
     {
       "name": "c4",
       "matches": 10,
-      "playerWins": 6,
-      "draws": 0,
+      "playerWins": 5,
+      "draws": 1,
       "losses": 4,
-      "medianSeconds": 205,
-      "baseDestroyed": 10
+      "medianSeconds": 207,
+      "baseDestroyed": 9
     },
     {
       "name": "c5",
       "matches": 10,
       "playerWins": 2,
-      "draws": 3,
-      "losses": 5,
+      "draws": 4,
+      "losses": 4,
       "medianSeconds": 966,
       "baseDestroyed": 5
     },
@@ -439,44 +439,44 @@
       "playerWins": 6,
       "draws": 2,
       "losses": 2,
-      "medianSeconds": 257,
-      "baseDestroyed": 7
+      "medianSeconds": 298,
+      "baseDestroyed": 8
     },
     {
       "name": "c7",
       "matches": 10,
-      "playerWins": 7,
+      "playerWins": 4,
       "draws": 1,
-      "losses": 2,
-      "medianSeconds": 324,
-      "baseDestroyed": 9
+      "losses": 5,
+      "medianSeconds": 283,
+      "baseDestroyed": 8
     },
     {
       "name": "c8",
       "matches": 10,
       "playerWins": 6,
-      "draws": 0,
-      "losses": 4,
-      "medianSeconds": 345,
-      "baseDestroyed": 10
+      "draws": 1,
+      "losses": 3,
+      "medianSeconds": 266,
+      "baseDestroyed": 8
     },
     {
       "name": "c9",
       "matches": 10,
-      "playerWins": 2,
-      "draws": 1,
-      "losses": 7,
-      "medianSeconds": 231,
-      "baseDestroyed": 9
+      "playerWins": 4,
+      "draws": 0,
+      "losses": 6,
+      "medianSeconds": 210,
+      "baseDestroyed": 10
     },
     {
       "name": "c10",
       "matches": 10,
-      "playerWins": 2,
-      "draws": 1,
-      "losses": 7,
-      "medianSeconds": 168,
-      "baseDestroyed": 9
+      "playerWins": 1,
+      "draws": 0,
+      "losses": 9,
+      "medianSeconds": 204,
+      "baseDestroyed": 8
     },
     {
       "name": "h1",
@@ -484,7 +484,7 @@
       "playerWins": 2,
       "draws": 4,
       "losses": 6,
-      "medianSeconds": 287,
+      "medianSeconds": 484,
       "baseDestroyed": 8
     },
     {
@@ -493,7 +493,7 @@
       "playerWins": 3,
       "draws": 0,
       "losses": 7,
-      "medianSeconds": 105,
+      "medianSeconds": 102,
       "baseDestroyed": 10
     },
     {
@@ -510,38 +510,38 @@
     {
       "name": "mixed vs difficulty 0",
       "matches": 6,
-      "playerWins": 5,
+      "playerWins": 6,
       "draws": 0,
-      "losses": 1,
-      "medianSeconds": 181,
+      "losses": 0,
+      "medianSeconds": 180,
       "baseDestroyed": 6
     },
     {
       "name": "mixed vs difficulty 1",
       "matches": 6,
-      "playerWins": 6,
+      "playerWins": 5,
       "draws": 0,
-      "losses": 0,
-      "medianSeconds": 195,
+      "losses": 1,
+      "medianSeconds": 186,
       "baseDestroyed": 6
     },
     {
       "name": "mixed vs difficulty 2",
       "matches": 6,
-      "playerWins": 3,
-      "draws": 2,
-      "losses": 1,
-      "medianSeconds": 394,
-      "baseDestroyed": 4
+      "playerWins": 5,
+      "draws": 1,
+      "losses": 0,
+      "medianSeconds": 281,
+      "baseDestroyed": 5
     },
     {
       "name": "mixed vs difficulty 3",
       "matches": 6,
-      "playerWins": 4,
-      "draws": 1,
+      "playerWins": 3,
+      "draws": 2,
       "losses": 1,
       "medianSeconds": 966,
-      "baseDestroyed": 3
+      "baseDestroyed": 2
     },
     {
       "name": "mixed vs difficulty 4",
@@ -550,15 +550,15 @@
       "draws": 1,
       "losses": 4,
       "medianSeconds": 966,
-      "baseDestroyed": 3
+      "baseDestroyed": 2
     },
     {
       "name": "greedy elite transition vs master",
       "matches": 6,
-      "playerWins": 4,
+      "playerWins": 3,
       "draws": 0,
-      "losses": 2,
-      "medianSeconds": 245,
+      "losses": 3,
+      "medianSeconds": 244,
       "baseDestroyed": 6
     },
     {
@@ -567,7 +567,7 @@
       "playerWins": 6,
       "draws": 0,
       "losses": 0,
-      "medianSeconds": 337,
+      "medianSeconds": 276,
       "baseDestroyed": 6
     },
     {
@@ -576,7 +576,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 173,
+      "medianSeconds": 167,
       "baseDestroyed": 2
     },
     {
@@ -585,7 +585,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 180,
+      "medianSeconds": 173,
       "baseDestroyed": 2
     },
     {
@@ -594,7 +594,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 195,
+      "medianSeconds": 203,
       "baseDestroyed": 2
     },
     {
@@ -603,7 +603,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 125,
+      "medianSeconds": 135,
       "baseDestroyed": 2
     },
     {
@@ -612,7 +612,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 159,
+      "medianSeconds": 155,
       "baseDestroyed": 2
     },
     {
@@ -621,7 +621,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 124,
+      "medianSeconds": 129,
       "baseDestroyed": 2
     },
     {
@@ -630,7 +630,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 88,
+      "medianSeconds": 87,
       "baseDestroyed": 2
     },
     {
@@ -639,7 +639,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 120,
+      "medianSeconds": 118,
       "baseDestroyed": 2
     },
     {
@@ -648,7 +648,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 150,
+      "medianSeconds": 167,
       "baseDestroyed": 2
     },
     {
@@ -657,7 +657,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 96,
+      "medianSeconds": 95,
       "baseDestroyed": 2
     },
     {
@@ -675,7 +675,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 130,
+      "medianSeconds": 125,
       "baseDestroyed": 2
     },
     {
@@ -702,7 +702,7 @@
       "playerWins": 0,
       "draws": 0,
       "losses": 2,
-      "medianSeconds": 105,
+      "medianSeconds": 104,
       "baseDestroyed": 2
     },
     {
@@ -753,7 +753,7 @@
         "playerWins": 6,
         "draws": 0,
         "losses": 0,
-        "medianSeconds": 437,
+        "medianSeconds": 296,
         "baseDestroyed": 6
       }
     ],
@@ -761,12 +761,42 @@
       {
         "name": "h1 hard mirror",
         "matches": 6,
-        "playerWins": 6,
-        "draws": 0,
+        "playerWins": 5,
+        "draws": 1,
         "losses": 0,
-        "medianSeconds": 653,
+        "medianSeconds": 857,
         "baseDestroyed": 5
       }
     ]
+  },
+  "v11": {
+    "regressionEquivalence": {
+      "file": "v11-regression-equivalence.json",
+      "equal": true,
+      "files": 6,
+      "method": "Deep canonical comparison; omit generated/source/cpuMs; normalize only unused challenge config template seed to first search seed (explicit per-match seeds all retained). Array order and every gameplay/RNG-derived result retained. Replays are not new independent samples."
+    },
+    "audio": {
+      "file": "v11-audio-continuity.json",
+      "durationSeconds": 305,
+      "sampleCount": 3812,
+      "longestSilentSeconds": 0,
+      "longestNotPlayingSeconds": 0,
+      "loopCrossfades": 2,
+      "transitions": 5,
+      "maxCombinedPeak": 0.34271918050944805
+    },
+    "motion": {
+      "file": "v11-motion-browser.json",
+      "cases": 9,
+      "errors": []
+    },
+    "motionAudit": {
+      "file": "v11-motion-audit.json",
+      "ticks": 44769,
+      "samples": 1941038,
+      "stepMax": 2.743709,
+      "anomalyCount": 0
+    }
   }
 }

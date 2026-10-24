@@ -103,6 +103,68 @@ describe('local formation flow', () => {
   });
 });
 
+describe('reinforcements at an occupied fortress', () => {
+  it.each([0, 1] as const)('does not spawn a wave into parked support or shove it by a correction cap (side=%s)', (side) => {
+    const state = battle();
+    const x = (value: number) => side === 0 ? value : 1280 - value;
+    const parked: Fighter[] = [];
+    for (let lane = 0; lane < 8; lane++) {
+      parked.push(add(state, side, 'ballista', x(150), laneCenterY(lane)));
+      add(state, side === 0 ? 1 : 0, 'guardian', x(300), laneCenterY(lane));
+    }
+    state.config.supply = 100;
+    state.teams[side].gold = 6000;
+    state.teams[side].selected = 'runner';
+    state.countdown = 0;
+    const before = new Map(state.units.map(unit => [unit.id, point(unit)]));
+    stepBattle(state, DT);
+    const spawns = state.events.filter(event => event.kind === 'spawn');
+    expect(spawns).toHaveLength(18);
+    // Recruitment itself must provide legal positions, rather than relying on
+    // the movement solver to explosively untangle an overlapping birth pile.
+    let minimumBirthGap = Infinity;
+    for (let i = 0; i < spawns.length; i++) {
+      const born = spawns[i]!;
+      for (const unit of before.values()) minimumBirthGap = Math.min(minimumBirthGap, Math.hypot(born.x - unit.x, born.y - unit.y));
+      for (let j = 0; j < i; j++) minimumBirthGap = Math.min(minimumBirthGap, Math.hypot(born.x - spawns[j]!.x, born.y - spawns[j]!.y));
+    }
+    expect.soft(minimumBirthGap).toBeGreaterThanOrEqual(15 - 1e-5);
+    let maximumParkedStep = 0, minimumFriendGap = Infinity;
+    for (const unit of parked) {
+      const start = before.get(unit.id)!;
+      maximumParkedStep = Math.max(maximumParkedStep, Math.hypot(unit.x - start.x, unit.y - start.y));
+    }
+    const friends = state.units.filter(unit => unit.side === side);
+    for (let i = 0; i < friends.length; i++) for (let j = i + 1; j < friends.length; j++) {
+      minimumFriendGap = Math.min(minimumFriendGap, Math.hypot(friends[i]!.x - friends[j]!.x, friends[i]!.y - friends[j]!.y));
+    }
+    expect(maximumParkedStep).toBeLessThan(2);
+    expect(minimumFriendGap).toBeGreaterThanOrEqual(15 - 1e-5);
+  });
+
+  it('chooses the same free birth slots without extra randomness or unit-array-order dependence', () => {
+    const a = battle();
+    a.countdown = 0;
+    a.config.supply = 100;
+    a.teams[0].gold = a.teams[1].gold = 6000;
+    a.teams[0].selected = a.teams[1].selected = 'runner';
+    for (let lane = 0; lane < 8; lane++) {
+      add(a, 0, 'ballista', 150, laneCenterY(lane));
+      add(a, 1, 'ballista', 1130, laneCenterY(lane));
+    }
+    const b = structuredClone(a);
+    b.units.reverse();
+    for (let tick = 0; tick < 30; tick++) {
+      stepBattle(a, DT);
+      stepBattle(b, DT);
+      expect(a.rng).toBe(b.rng);
+      expect(a.events.filter(event => event.kind === 'spawn')).toEqual(b.events.filter(event => event.kind === 'spawn'));
+      const positions = (state: BattleState) => [...state.units].sort((left, right) => left.id - right.id).map(unit => [unit.id, unit.x, unit.y]);
+      expect(positions(a)).toEqual(positions(b));
+    }
+  });
+});
+
 describe('cross-lane and boundary contacts', () => {
   it.each([DT, 0.1])('keeps swept enemy bodies separated and corrections bounded at dt=%s', (dt) => {
     for (const y of [FIELD_TOP, 375, FIELD_BOTTOM - 20]) {

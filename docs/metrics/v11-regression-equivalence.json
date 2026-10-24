@@ -1,0 +1,61 @@
+{
+  "generated": "2026-10-23T16:05:42.802Z",
+  "method": "Deep canonical comparison; omit generated/source/cpuMs; normalize only unused challenge config template seed to first search seed (explicit per-match seeds all retained). Array order and every gameplay/RNG-derived result retained. Replays are not new independent samples.",
+  "files": [
+    {
+      "file": "balance-holdout.json",
+      "beforeSource": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+      "afterSource": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+      "equal": true,
+      "beforeDataSha256": "22fe9d7f0741db913f730b3abed281d5e3b94497115414f1606b25b5742a5043",
+      "afterDataSha256": "22fe9d7f0741db913f730b3abed281d5e3b94497115414f1606b25b5742a5043"
+    },
+    {
+      "file": "strategy-suite.json",
+      "beforeSource": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+      "afterSource": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+      "equal": true,
+      "beforeDataSha256": "c672dfa4c784e5605ea8dbd9f078c5d931e928a3cd3b3c2911d4d83281b5b6cf",
+      "afterDataSha256": "c672dfa4c784e5605ea8dbd9f078c5d931e928a3cd3b3c2911d4d83281b5b6cf"
+    },
+    {
+      "file": "mission-playability.json",
+      "beforeSource": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+      "afterSource": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+      "equal": true,
+      "beforeDataSha256": "56e237da1a7e7691417c72a7f684a9f530e0ccd9a9b94df15b8ccda8a119ac32",
+      "afterDataSha256": "56e237da1a7e7691417c72a7f684a9f530e0ccd9a9b94df15b8ccda8a119ac32"
+    },
+    {
+      "file": "fresh-validation.json",
+      "beforeSource": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+      "afterSource": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+      "equal": true,
+      "beforeDataSha256": "b92fbc59ee9a65636750ddacef2157ee592efb1a16cffa5b3b9bbfea323599a6",
+      "afterDataSha256": "b92fbc59ee9a65636750ddacef2157ee592efb1a16cffa5b3b9bbfea323599a6"
+    },
+    {
+      "file": "ai-role-coverage.json",
+      "beforeSource": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+      "afterSource": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+      "equal": true,
+      "beforeDataSha256": "1c795f511daad45e8b8ad1970384576d993045e2f8537eb12a54eb56ff896e46",
+      "afterDataSha256": "1c795f511daad45e8b8ad1970384576d993045e2f8537eb12a54eb56ff896e46"
+    },
+    {
+      "file": "challenge-witness.json",
+      "beforeSource": "1256fbbf4d74153abd7fadc8c80fd6606a3b8219e7c4e79278791524ce87407c",
+      "afterSource": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+      "unusedTemplateSeed": {
+        "before": 1765205709,
+        "after": 101,
+        "normalizedTo": 101,
+        "reason": "runMatch overrides template seed with every explicit per-match seed; per-match seeds remain compared"
+      },
+      "equal": true,
+      "beforeDataSha256": "6a7a790d8ada08f3a704c66fc8923875d0a88a374ae8add3286f73ce2576c3d7",
+      "afterDataSha256": "6a7a790d8ada08f3a704c66fc8923875d0a88a374ae8add3286f73ce2576c3d7"
+    }
+  ],
+  "equal": true
+}

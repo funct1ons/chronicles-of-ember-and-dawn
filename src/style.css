@@ -4,3 +4,60 @@
 @media(max-width:1180px){.top-caption{display:none}.home{padding-left:6%;padding-right:6%;padding-top:8vh}.home-lore{margin-right:0;max-width:205px}.hero-content h1{font-size:59px}.mode-strip,.home-footer{left:6%;right:6%}.mode-tile{padding:20px 12px;gap:10px}.mode-tile strong{font-size:14px}.mode-tile span{font-size:8px}.mode-tile>.icon:last-child{display:none}.page{padding-left:4%;padding-right:4%}.setup-columns{gap:16px}.setup-columns>.panel{padding:20px}.faction{padding:24px 8px 18px}.faction h2{font-size:18px}.challenge-card{padding:28px 22px}.codex-grid{grid-template-columns:repeat(2,1fr)}.command-deck{grid-template-columns:210px 1fr;gap:16px;padding:16px 2%}.unit-inspector{padding-right:15px}.deck-label{gap:10px}.deck-label span{display:none}.unit-card strong{font-size:9px;letter-spacing:0}.unit-card canvas{height:42px}.roster{gap:5px}.war-hud{gap:24px;grid-template-columns:1fr 140px 1fr;padding:16px 2% 12px}.resources{gap:19px}.resources small{font-size:8px}.resources>span{font-size:17px;gap:5px}.resources .icon{width:13px}.local-army+.local-army{padding-left:12px}.command-deck.two-player{gap:12px}.local-army .deck-label b{font-size:8px}.local-roster .unit-card strong{font-size:7px}.local-roster .unit-card canvas{height:34px}.local-roster .unit-cost small{display:none}}
 @media(max-width:860px){.topbar{height:63px;padding:0 4%}.topbar nav{gap:2px}.topbar nav .quiet{font-size:10px;padding:8px}.brand>span{font-size:17px}.brand>.icon{width:26px}#ambient{top:63px}.home{min-height:calc(100vh - 63px);padding-top:65px;padding-bottom:230px}.hero-content h1{font-size:52px}.hero-content .eyebrow{font-size:8px;letter-spacing:2px}.hero-english{font-size:8px;letter-spacing:2.7px}.hero-desc{font-size:12px}.home-lore{display:none}.mode-strip{grid-template-columns:1fr 1fr;bottom:54px}.mode-tile{padding:16px 18px;border-bottom:1px solid var(--line)}.mode-tile strong{font-size:13px}.mode-tile span{font-size:9px}.mode-tile>.icon:last-child{display:block}.home-footer{font-size:8px;gap:10px;bottom:20px}.home-footer>span:first-child{display:none}.page-heading h1{font-size:30px}.page-heading p{font-size:10px}.setup-columns{grid-template-columns:1fr}.factions{gap:20px}.faction{padding:25px}.faction .icon{width:40px;height:45px;margin-bottom:15px}.faction p{margin:18px 0}.setup-columns>.panel{padding:25px}.campaign-map{gap:22px 9px}.mission-node{padding:22px 8px;min-height:180px}.mission-node strong{font-size:12px;letter-spacing:0}.mission-node small{font-size:8px}.node-order{font-size:7px;letter-spacing:0}.mission-node .node-ring{width:39px;height:39px}.challenge-grid{gap:12px}.challenge-card{padding:25px 17px}.challenge-card h2{font-size:18px}.challenge-card p{font-size:10px}.challenge-card .eyebrow{font-size:7px;letter-spacing:0}.difficulty{font-size:9px}.unit-entry{padding:16px}.unit-entry-heading{gap:9px}.unit-entry-heading canvas{width:73px;height:61px}.unit-entry h2{font-size:17px}.unit-entry-heading span{font-size:9px}.war-hud{grid-template-columns:1fr 115px 1fr;gap:14px}.resources{gap:15px}.resources small{display:none}.resources>span{font-size:16px}.team-label strong{font-size:10px}.team-label>span{font-size:8px}.wave-hud>strong{font-size:33px}.wave-hud{padding:0 7px}.wave-hud>div:not(.wave-controls){font-size:7px}.wave-controls .btn{padding:3px 6px;font-size:8px}.battle-canvas{min-height:235px}.battlefield-caption{font-size:8px;letter-spacing:0;gap:10px}.battlefield-caption>span:nth-child(2){font-size:8px}.battlefield-caption>span:last-child{min-width:50px}.command-deck{grid-template-columns:175px 1fr;gap:12px;padding:14px 2%}.unit-inspector p{font-size:9px;line-height:1.7}.inspector-title h2{font-size:18px}.inspector-economy{font-size:9px}.inspector-compact{font-size:8px;gap:7px}.unit-inspector .ability{font-size:8px}.unit-card strong{font-size:8px}.unit-card canvas{height:36px}.unit-cost{font-size:10px;gap:5px}.unit-cost small{font-size:8px}.unit-card .unit-key{font-size:8px;left:3px}.deck-label{font-size:10px;letter-spacing:1px;gap:6px}.deck-label b{font-size:8px}.battle-footer{font-size:7px}.battle-footer i{margin:0 4px}.two-player .local-roster{grid-template-columns:repeat(4,1fr)}.local-roster .unit-card canvas{height:32px}.local-roster .unit-card strong{font-size:8px}.local-army .deck-label b{display:none}.local-roster .unit-cost small{display:inline}.modal{padding:34px 30px}.modal h2{font-size:25px}.modal p{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}button{transition:none!important}}
+/* ==========================================================================
+   v1.1 兵种图鉴（codex）— 仅作用于 .codex-* / .unit-detail 命名空间
+   ========================================================================== */
+.codex-toolbar{display:grid;grid-template-columns:minmax(230px,1.5fr) minmax(170px,.85fr) minmax(170px,.85fr) auto;gap:14px;align-items:end;margin:0 0 24px;padding:16px 18px;border:1px solid var(--line);background:linear-gradient(135deg,#1d2930e6,#121e25ee);position:relative}
+.codex-toolbar:before{content:'';position:absolute;top:-1px;left:18px;width:24px;height:1px;background:#c8af7f7d}
+.codex-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.codex-field-label{font:10px/1 Georgia,serif;letter-spacing:2px;color:#ad9568}
+.codex-field input,.codex-field select{width:100%;padding:10px 12px;background:#0c1923aa;border:1px solid var(--line);color:#d5d6cf;font:12px var(--body-font);letter-spacing:.6px;border-radius:0}
+.codex-field input::placeholder{color:#64767d}
+.codex-field input:hover,.codex-field select:hover{border-color:#bca37055}
+.codex-field input:focus-visible,.codex-field select:focus-visible{outline:2px solid var(--gold-light);outline-offset:1px}
+.codex-status{margin:0 0 3px;font:10px/1.6 Georgia,serif;letter-spacing:1.2px;color:#9fb0b3;white-space:nowrap}
+.codex-empty{margin:26px 0 0;padding:30px 20px;border:1px dashed var(--line);text-align:center;font-size:12px;color:#94a4a8}
+.codex-empty[hidden]{display:none}
+.codex-card{display:flex;flex-direction:column;gap:12px;min-width:0}
+.codex-card[hidden]{display:none}
+.codex-card-body{display:flex;flex-direction:column;gap:11px}
+.unit-detail-head{display:flex;align-items:center;gap:16px;min-width:0}
+.unit-detail-head canvas{width:96px;height:80px;image-rendering:pixelated;border:1px solid var(--line);flex-shrink:0}
+.unit-detail-head>div{min-width:0}
+.unit-detail-head .eyebrow{margin:0 0 6px;font-size:9px;letter-spacing:1.6px}
+.unit-detail-head h2{margin:4px 0 8px;font-size:24px;letter-spacing:3px;color:#ded6be}
+.codex-card .unit-detail-head canvas{width:86px;height:72px}
+.codex-card .unit-detail-head h2{font-size:19px;letter-spacing:2px;margin:4px 0 7px}
+.unit-detail .unit-detail-price{margin:0 0 8px;font-size:11px;line-height:1.7;color:#c7ccbf}
+.unit-detail-price b{font-size:15px;font-weight:400}
+.unit-detail-price span{color:var(--muted)}
+.unit-detail .unit-detail-doctrine{margin:0;font-size:11px;line-height:1.8;color:#bba77a;border-left:2px solid #c8af7f66;padding-left:10px}
+.codex-card .unit-detail-doctrine{font-size:11px;margin:0}
+.codex-lore-lead,.unit-detail .codex-lore-lead{margin:0;font-size:11px;line-height:1.9;color:#94a4a8}
+.codex-details{border-top:1px solid var(--line);padding-top:12px}
+.codex-details>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;list-style:none;font-size:10px;letter-spacing:1.5px;color:var(--gold);transition:color .2s}
+.codex-details>summary::-webkit-details-marker{display:none}
+.codex-details>summary:hover{color:var(--gold-light)}
+.codex-details>summary i{font-style:normal;font-size:12px;line-height:1}
+.codex-details>summary i::before{content:'＋'}
+.codex-details[open]>summary i::before{content:'－'}
+.codex-details-body{display:grid;gap:13px;padding:15px 0 2px}
+.codex-lore h3,.codex-hints h3{margin:0 0 6px;font:10px/1.4 Georgia,serif;letter-spacing:2px;color:#ad9568}
+.codex-lore p{margin:0;font-size:11px;line-height:2;color:#9db0b6}
+.codex-economy{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:11px 0;margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.codex-economy span{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-size:10px;color:#82969d}
+.codex-economy b{font-weight:400;color:#c1ccc8;letter-spacing:.5px}
+.codex-hints{display:grid;gap:13px;margin:0}
+.codex-hint-group{display:grid;gap:8px}
+.codex-hint{padding:9px 11px;border:1px solid var(--line);background:#0c192344}
+.codex-hint-label{display:block;font-size:10px;line-height:1.6;letter-spacing:1px;color:var(--gold);margin-bottom:4px}
+.codex-hint.caution .codex-hint-label{color:#c48076}
+.codex-hint p{margin:0;font-size:10px;line-height:1.8;color:#94a4a8}
+.codex-hints .codex-note,.unit-detail .codex-note{margin:0;font-size:9px;line-height:1.7;color:#6f8188}
+.unit-detail{display:grid;gap:14px}
+.unit-detail .stat-grid{margin:0}
+.unit-detail .ability{margin:0}
+.codex-card .stat-grid{margin:0;padding:13px 0}
+.codex-card .ability{margin:0}
+@media(max-width:1180px){.codex-toolbar{grid-template-columns:1fr 1fr}.codex-status{grid-column:1/-1;white-space:normal}}
+@media(max-width:860px){.codex-toolbar{grid-template-columns:1fr;gap:11px}.codex-toolbar{padding:14px}.unit-detail-head{flex-wrap:wrap}.unit-detail-head canvas{width:72px;height:60px}.unit-detail-head h2{font-size:21px}.codex-card .unit-detail-head canvas{width:72px;height:60px}}
