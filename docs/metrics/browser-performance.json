@@ -2,44 +2,44 @@
   "units": 150,
   "frames": 120,
   "renderMedianMs": 0.5999999940395355,
-  "renderP95Ms": 4.0999999940395355,
-  "simulation3sMs": 134.90000000596046,
-  "steadyFrames": 327,
-  "steadyFps": 108.59818670917603,
-  "frameP95Ms": 11.300000000000182,
+  "renderP95Ms": 5,
+  "simulation3sMs": 155.40000000596046,
+  "steadyFrames": 288,
+  "steadyFps": 95.82751048113397,
+  "frameP95Ms": 11.400000000000091,
   "remainingUnits": 150,
-  "ai150MedianMs": 0.5999999940395355,
-  "ai150MaxMs": 1.5,
+  "ai150MedianMs": 0.8999999761581421,
+  "ai150MaxMs": 5.899999976158142,
   "aiByDifficulty": [
     {
       "level": 0,
       "medianMs": 0,
-      "maxMs": 5.199999988079071
+      "maxMs": 5.5
     },
     {
       "level": 1,
-      "medianMs": 2.399999976158142,
-      "maxMs": 2.600000023841858
+      "medianMs": 2.7000000178813934,
+      "maxMs": 3.5
     },
     {
       "level": 2,
-      "medianMs": 36.400000005960464,
-      "maxMs": 64.30000001192093
+      "medianMs": 22.5,
+      "maxMs": 35.30000001192093
     },
     {
       "level": 3,
-      "medianMs": 42.69999998807907,
-      "maxMs": 43.69999998807907
+      "medianMs": 42.5,
+      "maxMs": 163.7000000178814
     },
     {
       "level": 4,
-      "medianMs": 0.5999999940395355,
-      "maxMs": 1.5
+      "medianMs": 0.8999999761581421,
+      "maxMs": 5.899999976158142
     }
   ],
-  "advantageForecastMaxMs": 79.80000001192093,
+  "advantageForecastMaxMs": 67.2999999821186,
   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
-  "generated": "2026-10-24T02:16:37.439Z",
+  "generated": "2026-10-24T02:50:27.807Z",
   "source": {
     "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
     "files": {

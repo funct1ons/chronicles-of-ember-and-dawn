@@ -1,0 +1,13 @@
+{
+  "kind": "Manual transcription of the tool's terminal output; not an additional measurement",
+  "command": "npx playwright test tests/e2e/game.spec.ts --grep '150-unit rendering' --repeat-each 3",
+  "coreSha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
+  "testOrProductionCodeChangedBetweenRuns": false,
+  "thresholdMs": 100,
+  "runs": [
+    {"repeat": 1, "hardMedianMs": 40.70000001788139, "hardMaxMs": 91.40000000596046, "normalMaxMs": 34.80000001192093, "masterMaxMs": 2.4000000059604645, "advantageForecastMaxMs": 56.5, "passed": true},
+    {"repeat": 2, "hardMedianMs": 40.400000005960464, "hardMaxMs": 74.30000001192093, "normalMaxMs": 33.5, "masterMaxMs": 2.300000011920929, "advantageForecastMaxMs": 41.099999994039536, "passed": true},
+    {"repeat": 3, "hardMedianMs": 23.900000005960464, "hardMaxMs": 46.39999997615814, "normalMaxMs": 22.5, "masterMaxMs": 0.9000000059604645, "advantageForecastMaxMs": 35.900000005960464, "passed": true}
+  ],
+  "limitations": "Isolated tests passing does not invalidate either full-suite failure or prove a cause. No threshold relaxation or gameplay change. Both full-suite failures are separately retained."
+}

@@ -1,4 +1,5 @@
 import './style.css';
+import './ui/home.css';
 import { App } from './ui/App';
 const app=new App(document.querySelector<HTMLElement>('#app')!);
 if(import.meta.env.DEV){

@@ -16,9 +16,30 @@ import {
 } from './codex';
 export const HOTKEYS=['1','2','3','4','5','6','7','8','Q','W','E','R','T','Y','U','I'];
 export const btn=(action:string,label:string,cls='',ico='')=>`<button type="button" class="btn ${cls}" data-action="${action}" aria-label="${label}">${ico?icon(ico):''}<span>${label}</span></button>`;
-export function header(inBattle=false):string{return `<header class="topbar"><button class="brand" data-action="home" aria-label="返回主菜单">${icon('crest')}<span>烬辉战纪<small>EMBER & DAWN</small></span></button><div class="top-caption">${inBattle?'埃瑟兰 · 军团指挥部':'CHRONICLES OF EMBER AND DAWN'}</div><nav aria-label="全局导航">${!inBattle?btn('codex','兵种图鉴','quiet','book'):btn('tutorial','战场指南','quiet','help')}${btn('mute','声音','icon-btn','volume')}${btn('fullscreen','全屏','icon-btn','expand')}${btn('settings','设置','icon-btn','gear')}</nav></header>`;}
+export function header(inBattle=false,cover=false):string{return `<header class="topbar${cover?' cover-topbar':''}"><button class="brand" data-action="home" aria-label="返回主菜单">${icon('crest')}${cover?'':'<span>烬辉战纪<small>EMBER & DAWN</small></span>'}</button>${cover?'':`<div class="top-caption">${inBattle?'埃瑟兰 · 军团指挥部':'CHRONICLES OF EMBER AND DAWN'}</div>`}<nav aria-label="全局导航">${!inBattle?btn('codex','兵种图鉴','quiet','book'):btn('tutorial','战场指南','quiet','help')}${btn('mute','声音','icon-btn','volume')}${btn('fullscreen','全屏','icon-btn','expand')}${btn('settings','设置','icon-btn','gear')}</nav></header>`;}
 export function home(save:SaveData):string{
- return `${header()}<main class="home"><div class="hero-content"><div class="eyebrow"><span class="gold-line"></span> THE SHATTERED KINGDOM AWAITS</div><h1>余烬未息<span>黎明将至</span></h1><p class="hero-english">CHRONICLES OF EMBER AND DAWN</p><p class="hero-desc">星火破碎，王国分崩。<br>铸造你的军团，让战旗越过最后一道防线。</p><div class="hero-actions">${btn('campaign','踏上征途','primary large','flag')}${btn('classic','经典对战','large','swords')}</div><div class="hero-note">${icon('crest')}统御军团 · 经营战时经济 · 自动交锋</div></div><aside class="home-lore"><span class="eyebrow">THE AGE OF EMBERS</span><div class="lore-number">I</div><h3>星火之心</h3><p>古老王国的荣光已成灰烬。<br>在苍曜与赤烬的旗帜之间，<br>下一场战争由你书写。</p><div class="chapter-line"></div><small>战役进度 <b>${save.completed.length} / 10</b></small></aside><div class="mode-strip"><button class="mode-tile" data-action="tutorial">${icon('book')}<div><strong>统帅学院</strong><span>从第一面战旗开始</span></div>${icon('arrow')}</button><button class="mode-tile" data-action="challenges">${icon('crown')}<div><strong>战争试炼</strong><span>特殊规则 · 极限挑战</span></div>${icon('arrow')}</button><button class="mode-tile" data-action="custom">${icon('gear')}<div><strong>自定义战场</strong><span>以你的规则决战</span></div>${icon('arrow')}</button><button class="mode-tile" data-action="local">${icon('people')}<div><strong>本地双人</strong><span>一台电脑 · 两位统帅</span></div>${icon('arrow')}</button></div><footer class="home-footer"><span>原创像素战争策略 <i>·</i> 单人 / 本地双人 <i>·</i> 离线可玩</span><button data-action="credits">制作与素材鸣谢</button><span>v1.0 · ${save.records.length} 场战史</span></footer></main>`;
+ return `${header(false,true)}
+ <main class="home cover" aria-labelledby="cover-title">
+  <section class="cover-content">
+   <h1 id="cover-title" class="cover-title">烬辉战纪</h1>
+   <p class="cover-english" lang="en">CHRONICLES OF EMBER AND DAWN</p>
+   <p class="cover-motto">余烬未息<span aria-hidden="true"> · </span>黎明将至</p>
+   <nav class="cover-actions" aria-label="开始游戏">
+    ${btn('campaign','战役征途','primary large')}
+    ${btn('classic','经典对战','large')}
+   </nav>
+   <nav class="cover-modes" aria-label="更多模式">
+    <button type="button" data-action="tutorial">新手教学</button>
+    <button type="button" data-action="challenges">战争试炼</button>
+    <button type="button" data-action="custom">自定义</button>
+    <button type="button" data-action="local">本地双人</button>
+   </nav>
+  </section>
+  <footer class="cover-footer">
+   <button type="button" data-action="credits">制作与鸣谢</button>
+   <span aria-label="战役进度">战役 <b>${save.completed.length}</b><span class="cover-progress-total"> / ${MISSIONS.length}</span></span>
+  </footer>
+ </main>`;
 }
 export function setup(mode:string,config:MatchConfig,speed=1):string{
  const custom=mode==='custom';const local=mode==='local';const factionTag=local?'article':'button';

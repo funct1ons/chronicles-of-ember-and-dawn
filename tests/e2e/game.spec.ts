@@ -2,7 +2,7 @@ import {test,expect,type Page} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {sourceFingerprint} from '../../scripts/fingerprint';
 const act=(page:Page,a:string)=>page.locator(`[data-action="${a}"]`).first();
-async function boot(page:Page){await page.goto('/');await expect(page.getByRole('heading',{name:/余烬未息.*黎明将至/})).toBeVisible();}
+async function boot(page:Page){await page.goto('/');await expect(page.getByRole('heading',{name:'烬辉战纪',exact:true,level:1})).toBeVisible();}
 async function launch(page:Page,mode='classic'){await boot(page);await act(page,mode).click();await act(page,'launch').click();await expect(page.locator('.battle-canvas')).toBeVisible();}
 test('main menu, full codex and no runtime errors',async({page},info)=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await boot(page);

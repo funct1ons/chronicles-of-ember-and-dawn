@@ -1,0 +1,258 @@
+{
+  "generated": "2026-10-24T02:50:02.113Z",
+  "kind": "local browser geometry and navigation assertions; screenshots separately reviewed",
+  "source": {
+    "src/ui/templates.ts": "4852de9cb7abc05ce2f9f68c8ae682af4de081970512c60cad4694db985b333d",
+    "src/ui/home.css": "5f3725ab6bf02d5d46b6b1a5b33c0dc2cf6fd9677e16ee7237cdc8ffbac2c2dc",
+    "src/main.ts": "02900ee1a622664b521aaebcbf1083419c8c1c20a506513680f33fc85799ea93"
+  },
+  "rows": [
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "title": {
+        "x": 61.4375,
+        "y": 179.515625,
+        "width": 901.125,
+        "height": 92.453125,
+        "right": 962.5625,
+        "bottom": 271.96875
+      },
+      "actions": {
+        "x": 61.4375,
+        "y": 414.65625,
+        "width": 901.125,
+        "height": 49,
+        "right": 962.5625,
+        "bottom": 463.65625
+      },
+      "modes": {
+        "x": 61.4375,
+        "y": 492.65625,
+        "width": 901.125,
+        "height": 32,
+        "right": 962.5625,
+        "bottom": 524.65625
+      },
+      "footer": {
+        "x": 40.953125,
+        "y": 713,
+        "width": 942.09375,
+        "height": 29,
+        "right": 983.046875,
+        "bottom": 742
+      },
+      "text": "烬辉战纪 CHRONICLES OF EMBER AND DAWN 余烬未息 · 黎明将至 战役征途 经典对战 新手教学 战争试炼 自定义 本地双人 制作与鸣谢 战役 0 / 10"
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "title": {
+        "x": 81.953125,
+        "y": 179.515625,
+        "width": 1202.09375,
+        "height": 123.3125,
+        "right": 1284.046875,
+        "bottom": 302.828125
+      },
+      "actions": {
+        "x": 81.953125,
+        "y": 445.515625,
+        "width": 1202.09375,
+        "height": 49,
+        "right": 1284.046875,
+        "bottom": 494.515625
+      },
+      "modes": {
+        "x": 81.953125,
+        "y": 523.515625,
+        "width": 1202.09375,
+        "height": 32,
+        "right": 1284.046875,
+        "bottom": 555.515625
+      },
+      "footer": {
+        "x": 54.625,
+        "y": 713,
+        "width": 1256.75,
+        "height": 29,
+        "right": 1311.375,
+        "bottom": 742
+      },
+      "text": "烬辉战纪 CHRONICLES OF EMBER AND DAWN 余烬未息 · 黎明将至 战役征途 经典对战 新手教学 战争试炼 自定义 本地双人 制作与鸣谢 战役 0 / 10"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "title": {
+        "x": 86.390625,
+        "y": 212,
+        "width": 1267.21875,
+        "height": 130,
+        "right": 1353.609375,
+        "bottom": 342
+      },
+      "actions": {
+        "x": 86.390625,
+        "y": 484.6875,
+        "width": 1267.21875,
+        "height": 49,
+        "right": 1353.609375,
+        "bottom": 533.6875
+      },
+      "modes": {
+        "x": 86.390625,
+        "y": 562.6875,
+        "width": 1267.21875,
+        "height": 32,
+        "right": 1353.609375,
+        "bottom": 594.6875
+      },
+      "footer": {
+        "x": 57.59375,
+        "y": 945,
+        "width": 1324.8125,
+        "height": 29,
+        "right": 1382.40625,
+        "bottom": 974
+      },
+      "text": "烬辉战纪 CHRONICLES OF EMBER AND DAWN 余烬未息 · 黎明将至 战役征途 经典对战 新手教学 战争试炼 自定义 本地双人 制作与鸣谢 战役 0 / 10"
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "title": {
+        "x": 115.1875,
+        "y": 222,
+        "width": 1689.625,
+        "height": 136.625,
+        "right": 1804.8125,
+        "bottom": 358.625
+      },
+      "actions": {
+        "x": 115.1875,
+        "y": 501.3125,
+        "width": 1689.625,
+        "height": 49,
+        "right": 1804.8125,
+        "bottom": 550.3125
+      },
+      "modes": {
+        "x": 115.1875,
+        "y": 579.3125,
+        "width": 1689.625,
+        "height": 32,
+        "right": 1804.8125,
+        "bottom": 611.3125
+      },
+      "footer": {
+        "x": 76.796875,
+        "y": 1025,
+        "width": 1766.40625,
+        "height": 29,
+        "right": 1843.203125,
+        "bottom": 1054
+      },
+      "text": "烬辉战纪 CHRONICLES OF EMBER AND DAWN 余烬未息 · 黎明将至 战役征途 经典对战 新手教学 战争试炼 自定义 本地双人 制作与鸣谢 战役 0 / 10"
+    },
+    {
+      "viewport": {
+        "width": 800,
+        "height": 600
+      },
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "title": {
+        "x": 48,
+        "y": 103,
+        "width": 704,
+        "height": 78.078125,
+        "right": 752,
+        "bottom": 181.078125
+      },
+      "actions": {
+        "x": 48,
+        "y": 286.953125,
+        "width": 704,
+        "height": 49,
+        "right": 752,
+        "bottom": 335.953125
+      },
+      "modes": {
+        "x": 48,
+        "y": 355.953125,
+        "width": 704,
+        "height": 32,
+        "right": 752,
+        "bottom": 387.953125
+      },
+      "footer": {
+        "x": 32,
+        "y": 545,
+        "width": 736,
+        "height": 29,
+        "right": 768,
+        "bottom": 574
+      },
+      "text": "烬辉战纪 CHRONICLES OF EMBER AND DAWN 余烬未息 · 黎明将至 战役征途 经典对战 新手教学 战争试炼 自定义 本地双人 制作与鸣谢 战役 0 / 10"
+    },
+    {
+      "viewport": {
+        "width": 640,
+        "height": 480
+      },
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "title": {
+        "x": 38.390625,
+        "y": 103,
+        "width": 563.21875,
+        "height": 78.078125,
+        "right": 601.609375,
+        "bottom": 181.078125
+      },
+      "actions": {
+        "x": 38.390625,
+        "y": 286.953125,
+        "width": 563.21875,
+        "height": 49,
+        "right": 601.609375,
+        "bottom": 335.953125
+      },
+      "modes": {
+        "x": 38.390625,
+        "y": 355.953125,
+        "width": 563.21875,
+        "height": 32,
+        "right": 601.609375,
+        "bottom": 387.953125
+      },
+      "footer": {
+        "x": 25.59375,
+        "y": 425,
+        "width": 588.8125,
+        "height": 29,
+        "right": 614.40625,
+        "bottom": 454
+      },
+      "text": "烬辉战纪 CHRONICLES OF EMBER AND DAWN 余烬未息 · 黎明将至 战役征途 经典对战 新手教学 战争试炼 自定义 本地双人 制作与鸣谢 战役 0 / 10"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,196 @@
+/* Title screen only: one wordmark, one subtitle, two navigation levels. */
+body:has(.home.cover) #ambient {
+  inset: 0;
+}
+body:has(.home.cover) #ambient::after {
+  background:
+    linear-gradient(180deg, #0b151ee0 0%, #0b151e92 28%, #0b151e30 60%, #0b151eeb 100%),
+    radial-gradient(ellipse at 50% 32%, #101b2300 20%, #0b151e7d 100%);
+}
+body:has(.home.cover) .ambient-canvas {
+  filter: saturate(.65) brightness(.73);
+}
+.topbar.cover-topbar {
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+  padding-inline: 4%;
+}
+.cover-topbar .brand > .icon {
+  width: 28px;
+  height: 34px;
+  opacity: .85;
+}
+.cover-topbar nav {
+  gap: 12px;
+}
+.cover-topbar nav .quiet {
+  color: #9caaa9;
+  font-size: 11px;
+}
+.home.cover {
+  min-height: calc(100vh - 72px);
+  min-height: calc(100svh - 72px);
+  padding: clamp(70px, 14vh, 150px) 6% 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+}
+.cover-content {
+  width: 100%;
+  text-align: center;
+}
+.cover-title {
+  margin: 0;
+  color: #e6ddc8;
+  font-family: var(--title-font);
+  font-size: clamp(64px, 7.4vw, 112px);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: .18em;
+  text-indent: .18em;
+  white-space: nowrap;
+  text-shadow: 0 2px 32px #030a1090;
+}
+.cover-english {
+  margin: 23px 0 0;
+  color: #b6a686;
+  font: 10px/1.8 Georgia, serif;
+  letter-spacing: .38em;
+  text-indent: .38em;
+}
+.cover-motto {
+  margin: 37px 0 0;
+  color: #a6afac;
+  font: 13px/1.9 var(--title-font);
+  letter-spacing: .32em;
+  text-indent: .32em;
+}
+.cover-motto > span {
+  margin-inline: 6px;
+  color: #8d7957;
+}
+.cover-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+.cover-actions .btn {
+  min-width: 178px;
+  min-height: 48px;
+  padding: 13px 28px;
+  font-family: var(--title-font);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-indent: .18em;
+}
+.cover-actions .btn:not(.primary) {
+  border-color: #b9aa825c;
+  background: #111d2599;
+  color: #d1ccbc;
+}
+.cover-actions .btn:not(.primary):hover {
+  border-color: #c9b489;
+  background: #29343db3;
+}
+.cover-modes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 29px;
+}
+.cover-modes button {
+  position: relative;
+  padding: 9px 23px;
+  color: #a7b1b1;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  transition: color .2s;
+}
+.cover-modes button + button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 4px);
+  height: 8px;
+  width: 1px;
+  background: #a4a38e38;
+}
+.cover-modes button:hover,
+.cover-footer button:hover {
+  color: var(--gold-light);
+}
+.cover-footer {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #849799;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+.cover-footer button {
+  padding: 8px 0;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+.cover-footer b {
+  color: #c4b592;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  margin-left: 7px;
+}
+.cover-progress-total {
+  color: #738587;
+  font-family: Georgia, serif;
+  letter-spacing: .5px;
+}
+@media (max-width: 860px) {
+  .home.cover {
+    min-height: calc(100vh - 63px);
+    min-height: calc(100svh - 63px);
+    padding-top: clamp(55px, 12vh, 100px);
+  }
+  .cover-english {
+    font-size: 9px;
+    letter-spacing: .3em;
+  }
+  .cover-motto {
+    margin-top: 30px;
+  }
+  .cover-actions {
+    margin-top: 33px;
+  }
+  .cover-modes button {
+    padding-inline: 19px;
+  }
+}
+@media (max-height: 700px) {
+  .home.cover {
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+  .cover-title {
+    font-size: clamp(64px, 6.3vw, 88px);
+  }
+  .cover-english {
+    margin-top: 17px;
+  }
+  .cover-motto {
+    margin-top: 22px;
+  }
+  .cover-actions {
+    margin-top: 26px;
+  }
+  .cover-modes {
+    margin-top: 20px;
+  }
+}
