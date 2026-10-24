@@ -30,8 +30,12 @@ describe('forecast side-index exactness and performance fixtures',()=>{
  it('matches every forecast field, AI selection, RNG and full state exactly',()=>{
   const result=verifyEquivalence();
   expect(result).toMatchObject({snapshots:167,forecastComparisons:3374,fieldComparisons:13496,otherScoreComparisons:10688,aiComparisons:1990,exact:true});
-  expect(result.forecastDigest).toBe('520f59ca223926620ea22ec0868cb695584a1ca791f30a4d5c02f4cc264764c3');
-  expect(result.aiAndStateDigest).toBe('96cf02d322cdf2adcbd8bcd63f9c8f7ea10ea7dd86610c0ed9fab97de8df4a57');
+  // Raw floating-point serialization is not a cross-engine golden value (CI Node 22
+  // differs from Windows Node 24). Keep Object.is per field/full-state comparisons,
+  // then compare independently accumulated original/optimized digests on this runtime.
+  expect(result.forecastDigest).toMatch(/^[a-f0-9]{64}$/);
+  expect(result.forecastDigest).toBe(result.referenceForecastDigest);
+  expect(result.aiAndStateDigest).toBe(result.referenceAiAndStateDigest);
  },120_000);
  it('benchmarks real 150-levy hard/normal and the master small-army forecast path',()=>{
   const fixtures=benchmarkFixtures();

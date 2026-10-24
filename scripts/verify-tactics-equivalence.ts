@@ -125,6 +125,7 @@ export function makeSnapshots():Snapshot[] {
 export function verifyEquivalence(snapshots=makeSnapshots()) {
  let forecastComparisons=0,otherScoreComparisons=0,aiComparisons=0;
  const forecastHash=createHash('sha256'),aiHash=createHash('sha256');
+ const referenceForecastHash=createHash('sha256'),referenceAiHash=createHash('sha256');
  for(const snapshot of snapshots) {
   const {state:s,name}=snapshot,before=structuredClone(s);
   assert.ok(s.units.length<=150,name);assert.ok(s.teams.every(t=>t.supplyUsed<=80),name);
@@ -136,7 +137,8 @@ export function verifyEquivalence(snapshots=makeSnapshots()) {
     const expected=reference.forecastWave(s,side,d,enemyLegal,horizon);
     const actual=current.forecastWave(s,side,d,enemyLegal,horizon);
     for(const key of ['score','count','income','combat'] as const)assert.ok(Object.is(actual[key],expected[key]),`${name}/${side}/${d.id}/${horizon}/${key}: ${actual[key]} != ${expected[key]}`);
-    forecastHash.update(JSON.stringify([name,side,d.id,horizon,actual]));forecastComparisons++;
+    forecastHash.update(JSON.stringify([name,side,d.id,horizon,actual]));
+    referenceForecastHash.update(JSON.stringify([name,side,d.id,horizon,expected]));forecastComparisons++;
    }
    for(const d of UNITS)for(const key of ['fastWaveScore','strategicWaveScore'] as const){assert.deepStrictEqual(current[key](s,side,d),reference[key](s,side,d),`${name}/${side}/${d.id}/${key}`);otherScoreComparisons++;}
    assert.equal(current.useAdvantageForecast(s,side),reference.useAdvantageForecast(s,side),`${name}/${side}/advantage`);
@@ -149,13 +151,14 @@ export function verifyEquivalence(snapshots=makeSnapshots()) {
      assert.equal(actual.rng,expected.rng,`${name}/${side}/${level}/${repeat}/rng`);
      assert.deepStrictEqual(actual,expected,`${name}/${side}/${level}/${repeat}/state`);
      assert.deepStrictEqual({...actual,rng:unchanged.rng},unchanged,`${name}/${side}/${level}/${repeat}/only-rng-may-change`);
-     aiHash.update(JSON.stringify([name,side,level,repeat,actualPick,actual.rng,digest(actual)]));aiComparisons++;
+     aiHash.update(JSON.stringify([name,side,level,repeat,actualPick,actual.rng,digest(actual)]));
+     referenceAiHash.update(JSON.stringify([name,side,level,repeat,expectedPick,expected.rng,digest(expected)]));aiComparisons++;
     }
    }
   }
   assert.deepStrictEqual(s,before,`${name}/score-calls-do-not-mutate-state-or-rng`);
  }
- return {snapshots:snapshots.length,bodyCounts:[...new Set(snapshots.map(s=>s.state.units.length))].sort((a,b)=>a-b),forecastComparisons,fieldComparisons:forecastComparisons*4,otherScoreComparisons,aiComparisons,forecastDigest:forecastHash.digest('hex'),aiAndStateDigest:aiHash.digest('hex'),exact:true};
+ return {snapshots:snapshots.length,bodyCounts:[...new Set(snapshots.map(s=>s.state.units.length))].sort((a,b)=>a-b),forecastComparisons,fieldComparisons:forecastComparisons*4,otherScoreComparisons,aiComparisons,forecastDigest:forecastHash.digest('hex'),referenceForecastDigest:referenceForecastHash.digest('hex'),aiAndStateDigest:aiHash.digest('hex'),referenceAiAndStateDigest:referenceAiHash.digest('hex'),exact:true};
 }
 
 export function benchmarkFixtures():{name:string;state:BattleState;side:Side;level:Difficulty}[] {
