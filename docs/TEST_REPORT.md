@@ -13,6 +13,8 @@ npx.cmd playwright install chromium
 npm.cmd run test:e2e
 npm.cmd run screenshots
 npm.cmd run verify:release
+# 线上必须已部署为与本地dist相同的构建，才执行：
+npm.cmd run verify:live
 npm.cmd run balance -- --holdout
 npm.cmd run strategy:suite
 npm.cmd run missions:verify
@@ -33,10 +35,10 @@ npm.cmd audit
 
 |项目|结果与证据|
 |---|---|
-|单元测试|主侧完整执行：**17文件、226项通过**；包括独立冻结参考实现的 AI 精确等价检查。|
+|单元测试|主侧完整执行：**18文件、259项通过**；包括独立冻结参考实现的 AI 精确等价检查、33项静态缓存/Vary/Range与worker生成检查。|
 |类型、图集导出、构建|全部通过；JS139.45kB/gzip53.09kB、CSS32.74kB/gzip8.19kB；音乐另计。|
-|完整浏览器E2E|**12/12通过，46.5秒**；包含新图鉴、音频、合法自然胜局与150人压力。首轮性能失败仍保留。|
-|生产子路径/离线|当前构建 `/game/` 子路径SW缓存21文件；断网重载后真实RAF推进至第8波，音乐时钟25.3秒、Range206/128字节，无页面错误/资源失败。源码和生产文件SHA均锁定于 `metrics/release.json`。|
+|完整浏览器E2E|**12/12通过，56.9秒**；包含新图鉴、音频、合法自然胜局与150人压力。首轮性能失败仍保留。|
+|生产子路径/离线|当前构建 `/game/` 子路径SW缓存21文件；断网重载后真实RAF推进至第8波，音乐时钟25.4秒、五首真实媒体均由SW返回206、完整文件SHA一致，Range206/128字节，无页面错误/资源失败。源码和生产文件SHA均锁定于 `metrics/release.json`。|
 |自动对战|当前指纹**521局全部重跑**；3136个局面角色覆盖及挑战见证完成。保序扫描优化前后六份报告的实际对战数据全部精确一致。|
 |运动全tick审计|当前指纹44,769 tick／1,941,038个连续单位样本，最大2.744 world px，无 >6px；`v11-motion-audit.json`。|
 |真实RAF/视口|9组1024/1440/1920宽 × DPR1/1.25/1.5；相邻帧同id测量，均无溢出/页面错误，源码锁已更新。|
@@ -70,7 +72,7 @@ npm.cmd audit
 - Node交替计时两轮困难中位减少7.73% / 7.96%；这是局部余量，不是浏览器或最坏时延保证。`v11-tactics-equivalence.json` 包含完整方法与精确比较。
 - 主侧优化后三次独立浏览器压力均通过：困难峰值50.3 / 44.6 / 60.2ms，普通13.4 / 41.4 / 24.2ms，小军收尾33.1 / 36.6 / 40.9ms。见 `v11-ai-post-optimization-probe.json`，其中明确标注为终端原输出的人工汇总。
 
-最终完整E2E再次通过：绘图中位0.6ms/P95 4.2ms，持续150人约136 headless FPS；正常生命150人困难峰值39.2ms、普通31.5ms、大师0.6ms，小军收尾29.3ms。`browser-performance.json` 记录当前源指纹；所有100ms门槛保持不变。本机headless帧数不是显示器刷新率，也不保证所有低配设备60FPS或任何阵容的最坏上界。
+最终完整E2E再次通过：绘图中位0.6ms/P95 4.1ms，持续150人约108.6 headless FPS；正常生命150人困难峰值43.7ms、普通64.3ms、大师1.5ms，小军收尾79.8ms。`browser-performance.json` 记录当前源指纹；所有100ms门槛保持不变。本机headless帧数不是显示器刷新率，也不保证所有低配设备60FPS或任何阵容的最坏上界。
 
 ### 回归报告元数据修正
 
@@ -100,8 +102,14 @@ DPR≤2 backing；角色原图整数倍率绘制、落脚点对齐设备像素�
 
 修复仅涉及测试/校验脚本：保持冻结原实现、全部字段精确比较，另外独立累积参考/优化摘要后在同一运行时比较；没有容差、四舍五入或生产代码变化。Node22和24均通过原/新精确比较，226单测与生产构建再次通过。首次失败记录与运行编号保留，不靠重试跳过。
 
+## 公网部署实测：离线媒体阻塞记录
+
+提交 `48562e9` 的流水40052109535已完成build/deploy；真实公网在线JS字节与本地构建一致，新图鉴、B/U、主曲连续12秒与SW21文件/Range206均通过。但首次**公网断网重载后五首音乐全部net::ERR_FAILED**，战斗仍正常；本地生产离线通过不覆盖这个失败。原报告保留于 `v11-live-pages-first-offline-failure.json`。debugger已证实：Cache.addAll保存的请求键无Accept-Encoding，而真实浏览器音频请求带identity；Pages即使不压缩音乐仍返回Vary: Accept-Encoding，导致媒体请求miss。手动fetch的Range请求没有这个浏览器专用头，因此旧测试误通过。精简真实SW证据见 `v11-offline-cache-reproduction.json`；合成new Request不能复制禁止修改的浏览器请求头，未作为根因证明。
+
+修复只对**精确构建清单URL、完整200、仅含Accept-Encoding的Vary**回退匹配，绝不绕过Origin/Cookie/Authorization等Vary；保留Range206/416并将handler纳入缓存revision。本地生产服务器增加Pages式Vary/gzip/Range，检查五首真实离线媒体206和完整SHA。主侧独立259单测/tsc、12/12 E2E、模拟Pages生产离线回归与指标源锁检查全部通过；五首媒体206/完整SHA、82模拟秒至第8波、音乐25.4秒，无页面或失败请求。正在重新部署并做真正公网复测。`npm.cmd run verify:live` 可复现公开页面流程（要求本地dist与线上产物一致）。
+
 ## 发布与未完成边界
 
-v1.1已获用户明确授权提交并发布；推送、Actions部署和公网验收进行中。GitHub Pages的`live-pages.json`仍是已上线v1.0的历史记录，不作为v1.1证据；新版本实测将独立记录。
+v1.1已获用户明确授权提交并发布；Actions首轮已部署；公网离线媒体修复已完成，正在重新验证与部署。GitHub Pages的`live-pages.json`仍是已上线v1.0的历史记录，不作为v1.1证据；新版本实测将独立记录。
 
 仍未完成：人耳音频听审、人类完整战役通关/难度体验、实体低配PC、Firefox/Safari以及所有权限/DPI组合。核心回归、完整E2E和生产离线验收均已完成；不将外部/主观评估写成已验收承诺。

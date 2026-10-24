@@ -1,0 +1,339 @@
+{
+    "generated":  "2026-10-24T02:07:51.7915915Z",
+    "note":  "GitHub Actions metadata retrieved by gh; first CI failure preserved. CI success is not proof of public offline-media success.",
+    "runs":  [
+                 {
+                     "conclusion":  "failure",
+                     "createdAt":  "2026-10-24T01:51:03Z",
+                     "databaseId":  40051642563,
+                     "headSha":  "1d5490a3c54fc099f415979d895783e7d4f480b5",
+                     "jobs":  [
+                                  {
+                                      "completedAt":  "2026-10-24T01:51:38Z",
+                                      "conclusion":  "failure",
+                                      "databaseId":  120745394335,
+                                      "name":  "build",
+                                      "startedAt":  "2026-10-24T01:51:06Z",
+                                      "status":  "completed",
+                                      "steps":  [
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:08Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Set up job",
+                                                        "number":  1,
+                                                        "startedAt":  "2026-10-24T01:51:07Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:10Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/checkout@v7",
+                                                        "number":  2,
+                                                        "startedAt":  "2026-10-24T01:51:08Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:13Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/setup-node@v7",
+                                                        "number":  3,
+                                                        "startedAt":  "2026-10-24T01:51:10Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:16Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npm ci",
+                                                        "number":  4,
+                                                        "startedAt":  "2026-10-24T01:51:13Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:35Z",
+                                                        "conclusion":  "failure",
+                                                        "name":  "Run npm test",
+                                                        "number":  5,
+                                                        "startedAt":  "2026-10-24T01:51:16Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:35Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Run npm run build",
+                                                        "number":  6,
+                                                        "startedAt":  "2026-10-24T01:51:35Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:35Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Run npx playwright install --with-deps chromium",
+                                                        "number":  7,
+                                                        "startedAt":  "2026-10-24T01:51:35Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:35Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Run npm run test:e2e",
+                                                        "number":  8,
+                                                        "startedAt":  "2026-10-24T01:51:35Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:35Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Run npm run verify:release",
+                                                        "number":  9,
+                                                        "startedAt":  "2026-10-24T01:51:35Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:37Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/upload-artifact@v7",
+                                                        "number":  10,
+                                                        "startedAt":  "2026-10-24T01:51:35Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:37Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Run actions/configure-pages@v6",
+                                                        "number":  11,
+                                                        "startedAt":  "2026-10-24T01:51:37Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:37Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Run actions/upload-pages-artifact@v5",
+                                                        "number":  12,
+                                                        "startedAt":  "2026-10-24T01:51:37Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:37Z",
+                                                        "conclusion":  "skipped",
+                                                        "name":  "Post Run actions/setup-node@v7",
+                                                        "number":  23,
+                                                        "startedAt":  "2026-10-24T01:51:37Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:37Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Post Run actions/checkout@v7",
+                                                        "number":  24,
+                                                        "startedAt":  "2026-10-24T01:51:37Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:51:37Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Complete job",
+                                                        "number":  25,
+                                                        "startedAt":  "2026-10-24T01:51:37Z",
+                                                        "status":  "completed"
+                                                    }
+                                                ],
+                                      "url":  "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40051642563/job/120745394335"
+                                  },
+                                  {
+                                      "completedAt":  "2026-10-24T01:51:38Z",
+                                      "conclusion":  "skipped",
+                                      "databaseId":  120745522921,
+                                      "name":  "deploy",
+                                      "startedAt":  "2026-10-24T01:51:39Z",
+                                      "status":  "completed",
+                                      "steps":  [
+
+                                                ],
+                                      "url":  "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40051642563/job/120745522921"
+                                  }
+                              ],
+                     "status":  "completed",
+                     "updatedAt":  "2026-10-24T01:51:39Z",
+                     "url":  "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40051642563",
+                     "workflowName":  "Validate and deploy GitHub Pages"
+                 },
+                 {
+                     "conclusion":  "success",
+                     "createdAt":  "2026-10-24T01:57:28Z",
+                     "databaseId":  40052109535,
+                     "headSha":  "48562e99b513c503f3b07513048d6116166089b2",
+                     "jobs":  [
+                                  {
+                                      "completedAt":  "2026-10-24T01:59:44Z",
+                                      "conclusion":  "success",
+                                      "databaseId":  120746821281,
+                                      "name":  "build",
+                                      "startedAt":  "2026-10-24T01:57:31Z",
+                                      "status":  "completed",
+                                      "steps":  [
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:57:34Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Set up job",
+                                                        "number":  1,
+                                                        "startedAt":  "2026-10-24T01:57:31Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:57:36Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/checkout@v7",
+                                                        "number":  2,
+                                                        "startedAt":  "2026-10-24T01:57:34Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:57:37Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/setup-node@v7",
+                                                        "number":  3,
+                                                        "startedAt":  "2026-10-24T01:57:36Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:57:39Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npm ci",
+                                                        "number":  4,
+                                                        "startedAt":  "2026-10-24T01:57:37Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:57:53Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npm test",
+                                                        "number":  5,
+                                                        "startedAt":  "2026-10-24T01:57:39Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:57:56Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npm run build",
+                                                        "number":  6,
+                                                        "startedAt":  "2026-10-24T01:57:53Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:58:19Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npx playwright install --with-deps chromium",
+                                                        "number":  7,
+                                                        "startedAt":  "2026-10-24T01:57:56Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:07Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npm run test:e2e",
+                                                        "number":  8,
+                                                        "startedAt":  "2026-10-24T01:58:19Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:36Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run npm run verify:release",
+                                                        "number":  9,
+                                                        "startedAt":  "2026-10-24T01:59:07Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:38Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/upload-artifact@v7",
+                                                        "number":  10,
+                                                        "startedAt":  "2026-10-24T01:59:36Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:38Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/configure-pages@v6",
+                                                        "number":  11,
+                                                        "startedAt":  "2026-10-24T01:59:38Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:41Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Run actions/upload-pages-artifact@v5",
+                                                        "number":  12,
+                                                        "startedAt":  "2026-10-24T01:59:38Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:42Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Post Run actions/setup-node@v7",
+                                                        "number":  23,
+                                                        "startedAt":  "2026-10-24T01:59:41Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:42Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Post Run actions/checkout@v7",
+                                                        "number":  24,
+                                                        "startedAt":  "2026-10-24T01:59:42Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:42Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Complete job",
+                                                        "number":  25,
+                                                        "startedAt":  "2026-10-24T01:59:42Z",
+                                                        "status":  "completed"
+                                                    }
+                                                ],
+                                      "url":  "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40052109535/job/120746821281"
+                                  },
+                                  {
+                                      "completedAt":  "2026-10-24T01:59:55Z",
+                                      "conclusion":  "success",
+                                      "databaseId":  120747316416,
+                                      "name":  "deploy",
+                                      "startedAt":  "2026-10-24T01:59:48Z",
+                                      "status":  "completed",
+                                      "steps":  [
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:49Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Set up job",
+                                                        "number":  1,
+                                                        "startedAt":  "2026-10-24T01:59:49Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:54Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Deploy",
+                                                        "number":  2,
+                                                        "startedAt":  "2026-10-24T01:59:49Z",
+                                                        "status":  "completed"
+                                                    },
+                                                    {
+                                                        "completedAt":  "2026-10-24T01:59:54Z",
+                                                        "conclusion":  "success",
+                                                        "name":  "Complete job",
+                                                        "number":  3,
+                                                        "startedAt":  "2026-10-24T01:59:54Z",
+                                                        "status":  "completed"
+                                                    }
+                                                ],
+                                      "url":  "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40052109535/job/120747316416"
+                                  }
+                              ],
+                     "status":  "completed",
+                     "updatedAt":  "2026-10-24T01:59:56Z",
+                     "url":  "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40052109535",
+                     "workflowName":  "Validate and deploy GitHub Pages"
+                 }
+             ]
+}

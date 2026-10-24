@@ -12,38 +12,38 @@
     "climaxSrc": "/audio/the_final_battle.ogg",
     "backSrc": "/audio/the_final_battle.ogg",
     "sameDeck": true,
-    "battleStart": 0.576161,
-    "battleAdvanced": 1.286827,
-    "climaxTime": 1.68488,
-    "climaxAdvanced": 2.38386,
-    "backTime": 2.795086,
-    "backAdvanced": 3.303467
+    "battleStart": 0.565784,
+    "battleAdvanced": 1.262522,
+    "climaxTime": 1.663113,
+    "climaxAdvanced": 2.372047,
+    "backTime": 2.77224,
+    "backAdvanced": 3.271783
   },
   "climaxLayer": {
-    "level": 0.11009785608877538,
-    "gain": 0.11009785532951355,
+    "level": 0.11004649861553817,
+    "gain": 0.11004649847745895,
     "hits": 1,
     "sources": 3,
-    "music": 0.4283907879706689
+    "music": 0.42838365196280814
   },
   "calmLayer": {
-    "level": 0.002032709375965025,
-    "gain": 0.0020327093079686165,
+    "level": 0.0019841462194094828,
+    "gain": 0.0019841461908072233,
     "hits": 0,
     "sources": 0
   },
-  "lowSliderLayer": 0.018594730223450633,
-  "zeroSliderLayer": 0.0006089744759267294,
+  "lowSliderLayer": 0.018534950655306307,
+  "zeroSliderLayer": 0.0006011485195766966,
   "zeroSliderMusic": 0,
   "loop": {
     "duration": 145.824218,
-    "minLevel": 0.2616803504846785,
-    "maxLevel": 0.3915171415280283,
-    "samples": 489,
+    "minLevel": 0.26193006592840584,
+    "maxLevel": 0.39176354821069215,
+    "samples": 577,
     "crossfades": 1,
     "swapped": true,
     "newDeckPaused": false,
-    "newDeckTime": 3.113656,
+    "newDeckTime": 3.11877,
     "oldDeckPaused": true
   },
   "muted": {
@@ -54,23 +54,23 @@
     "busLayer": 0
   },
   "unmuted": {
-    "music": 0.4301427443275642,
-    "layer": 0.04529391135762957,
-    "busRms": 0.043401574360308635
+    "music": 0.43011841257916983,
+    "layer": 0.04525688963324927,
+    "busRms": 0.04386452854728884
   },
   "bus": {
     "attached": true,
-    "musicRms": 0.041924049812971174,
-    "musicPeak": 0.17559613287448883,
-    "layerRms": 0.001628527360879839,
-    "combinedPeak": 0.20355530828237534,
+    "musicRms": 0.04195191711957477,
+    "musicPeak": 0.1755317747592926,
+    "layerRms": 0.0015360873100655323,
+    "combinedPeak": 0.19571406207978725,
     "samples": 20,
-    "firstTime": 11.754643,
-    "lastTime": 13.413333
+    "firstTime": 11.771853,
+    "lastTime": 13.384308
   },
   "voices": 19,
-  "sfxPeak": 0.1952819526195526,
-  "outputPeak": 0.292999804019928,
+  "sfxPeak": 0.12265817821025848,
+  "outputPeak": 0.1784529685974121,
   "disposed": {
     "deckCount": 6,
     "elements": 0,

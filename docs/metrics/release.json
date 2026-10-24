@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-10-23T16:07:18.973Z",
+  "testedAt": "2026-10-24T02:17:10.861Z",
   "source": {
     "sha256": "30dddd5144bb093fb29cfa5a5f31a4504005866bcfde598bd8c1762b350477af",
     "files": {
@@ -14,14 +14,14 @@
   },
   "artifacts": {
     "index.html": "bcc8dfd405371c21f2a72a2599d329097329d3efc02a8089854c648abf08b9d9",
-    "sw.js": "b23097b07e7090195e74dab751b80456acd2cf7417078fdb34c0e00fbfa2e85c",
+    "sw.js": "84113eeca2dd8fb30df76b0e10e09b83bf727dc0de01fdccd08d78774482bf3f",
     "assets/index-Ce4nEHFL.js": "043e571453889c62362c11b1f7ed60487fd517704791539cb029e96bd3e0a1d4",
     "assets/index-N9YchXMn.css": "d5705d51f4ecbff92a5c1b59daa338603e78308925ad724689939541056b67c5"
   },
-  "url": "http://127.0.0.1:4190/game/",
+  "url": "http://127.0.0.1:52687/game/",
   "cacheInfo": {
     "names": [
-      "ember-dawn-115e582b04c98f"
+      "ember-dawn-44ea01f5176708"
     ],
     "files": [
       "/game/art/README.txt",
@@ -45,20 +45,232 @@
       "/game/legal/AUDIO_CREDITS.md",
       "/game/legal/LICENSE.txt",
       "/game/legal/VITE_LICENSE.md"
+    ],
+    "media": [
+      {
+        "url": "http://127.0.0.1:52687/game/audio/epic_march_loop.wav",
+        "keyHeaders": [],
+        "responseHeaders": [
+          [
+            "accept-ranges",
+            "bytes"
+          ],
+          [
+            "access-control-allow-origin",
+            "*"
+          ],
+          [
+            "cache-control",
+            "max-age=600"
+          ],
+          [
+            "connection",
+            "keep-alive"
+          ],
+          [
+            "content-length",
+            "7687996"
+          ],
+          [
+            "content-type",
+            "audio/wav"
+          ],
+          [
+            "date",
+            "Sat, 24 Oct 2026 02:16:42 GMT"
+          ],
+          [
+            "keep-alive",
+            "timeout=5"
+          ],
+          [
+            "vary",
+            "Accept-Encoding"
+          ]
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:52687/game/audio/eye_of_the_storm.mp3",
+        "keyHeaders": [],
+        "responseHeaders": [
+          [
+            "accept-ranges",
+            "bytes"
+          ],
+          [
+            "access-control-allow-origin",
+            "*"
+          ],
+          [
+            "cache-control",
+            "max-age=600"
+          ],
+          [
+            "connection",
+            "keep-alive"
+          ],
+          [
+            "content-length",
+            "3777653"
+          ],
+          [
+            "content-type",
+            "audio/mpeg"
+          ],
+          [
+            "date",
+            "Sat, 24 Oct 2026 02:16:42 GMT"
+          ],
+          [
+            "keep-alive",
+            "timeout=5"
+          ],
+          [
+            "vary",
+            "Accept-Encoding"
+          ]
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:52687/game/audio/hope_orchestral_battle_music.ogg",
+        "keyHeaders": [],
+        "responseHeaders": [
+          [
+            "accept-ranges",
+            "bytes"
+          ],
+          [
+            "access-control-allow-origin",
+            "*"
+          ],
+          [
+            "cache-control",
+            "max-age=600"
+          ],
+          [
+            "connection",
+            "keep-alive"
+          ],
+          [
+            "content-length",
+            "2192846"
+          ],
+          [
+            "content-type",
+            "audio/ogg"
+          ],
+          [
+            "date",
+            "Sat, 24 Oct 2026 02:16:42 GMT"
+          ],
+          [
+            "keep-alive",
+            "timeout=5"
+          ],
+          [
+            "vary",
+            "Accept-Encoding"
+          ]
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:52687/game/audio/the_final_battle.ogg",
+        "keyHeaders": [],
+        "responseHeaders": [
+          [
+            "accept-ranges",
+            "bytes"
+          ],
+          [
+            "access-control-allow-origin",
+            "*"
+          ],
+          [
+            "cache-control",
+            "max-age=600"
+          ],
+          [
+            "connection",
+            "keep-alive"
+          ],
+          [
+            "content-length",
+            "2822466"
+          ],
+          [
+            "content-type",
+            "audio/ogg"
+          ],
+          [
+            "date",
+            "Sat, 24 Oct 2026 02:16:42 GMT"
+          ],
+          [
+            "keep-alive",
+            "timeout=5"
+          ],
+          [
+            "vary",
+            "Accept-Encoding"
+          ]
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+        "keyHeaders": [],
+        "responseHeaders": [
+          [
+            "accept-ranges",
+            "bytes"
+          ],
+          [
+            "access-control-allow-origin",
+            "*"
+          ],
+          [
+            "cache-control",
+            "max-age=600"
+          ],
+          [
+            "connection",
+            "keep-alive"
+          ],
+          [
+            "content-length",
+            "6890306"
+          ],
+          [
+            "content-type",
+            "audio/ogg"
+          ],
+          [
+            "date",
+            "Sat, 24 Oct 2026 02:16:42 GMT"
+          ],
+          [
+            "keep-alive",
+            "timeout=5"
+          ],
+          [
+            "vary",
+            "Accept-Encoding"
+          ]
+        ]
+      }
     ]
   },
   "runtime": {
     "offline": true,
-    "elapsed": "01:21",
+    "elapsed": "01:22",
     "round": "第 8 波",
     "gold": "76",
-    "population": "24/80",
-    "fps": "153 FPS · 24 单位 · 30Hz",
+    "population": "36/80",
+    "fps": "180 FPS · 16 单位 · 30Hz",
     "tracks": [
       {
         "src": "/game/audio/eye_of_the_storm.mp3",
         "paused": true,
-        "currentTime": 0.127815,
+        "currentTime": 0.107785,
         "duration": 117.98059,
         "error": null,
         "volume": 0
@@ -82,15 +294,15 @@
       {
         "src": "/game/audio/the_final_battle.ogg",
         "paused": false,
-        "currentTime": 25.314718,
+        "currentTime": 25.41337,
         "duration": 145.824218,
         "error": null,
-        "volume": 0.34257599999999827
+        "volume": 0.34257599999999777
       },
       {
         "src": "/game/audio/epic_march_loop.wav",
         "paused": true,
-        "currentTime": 3.698653,
+        "currentTime": 3.708917,
         "duration": 43.582494,
         "error": null,
         "volume": 0
@@ -101,8 +313,135 @@
   "range": {
     "status": 206,
     "bytes": 128,
-    "contentRange": "bytes 0-127/3777653"
+    "contentRange": "bytes 0-127/3777653",
+    "sha256": "a5409a003996d306ea837b80ec1e18bae88f99fe38d4201f1de5ebaed805d458"
   },
+  "offlineFiles": [
+    {
+      "file": "epic_march_loop.wav",
+      "status": 200,
+      "bytes": 7687996,
+      "sha256": "7dffcb82140f3aced075b2766f135c17757c60bd8f7a2717b11ab49318c824d6"
+    },
+    {
+      "file": "eye_of_the_storm.mp3",
+      "status": 200,
+      "bytes": 3777653,
+      "sha256": "e7dff5f9d7d205237c6e767929230434666ea52e621f80038e9ea02dc5d6a629"
+    },
+    {
+      "file": "hope_orchestral_battle_music.ogg",
+      "status": 200,
+      "bytes": 2192846,
+      "sha256": "1615903236286af59d14b4d71da3fc2518a3091ecdd8f162a50215b9b3d0f320"
+    },
+    {
+      "file": "the_final_battle.ogg",
+      "status": 200,
+      "bytes": 2822466,
+      "sha256": "401fa62b9ed9bb2eea5821bdbe245e3eb991a89ecd1509c3742f7b5393b0df1c"
+    },
+    {
+      "file": "war_theme.ogg",
+      "status": 200,
+      "bytes": 6890306,
+      "sha256": "1291731b7f99e58655954e5e6d1f256dc522601664bcd9c3d9d0d4618f020d3e"
+    }
+  ],
+  "mediaRequests": [],
+  "mediaResponses": [
+    {
+      "url": "http://127.0.0.1:52687/game/audio/hope_orchestral_battle_music.ogg",
+      "status": 206,
+      "fromServiceWorker": false,
+      "offline": false
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/eye_of_the_storm.mp3",
+      "status": 206,
+      "fromServiceWorker": false,
+      "offline": false
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/the_final_battle.ogg",
+      "status": 206,
+      "fromServiceWorker": false,
+      "offline": false
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+      "status": 206,
+      "fromServiceWorker": false,
+      "offline": false
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/epic_march_loop.wav",
+      "status": 206,
+      "fromServiceWorker": false,
+      "offline": false
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+      "status": 206,
+      "fromServiceWorker": false,
+      "offline": false
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/eye_of_the_storm.mp3",
+      "status": 206,
+      "fromServiceWorker": true,
+      "offline": true
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+      "status": 206,
+      "fromServiceWorker": true,
+      "offline": true
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/hope_orchestral_battle_music.ogg",
+      "status": 206,
+      "fromServiceWorker": true,
+      "offline": true
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/the_final_battle.ogg",
+      "status": 206,
+      "fromServiceWorker": true,
+      "offline": true
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/epic_march_loop.wav",
+      "status": 206,
+      "fromServiceWorker": true,
+      "offline": true
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+      "status": 206,
+      "fromServiceWorker": true,
+      "offline": true
+    }
+  ],
+  "failedRequests": [],
+  "abortedRequests": [
+    {
+      "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/war_theme.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/eye_of_the_storm.mp3",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "url": "http://127.0.0.1:52687/game/audio/epic_march_loop.wav",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
   "errors": [],
   "badResponses": []
 }

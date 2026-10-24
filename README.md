@@ -115,7 +115,7 @@ Windows自动化配置也会查找已有Playwright Chromium缓存。CI使用标�
 3. `.github/workflows/pages.yml` 在 `main` 推送或手动触发时执行依赖安装、单测、构建与浏览器验收，然后上传 `dist/` 并部署。
 4. 如果默认分支不是main，修改工作流分支过滤。
 
-Vite `base: './'`、同源相对音频和SW清单支持 `https://<user>.github.io/<repo>/`，不需要硬编码仓库名。
+Vite `base: './'`、同源相对音频和SW清单支持 `https://<user>.github.io/<repo>/`，不需要硬编码仓库名。离线入口使用标准发布地址（末尾 `/`）；缓存仅包含精确构建清单，不对任意查询URL或其它页面作离线兜底。部署后可运行 `npm.cmd run verify:live` 做真实公网在线/断网验收，要求本地 `dist/` 与线上构建一致。
 
 ## 工程结构
 

@@ -1,0 +1,111 @@
+{
+  "recordedAt": "2026-10-24T02:15:26.244Z",
+  "browser": "153.0.8010.12",
+  "note": "Extracted real public SW media-request evidence; synthetic new Request probes do not reproduce browser-forbidden Accept-Encoding and are not used as proof.",
+  "cache": {
+    "names": [
+      "ember-dawn-115e582b04c98f"
+    ],
+    "key": {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "headers": [],
+      "mode": "no-cors",
+      "destination": ""
+    },
+    "responseStatus": 200,
+    "responseType": "basic",
+    "vary": "Accept-Encoding"
+  },
+  "realMediaEvents": [
+    {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "mode": "no-cors",
+      "destination": "audio",
+      "acceptEncoding": "identity;q=1, *;q=0",
+      "range": "bytes=0-",
+      "ordinaryCacheHit": false,
+      "ignoreVaryHit": true,
+      "vary": "Accept-Encoding"
+    },
+    {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "mode": "no-cors",
+      "destination": "audio",
+      "acceptEncoding": "identity;q=1, *;q=0",
+      "range": "bytes=0-",
+      "ordinaryCacheHit": false,
+      "ignoreVaryHit": true,
+      "vary": "Accept-Encoding"
+    },
+    {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "mode": "no-cors",
+      "destination": "audio",
+      "acceptEncoding": "identity;q=1, *;q=0",
+      "range": "bytes=0-",
+      "ordinaryCacheHit": false,
+      "ignoreVaryHit": true,
+      "vary": "Accept-Encoding"
+    },
+    {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "mode": "no-cors",
+      "destination": "audio",
+      "acceptEncoding": "identity;q=1, *;q=0",
+      "range": "bytes=0-",
+      "ordinaryCacheHit": false,
+      "ignoreVaryHit": true,
+      "vary": "Accept-Encoding"
+    },
+    {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "mode": "no-cors",
+      "destination": "audio",
+      "acceptEncoding": "identity;q=1, *;q=0",
+      "range": "bytes=0-",
+      "ordinaryCacheHit": false,
+      "ignoreVaryHit": true,
+      "vary": "Accept-Encoding"
+    },
+    {
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "mode": "no-cors",
+      "destination": "audio",
+      "acceptEncoding": "identity;q=1, *;q=0",
+      "range": "bytes=0-",
+      "ordinaryCacheHit": false,
+      "ignoreVaryHit": true,
+      "vary": "Accept-Encoding"
+    }
+  ],
+  "scriptedRangeFetch": {
+    "status": 206,
+    "headers": [
+      [
+        "accept-ranges",
+        "bytes"
+      ],
+      [
+        "content-length",
+        "128"
+      ],
+      [
+        "content-range",
+        "bytes 0-127/3777653"
+      ],
+      [
+        "content-type",
+        "audio/mp3"
+      ]
+    ],
+    "bytes": 128
+  },
+  "failedMedia": {
+    "result": {
+      "code": 4,
+      "message": "MEDIA_ELEMENT_ERROR: Format error"
+    },
+    "readyState": 0,
+    "duration": null
+  }
+}

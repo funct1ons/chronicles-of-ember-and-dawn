@@ -20,6 +20,7 @@
     "screenshots": "node scripts/collect-screenshots.mjs",
     "assets": "tsx scripts/export-assets.ts",
     "verify:release": "tsx scripts/verify-release.ts",
+    "verify:live": "node scripts/verify-live-pages.mjs",
     "motion:audit": "tsx scripts/diagnose-jitter.ts --output docs/metrics/v11-motion-audit.json",
     "verify:motion": "node scripts/verify-motion-browser.mjs",
     "verify:audio": "node scripts/verify-audio-continuity.mjs",
