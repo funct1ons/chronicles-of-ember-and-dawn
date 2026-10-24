@@ -102,14 +102,14 @@ DPR≤2 backing；角色原图整数倍率绘制、落脚点对齐设备像素�
 
 修复仅涉及测试/校验脚本：保持冻结原实现、全部字段精确比较，另外独立累积参考/优化摘要后在同一运行时比较；没有容差、四舍五入或生产代码变化。Node22和24均通过原/新精确比较，226单测与生产构建再次通过。首次失败记录与运行编号保留，不靠重试跳过。
 
-## 公网部署实测：离线媒体阻塞记录
+## 公网部署实测：离线媒体失败、修复与最终通过
 
 提交 `48562e9` 的流水40052109535已完成build/deploy；真实公网在线JS字节与本地构建一致，新图鉴、B/U、主曲连续12秒与SW21文件/Range206均通过。但首次**公网断网重载后五首音乐全部net::ERR_FAILED**，战斗仍正常；本地生产离线通过不覆盖这个失败。原报告保留于 `v11-live-pages-first-offline-failure.json`。debugger已证实：Cache.addAll保存的请求键无Accept-Encoding，而真实浏览器音频请求带identity；Pages即使不压缩音乐仍返回Vary: Accept-Encoding，导致媒体请求miss。手动fetch的Range请求没有这个浏览器专用头，因此旧测试误通过。精简真实SW证据见 `v11-offline-cache-reproduction.json`；合成new Request不能复制禁止修改的浏览器请求头，未作为根因证明。
 
-修复只对**精确构建清单URL、完整200、仅含Accept-Encoding的Vary**回退匹配，绝不绕过Origin/Cookie/Authorization等Vary；保留Range206/416并将handler纳入缓存revision。本地生产服务器增加Pages式Vary/gzip/Range，检查五首真实离线媒体206和完整SHA。主侧独立259单测/tsc、12/12 E2E、模拟Pages生产离线回归与指标源锁检查全部通过；五首媒体206/完整SHA、82模拟秒至第8波、音乐25.4秒，无页面或失败请求。正在重新部署并做真正公网复测。`npm.cmd run verify:live` 可复现公开页面流程（要求本地dist与线上产物一致）。
+修复只对**精确构建清单URL、完整200、仅含Accept-Encoding的Vary**回退匹配，绝不绕过Origin/Cookie/Authorization等Vary；保留Range206/416并将handler纳入缓存revision。本地生产服务器增加Pages式Vary/gzip/Range，检查五首真实离线媒体206和完整SHA。主侧独立259单测/tsc、12/12 E2E、模拟Pages生产离线回归与指标源锁检查全部通过；五首媒体206/完整SHA、82模拟秒至第8波、音乐25.4秒，无页面或失败请求。修复提交`f1a096c`对应Actions40053690078的build/deploy全部成功。随后**真正公网复测通过**（不是用本地或CI代替）：HTTP200，生产JS与SW逐字节匹配dist；16条图鉴、搜索焦点、故事展开、B完整详情/暂停与U火法通过。在线Final由1.01秒推进至13.02秒；SW控制21缓存，Range206/128字节。断网重载后8秒征募9人口、Final实际播放2.48秒，五首完整音频SHA与public/audio全部相同，无pageerror、异常HTTP或失败请求；导航/媒体主动取消的ERR_ABORTED独立记录。证据`v11-live-pages.json`、`v11-ci-runs.json`和`../screenshots/v11/live-pages-offline.png`，截图已实际打开检查。`npm.cmd run verify:live`可复现公开页面流程（要求本地dist与线上产物一致）。
 
 ## 发布与未完成边界
 
-v1.1已获用户明确授权提交并发布；Actions首轮已部署；公网离线媒体修复已完成，正在重新验证与部署。GitHub Pages的`live-pages.json`仍是已上线v1.0的历史记录，不作为v1.1证据；新版本实测将独立记录。
+v1.1已获用户明确授权并完成提交、推送、CI、部署与真正公网在线/断网验收。`live-pages.json`是v1.0历史记录，不作为v1.1证据；本次最终通过见`v11-live-pages.json`，首次失败单独保留为`v11-live-pages-first-offline-failure.json`。最终证据提交可以晚于实测所记localHead；只含文档/截图/报告，不改变已逐字节核对的运行产物。
 
 仍未完成：人耳音频听审、人类完整战役通关/难度体验、实体低配PC、Firefox/Safari以及所有权限/DPI组合。核心回归、完整E2E和生产离线验收均已完成；不将外部/主观评估写成已验收承诺。

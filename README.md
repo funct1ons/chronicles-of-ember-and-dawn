@@ -110,7 +110,7 @@ Windows自动化配置也会查找已有Playwright Chromium缓存。CI使用标�
 
 **线上地址：<https://funct1ons.github.io/chronicles-of-ember-and-dawn/>**（已实际部署并访问验证）
 
-1. v1.0 已上线；v1.1 已获授权发布，推送后由 GitHub Actions 校验并部署。公开站点以最后成功部署为准，发布与实测状态见 [执行记录](docs/PROGRESS.md)。
+1. **v1.1 已提交、部署并通过真实公网验收**：16兵种完整图鉴、连续战斗配乐、运动优化均已上线；GitHub Pages 断网重载后可出兵并实际播放音乐，五首离线音频SHA校验全部一致。发布与实测证据见 [执行记录](docs/PROGRESS.md)。
 2. GitHub仓库 **Settings → Pages → Source → GitHub Actions**。
 3. `.github/workflows/pages.yml` 在 `main` 推送或手动触发时执行依赖安装、单测、构建与浏览器验收，然后上传 `dist/` 并部署。
 4. 如果默认分支不是main，修改工作流分支过滤。
