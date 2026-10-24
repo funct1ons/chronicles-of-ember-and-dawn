@@ -1,12 +1,13 @@
 # 测试与实际运行记录
 
-## 首页封面改版（用户已授权提交部署）
+## 首页封面改版（已提交部署并完成公网验收）
 
 - **262项单测 / 19文件通过**，含新增3项首页结构与兼容性检查；类型与生产构建通过。JS138.74kB/gzip52.77kB、CSS35.84kB/gzip8.91kB。
 - 首页专项 **2/2浏览器用例通过**：六窗口640×480、800×600、1024×768、1366×768、1440×1000、1920×1080；无横纵溢出、标题/按钮/页脚不交叠，所有模式、存档进度、设置/鸣谢与键盘跳转保留。`metrics/cover-redesign.json` 锁定模板/首页CSS/入口文件；实际打开上述多尺寸截图，归档 `screenshots/cover/`。
 - 生产 `/game/` 子路径与断网重载通过：SW21缓存、第8波/82模拟秒，Final实际推进25.48秒，五音频完整SHA与Range206正确；`metrics/release.json` 锁定本地新产物。这不是新版公网发布验收。
-- **完整回归仍有性能项未过**：两次14用例执行均13通过，困难AI最大182.5ms / 163.7ms，超过原100ms门槛；保留于 `cover-browser-performance-first-failure.json` 和 `cover-browser-performance-second-failure.json`。未改源码的单项三次复测分别91.4 / 74.3 / 46.4ms并通过；不能据此抹去完整套件失败或声称原因已确证。独立有界诊断已经结束，见 `metrics/cover-performance-diagnosis.json`：带引擎trace的新浏览器/有限前序负载峰值207.6/100.9ms，41次AI选择与RNG序列一致；最大尖峰主线程CPU181.8ms，记录到的GC9.44ms、直接JIT scope1.09ms不足以解释全部耗时。trace可能扰动时序，不代替原始验收。旧首页对照超时未完成，**根因仍未确证，也未排除UI的间接影响**；待独立性能专项做固定次数、等等待时间的旧/新首页配对与函数级CPU分析。
-- 用户随后明确授权“提交和部署”。按原工作流执行全部CI，既不跳过性能测试，也不把后续通过视为历史尖峰根因已解决；实际流水线与公网验收结果完成后归档。
+- **本地Windows完整回归曾有性能项未过，原因仍未决**：两次14用例执行均13通过，困难AI最大182.5ms / 163.7ms，超过原100ms门槛；保留于 `cover-browser-performance-first-failure.json` 和 `cover-browser-performance-second-failure.json`。未改源码的单项三次复测分别91.4 / 74.3 / 46.4ms并通过；不能据此抹去完整套件失败或声称原因已确证。独立有界诊断已经结束，见 `metrics/cover-performance-diagnosis.json`：带引擎trace的新浏览器/有限前序负载峰值207.6/100.9ms，41次AI选择与RNG序列一致；最大尖峰主线程CPU181.8ms，记录到的GC9.44ms、直接JIT scope1.09ms不足以解释全部耗时。trace可能扰动时序，不代替原始验收。旧首页对照超时未完成，**根因仍未确证，也未排除UI的间接影响**；待独立性能专项做固定次数、等等待时间的旧/新首页配对与函数级CPU分析。
+- 用户随后明确授权“提交和部署”。提交 `7cab52f` 后，原完整流水线 [40057479233](https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40057479233) 一次通过：**262单测、14/14浏览器（51.4秒）、生产离线验证**，build2m15、deploy10s。Ubuntu/Node22/Chrome156压力绘图中位0.6ms/P95 13.4ms、持续52.7FPS，普通AI峰值7.4ms、困难52.6ms、大师0.9ms、小军20.3ms；原100ms门槛未改。`metrics/cover-ci-run.json` 保存API步骤状态和日志原行。**这是独立CI环境通过，不是Windows尖峰已修复或可随意忽略的证明**；本地两次失败、三次隔离通过及诊断全部保留，Windows性能专项仍未决。
+- 真实公网 `https://funct1ons.github.io/chronicles-of-ember-and-dawn/` 新封面验收通过（`metrics/cover-live-pages.json`）：标题为「烬辉战纪」，JS `index-BExlH8Ov.js`、SW与本地构建逐字节相同，无开发API。已实际打开1440封面与断网交战截图；图鉴/搜索/故事、U/B快捷键/暂停保留，Final从1.0096推进13.0149秒。SW缓存 `ember-dawn-605d01d47a707c` 共21文件；断网重载8秒后9人口、Final播放2.47秒，五首音频完整SHA与本地一致、Range206/128字节，无页面错误或非取消类资源失败。主动导航取消媒体请求单列为ERR_ABORTED，非隐藏真实错误。
 - 本次未改战斗/AI/经济/音频/运动代码；源码未变不等于浏览器性能不受影响。旧521局、305秒音频长播与运动审计仍为对应源码的既有证据，不冒充本轮重跑。下列为 **v1.1发布时的历史验收**；其性能报告另存 `metrics/v11-published-browser-performance.json`，当前 `browser-performance.json` 如实保留最新执行结果。
 
 ## v1.1 环境与复现

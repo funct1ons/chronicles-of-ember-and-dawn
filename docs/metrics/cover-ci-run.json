@@ -1,0 +1,233 @@
+{
+  "recordedAt": "2026-10-24T03:21:25.418Z",
+  "kind": "GitHub Actions Ubuntu/Node22 full suite; separate from retained Windows failures, not a root-cause resolution",
+  "run": {
+    "conclusion": "success",
+    "databaseId": 40057479233,
+    "headSha": "7cab52fd912fc15f215f34c62f6e64f166814f77",
+    "jobs": [
+      {
+        "completedAt": "2026-10-24T03:16:38Z",
+        "conclusion": "success",
+        "databaseId": 120763550718,
+        "name": "build",
+        "startedAt": "2026-10-24T03:14:23Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-24T03:14:27Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-24T03:14:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:14:30Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7",
+            "number": 2,
+            "startedAt": "2026-10-24T03:14:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:14:32Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@v7",
+            "number": 3,
+            "startedAt": "2026-10-24T03:14:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:14:33Z",
+            "conclusion": "success",
+            "name": "Run npm ci",
+            "number": 4,
+            "startedAt": "2026-10-24T03:14:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:14:44Z",
+            "conclusion": "success",
+            "name": "Run npm test",
+            "number": 5,
+            "startedAt": "2026-10-24T03:14:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:14:47Z",
+            "conclusion": "success",
+            "name": "Run npm run build",
+            "number": 6,
+            "startedAt": "2026-10-24T03:14:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:15:09Z",
+            "conclusion": "success",
+            "name": "Run npx playwright install --with-deps chromium",
+            "number": 7,
+            "startedAt": "2026-10-24T03:14:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:01Z",
+            "conclusion": "success",
+            "name": "Run npm run test:e2e",
+            "number": 8,
+            "startedAt": "2026-10-24T03:15:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:30Z",
+            "conclusion": "success",
+            "name": "Run npm run verify:release",
+            "number": 9,
+            "startedAt": "2026-10-24T03:16:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:32Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v7",
+            "number": 10,
+            "startedAt": "2026-10-24T03:16:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:33Z",
+            "conclusion": "success",
+            "name": "Run actions/configure-pages@v6",
+            "number": 11,
+            "startedAt": "2026-10-24T03:16:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:35Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@v5",
+            "number": 12,
+            "startedAt": "2026-10-24T03:16:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:36Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@v7",
+            "number": 23,
+            "startedAt": "2026-10-24T03:16:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:36Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7",
+            "number": 24,
+            "startedAt": "2026-10-24T03:16:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:36Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 25,
+            "startedAt": "2026-10-24T03:16:36Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40057479233/job/120763550718"
+      },
+      {
+        "completedAt": "2026-10-24T03:16:52Z",
+        "conclusion": "success",
+        "databaseId": 120764038520,
+        "name": "deploy",
+        "startedAt": "2026-10-24T03:16:42Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-24T03:16:43Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-24T03:16:43Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:50Z",
+            "conclusion": "success",
+            "name": "Deploy",
+            "number": 2,
+            "startedAt": "2026-10-24T03:16:43Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T03:16:50Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 3,
+            "startedAt": "2026-10-24T03:16:50Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40057479233/job/120764038520"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40057479233"
+  },
+  "tests": {
+    "unitTests": 262,
+    "unitFiles": 19,
+    "browserTests": 14,
+    "browserDurationSeconds": 51.4
+  },
+  "benchmark": {
+    "units": 150,
+    "frames": 120,
+    "renderMedianMs": 0.6000000000058208,
+    "renderP95Ms": 13.400000000008731,
+    "simulation3sMs": 136.8000000000029,
+    "steadyFrames": 159,
+    "steadyFps": 52.708347145793276,
+    "frameP95Ms": 16.799999999999727,
+    "remainingUnits": 150,
+    "ai150MedianMs": 0.3000000000029104,
+    "ai150MaxMs": 0.9000000000087311,
+    "aiByDifficulty": [
+      {
+        "level": 0,
+        "medianMs": 0,
+        "maxMs": 3.599999999991269
+      },
+      {
+        "level": 1,
+        "medianMs": 1.2999999999883585,
+        "maxMs": 1.6000000000058208
+      },
+      {
+        "level": 2,
+        "medianMs": 7,
+        "maxMs": 7.399999999994179
+      },
+      {
+        "level": 3,
+        "medianMs": 17.19999999999709,
+        "maxMs": 52.60000000000582
+      },
+      {
+        "level": 4,
+        "medianMs": 0.3000000000029104,
+        "maxMs": 0.9000000000087311
+      }
+    ],
+    "advantageForecastMaxMs": 20.30000000000291,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+  },
+  "logEvidence": [
+    "build\tRun npm test\t2026-10-24T03:14:44.6173350Z ^[[2m Test Files ^[[22m ^[[1m^[[32m19 passed^[[39m^[[22m^[[90m (19)^[[39m",
+    "build\tRun npm test\t2026-10-24T03:14:44.6177113Z ^[[2m      Tests ^[[22m ^[[1m^[[32m262 passed^[[39m^[[22m^[[90m (262)^[[39m",
+    "build\tRun npm run test:e2e\t2026-10-24T03:16:00.7737705Z 150-UNIT BENCHMARK {\"units\":150,\"frames\":120,\"renderMedianMs\":0.6000000000058208,\"renderP95Ms\":13.400000000008731,\"simulation3sMs\":136.8000000000029,\"steadyFrames\":159,\"steadyFps\":52.708347145793276,\"frameP95Ms\":16.799999999999727,\"remainingUnits\":150,\"ai150MedianMs\":0.3000000000029104,\"ai150MaxMs\":0.9000000000087311,\"aiByDifficulty\":[{\"level\":0,\"medianMs\":0,\"maxMs\":3.599999999991269},{\"level\":1,\"medianMs\":1.2999999999883585,\"maxMs\":1.6000000000058208},{\"level\":2,\"medianMs\":7,\"maxMs\":7.399999999994179},{\"level\":3,\"medianMs\":17.19999999999709,\"maxMs\":52.60000000000582},{\"level\":4,\"medianMs\":0.3000000000029104,\"maxMs\":0.9000000000087311}],\"advantageForecastMaxMs\":20.30000000000291,\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\"}",
+    "build\tRun npm run test:e2e\t2026-10-24T03:16:01.0122750Z   14 passed (51.4s)"
+  ]
+}
