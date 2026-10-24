@@ -1,0 +1,52 @@
+{
+  "testedAt": "2026-10-24T08:13:28.946Z",
+  "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/",
+  "localHead": "24864cb6150b20afbea9b6cc5be230bb32183b3f",
+  "version": "1.1.0",
+  "errors": [],
+  "badResponses": [],
+  "failedRequests": [],
+  "abortedRequests": [
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "requestNote": "ERR_ABORTED records intentional media/navigation cancellation separately; all other failed requests are fatal.",
+  "status": 200,
+  "title": "烬辉战纪",
+  "productionAsset": {
+    "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/assets/index-gSkNVr4C.js",
+    "sha256": "70beb455d27ee28cd554c42fd056ebd16d270d003382c5c6acf2c5d4eb21e59a",
+    "matchesLocal": true
+  },
+  "productionWorker": {
+    "sha256": "20d380a4b64f617ab87191ad5f1947ca6c43019f784c1b5f0ad9c0cf6d7057fd",
+    "matchesLocal": true
+  },
+  "codex": {
+    "entries": 16,
+    "search": true,
+    "focus": true,
+    "storyExpanded": true
+  },
+  "shortcuts": {
+    "BCompleteEntry": true,
+    "UFireMage": true,
+    "pauses": true
+  },
+  "failure": {
+    "message": "page.waitForFunction: Timeout 15000ms exceeded."
+  }
+}

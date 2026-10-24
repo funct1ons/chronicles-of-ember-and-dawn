@@ -1,0 +1,12 @@
+{
+  "archivedAt": "2026-10-24T08:29:20.086Z",
+  "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/?v=units-24864cb",
+  "passed": false,
+  "method": "Manual faithful archival of the one .tmp/verify-unit-version-entry.mjs tool execution, not a new network sample.",
+  "failure": "apiRequestContext.get: Timeout 30000ms exceeded. No HTTP status/body was obtained; do not claim the query entry was verified.",
+  "probeProvenance": {
+    "executedSha256": "da67a1ea16136d38651dc3ac348e74367c94bec3798ad4194d04b6d604bb2b2f",
+    "archivedSha256": "338eed924824b338269f521d611dfbcca4bcb5b753b10bd7c1f34f513c17bf5c",
+    "equivalentExceptCommentsAndDefaultOutputPaths": true
+  }
+}

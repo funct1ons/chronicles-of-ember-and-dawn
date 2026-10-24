@@ -1,0 +1,439 @@
+{
+  "testedAt": "2026-10-24T08:17:31.985Z",
+  "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/",
+  "localHead": "24864cb6150b20afbea9b6cc5be230bb32183b3f",
+  "version": "1.1.0",
+  "errors": [],
+  "badResponses": [],
+  "failedRequests": [],
+  "abortedRequests": [
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "phase": "online",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "requestNote": "ERR_ABORTED records intentional media/navigation cancellation separately; all other failed requests are fatal.",
+  "status": 200,
+  "bootstrap": {
+    "mode": "Wait for the actual public worker to finish downloading before interactions; NOT a cold-start latency pass.",
+    "waitMs": 19012
+  },
+  "title": "烬辉战纪",
+  "productionAsset": {
+    "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/assets/index-gSkNVr4C.js",
+    "sha256": "70beb455d27ee28cd554c42fd056ebd16d270d003382c5c6acf2c5d4eb21e59a",
+    "matchesLocal": true
+  },
+  "productionWorker": {
+    "sha256": "20d380a4b64f617ab87191ad5f1947ca6c43019f784c1b5f0ad9c0cf6d7057fd",
+    "matchesLocal": true
+  },
+  "unitPortraits": {
+    "method": "Raw RGBA SHA-256 of all 16 actual deployed codex canvases vs independently opened current local dev UI. No production dev APIs or state mutation.",
+    "matchesLocal": true,
+    "portraits": [
+      {
+        "id": "levy",
+        "width": 96,
+        "height": 96,
+        "sha256": "b414cd4b99eae8ee80bf12a2c62825c1edd7fbb74ef6d58e733ea4a91d7e2f30"
+      },
+      {
+        "id": "runner",
+        "width": 96,
+        "height": 96,
+        "sha256": "d557ce3801d09f8c35d9304a775c18e5ea01cb5ff419e2f3de0e73fcab375790"
+      },
+      {
+        "id": "shield",
+        "width": 96,
+        "height": 96,
+        "sha256": "74234960162223eac2f90d763893521c4216a6ee79ee1efbfd55d50b44e56bbd"
+      },
+      {
+        "id": "pike",
+        "width": 96,
+        "height": 96,
+        "sha256": "c995a09beaf8c46bd8b346945dafe53d31d21e6e935f7f736d3fdcadf839f864"
+      },
+      {
+        "id": "axe",
+        "width": 96,
+        "height": 96,
+        "sha256": "8d723a229e07db159ec801bdb52b720fc38c4ab98f470dd5635b71c6226e053a"
+      },
+      {
+        "id": "bow",
+        "width": 96,
+        "height": 96,
+        "sha256": "33d4ca9b0aac76808e26b7db3132f37837b778853d0814754ed5d84275f824ca"
+      },
+      {
+        "id": "crossbow",
+        "width": 96,
+        "height": 96,
+        "sha256": "b416aacff7fba06d253d326d762db81dd56e1d43d6ab10d8113b6977ceacfd10"
+      },
+      {
+        "id": "rider",
+        "width": 96,
+        "height": 96,
+        "sha256": "626983553b365a5c54d2ec7ec13bf4afeceb2be77c8c0c7344c08842bc52b220"
+      },
+      {
+        "id": "knight",
+        "width": 96,
+        "height": 96,
+        "sha256": "a7fb874464423d4649825cdb4094177f7ff7aeac7f1039e4b9f807d585a6e1e4"
+      },
+      {
+        "id": "mage",
+        "width": 96,
+        "height": 96,
+        "sha256": "2296d2504759b314d6a495beb3cd440a6aaba9fe3b82fbe3462d54a397bd2a64"
+      },
+      {
+        "id": "healer",
+        "width": 96,
+        "height": 96,
+        "sha256": "a5facf9c5575c9168a0228bbed47e2ecdd10c6cae9be6e2f8afd89a9c1a6c3e9"
+      },
+      {
+        "id": "ballista",
+        "width": 96,
+        "height": 96,
+        "sha256": "24ae85cdd7f3a404c37cf81cdd568ca664392396bab130c4510c04680cae1bf4"
+      },
+      {
+        "id": "assassin",
+        "width": 96,
+        "height": 96,
+        "sha256": "ddc83fb3ca0a040a81da2c129c5af4afefaf3b7b2b787e16577ad1d3ea175023"
+      },
+      {
+        "id": "guardian",
+        "width": 96,
+        "height": 96,
+        "sha256": "8e5106dd73d73a067e55b7afa40d794f2b1eb386bbf5a45ce6281b453041c596"
+      },
+      {
+        "id": "firemage",
+        "width": 96,
+        "height": 96,
+        "sha256": "6660ed8de05cd379f0180232f0688732c342fda5a70b23439c78d7edbd787e3a"
+      },
+      {
+        "id": "paladin",
+        "width": 96,
+        "height": 96,
+        "sha256": "e7cbb3e43728d8daf440d307b9d59863e399ed73869ad0ae2275efbe1d3d5448"
+      }
+    ]
+  },
+  "codex": {
+    "entries": 16,
+    "search": true,
+    "focus": true,
+    "storyExpanded": true
+  },
+  "shortcuts": {
+    "BCompleteEntry": true,
+    "UFireMage": true,
+    "pauses": true
+  },
+  "failure": {
+    "message": "page.waitForFunction: Timeout 15000ms exceeded."
+  },
+  "mediaEvents": [
+    {
+      "at": 1792829855804,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "range": "bytes=0-"
+    },
+    {
+      "at": 1792829855805,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "at": 1792829855805,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "at": 1792829855805,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "range": "bytes=0-"
+    },
+    {
+      "at": 1792829855805,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "range": "bytes=0-"
+    },
+    {
+      "at": 1792829856093,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829857034,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829857621,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829857801,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "range": "bytes=2097152-"
+    },
+    {
+      "at": 1792829857961,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829858821,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "range": "bytes=2752512-"
+    },
+    {
+      "at": 1792829861794,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829862896,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "range": "bytes=6815744-"
+    },
+    {
+      "at": 1792829868813,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829869494,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829870182,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "range": "bytes=32768-"
+    },
+    {
+      "at": 1792829870183,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829870326,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "range": "bytes=32768-"
+    },
+    {
+      "at": 1792829870326,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "range": "bytes=2818048-"
+    },
+    {
+      "at": 1792829874695,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829875122,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "range": "bytes=32768-"
+    },
+    {
+      "at": 1792829875122,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829876804,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "status": 206,
+      "fromSW": false
+    },
+    {
+      "at": 1792829904239,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "range": "bytes=0-"
+    },
+    {
+      "at": 1792829904249,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+      "status": 206,
+      "fromSW": true
+    },
+    {
+      "at": 1792829905519,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "range": "bytes=1179648-"
+    },
+    {
+      "at": 1792829905564,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+      "status": 206,
+      "fromSW": true
+    },
+    {
+      "at": 1792829911951,
+      "kind": "request",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "range": "bytes=32768-"
+    },
+    {
+      "at": 1792829911957,
+      "kind": "response",
+      "url": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+      "status": 206,
+      "fromSW": true
+    }
+  ],
+  "finalMediaState": {
+    "elapsed": "00:14",
+    "tracks": [
+      {
+        "src": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/eye_of_the_storm.mp3",
+        "time": 0,
+        "paused": true,
+        "volume": 0,
+        "readyState": 4,
+        "networkState": 1,
+        "error": "PipelineStatus::PIPELINE_ERROR_READ: FFmpegDemuxer: data source error"
+      },
+      {
+        "src": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/war_theme.ogg",
+        "time": 0,
+        "paused": true,
+        "volume": 0,
+        "readyState": 4,
+        "networkState": 1,
+        "error": null
+      },
+      {
+        "src": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/hope_orchestral_battle_music.ogg",
+        "time": 0,
+        "paused": true,
+        "volume": 0,
+        "readyState": 4,
+        "networkState": 1,
+        "error": null
+      },
+      {
+        "src": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/the_final_battle.ogg",
+        "time": 0.007904,
+        "paused": false,
+        "volume": 0.34257599983977116,
+        "readyState": 4,
+        "networkState": 1,
+        "error": "PipelineStatus::PIPELINE_ERROR_READ: FFmpegDemuxer: data source error"
+      },
+      {
+        "src": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/audio/epic_march_loop.wav",
+        "time": 0.053396,
+        "paused": true,
+        "volume": 0,
+        "readyState": 3,
+        "networkState": 1,
+        "error": "PipelineStatus::PIPELINE_ERROR_READ: FFmpegDemuxer: data source error"
+      }
+    ],
+    "worker": "https://funct1ons.github.io/chronicles-of-ember-and-dawn/sw.js"
+  }
+}

@@ -1,6 +1,6 @@
 # 测试与实际运行记录
 
-## 当前：16兵种视觉身份重构（本地验收通过，已获授权正在发布）
+## 当前：16兵种视觉身份重构（已提交上线；公网冷启动音频未决）
 
 当前核心/数据指纹：`fd82d170ac87125473db58255d89a7aeb7251d50698bf991ae1c09d89df3449e`。本轮仅精灵、美术辅助、装备一致性文案与测试/报告调整；16兵所有机械字段逐项锁定，模拟、AI、经济、音频及运动算法未改。`units.ts` 的故事变动会改变原始字节指纹，故重新跑完整对战报告，而非直接沿用旧指纹。
 
@@ -19,7 +19,24 @@
 
 主入口`metrics/summary.json`；新证据`unit-visual-redesign.json`、`unit-visual-gameplay-equivalence.json`，最新`browser-performance.json`、`release.json`、`v11-motion-browser.json`均有相应源码锁。旧v1.1等价报告保留为历史，汇总脚本按当前源码匹配，不用新故事指纹冒充旧验收。音频四文件未改，305秒长播证据源码锁仍有效，未无必要重跑并冒充新听审。
 
-**边界**：本轮完整性能通过不解释过去Windows182.5/163.7ms尖峰，根因专项仍未决；旧缓存安全升级提示尚未实现。没有人类辨识率实验、人耳听审、人工完整战役或实体低配/Firefox/Safari验收。用户已授权提交部署，新版CI/公网证据将在完成后归档；下列封面与v1.1公网记录仅属于历史版本。
+**边界**：本轮完整性能通过不解释过去Windows182.5/163.7ms尖峰，根因专项仍未决；旧缓存安全升级提示尚未实现。没有人类辨识率实验、人耳听审、人工完整战役或实体低配/Firefox/Safari验收。新版发布与公网证据见下节；下列封面与v1.1公网记录仅属于历史版本。
+
+### 本轮提交部署与真实公网复核
+
+用户授权后提交并推送 `24864cb6150b20afbea9b6cc5be230bb32183b3f`。Actions [40076984366](https://github.com/funct1ons/chronicles-of-ember-and-dawn/actions/runs/40076984366) build2m17/deploy9s成功；**274单测/22文件、16/16浏览器55.9s、生产离线通过**。CI 150人绘图中位0.7ms/P95 14.9ms、持续50.4FPS，普通AI最大21.8ms、困难49.6ms、大师0.9ms、小军40.5ms；不替代旧Windows尖峰根因诊断。API步骤与日志原行保存于`metrics/unit-redesign-ci-run.json`。
+
+真实公网规范入口HTTP200，JS `index-gSkNVr4C.js` SHA `70beb455d27ee28cd554c42fd056ebd16d270d003382c5c6acf2c5d4eb21e59a`、SW SHA `20d380a4b64f617ab87191ad5f1947ca6c43019f784c1b5f0ad9c0cf6d7057fd` 与dist逐字节一致。16个实际图鉴canvas的96×96 RGBA SHA与独立打开的本地当前UI全部一致，搜索/故事/U/B/暂停通过；不是只看部署状态或资源文件名。主侧实际打开`../screenshots/unit-redesign/live-controlled/live-all-unit-portraits.png`与`live-pages-offline.png`。
+
+**公网冷启动/媒体验收尚未全部通过**，以下为四次有界场景，不合并成一次成功：
+
+1. 原样`verify:live`：新JS/SW、图鉴与快捷键通过，但等待Final启动15s超时。`unit-redesign-live-pages.json`与`unit-redesign-live-pages-first-failure.json`是**同一次执行的原报告与保全副本，不是两个样本**。
+2. 原断言加媒体观测，不放宽超时：独立GET JS超过30s；媒体响应延迟、部分仍networkState2。`unit-redesign-live-pages-second.json`。不据此断言首次问题纯属网络。
+3. 等真实SW安装接管（19.012s），**不重载页面**：新造型像素对比通过，但Final15s仍未推进，观察到`PIPELINE_ERROR_READ / FFmpegDemuxer: data source error`。`unit-redesign-live-pages-warm.json`；不能把已接管等同于已有媒体流已健康恢复。
+4. 等真实资源安装接管（33.728s）后**受控重载**，再执行原音乐推进/离线断言：通过。`unit-redesign-live-pages-controlled.json`。Final1.009069→13.027367s，无媒体错误；21文件`ember-dawn-44318b33d096ba`，Range206/128字节；断网重载后8s、9/80人口、Final2.457671s，五首全文SHA/大小与本地一致，无pageerror/HTTP错误/非取消失败请求。受控预热重载是不同条件，**不是首次加载可靠性或问题已修复的证明**。
+
+没有产品代码/存档/资源/响应mock或模拟快进注入。ERR_ABORTED按原脚本单列；第三次诊断中的真实媒体error另行完整保留，不能以“取消请求”标签将其掩盖。首次网络流、新worker接管与解码读取错误的因果尚未确证；没有改SW/音频、放宽AI100ms或音乐15s门槛。后续需独立冷启动媒体专项。本轮版本查询入口`?v=units-24864cb`的独立GET也30s超时（`unit-redesign-version-entry.json`），不声称该请求实测成功。
+
+复现受控重载场景：启动匹配源码的4199本地开发UI后运行`node scripts/diagnose-unit-release-live.mjs`（联网，需要当前dist匹配线上）；该脚本默认输出另一个reprobe文件，不覆盖归档。它由实际成功执行的脚本提取，除注释/默认输出路径外严格相同，源SHA与等价校验见`unit-redesign-version-entry.json`。单独运行`npm.cmd run verify:live`仍代表无预热的原始流程，不冒充两种场景等价。
 
 ## 首页封面改版（已提交部署并完成公网验收，历史）
 
